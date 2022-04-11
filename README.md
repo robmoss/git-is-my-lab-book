@@ -1,6 +1,6 @@
 # Git is my lab book
 
-[![book](https://img.shields.io/badge/book-online?logo=read-the-docs)][book]
+[![book](https://img.shields.io/badge/book-online-blue?logo=read-the-docs)][book]
 
 These materials aim to support
 early- and mid-career researchers (EMCRs) in the
