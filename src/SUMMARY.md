@@ -39,6 +39,10 @@
 - [Generating reproducible outputs]()
 - [Ensuring that outputs are reproducible]()
 
+# Case studies
+
+- [Fixing a bug in pypfilt](case-studies/moss-pypfilt-earlier-states.md)
+
 -----------
 
 [Contributors]()
