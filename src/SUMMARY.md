@@ -33,6 +33,12 @@
   - [Pull requests]()
 - [Continuous integration]()
 
+# Reproducibility
+
+- [What is reproducible research?]()
+- [Generating reproducible outputs]()
+- [Ensuring that outputs are reproducible]()
+
 -----------
 
 [Contributors]()
