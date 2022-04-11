@@ -8,15 +8,28 @@ Date: 27 October 2021
 
 ## Overview
 
-I introduced a bug when I modified a function in my [pypfilt] package, and did not detect this until 8 commits later.
+I introduced a bug when I modified a function in my [pypfilt] package, and only detected the bug after I had created several more commits.
 
 To resolve this bug, I had to:
 
-1. Identify the cause of the bug;
+1. Notice the bug;
 
-2. Write a test case to check whether the bug is present; and
+2. Identify the cause of the bug;
 
-3. Fix the bug.
+3. Write a test case to check whether the bug is present; and
+
+4. Fix the bug.
+
+## Notice the bug
+
+I noticed that a regression test[^regression] was failing: re-running a set of model simulations was no longer generating the same output.
+The results had changed, but none of my recent commits should have had this effect.
+
+**I should have noticed this** when I created the commit that introduced this bug, but:
+
+- I had not pushed the most recent commits to the upstream [repository], where all of the test cases are run automatically every time a new commit is pushed; and
+
+- I had not run the test cases on my laptop after making each of the recent commits, because this takes a few minutes and I was lazy.
 
 ## Identify the cause of the bug
 
@@ -77,8 +90,11 @@ In the commit message I indicated:
 
 3. Why the bug was not detected when I created commit [`408b5f1`].
 
+[^regression]: A regression test checks that a commit hasn't changed an existing behaviour or functionality.
+
 [pypfilt]: https://pypfilt.readthedocs.io/
 [`earlier_states()`]: https://pypfilt.readthedocs.io/en/latest/api/state.html#pypfilt.state.earlier_states
+[repository]: https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python
 [`408b5f1`]: https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/408b5f13302e5edb5ae7866286927873ed0f0c96
 [`test_earlier_state()`]: https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/blob/9dcf621618fe76281a486af7bfba364e7bd26c13/tests/test_earlier_state.py
 [`9dcf621`]: https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/9dcf621618fe76281a486af7bfba364e7bd26c13
