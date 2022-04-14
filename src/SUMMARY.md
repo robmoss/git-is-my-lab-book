@@ -46,5 +46,5 @@
 -----------
 
 [Contributors]()
-[How to contribute]()
+[How to contribute](how-to-contribute.md)
 [References]()
