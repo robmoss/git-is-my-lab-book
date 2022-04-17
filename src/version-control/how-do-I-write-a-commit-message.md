@@ -22,11 +22,11 @@ You could write something like:
 > This model includes all of the core features that we need to fit the data,
 > but there several other features that we intend to add:
 >
-> - Parameter X is currently constant, but we may need to allow it to vary
+> \- Parameter X is currently constant, but we may need to allow it to vary
 >   over time;
 >
-> - Parameter Y should probably be a hyperparameter; and
+> \- Parameter Y should probably be a hyperparameter; and
 >
-> - The population includes age-structured mixing, but we need to also include
+> \- The population includes age-structured mixing, but we need to also include
 >   age-specific outcomes, even though there is very little data to suggest
 >   what the age effects might be.
