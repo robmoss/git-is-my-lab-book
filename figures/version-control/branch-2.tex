@@ -1,0 +1,26 @@
+\documentclass{tikzfig}
+
+\begin{document}
+
+\begin{tikzpicture}
+  % Define each of the commits.
+  \node[commit] (A) {A};
+  \node[commit] (B) [right = 1cm of A] {B};
+  \node[commit] (C) [right = 1cm of B] {C};
+  \node[commit,fill=lightgreen] (D) [below right = 0.5cm and 1cm of C] {D};
+  \node[commit,fill=lightgreen] (E) [right = 1cm of D] {E};
+  \node[commit,fill=lightgreen] (F) [right = 1cm of E] {F};
+  \node[commit,fill=lightorange] (G) [below right = 1.5cm and 1cm of C] {E};
+  \node[commit,fill=lightorange] (H) [right = 1cm of G] {H};
+
+  % Define the connections between the commits.
+  \nextcommit{A}{B}
+  \nextcommit{B}{C}
+  \changebranch{C}{D}
+  \nextcommit{D}{E}
+  \nextcommit{E}{F}
+  \changebranch{C}{G}
+  \nextcommit{G}{H}
+\end{tikzpicture}
+
+\end{document}

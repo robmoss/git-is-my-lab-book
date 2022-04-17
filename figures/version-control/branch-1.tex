@@ -1,0 +1,14 @@
+\documentclass{tikzfig}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \node[commit] (A) {A};
+  \node[commit] (B) [right = 1cm of A] {B};
+  \node[commit] (C) [right = 1cm of B] {C};
+
+  \nextcommit{A}{B}
+  \nextcommit{B}{C}
+\end{tikzpicture}
+
+\end{document}

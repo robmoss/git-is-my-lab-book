@@ -2,13 +2,14 @@
 
 [Introduction](README.md)
 
-# Version control basics
+# Version control concepts
 
-- [What is version control?]()
-- [What is a commit?]()
-- [What should I commit?]()
-- [How do I write a commit message?]()
-- [What is a branch?]()
+- [What is version control?](version-control/what-is-version-control.md)
+- [What is a repository?](version-control/what-is-repository.md)
+- [What is a commit?](version-control/what-is-a-commit.md)
+- [What should I commit?](version-control/what-should-I-commit.md)
+- [How do I write a commit message?](version-control/how-do-I-write-a-commit-message.md)
+- [What is a branch?](version-control/what-is-a-branch.md)
 
 # Effective use of git
 
