@@ -5,7 +5,7 @@
 # Version control concepts
 
 - [What is version control?](version-control/what-is-version-control.md)
-- [What is a repository?](version-control/what-is-repository.md)
+- [What is a repository?](version-control/what-is-a-repository.md)
 - [What is a commit?](version-control/what-is-a-commit.md)
 - [What should I commit?](version-control/what-should-I-commit.md)
 - [How do I write a commit message?](version-control/how-do-I-write-a-commit-message.md)
