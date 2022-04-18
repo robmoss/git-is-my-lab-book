@@ -1,5 +1,11 @@
 # How to contribute
 
+## Add a case study
+
+If you've made use of Git in your research activities, **please let us know!**
+We're looking for [case studies](case-studies/README.md) that highlight how EMCRs are using Git.
+See the instructions for suggesting new content (below).
+
 ## Provide comments and feedback
 
 The easiest way to provide comments and feedback is to [create an issue](https://github.com/robmoss/git-is-my-lab-book/issues).
