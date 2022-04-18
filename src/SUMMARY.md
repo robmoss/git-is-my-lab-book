@@ -39,6 +39,8 @@
   - [Generating reproducible outputs]()
   - [Ensuring that outputs are reproducible]()
 
+- [Cloud and HPC platforms]()
+
 - [Case studies](case-studies/README.md)
   - [Fixing a bug in pypfilt](case-studies/moss-pypfilt-earlier-states.md)
 
