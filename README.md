@@ -13,5 +13,15 @@ You can [view this book online][book].
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][license].
 
+## Building the book
+
+You can build this book by installing [mdBook](https://rust-lang.github.io/mdBook/) and running the following command in this directory:
+
+```shell
+mdbook build
+```
+
+You can then open `book/index.html` in your browser.
+
 [book]: https://robmoss.github.io/git-is-my-lab-book/
 [license]: http://creativecommons.org/licenses/by-sa/4.0/
