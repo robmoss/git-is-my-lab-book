@@ -13,11 +13,15 @@
 
 # Effective use of git
 
-- [Inspect past commits]()
-- [Show differences over time]()
-- [Where did this line come from?]()
-- [Where did this problem come from?]()
-- [When to use branches]()
+- [Graphical Git clients](using-git/graphical-git-clients.md)
+- [Creating a repository](using-git/creating-a-repository.md)
+- [Creating a commit](using-git/creating-a-commit.md)
+- [Pushing and pulling commits](using-git/pushing-and-pulling-commits.md)
+- [Inspecting past commits](using-git/inspecting-past-commits.md)
+- [Showing changes over time](using-git/showing-changes-over-time.md)
+- [Where did this line come from?](using-git/where-did-this-line-come-from.md)
+- [Where did this problem come from?](using-git/where-did-this-problem-come-from.md)
+- [How to use branches?](using-git/how-to-use-branches.md)
 
 # Testing
 
