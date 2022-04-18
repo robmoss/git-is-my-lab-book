@@ -3,6 +3,9 @@
 Let's find the commit that created the file `src/version-control/what-is-a-repository.md`.
 We could find this out using `git log`, but the point here is to illustrate how to use a script to **find the commit that causes any arbitrary change** to our repository.
 
+Once the commit has been found, you can inspect it (using `git show <commit>`) to see all of the changes this commit introduced **and** the commit message that (hopefully) explains the reasons why this commit was made.
+This is one way in which **your commit messages can act as a lab book**.
+
 1. Create a Python script called `my_test.py` with the following contents:
 
     ```py
@@ -92,4 +95,10 @@ We could find this out using `git log`, but the point here is to illustrate how 
 
     ```sh
     git bisect reset
+    ```
+
+6. You can then [inspect this commit](inspecting-past-commits.md) by running the following command:
+
+    ```sh
+    git show 1251357
     ```

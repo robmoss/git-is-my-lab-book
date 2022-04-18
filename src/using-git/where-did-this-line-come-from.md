@@ -1,7 +1,16 @@
 # Where did this line come from?
 
 Consider the [What should I commit?](../version-control/what-should-I-commit.md) chapter.
-At the time of writing, the contents of this file came from two commits:
+Imagine that we want to know when **and why** the following text (line 9) was added:
+
+```md
+A helpful guideline is "**commit early, commit often**".
+```
+
+We can identify the relevant commit, and inspect it (using `git show <commit>`) to see all of the changes this commit introduced **and** the commit message that (hopefully) explains the reasons why this commit was made.
+This is one way in which **your commit messages can act as a lab book**.
+
+At the time of writing, the contents of the [What should I commit?](../version-control/what-should-I-commit.md) came from two commits:
 
 ```sh
 git log --oneline src/version-control/what-should-I-commit.md
@@ -43,16 +52,10 @@ git blame -s src/version-control/what-should-I-commit.md
 ```
 
 You can see that the first seven lines were last modified by commit `9be780b` (*Briefly describe key version control concepts*), while the rest of the file was last modified by commit `3dfff1f` (*Add notes about committing early and often*).
+So the text that we're interested in (line 9) was **introduced by commit `3dfff1f`**.
 
-Without the `-s` argument, each line will also include the author name and timestamp of the commit:
+You can inspect this commit by running the following command:
 
 ```sh
-git blame src/version-control/what-should-I-commit.md
-```
-
-```txt
-9be780b8 (Rob Moss 2022-04-17 21:36:19 +1000  1) # What should I commit?
-9be780b8 (Rob Moss 2022-04-17 21:36:19 +1000  2)
-9be780b8 (Rob Moss 2022-04-17 21:36:19 +1000  3) A commit should represent a **unit of work**.
-...
+git show 3dfff1f
 ```
