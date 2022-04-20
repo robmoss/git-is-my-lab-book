@@ -75,8 +75,8 @@
 \tikzstyle{commit}=[
     circle,
     minimum size = 0.75cm,
-    draw=black,
-    thick,
+    draw=normtext,
+    very thick,
     fill=lightblue,
     text=black,
     font=\bfseries
@@ -84,8 +84,8 @@
 
 \tikzstyle{link}=[
   -,
-  black,
-  thick,
+  draw=normtext,
+  ultra thick,
   rounded corners = 0.25cm
 ]
 
