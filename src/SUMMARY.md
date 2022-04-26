@@ -9,6 +9,7 @@
   - [What should I commit?](version-control/what-should-I-commit.md)
   - [How do I write a commit message?](version-control/how-do-I-write-a-commit-message.md)
   - [What is a branch?](version-control/what-is-a-branch.md)
+  - [What is a merge conflict?](version-control/what-is-a-merge-conflict.md)
 
 - [Effective use of git](using-git/README.md)
   - [Graphical Git clients](using-git/graphical-git-clients.md)
@@ -20,6 +21,7 @@
   - [Where did this line come from?](using-git/where-did-this-line-come-from.md)
   - [Where did this problem come from?](using-git/where-did-this-problem-come-from.md)
   - [How to use branches?](using-git/how-to-use-branches.md)
+  - [How to resolve merge conflicts?](using-git/how-to-resolve-merge-conflicts.md)
 
 - [Testing]()
   - [What are tests for?]()
