@@ -13,6 +13,7 @@
 
 - [Effective use of git](using-git/README.md)
   - [Graphical Git clients](using-git/graphical-git-clients.md)
+  - [First-time Git setup](using-git/first-time-git-setup.md)
   - [Creating a repository](using-git/creating-a-repository.md)
   - [Creating a commit](using-git/creating-a-commit.md)
   - [Pushing and pulling commits](using-git/pushing-and-pulling-commits.md)
