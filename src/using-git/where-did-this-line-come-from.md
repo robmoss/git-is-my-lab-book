@@ -1,16 +1,17 @@
 # Where did this line come from?
 
 Consider the [What should I commit?](../version-control/what-should-I-commit.md) chapter.
-Imagine that we want to know when **and why** the following text (line 9) was added:
+Imagine that we want to know when **and why** the following text was added:
 
 ```md
 A helpful guideline is "**commit early, commit often**".
 ```
 
-We can identify the relevant commit, and inspect it (using `git show <commit>`) to see all of the changes this commit introduced **and** the commit message that (hopefully) explains the reasons why this commit was made.
+If we can identify the relevant commit, we can then inspect the commit (using `git show <commit>`) to see all of the changes that it introduced.
+Ideally, the commit message will explain the reasons why this commit was made.
 This is one way in which **your commit messages can act as a lab book**.
 
-At the time of writing, the contents of the [What should I commit?](../version-control/what-should-I-commit.md) came from two commits:
+At the time of writing (commit `2a96324`), the contents of the [What should I commit?](../version-control/what-should-I-commit.md) came from two commits:
 
 ```sh
 git log --oneline src/version-control/what-should-I-commit.md
