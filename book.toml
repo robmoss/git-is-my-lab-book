@@ -4,3 +4,9 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Git is my lab book"
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+
+[output.html]
+additional-css = ["mdbook-admonish.css"]
