@@ -9,3 +9,4 @@ While Git is a command-line program, there are other ways to work with Git repos
 - Online platforms such as [GitHub](https://github.com/), [GitLab](https://gitlab.com/public), and [Bitbucket](https://bitbucket.org/) also provide a graphical interface for common Git actions.
 
 In this book we will primarily show how to use Git **from the command-line**, but all of the concepts and terminology should also apply to all of the tools described above.
+If you don't have Git already installed on your computer, see these [instructions for installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
