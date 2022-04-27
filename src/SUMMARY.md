@@ -24,6 +24,11 @@
   - [How to use branches?](using-git/how-to-use-branches.md)
   - [How to resolve merge conflicts?](using-git/how-to-resolve-merge-conflicts.md)
 
+- [Collaborating]()
+  - [Peer code review]()
+    - [Pull requests]()
+  - [Continuous integration]()
+
 - [Testing]()
   - [What are tests for?]()
   - [Unit tests]()
@@ -31,11 +36,6 @@
   - [Regression tests]()
   - [Testing stochastic models]()
   - [I found a bug, now what?]()
-
-- [Collaborating]()
-  - [Peer code review]()
-    - [Pull requests]()
-  - [Continuous integration]()
 
 - [Reproducibility]()
   - [What is reproducible research?]()
