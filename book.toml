@@ -10,3 +10,5 @@ command = "mdbook-admonish"
 
 [output.html]
 additional-css = ["mdbook-admonish.css"]
+git-repository-url = "https://github.com/robmoss/git-is-my-lab-book"
+edit-url-template = "https://github.com/robmoss/git-is-my-lab-book/edit/master/{path}"
