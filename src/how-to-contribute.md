@@ -25,3 +25,8 @@ You can suggest modifications and new content by:
 - Recording your changes in one or more git commits; and
 
 - [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request), so that we can review your suggestions.
+
+```admonish info
+You can also edit any page by clicking the "Suggest an edit" button (<i class="fa fa-edit"></i>) in the top-right corner.
+This will start the process described above by forking the book repository.
+```
