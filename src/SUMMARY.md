@@ -37,7 +37,7 @@
   - [Peer code review]()
   - [Continuous integration]()
 
-- [Testing]()
+- [Testing](testing/README.md)
   - [What are tests for?]()
   - [Unit tests]()
   - [Integration tests]()
@@ -45,10 +45,12 @@
   - [Testing stochastic models]()
   - [I found a bug, now what?]()
 
-- [Reproducibility]()
+- [Reproducibility](reproducibility/README.md)
   - [What is reproducible research?]()
   - [Generating reproducible outputs]()
   - [Ensuring that outputs are reproducible]()
+  - [Ensuring that output are up to date]()
+  - [Reproducible supplementary materials]()
 
 - [Cloud and HPC platforms]()
 
