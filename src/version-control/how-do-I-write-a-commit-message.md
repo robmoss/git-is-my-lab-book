@@ -7,9 +7,13 @@ You should treat these messages as **entries in a log book**.
 Explain what changes were made and **why** they were made.
 This can help collaborators understand what we have done, but more importantly is acts as a record for our future selves.
 
-*Have you ever looked at code you wrote a long time ago, and wondered what you were thinking?*
+```admonish info
+Have you ever looked at code you wrote a long time ago *and wondered what you were thinking?*
 
-A history of detailed commit messages should answer this!
+A history of detailed commit messages should allow you to answer this question!
+
+Remember that **code is harder to read than it is to write** ([Joel Spolsky](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)).
+```
 
 For example, rather than writing:
 
