@@ -1,6 +1,7 @@
 # Summary
 
 [Introduction](README.md)
+[Prerequisites](prerequisites.md)
 
 - [Version control concepts](version-control/README.md)
   - [What is version control?](version-control/what-is-version-control.md)
