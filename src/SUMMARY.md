@@ -52,7 +52,11 @@
   - [Ensuring that output are up to date]()
   - [Reproducible supplementary materials]()
 
-- [Cloud and HPC platforms]()
+- [Cloud and HPC platforms](high-performance-computing/README.md)
+  - [Available platforms]()
+  - [Synchronising code and outputs]()
+  - [Making one thing run faster]()
+  - [Running many things at the same time]()
 
 - [Case studies](case-studies/README.md)
   - [Fixing a bug in pypfilt](case-studies/moss-pypfilt-earlier-states.md)
