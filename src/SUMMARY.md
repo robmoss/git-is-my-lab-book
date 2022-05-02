@@ -8,6 +8,7 @@
   - [What is a commit?](version-control/what-is-a-commit.md)
   - [What should I commit?](version-control/what-should-I-commit.md)
   - [How do I write a commit message?](version-control/how-do-I-write-a-commit-message.md)
+  - [What is a tag?](version-control/what-is-a-tag.md)
   - [What is a branch?](version-control/what-is-a-branch.md)
   - [What is a merge conflict?](version-control/what-is-a-merge-conflict.md)
 
