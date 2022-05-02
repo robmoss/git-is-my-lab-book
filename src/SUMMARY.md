@@ -26,9 +26,15 @@
   - [How to use branches?](using-git/how-to-use-branches.md)
   - [How to resolve merge conflicts?](using-git/how-to-resolve-merge-conflicts.md)
 
-- [Collaborating]()
+- [Collaborating](collaborating/README.md)
+  - [How to structure a repository]()
+  - [Choose a license]()
+  - [Sharing a repository]()
+  - [Sharing a branch]()
+  - [Merge/Pull requests]()
+  - [Collaborating on code]()
+  - [Collaborating on a paper]()
   - [Peer code review]()
-    - [Pull requests]()
   - [Continuous integration]()
 
 - [Testing]()
