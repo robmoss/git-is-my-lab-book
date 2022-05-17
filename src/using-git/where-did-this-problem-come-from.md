@@ -48,7 +48,9 @@ This is one way in which **your commit messages can act as a lab book**.
    git bisect start 3dfff1f 5a19b02
    ```
 
-   It displays a message that tells you about the search progress, and which commit is currently being investigated.
+   Note that we specify **the newer commit first**, and then the older commit.
+
+   Git will inform you about the search progress, and which commit is currently being investigated.
 
    ```txt
    Bisecting: 7 revisions left to test after this (roughly 3 steps)
@@ -61,7 +63,7 @@ This is one way in which **your commit messages can act as a lab book**.
    git bisect run ./my_test.py
    ```
 
-   It will then report the search progress and identify the commit that we're looking for:
+   It will continue to report the search progress and **automatically identify** the commit that we're looking for:
 
    ```txt
    running  './my_test.py'
@@ -91,7 +93,7 @@ This is one way in which **your commit messages can act as a lab book**.
     delete mode 100644 src/version-control/what-is-repository.md
    ```
 
-5. To quit the search and return to the current commit, run the following command:
+5. To quit the search and return to your current commit, run the following command:
 
     ```sh
     git bisect reset
