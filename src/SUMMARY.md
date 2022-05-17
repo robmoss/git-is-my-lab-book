@@ -26,6 +26,7 @@
   - [Where did this problem come from?](using-git/where-did-this-problem-come-from.md)
   - [How to use branches?](using-git/how-to-use-branches.md)
   - [How to resolve merge conflicts?](using-git/how-to-resolve-merge-conflicts.md)
+  - [Exercise: resolve a merge conflict](using-git/exercise-resolve-a-merge-conflict.md)
 
 - [Collaborating](collaborating/README.md)
   - [How to structure a repository]()
