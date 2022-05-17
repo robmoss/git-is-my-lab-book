@@ -17,6 +17,7 @@
   - [Graphical Git clients](using-git/graphical-git-clients.md)
   - [First-time Git setup](using-git/first-time-git-setup.md)
   - [Creating a repository](using-git/creating-a-repository.md)
+  - [Cloning an existing repository](using-git/cloning-an-existing-repository.md)
   - [Creating a commit](using-git/creating-a-commit.md)
   - [Creating a remote repository](using-git/creating-a-remote-repository.md)
   - [Pushing and pulling commits](using-git/pushing-and-pulling-commits.md)
