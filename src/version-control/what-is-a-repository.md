@@ -9,7 +9,7 @@ You will generally have at least two copies of each repository:
 
 1. A **local repository** on your computer; and
 
-2. A **remote repository** on a service such as GitHub, or a University-provided platform (such as the University of Melbourne's [GitLab instance](gitlab.unimelb.edu.au/)).
+2. A **remote repository** on a service such as GitHub, or a University-provided platform (such as the University of Melbourne's [GitLab instance](https://gitlab.unimelb.edu.au/)).
 
 You make changes in your local repository and "push" them to the remote repository.
 You can share this remote repository with your collaborators and supervisors, and they will be able to see all of the changes that you have pushed.
