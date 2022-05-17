@@ -30,22 +30,3 @@ git remote add origin git@github.com:robmoss/git-is-my-lab-book.git
 ```admonish note
 Notice that the URL is similar to, **but not identical to**, the URL you use to view the repository in your web browser.
 ```
-
-## Pushing your first commit to the remote repository
-
-In order to push commits from your local repository to the remote repository, we need to create a branch in the remote repository that corresponds to the main branch of our local repository.
-This requires that you have **created at least one commit** in your local repository.
-
-```admonish info
-This is a good time to create a `README.md` file and write a brief description of what this repository will contain.
-```
-
-Once you have at least one commit in your local repository, you can create a corresponding branch in the remote repository with the following command:
-
-```sh
-git push -u origin
-```
-
-```admonish note
-Recall that we identify remote repositories by name ("origin" in this example).
-```
