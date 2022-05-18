@@ -79,3 +79,11 @@ You can delete a tag by running:
 ```sh
 git tag --delete my-tag
 ```
+
+## Creating a branch from a tag
+
+You can check out a tag and begin working on a new branch by running:
+
+```sh
+git checkout -b my-branch my-tag
+```
