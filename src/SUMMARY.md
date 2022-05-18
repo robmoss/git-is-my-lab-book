@@ -21,6 +21,7 @@
   - [Creating a commit](using-git/creating-a-commit.md)
   - [Creating a remote repository](using-git/creating-a-remote-repository.md)
   - [Pushing and pulling commits](using-git/pushing-and-pulling-commits.md)
+  - [How to ignore certain files](using-git/how-to-ignore-certain-files.md)
   - [Inspecting past commits](using-git/inspecting-past-commits.md)
   - [Showing changes over time](using-git/showing-changes-over-time.md)
   - [Where did this line come from?](using-git/where-did-this-line-come-from.md)
