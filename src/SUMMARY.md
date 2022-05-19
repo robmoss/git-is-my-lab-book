@@ -32,7 +32,7 @@
 
 - [Collaborating](collaborating/README.md)
   - [How to structure a repository]()
-  - [Choose a license]()
+  - [Choosing a license]()
   - [Sharing a repository]()
   - [Sharing a branch]()
   - [Merge/Pull requests]()
