@@ -39,7 +39,7 @@
   - [Collaborating on code]()
   - [Collaborating on a paper]()
   - [Peer code review]()
-  - [Continuous integration]()
+  - [Continuous integration](collaborating/continuous-integration.md)
 
 - [Testing](testing/README.md)
   - [What are tests for?]()
