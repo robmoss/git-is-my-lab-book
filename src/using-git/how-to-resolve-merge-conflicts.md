@@ -52,7 +52,9 @@ Note that this two-day diff shows:
 
 Each conflict is surrounded by `<<<<<<<` and `>>>>>>>` markers, and the conflicting changes are separated by a `=======` marker.
 
-We can then edit `test.txt` to reconcile these changes, and the commit our fix.
+## Resolving the conflicts
+
+We can edit `test.txt` to reconcile these changes, and the commit our fix.
 For example, we might decide that `test.txt` should have the following contents:
 
 ```text
@@ -66,4 +68,12 @@ We can then commit these changes to resolve the merge conflict:
 ```sh
 git add test.txt
 git commit -m "Resolved the merge conflict"
+```
+
+## Cancelling the merge
+
+Alternatively, you may decide you don't want to merge these two branches, in which case you cancel the merge by running:
+
+```sh
+git merge --abort
 ```
