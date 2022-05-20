@@ -48,6 +48,7 @@
   - [Regression tests]()
   - [Testing stochastic models]()
   - [I found a bug, now what?]()
+  - [Testing Frameworks](testing/testing-frameworks.md)
 
 - [Reproducibility](reproducibility/README.md)
   - [What is reproducible research?]()
