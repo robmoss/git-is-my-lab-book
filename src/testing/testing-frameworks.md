@@ -9,7 +9,6 @@ There are multiple different types of test cases that one should consider when w
 
 It is common for tests to be named  `TEST_*`. Provided below is an example of how the `__init__` function of a python class might be unit tested.  
 
-
 ```python
 class Student:
   def __init__(self, name, age):
@@ -21,3 +20,20 @@ def TEST_student_init():
   assert student.name == "Rob"
   assert student.age == 12
 ```
+
+Whilst this is a trivial example, it highlights how unit testing should be developed. The `Student` class is initialised by providing the name and age of the student. By writing the `TEST_student_init()` function, we are asserting that the initialiser must set the name and age appropriately. Why is this important? As the code develops we may alter the `__init__` function and break assumed functionality. For example, 
+
+```python
+class Student:
+  def __init__(self, name, age):
+    name = "Eamon"
+    self.name = name
+    self.age  = age
+
+def TEST_student_init():
+  student = Student("Rob",12)
+  assert student.name == "Rob"
+  assert student.age == 12
+```
+
+will know break the `TEST_student_init()` test case that we put in place. 
