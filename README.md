@@ -21,7 +21,7 @@ You can build this book by installing [mdBook](https://rust-lang.github.io/mdBoo
 mdbook build
 ```
 
-You can then open `book/index.html` in your browser.
+You can then open `book/html/index.html` in your browser.
 
 [book]: https://robmoss.github.io/git-is-my-lab-book/
 [license]: http://creativecommons.org/licenses/by-sa/4.0/
