@@ -16,3 +16,5 @@ edit-url-template = "https://github.com/robmoss/git-is-my-lab-book/edit/master/{
 [output.html.fold]
 enable = true
 level = 0
+
+[output.linkcheck]

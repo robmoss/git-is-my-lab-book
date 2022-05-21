@@ -15,7 +15,7 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 ## Building the book
 
-You can build this book by installing [mdBook](https://rust-lang.github.io/mdBook/) and [mdbook-admonish](https://github.com/tommilligan/mdbook-admonish/), and running the following command in this directory:
+You can build this book by installing [mdBook](https://rust-lang.github.io/mdBook/), [mdbook-admonish](https://github.com/tommilligan/mdbook-admonish/), and [mdbook-linkcheck](https://github.com/Michael-F-Bryan/mdbook-linkcheck), and running the following command in this directory:
 
 ```shell
 mdbook build
