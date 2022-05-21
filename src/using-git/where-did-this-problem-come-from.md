@@ -99,7 +99,7 @@ This is one way in which **your commit messages can act as a lab book**.
     git bisect reset
     ```
 
-6. You can then [inspect this commit](inspecting-past-commits.md) by running the following command:
+6. You can then [inspect this commit](inspecting-your-history.md) by running the following command:
 
     ```sh
     git show 1251357
