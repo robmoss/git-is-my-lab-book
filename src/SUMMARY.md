@@ -31,8 +31,8 @@
   - [Exercise: resolve a merge conflict](using-git/exercise-resolve-a-merge-conflict.md)
 
 - [Collaborating](collaborating/README.md)
-  - [How to structure a repository]()
-  - [Choosing a license]()
+  - [How to structure a repository](collaborating/how-to-structure-a-repository.md)
+  - [Choosing a license](collaborating/choosing-a-license.md)
   - [Sharing a repository]()
   - [Sharing a branch]()
   - [Merge/Pull requests]()
