@@ -24,7 +24,7 @@ In creating a pull request and inviting someone to review your work, the pull re
 
   - Is the code easy to understand?
 
-  - If you have a style guide, is the code formatted appropriately?
+  - If you have a [style guide](coding-style-guides.md), is the code formatted appropriately?
 
   - Do the model equation or data analysis steps seem sensible?
 
