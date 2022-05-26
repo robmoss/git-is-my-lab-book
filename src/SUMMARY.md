@@ -38,8 +38,8 @@
   - [Merge/Pull requests](collaborating/merge-pull-requests.md)
   - [Peer code review](collaborating/peer-code-review.md)
   - [Coding style guides](collaborating/coding-style-guides.md)
-  - [Collaborating on code]()
-  - [Collaborating on a paper]()
+  - [Collaborating on code](collaborating/collaborating-on-code.md)
+  - [Collaborating on a paper](collaborating/collaborating-on-a-paper.md)
   - [Continuous integration](collaborating/continuous-integration.md)
 
 - [Testing](testing/README.md)

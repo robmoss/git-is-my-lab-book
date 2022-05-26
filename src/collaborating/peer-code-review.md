@@ -65,6 +65,10 @@ Treat other people's code the way you would want them to treat your code.
 
   - Tell the author if reading their code gave you some ideas for your own code.
 
+## Complete the review
+
+Once the peer code review is complete, and any corresponding updates to the code have been made, you can [merge the branch](merge-pull-requests.md).
+
 ## Retain a record of the review
 
 By using merge/pull requests to review code, the discussion between the author and the reviewer is recorded.
