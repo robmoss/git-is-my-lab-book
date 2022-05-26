@@ -1,6 +1,7 @@
 # Summary
 
 [Introduction](README.md)
+[Learning objectives](learning-objectives.md)
 [Prerequisites](prerequisites.md)
 
 - [Version control concepts](version-control/README.md)
