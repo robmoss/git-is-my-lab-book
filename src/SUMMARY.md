@@ -33,13 +33,13 @@
   - [Exercise: resolve a merge conflict](using-git/exercise-resolve-a-merge-conflict.md)
 
 - [Collaborating](collaborating/README.md)
+  - [Collaborating on code](collaborating/collaborating-on-code.md)
+  - [Collaborating on a paper](collaborating/collaborating-on-a-paper.md)
   - [Sharing a repository](collaborating/sharing-a-repository.md)
   - [Sharing a branch](collaborating/sharing-a-branch.md)
   - [Merge/Pull requests](collaborating/merge-pull-requests.md)
   - [Peer code review](collaborating/peer-code-review.md)
   - [Coding style guides](collaborating/coding-style-guides.md)
-  - [Collaborating on code](collaborating/collaborating-on-code.md)
-  - [Collaborating on a paper](collaborating/collaborating-on-a-paper.md)
   - [Continuous integration](collaborating/continuous-integration.md)
 
 - [Testing](testing/README.md)
