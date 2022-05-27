@@ -18,6 +18,8 @@
   - [First-time Git setup](using-git/first-time-git-setup.md)
   - [Creating a repository](using-git/creating-a-repository.md)
   - [Cloning an existing repository](using-git/cloning-an-existing-repository.md)
+  - [How to structure a repository](using-git/how-to-structure-a-repository.md)
+  - [Choosing a license](using-git/choosing-a-license.md)
   - [Creating a commit](using-git/creating-a-commit.md)
   - [Creating a remote repository](using-git/creating-a-remote-repository.md)
   - [Pushing and pulling commits](using-git/pushing-and-pulling-commits.md)
@@ -31,8 +33,6 @@
   - [Exercise: resolve a merge conflict](using-git/exercise-resolve-a-merge-conflict.md)
 
 - [Collaborating](collaborating/README.md)
-  - [How to structure a repository](collaborating/how-to-structure-a-repository.md)
-  - [Choosing a license](collaborating/choosing-a-license.md)
   - [Sharing a repository](collaborating/sharing-a-repository.md)
   - [Sharing a branch](collaborating/sharing-a-branch.md)
   - [Merge/Pull requests](collaborating/merge-pull-requests.md)
