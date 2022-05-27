@@ -38,6 +38,7 @@
   - [Sharing a repository](collaborating/sharing-a-repository.md)
   - [Sharing a branch](collaborating/sharing-a-branch.md)
   - [Merge/Pull requests](collaborating/merge-pull-requests.md)
+  - [An example pull request](collaborating/an-example-pull-request.md)
   - [Peer code review](collaborating/peer-code-review.md)
   - [Coding style guides](collaborating/coding-style-guides.md)
   - [Continuous integration](collaborating/continuous-integration.md)
