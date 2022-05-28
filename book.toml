@@ -9,7 +9,8 @@ title = "Git is my lab book"
 command = "mdbook-admonish"
 
 [output.html]
-additional-css = ["mdbook-admonish.css"]
+additional-css = ["mdbook-admonish.css", "tabbed-code-blocks.css"]
+additional-js = ["tabbed-code-blocks.js"]
 git-repository-url = "https://github.com/robmoss/git-is-my-lab-book"
 edit-url-template = "https://github.com/robmoss/git-is-my-lab-book/edit/master/{path}"
 
