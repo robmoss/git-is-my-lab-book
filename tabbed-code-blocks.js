@@ -39,10 +39,16 @@ function getTabTextForCode(code_elt) {
     // Identify the language based on the code element's class.
     if (code_elt.classList.contains("language-python")) {
         return "Python";
+    } else if (code_elt.classList.contains("language-py")) {
+        return "Python";
     } else if (code_elt.classList.contains("language-R")) {
         return "R";
     } else if (code_elt.classList.contains("language-cpp")) {
         return "C++";
+    } else if (code_elt.classList.contains("language-sh")) {
+        return "Shell";
+    } else if (code_elt.classList.contains("language-text")) {
+        return "Text";
     } else {
         return "Unknown language";
     }
