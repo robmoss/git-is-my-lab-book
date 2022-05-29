@@ -1,5 +1,30 @@
 /* Implement tabbed code blocks for mdBook. */
 
+(function() {
+"use strict";
+
+// The CSS selector used to identify groups of tabbed code blocks.
+const blocks_selector = "div.tabbed-blocks";
+
+// The CSS class used to identify the active tab.
+const class_active = "active";
+
+// NOTE: the order in which we define the names is important, because we
+// iterate over the names in the *insertion order*.
+const tab_names = new Map();
+tab_names.set("language-python", "Python");
+tab_names.set("language-py", "Python");
+tab_names.set("language-R", "R");
+tab_names.set("language-cpp", "C++");
+tab_names.set("language-sh", "Shell");
+tab_names.set("language-shell", "Shell");
+tab_names.set("language-md", "Markdown");
+tab_names.set("language-text", "Text");
+tab_names.set("language-diff", "Diff");
+
+// The tab name to use when none of the above names apply.
+const default_tab_name = "Unknown";
+
 function addTabsToGroup(group) {
     // Create the container for the tab buttons.
     const tab_bar = document.createElement("ul");
@@ -13,7 +38,7 @@ function addTabsToGroup(group) {
         if (ix > 0) {
             pre_elt.style.display = "none";
         } else {
-            tab_elt.classList.add("active");
+            tab_elt.classList.add(class_active);
         }
     });
 }
@@ -37,21 +62,12 @@ function addTabForCodeBlock(tab_bar, pre_elts, pre_elt) {
 
 function getTabTextForCode(code_elt) {
     // Identify the language based on the code element's class.
-    if (code_elt.classList.contains("language-python")) {
-        return "Python";
-    } else if (code_elt.classList.contains("language-py")) {
-        return "Python";
-    } else if (code_elt.classList.contains("language-R")) {
-        return "R";
-    } else if (code_elt.classList.contains("language-cpp")) {
-        return "C++";
-    } else if (code_elt.classList.contains("language-sh")) {
-        return "Shell";
-    } else if (code_elt.classList.contains("language-text")) {
-        return "Text";
-    } else {
-        return "Unknown language";
+    for (const [class_name, tab_text] of tab_names) {
+        if (code_elt.classList.contains(class_name)) {
+            return tab_text;
+        }
     }
+    return default_tab_name;
 }
 
 function addTabEventHandler(tab_elt, tab_bar, pre_elts, pre_elt) {
@@ -65,14 +81,16 @@ function addTabEventHandler(tab_elt, tab_bar, pre_elts, pre_elt) {
 
         // Mark this button as the active tab.
         tab_bar.querySelectorAll("li").forEach((elt) => {
-            elt.classList.remove("active");
+            elt.classList.remove(class_active);
         });
-        tab_elt.classList.add("active");
+        tab_elt.classList.add(class_active);
     });
 }
 
 // Create a tab bar for each group of code blocks.
 window.addEventListener("DOMContentLoaded", (event) => {
-    const tab_groups = document.querySelectorAll("div.tabbed-blocks");
+    const tab_groups = document.querySelectorAll(blocks_selector);
     tab_groups.forEach(addTabsToGroup);
 });
+
+})();
