@@ -30,3 +30,62 @@ You can suggest modifications and new content by:
 You can also edit any page by clicking the "Suggest an edit" button (<i class="fa fa-edit"></i>) in the top-right corner.
 This will start the process described above by forking the book repository.
 ```
+
+## Adding tabbed code blocks
+
+You can display multiple code blocks as a tabbed group by enclosing them in a `<div class="tabbed-blocks"> ... </div>` container.
+For example:
+
+~~~md
+<div class="tabbed-blocks">
+
+```python
+print("Hello world")
+```
+
+```R
+cat("Hello world\n")
+```
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello World";
+    return 0;
+}
+```
+
+```sh
+echo "Hello world"
+```
+
+</div>
+~~~
+
+produces:
+
+<div class="tabbed-blocks">
+
+```python
+print("Hello world")
+```
+
+```R
+cat("Hello world\n")
+```
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello World";
+    return 0;
+}
+```
+
+```sh
+echo "Hello world"
+```
+
+</div>
