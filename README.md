@@ -18,7 +18,7 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 To build this book, you must have the following programs installed:
 
 - [mdBook 0.4.18](https://github.com/rust-lang/mdBook/releases/tag/v0.4.18)
-- [mdbook-admonish 1.5.0](https://github.com/tommilligan/mdbook-admonish/releases/tag/v1.5.0)
+- [mdbook-admonish 1.6.0](https://github.com/tommilligan/mdbook-admonish/releases/tag/v1.6.0)
 - [mdbook-linkcheck 0.7.6](https://github.com/Michael-F-Bryan/mdbook-linkcheck/releases/tag/v0.7.6)
 
 ## Building the book
