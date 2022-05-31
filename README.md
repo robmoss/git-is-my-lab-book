@@ -13,15 +13,23 @@ You can [view this book online][book].
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][license].
 
+## Requirements
+
+To build this book, you must have the following programs installed:
+
+- [mdBook 0.4.18](https://github.com/rust-lang/mdBook/releases/tag/v0.4.18)
+- [mdbook-admonish 1.6.0](https://github.com/tommilligan/mdbook-admonish/releases/tag/v1.6.0)
+- [mdbook-linkcheck 0.7.6](https://github.com/Michael-F-Bryan/mdbook-linkcheck/releases/tag/v0.7.6)
+
 ## Building the book
 
-You can build this book by installing [mdBook](https://rust-lang.github.io/mdBook/), [mdbook-admonish](https://github.com/tommilligan/mdbook-admonish/), and [mdbook-linkcheck](https://github.com/Michael-F-Bryan/mdbook-linkcheck), and running the following command in this directory:
+You can view this book in your browser by running the following command in this directory:
 
 ```shell
-mdbook build
+mdbook serve --open
 ```
 
-You can then open `book/html/index.html` in your browser.
+This will automatically rebuild the book whenever you edit the contents.
 
 [book]: https://robmoss.github.io/git-is-my-lab-book/
 [license]: http://creativecommons.org/licenses/by-sa/4.0/
