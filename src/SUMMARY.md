@@ -31,6 +31,8 @@
   - [Where did this problem come from?](using-git/where-did-this-problem-come-from.md)
   - [How to use branches?](using-git/how-to-use-branches.md)
   - [How to resolve merge conflicts?](using-git/how-to-resolve-merge-conflicts.md)
+  - [Exercise: create a local repository](using-git/exercise-create-a-local-repository.md)
+  - [Exercise: use a remote repository](using-git/exercise-use-a-remote-repository.md)
   - [Exercise: resolve a merge conflict](using-git/exercise-resolve-a-merge-conflict.md)
 
 - [Collaborating](collaborating/README.md)

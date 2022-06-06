@@ -72,12 +72,16 @@ You can then compare your results to the most recent commit on the `master` bran
 You may find it helpful to inspect the commits in each of the feature branches to understand how they have changed the files in which the conflicts have occurred.
 ```
 
+## Self evaluation
+
 Once you have created a commit that resolves these conflicts, see how similar or different the contents of your commit are to the corresponding commit in the master branch (which has been tagged `second_milestone`).
 You can inspect this commit by running:
 
 ```sh
 git show second_milestone
 ```
+
+How does your resolution compare to this commit?
 
 ```admonish note
 You may have resolved the conflicts differently to the `second_milestone` commit, **and that's perfectly fine** as long as they have the same effect.
