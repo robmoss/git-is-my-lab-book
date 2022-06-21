@@ -3,6 +3,10 @@
 This page defines the learning objectives for individual sections.
 These are skills that the reader should be able to demonstrate after reading through the relevant section, and completing any exercises in that section.
 
+## Version control concepts
+
+After completing [this section](version-control/), you should be ale to identify how to apply version control concepts to some of your existing work.
+
 ## Effective use of git
 
 After completing [this section](using-git/), you should be able to:

@@ -13,6 +13,7 @@
   - [What is a tag?](version-control/what-is-a-tag.md)
   - [What is a branch?](version-control/what-is-a-branch.md)
   - [What is a merge conflict?](version-control/what-is-a-merge-conflict.md)
+  - [Exercise: using version control](version-control/exercise-using-version-control.md)
 
 - [Effective use of git](using-git/README.md)
   - [Graphical Git clients](using-git/graphical-git-clients.md)
