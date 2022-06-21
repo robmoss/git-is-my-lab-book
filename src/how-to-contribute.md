@@ -31,6 +31,12 @@ You can also edit any page by clicking the "Suggest an edit" button (<i class="f
 This will start the process described above by forking the book repository.
 ```
 
+```admonish tip
+When editing Markdown content, please **write each sentence on a separate line**.
+
+This ensures that each commit will contain only the modified sentences, and makes it easier to inspect the repository history.
+```
+
 ## Adding tabbed code blocks
 
 You can display multiple code blocks as a tabbed group by enclosing them in a `<div class="tabbed-blocks"> ... </div>` container.
