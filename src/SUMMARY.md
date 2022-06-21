@@ -43,6 +43,13 @@
   - [Coding style guides](collaborating/coding-style-guides.md)
   - [Continuous integration](collaborating/continuous-integration.md)
 
+- [Reproducibility](reproducibility/README.md)
+  - [What is reproducible research?]()
+  - [Generating reproducible outputs]()
+  - [Ensuring that outputs are reproducible]()
+  - [Ensuring that output are up to date]()
+  - [Reproducible supplementary materials]()
+
 - [Testing](testing/README.md)
   - [What are tests for?]()
   - [Unit tests]()
@@ -50,13 +57,6 @@
   - [Regression tests]()
   - [Testing stochastic models]()
   - [I found a bug, now what?]()
-
-- [Reproducibility](reproducibility/README.md)
-  - [What is reproducible research?]()
-  - [Generating reproducible outputs]()
-  - [Ensuring that outputs are reproducible]()
-  - [Ensuring that output are up to date]()
-  - [Reproducible supplementary materials]()
 
 - [Cloud and HPC platforms](high-performance-computing/README.md)
   - [Available platforms]()
