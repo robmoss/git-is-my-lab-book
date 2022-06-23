@@ -15,6 +15,16 @@
 
 - The Software Carpentry Foundation publishes [many lessons](https://software-carpentry.org/lessons/), including [Version Control with Git](https://swcarpentry.github.io/git-novice/).
 
+## Performing peer code review
+
+- [The Art of Giving and Receiving Code Reviews (Gracefully)](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/)
+
+- [Code Review in the Lab](https://ropensci.org/blog/2018/11/29/codereview/)
+
+- [Scientific Code Review](https://uwescience.github.io/neuroinformatics/2017/10/08/code-review.html)
+
+- [The 5 Golden Rules of Code Review](https://www.semasoftware.com/blog/the-5-golden-rules-of-code-reviews)
+
 ## High-performance computing platforms
 
 - [How to access the ARDC Nectar Research Cloud](https://ardc.edu.au/services/nectar-research-cloud/how-to-access-the-ardc-nectar-research-cloud/)
