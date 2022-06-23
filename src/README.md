@@ -12,7 +12,7 @@ These materials are divided into the following sections:
 
 3. Using Git to [collaborate with colleagues](./collaborating/) in a precisely controlled and manageable way.
 
-4. Using [testing frameworks](./testing/) to verify that your code behaves as intended, and to automatically detect when you introduce a bug or mistake into your code.
+4. Using [testing frameworks](./testing/testing-testing-frameworks.md) to verify that your code behaves as intended, and to automatically detect when you introduce a bug or mistake into your code.
 
 5. Ensuring that your research is [reproducible by others](./reproducibility/).
 
