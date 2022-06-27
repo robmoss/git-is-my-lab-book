@@ -33,7 +33,7 @@ Once you've installed Git, you should define some important settings before you 
    git config --global merge.ff no
    ```
 
-   This prevents Git from ["fast-forwarding"](http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) when the destination branch contains no new commits.
+   This prevents Git from ["fast-forwarding"](https://www.atlassian.com/git/tutorials/using-branches/git-merge) when the destination branch contains no new commits.
    For example, it ensures that when you merge the green branch into the blue branch (as shown below) it records that commits *D*, *E*, and *F* came from the green branch.
 
    ![Merged branch](../version-control/branch-3.png)
