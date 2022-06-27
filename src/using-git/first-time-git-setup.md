@@ -26,3 +26,14 @@ Once you've installed Git, you should define some important settings before you 
    ```sh
    git config --global init.defaultBranch main
    ```
+
+4. Ensure that repository histories always record when branches were merged:
+
+   ```sh
+   git config --global merge.ff no
+   ```
+
+   This prevents Git from ["fast-forwarding"](https://www.atlassian.com/git/tutorials/using-branches/git-merge) when the destination branch contains no new commits.
+   For example, it ensures that when you merge the green branch into the blue branch (as shown below) it records that commits *D*, *E*, and *F* came from the green branch.
+
+   ![Merged branch](../version-control/branch-3.png)
