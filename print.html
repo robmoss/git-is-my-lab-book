@@ -1,0 +1,2150 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Git is my lab book</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="mdbook-admonish.css">
+        <link rel="stylesheet" href="tabbed-code-blocks.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item affix "><a href="prerequisites.html">Prerequisites</a></li><li class="chapter-item "><a href="version-control/index.html"><strong aria-hidden="true">1.</strong> Version control concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="version-control/what-is-version-control.html"><strong aria-hidden="true">1.1.</strong> What is version control?</a></li><li class="chapter-item "><a href="version-control/what-is-a-repository.html"><strong aria-hidden="true">1.2.</strong> What is a repository?</a></li><li class="chapter-item "><a href="version-control/what-is-a-commit.html"><strong aria-hidden="true">1.3.</strong> What is a commit?</a></li><li class="chapter-item "><a href="version-control/what-should-I-commit.html"><strong aria-hidden="true">1.4.</strong> What should I commit?</a></li><li class="chapter-item "><a href="version-control/how-do-I-write-a-commit-message.html"><strong aria-hidden="true">1.5.</strong> How do I write a commit message?</a></li><li class="chapter-item "><a href="version-control/what-is-a-tag.html"><strong aria-hidden="true">1.6.</strong> What is a tag?</a></li><li class="chapter-item "><a href="version-control/what-is-a-branch.html"><strong aria-hidden="true">1.7.</strong> What is a branch?</a></li><li class="chapter-item "><a href="version-control/what-is-a-merge-conflict.html"><strong aria-hidden="true">1.8.</strong> What is a merge conflict?</a></li></ol></li><li class="chapter-item "><a href="using-git/index.html"><strong aria-hidden="true">2.</strong> Effective use of git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="using-git/graphical-git-clients.html"><strong aria-hidden="true">2.1.</strong> Graphical Git clients</a></li><li class="chapter-item "><a href="using-git/first-time-git-setup.html"><strong aria-hidden="true">2.2.</strong> First-time Git setup</a></li><li class="chapter-item "><a href="using-git/creating-a-repository.html"><strong aria-hidden="true">2.3.</strong> Creating a repository</a></li><li class="chapter-item "><a href="using-git/cloning-an-existing-repository.html"><strong aria-hidden="true">2.4.</strong> Cloning an existing repository</a></li><li class="chapter-item "><a href="using-git/how-to-structure-a-repository.html"><strong aria-hidden="true">2.5.</strong> How to structure a repository</a></li><li class="chapter-item "><a href="using-git/choosing-a-license.html"><strong aria-hidden="true">2.6.</strong> Choosing a license</a></li><li class="chapter-item "><a href="using-git/creating-a-commit.html"><strong aria-hidden="true">2.7.</strong> Creating a commit</a></li><li class="chapter-item "><a href="using-git/creating-a-remote-repository.html"><strong aria-hidden="true">2.8.</strong> Creating a remote repository</a></li><li class="chapter-item "><a href="using-git/pushing-and-pulling-commits.html"><strong aria-hidden="true">2.9.</strong> Pushing and pulling commits</a></li><li class="chapter-item "><a href="using-git/how-to-ignore-certain-files.html"><strong aria-hidden="true">2.10.</strong> How to ignore certain files</a></li><li class="chapter-item "><a href="using-git/how-to-create-and-use-tags.html"><strong aria-hidden="true">2.11.</strong> How to create and use tags</a></li><li class="chapter-item "><a href="using-git/inspecting-your-history.html"><strong aria-hidden="true">2.12.</strong> Inspecting your history</a></li><li class="chapter-item "><a href="using-git/where-did-this-line-come-from.html"><strong aria-hidden="true">2.13.</strong> Where did this line come from?</a></li><li class="chapter-item "><a href="using-git/where-did-this-problem-come-from.html"><strong aria-hidden="true">2.14.</strong> Where did this problem come from?</a></li><li class="chapter-item "><a href="using-git/how-to-use-branches.html"><strong aria-hidden="true">2.15.</strong> How to use branches?</a></li><li class="chapter-item "><a href="using-git/how-to-resolve-merge-conflicts.html"><strong aria-hidden="true">2.16.</strong> How to resolve merge conflicts?</a></li><li class="chapter-item "><a href="using-git/exercise-resolve-a-merge-conflict.html"><strong aria-hidden="true">2.17.</strong> Exercise: resolve a merge conflict</a></li></ol></li><li class="chapter-item "><a href="collaborating/index.html"><strong aria-hidden="true">3.</strong> Collaborating</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="collaborating/collaborating-on-code.html"><strong aria-hidden="true">3.1.</strong> Collaborating on code</a></li><li class="chapter-item "><a href="collaborating/collaborating-on-a-paper.html"><strong aria-hidden="true">3.2.</strong> Collaborating on a paper</a></li><li class="chapter-item "><a href="collaborating/sharing-a-repository.html"><strong aria-hidden="true">3.3.</strong> Sharing a repository</a></li><li class="chapter-item "><a href="collaborating/sharing-a-branch.html"><strong aria-hidden="true">3.4.</strong> Sharing a branch</a></li><li class="chapter-item "><a href="collaborating/merge-pull-requests.html"><strong aria-hidden="true">3.5.</strong> Merge/Pull requests</a></li><li class="chapter-item "><a href="collaborating/an-example-pull-request.html"><strong aria-hidden="true">3.6.</strong> An example pull request</a></li><li class="chapter-item "><a href="collaborating/peer-code-review.html"><strong aria-hidden="true">3.7.</strong> Peer code review</a></li><li class="chapter-item "><a href="collaborating/coding-style-guides.html"><strong aria-hidden="true">3.8.</strong> Coding style guides</a></li><li class="chapter-item "><a href="collaborating/continuous-integration.html"><strong aria-hidden="true">3.9.</strong> Continuous integration</a></li></ol></li><li class="chapter-item "><a href="reproducibility/index.html"><strong aria-hidden="true">4.</strong> Reproducibility</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">4.1.</strong> What is reproducible research?</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.2.</strong> Generating reproducible outputs</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.3.</strong> Ensuring that outputs are reproducible</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.4.</strong> Ensuring that output are up to date</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.5.</strong> Reproducible supplementary materials</div></li></ol></li><li class="chapter-item "><a href="testing/index.html"><strong aria-hidden="true">5.</strong> Testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">5.1.</strong> What are tests for?</div></li><li class="chapter-item "><div><strong aria-hidden="true">5.2.</strong> Unit tests</div></li><li class="chapter-item "><div><strong aria-hidden="true">5.3.</strong> Integration tests</div></li><li class="chapter-item "><div><strong aria-hidden="true">5.4.</strong> Regression tests</div></li><li class="chapter-item "><div><strong aria-hidden="true">5.5.</strong> Testing stochastic models</div></li><li class="chapter-item "><div><strong aria-hidden="true">5.6.</strong> I found a bug, now what?</div></li></ol></li><li class="chapter-item "><a href="high-performance-computing/index.html"><strong aria-hidden="true">6.</strong> Cloud and HPC platforms</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">6.1.</strong> Available platforms</div></li><li class="chapter-item "><div><strong aria-hidden="true">6.2.</strong> Synchronising code and outputs</div></li><li class="chapter-item "><div><strong aria-hidden="true">6.3.</strong> Making one thing run faster</div></li><li class="chapter-item "><div><strong aria-hidden="true">6.4.</strong> Running many things at the same time</div></li></ol></li><li class="chapter-item "><a href="case-studies/index.html"><strong aria-hidden="true">7.</strong> Case studies</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="case-studies/moss-pypfilt-earlier-states.html"><strong aria-hidden="true">7.1.</strong> Fixing a bug in pypfilt</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><a href="how-to-contribute.html">How to contribute</a></li><li class="chapter-item affix "><a href="contributors.html">Contributors</a></li><li class="chapter-item affix "><a href="references.html">References</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Git is my lab book</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/robmoss/git-is-my-lab-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>These materials aim to support
+early- and mid-career researchers (EMCRs) in the
+<a href="https://www.spectrum.edu.au/">SPECTRUM</a> and <a href="https://www.spark.edu.au/">SPARK</a> networks to develop their computing skills, and to make effective use of available tools<sup class="footnote-reference"><a href="#tools">1</a></sup> and infrastructure<sup class="footnote-reference"><a href="#infra">2</a></sup>.</p>
+<p>These materials are divided into the following sections:</p>
+<ol>
+<li>
+<p>Understanding <a href="./version-control/">version control</a>, which provides you with a complete and annotated history of your work, and with powerful ways to search and examine this history.</p>
+</li>
+<li>
+<p>Learning to use <a href="./using-git/">Git</a>, the most widely used version control system, which is the foundation of popular code-hosting services such as <a href="https://github.com/">GitHub</a>, <a href="https://gitlab.com/public">GitLab</a>, and <a href="https://bitbucket.org/">Bitbucket</a>.</p>
+</li>
+<li>
+<p>Using Git to <a href="./collaborating/">collaborate with colleagues</a> in a precisely controlled and manageable way.</p>
+</li>
+<li>
+<p>Ensuring that your research is <a href="./reproducibility/">reproducible by others</a>.</p>
+</li>
+<li>
+<p>Using <a href="./testing/">testing frameworks</a> to verify that your code behaves as intended, and to automatically detect when you introduce a bug or mistake into your code.</p>
+</li>
+<li>
+<p>Running your code on various <a href="">computing platforms</a> that allow you to obtain results efficiently and without relying on your own laptop/computer.</p>
+</li>
+<li>
+<p><a href="./case-studies/">Case studies</a> where EMCRs showcase how their research activities are enabled and/or supported by these tools.</p>
+</li>
+</ol>
+<h2 id="how-to-contribute"><a class="header" href="#how-to-contribute">How to contribute</a></h2>
+<p>If you have any comments, feedback, or suggestions, please see the <a href="how-to-contribute.html">How to contribute</a> page.</p>
+<h2 id="license"><a class="header" href="#license">License</a></h2>
+<p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+<!-- NOTE: cannot link to README.md outside of SUMMARY.md
+     https://github.com/rust-lang/mdBook/issues/984 -->
+<div class="footnote-definition" id="tools"><sup class="footnote-definition-label">1</sup>
+<p>Such as <a href="./version-control/">version control</a> and <a href="./testing/">testing frameworks</a>.</p>
+</div>
+<div class="footnote-definition" id="infra"><sup class="footnote-definition-label">2</sup>
+<p>Such as the <a href="https://ardc.edu.au/services/nectar-research-cloud/">ARDC Nectar Research Cloud</a> and <a href="https://dashboard.hpc.unimelb.edu.au/">Spartan</a>.</p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h1>
+<p>These materials assume that the reader has a basic knowledge of the Bash command-line shell and using SSH to connect to remote computers.</p>
+<p>Please refer to the following materials for further details:</p>
+<ul>
+<li><a href="https://swcarpentry.github.io/shell-novice/">The Unix Shell</a>: an introduction to using Bash.</li>
+<li><a href="https://carpentries-incubator.github.io/shell-extras/">Extra Unix Shell Material</a>: additional shell lessons, including SSH.</li>
+</ul>
+<p>Some chapters also assume that the reader has an account on <a href="https://github.com/">GitHub</a> and has <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">added an SSH key</a> to their account.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="version-control-concepts"><a class="header" href="#version-control-concepts">Version control concepts</a></h1>
+<p>This section provides a high-level introduction to the concepts that you should understand in order to make effective use of version control.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="version-control/index.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>Version control can turn your files into a lab book that captures the broader context of your research activities and that you can easily search and reproduce.</p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-version-control"><a class="header" href="#what-is-version-control">What is version control?</a></h1>
+<p>Version control is a way of systematically recording changes to files (such as computer code and data files).
+This allows you to restore any previous version of a file.
+More importantly, this history of changes can be queried, and each set of changes can include additional information, such as who made the changes and an explanation of why the changes were made.</p>
+<blockquote>
+<p>A core component of making great decisions is understanding the rationale behind previous decisions.
+If we don't understand how we got &quot;here&quot;, we run the risk of making things much worse.</p>
+<p>— <a href="https://fs.blog/chestertons-fence/">Chesterton's Fence</a></p>
+</blockquote>
+<p>For academic research activities that involve data analysis or simulation modelling, some key uses of version control are:</p>
+<ul>
+<li>
+<p>You can use it as a <strong>log book</strong>, and capture a detailed and permanent record of every step of your research.
+This is extremely helpful for people — <strong>including you!</strong> — who want to understand and make use of your work.</p>
+</li>
+<li>
+<p>You can <strong>collaborate</strong> with others in a systematic way, ensuring that everyone has access to the most recent files and data, and review everyone's contributions.</p>
+</li>
+<li>
+<p>You can <strong>inspect the changes</strong> made over a period of interest (e.g., &quot;What have I done in the last week?&quot;).</p>
+</li>
+<li>
+<p>You can <strong>identify when a specific change occurred</strong>, and what other changes were made at the same time (e.g., &quot;What changes did I make that affected this output figure?&quot;).</p>
+</li>
+</ul>
+<p>In this book we will focus on the <a href="https://git-scm.com/">Git</a> version control system, which is used by popular online platforms such as <a href="https://github.com/">GitHub</a>, <a href="https://gitlab.com/public">GitLab</a>, and <a href="https://bitbucket.org/">Bitbucket</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-a-repository"><a class="header" href="#what-is-a-repository">What is a repository?</a></h1>
+<p>A repository records a set of files managed by a version control system, including the historical record of changes made to these files.</p>
+<p>You can create as many repositories as you want.
+Each repository should be a single &quot;thing&quot;, such as a research project or a journal article, and should be located in a separate directory.</p>
+<p>You will generally have at least two copies of each repository:</p>
+<ol>
+<li>
+<p>A <strong>local repository</strong> on your computer; and</p>
+</li>
+<li>
+<p>A <strong>remote repository</strong> on a service such as GitHub, or a University-provided platform (such as the University of Melbourne's <a href="https://gitlab.unimelb.edu.au/">GitLab instance</a>).</p>
+</li>
+</ol>
+<p>You make changes in your local repository and &quot;push&quot; them to the remote repository.
+You can share this remote repository with your collaborators and supervisors, and they will be able to see all of the changes that you have pushed.</p>
+<p>You can also allow collaborators to push their own changes to the remote repository, and then &quot;pull&quot; them into your local repository.
+This is one way in which you can use version control to work collaboratively on a project.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-a-commit"><a class="header" href="#what-is-a-commit">What is a commit?</a></h1>
+<p>A &quot;commit&quot; is a set of changes to one or more files in a repository.
+These changes can include:</p>
+<ul>
+<li>Adding lines to a file;</li>
+<li>Removing lines from a file;</li>
+<li>Changing lines in a file;</li>
+<li>Adding new files; and</li>
+<li>Deleting existing files.</li>
+</ul>
+<p>Each commit also includes the date and time that it was created, the user that created it, and a <a href="version-control/how-do-I-write-a-commit-message.html">commit message</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-should-i-commit"><a class="header" href="#what-should-i-commit">What should I commit?</a></h1>
+<p>A commit should represent a <strong>unit of work</strong>.</p>
+<p>If you've made changes that represent multiple units of work (e.g., changing how input data are processed, and adding a new model parameter) these should be saved as separate commits.</p>
+<p>Try describing out loud the changes you have made, and if you find yourself saying something like &quot;I did X and Y and Z&quot;, then the changes should probably divided into multiple commits.</p>
+<p>A helpful guideline is &quot;<strong>commit early, commit often</strong>&quot;.</p>
+<h2 id="commit-early"><a class="header" href="#commit-early">Commit early</a></h2>
+<ul>
+<li>
+<p>Don't delay creating a commit because &quot;it's not ready yet&quot;.</p>
+</li>
+<li>
+<p>A commit doesn't have to be &quot;perfect&quot;.</p>
+</li>
+</ul>
+<h2 id="commit-often"><a class="header" href="#commit-often">Commit often</a></h2>
+<ul>
+<li>
+<p>Small, focused commits are <strong>extremely helpful</strong> when trying to identify the cause of an unintended change in your code's behaviour or output.</p>
+</li>
+<li>
+<p>There is no such thing as too many commits.</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-do-i-write-a-commit-message"><a class="header" href="#how-do-i-write-a-commit-message">How do I write a commit message?</a></h1>
+<p>Commit messages are shown as part of the repository history (e.g., when running <code>git log</code>).
+Each message consists of a short one-line description, followed by as much or as little text as required.</p>
+<p>You should treat these messages as <strong>entries in a log book</strong>.
+Explain what changes were made and <strong>why</strong> they were made.
+This can help collaborators understand what we have done, but more importantly is acts as a record for our future selves.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="version-control/how-do-I-write-a-commit-message.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>Have you ever looked at code you wrote a long time ago <em>and wondered what you were thinking?</em></p>
+<p>A history of detailed commit messages should allow you to answer this question!</p>
+<p>Remember that <strong>code is harder to read than it is to write</strong> (<a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/">Joel Spolsky</a>).</p>
+</div>
+</div>
+<p>For example, rather than writing:</p>
+<blockquote>
+<p>Added model</p>
+</blockquote>
+<p>You could write something like:</p>
+<blockquote>
+<p>Implemented the initial model</p>
+<p>This model includes all of the core features that we need to fit the data,
+but there several other features that we intend to add:</p>
+<p>- Parameter X is currently constant, but we may need to allow it to vary
+over time;</p>
+<p>- Parameter Y should probably be a hyperparameter; and</p>
+<p>- The population includes age-structured mixing, but we need to also include
+age-specific outcomes, even though there is very little data to suggest
+what the age effects might be.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-a-tag"><a class="header" href="#what-is-a-tag">What is a tag?</a></h1>
+<p>A tag is a short, unique name that identifies a specific commit.
+You can use tags as bookmarks for interesting or important commits.
+Common uses of tags include:</p>
+<ul>
+<li>
+<p>Identifying manuscript revisions: <code>draft-1</code>, <code>submitted-version</code>, <code>revision-1</code>, etc.</p>
+</li>
+<li>
+<p>Identifying software package versions: <code>v1.0</code>, <code>v1.1</code>, <code>v2.0</code>, etc.</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-a-branch"><a class="header" href="#what-is-a-branch">What is a branch?</a></h1>
+<p>A branch allows you create a series of commits that are separate from the main history of your repository.
+They can be used for units of work that are too large to be a single commit.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="version-control/what-is-a-branch.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>It is easy to switch between branches!
+You can work on multiple ideas or tasks in parallel.</p>
+</div>
+</div>
+<p>Consider a repository with three commits: commit A, followed by commit B, followed by commit C:</p>
+<p><img src="version-control/branch-1.png" alt="A single branch" /></p>
+<p>At this point, you might consider two ways to implement a new model feature.
+One way to do this is to create a separate branch for each implementation:</p>
+<p><img src="version-control/branch-2.png" alt="Multiple branches" /></p>
+<p>You can work on each branch, <strong>and switch between them</strong>, in the same local repository.</p>
+<p>If you decide that the first implementation (the green branch) is the best way to proceed, you can then <strong>merge</strong> this branch back into your main branch.
+This means that your main branch now contains six commits (A to F), and you can continue adding new commits to your main branch:</p>
+<p><img src="version-control/branch-3.png" alt="Merged branch" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-a-merge-conflict"><a class="header" href="#what-is-a-merge-conflict">What is a merge conflict?</a></h1>
+<p>In <a href="version-control/what-is-a-branch.html">What is a branch?</a> we presented an example of successfully merging a branch into another.
+However, when we try to merge one branch into another, we may find that the two branches have conflicting changes.
+This is known as a <strong>merge conflict</strong>.</p>
+<p>Consider two branches that make conflicting changes to the same line of a file:</p>
+<ol>
+<li>
+<pre><code class="language-diff"> First line
+-Second line
++My new second line
+ Third line
+</code></pre>
+</li>
+<li>
+<pre><code class="language-diff"> First line
+-Second line
++A different second line
+ Third line
+</code></pre>
+</li>
+</ol>
+<p>There is no way to automatically reconcile these two branches, and <strong>we have to fix this conflict manually</strong>.
+This means that we need to decide what the true result should be, edit the file to resolve these conflicting changes, and commit our modifications.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="effective-use-of-git"><a class="header" href="#effective-use-of-git">Effective use of git</a></h1>
+<p>This section shows how to use the <code>git</code> command-line program to record your work, to inspect your commit history, and to search this commit history to identify commits that make specific changes or have specific effects.</p>
+<div id="admonition-reminder" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/index.html#admonition-reminder">
+<p>Reminder</p>
+</a>
+</div>
+<div>
+<p>Remember to <a href="using-git/../version-control/what-should-I-commit.html">commit early and commit often</a>.
+<strong>Do not wait</strong> until your code is &quot;perfect&quot;.</p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="graphical-git-clients"><a class="header" href="#graphical-git-clients">Graphical Git clients</a></h1>
+<p>While Git is a command-line program, there are other ways to work with Git repositories:</p>
+<ul>
+<li>
+<p>There are many <a href="https://git-scm.com/downloads/guis">graphical clients</a> that you can download and use;</p>
+</li>
+<li>
+<p>Many editors include Git support (e.g., <a href="https://atom.io/">Atom</a>, <a href="https://www.rstudio.com/">RStudio</a>, <a href="https://code.visualstudio.com/">Visual Studio Code</a>); and</p>
+</li>
+<li>
+<p>Online platforms such as <a href="https://github.com/">GitHub</a>, <a href="https://gitlab.com/public">GitLab</a>, and <a href="https://bitbucket.org/">Bitbucket</a> also provide a graphical interface for common Git actions.</p>
+</li>
+</ul>
+<p>In this book we will primarily show how to use Git <strong>from the command-line</strong>, but all of the concepts and terminology should also apply to all of the tools described above.
+If you don't have Git already installed on your computer, see these <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">instructions for installing Git</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="first-time-git-setup"><a class="header" href="#first-time-git-setup">First-time Git setup</a></h1>
+<p>Once you've installed Git, you should define some important settings before you starting using Git.</p>
+<ol>
+<li>
+<p>Define your user name and email address.
+These details are included in <strong>every commit that you create</strong>.</p>
+<pre><code class="language-sh">git config --global user.name &quot;My Name&quot;
+git config --global user.email &quot;my.name@some-university.edu.au&quot;
+</code></pre>
+</li>
+<li>
+<p>Define the text editor that Git should use for tasks such as writing commit messages:</p>
+<pre><code class="language-sh">git config --global core.editor editor-name
+</code></pre>
+<p><strong>NOTE:</strong> on Windows you need to specify the full path to the editor:</p>
+<pre><code class="language-sh">git config --global core.editor &quot;C:/Program Files/My Editor/editor.exe&quot;
+</code></pre>
+</li>
+<li>
+<p>By default, Git will create a branch called <code>master</code> when you create a new repository.
+You can set a different name for this initial branch:</p>
+<pre><code class="language-sh">git config --global init.defaultBranch main
+</code></pre>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-repository"><a class="header" href="#creating-a-repository">Creating a repository</a></h1>
+<p>You can create repositories by running <code>git init</code>.
+This will create a <code>.git</code> directory that will contain all of the repository information.</p>
+<p>There are two common ways to use <code>git init</code>:</p>
+<ol>
+<li>
+<p>Create an empty repository <strong>in the current directory</strong>, by running:</p>
+<pre><code class="language-sh">git init
+</code></pre>
+</li>
+<li>
+<p>Create an empty repository <strong>in a specific directory</strong>, by running:</p>
+<pre><code class="language-sh">git init path/to/repository
+</code></pre>
+</li>
+</ol>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/creating-a-repository.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>Git will create the repository directory if it does not exist.</p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloning-an-existing-repository"><a class="header" href="#cloning-an-existing-repository">Cloning an existing repository</a></h1>
+<p>If there is an existing repository that you want to work on, you can &quot;clone&quot; the repository and have a local copy.
+To do this, you need to know the remote repository's URL.</p>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/cloning-an-existing-repository.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>For GitHub repositories, there should be a green button labelled &quot;Code&quot;.
+Click on this button, and it will provide you with the URL.</p>
+</div>
+</div>
+<p>You can then make a local copy of the repository by running:</p>
+<pre><code class="language-sh">git clone URL
+</code></pre>
+<p>For example, to make a local copy of this book, run the following command:</p>
+<pre><code class="language-sh">git clone https://github.com/robmoss/git-is-my-lab-book.git
+</code></pre>
+<p>This will create a local copy in the directory <code>git-is-my-lab-book</code>.</p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/cloning-an-existing-repository.html#admonition-note">
+<p>Note</p>
+</a>
+</div>
+<div>
+<p>If you have a GitHub account and have set up an SSH key, you can clone GitHub repositories using your SSH key.
+This will allow you to push commits to the remote repository (if you are permitted to do so) without having to enter your user name and password.</p>
+<p>You can obtain the SSH URL from GitHub by clicking on the green &quot;Code&quot; button, and selecting the &quot;SSH&quot; tab.</p>
+<p>For example, to make a local copy of this book using SSH, run the following command:</p>
+<pre><code class="language-sh">git clone git@github.com:robmoss/git-is-my-lab-book.git
+</code></pre>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-structure-a-repository"><a class="header" href="#how-to-structure-a-repository">How to structure a repository</a></h1>
+<p>While there is no single &quot;best&quot; way to structure a repository, there are some guidelines that you can follow.
+The key aims are to ensure that your files are logically organised, and that others can easily navigate the repository.</p>
+<h2 id="divide-your-repository-into-multiple-directories"><a class="header" href="#divide-your-repository-into-multiple-directories">Divide your repository into multiple directories</a></h2>
+<p>It is generally a good idea to have separate directories for different types of files.
+For example, your repository might contain any of these different file types, and you should at least consider storing each of them in a separate directory:</p>
+<ul>
+<li>Input data files (which you may have received from a collaborator);</li>
+<li>Cleaned and/or processed input files (e.g., if you aggregate the input data before using it);</li>
+<li>Data analysis code;</li>
+<li>Simulation/model code;</li>
+<li>Output data files;</li>
+<li>Plotting scripts that extract results from the output data files;</li>
+<li>Output figures produced by the plotting scripts; and</li>
+<li>Manuscript text and bibliography files.</li>
+</ul>
+<h2 id="use-descriptive-names-for-directories-and-files"><a class="header" href="#use-descriptive-names-for-directories-and-files">Use descriptive names for directories and files</a></h2>
+<p>Choosing file names that indicate what each file/directory contains can help other people, such as your collaborators, navigate your repository.
+They can also <strong>help you</strong> when you return to a project after several weeks or months.</p>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/how-to-structure-a-repository.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>Have you ever asked yourself &quot;where is the file that contains X&quot;?</p>
+<p>Use descriptive file names, and the answer might be right in front of you!</p>
+</div>
+</div>
+<h2 id="include-a-readme-file"><a class="header" href="#include-a-readme-file">Include a <code>README</code> file</a></h2>
+<p>You can write this in Markdown (<code>README.md</code>), in plain text (<code>README</code> or <code>README.txt</code>), or in any other suitable format.
+For example, Python projects often use reStructuredText and have a <code>README.rst</code> file.</p>
+<p>This file should begin with a brief description of <strong>why</strong> the repository was created and <strong>what</strong> it contains.</p>
+<p>Importantly, this file should also mention:</p>
+<ul>
+<li>
+<p>How the files and directories are arranged.
+Help your collaborators understand where they need to look in order to find something.</p>
+</li>
+<li>
+<p>How to run important pieces of code (e.g., to generate output data files or figures).</p>
+</li>
+<li>
+<p>The software packages and/or libraries that are required run any of the code in this repository.</p>
+</li>
+<li>
+<p>The <a href="using-git/choosing-a-license.html">license</a> (if any) under which the repository contents are being made available.</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="choosing-a-license"><a class="header" href="#choosing-a-license">Choosing a license</a></h1>
+<p>A license specifies the conditions under which others may use, modify, and/or distribute your work.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/choosing-a-license.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>Simply making a repository publicly accessible is <strong>not sufficient</strong> to allow others to make use of your work.
+Unless you include a license that specifies otherwise, <a href="https://choosealicense.com/no-permission/">nobody else</a> can copy, distribute, or modify your work.</p>
+</div>
+</div>
+<p>There are many different types of licenses that you can use, and the number of options can seem overwhelming.
+But it is usually straightforward to narrow down your options.</p>
+<ul>
+<li>
+<p>If you're working on an <strong>existing project</strong>, the easiest option is to use that project's license.</p>
+</li>
+<li>
+<p>If you're working with an <strong>existing community</strong>, they may have a <a href="https://choosealicense.com/community/">preferred license</a>.</p>
+</li>
+<li>
+<p>If you want to choose an <strong>open source license</strong>, the <a href="https://choosealicense.com/">Choose an open source license</a> website  provides advice for selecting a license that meets your needs.</p>
+</li>
+</ul>
+<p>For further information about the various types of available licenses, and some advice for selecting a suitable license for academic software, see <a href="https://doi.org/10.1371/journal.pcbi.1002598">A Quick Guide to Software Licensing for the Scientist-Programmer</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-commit"><a class="header" href="#creating-a-commit">Creating a commit</a></h1>
+<p>Creating a commit involves two steps:</p>
+<ol>
+<li>
+<p>Identify the changes that should be included in the commit.
+These changes are then &quot;staged&quot; and ready to be included in the next commit.</p>
+</li>
+<li>
+<p>Create a new commit that records these staged changes.
+This should be accompanied by <a href="using-git/../version-control/how-do-I-write-a-commit-message.html">a useful commit message</a>.</p>
+</li>
+</ol>
+<p>We will now show how to perform these steps.</p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-note">
+<p>Note</p>
+</a>
+</div>
+<div>
+<p>At any time, you can see a summary of the changes in your repository, and which ones are staged to be committed, by running:</p>
+<pre><code class="language-sh">git status
+</code></pre>
+<p>This will show you:</p>
+<ol>
+<li>The files (if any) that contain changes that have been staged;</li>
+<li>The files (if any) that contain changes that have not been staged; and</li>
+<li>The files (if any) that are not recorded in the repository history.</li>
+</ol>
+</div>
+</div>
+<h2 id="adding-a-new-file"><a class="header" href="#adding-a-new-file">Adding a new file</a></h2>
+<p>If you've created a new file, you can include this file in the next commit by running:</p>
+<pre><code class="language-sh">git add filename
+</code></pre>
+<h2 id="adding-all-changes-in-an-existing-file"><a class="header" href="#adding-all-changes-in-an-existing-file">Adding all changes in an existing file</a></h2>
+<p>If you've made changes to an existing file, you can include all of these changes in the next commit by running:</p>
+<pre><code class="language-sh">git add filename
+</code></pre>
+<h2 id="adding-some-changes-in-an-existing-file"><a class="header" href="#adding-some-changes-in-an-existing-file">Adding some changes in an existing file</a></h2>
+<p>If you've made changes to an existing file and only want to include <strong>some of these changes</strong> in the next commit, you can select the changes to include by running:</p>
+<pre><code class="language-sh">git add -p filename
+</code></pre>
+<p>This will show you each of the changes in turn, and allow you select which ones to stage.</p>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>This interactive selection mode is very flexible; you can enter <code>?</code> at any of the prompts to see the range of available actions.</p>
+</div>
+</div>
+<h2 id="renaming-a-file"><a class="header" href="#renaming-a-file">Renaming a file</a></h2>
+<p>If you want to rename a file, you can use <code>git mv</code> to rename the file <strong>and</strong> stage this change for inclusion in the next commit:</p>
+<pre><code class="language-sh">git mv filename newname
+</code></pre>
+<h2 id="removing-a-file"><a class="header" href="#removing-a-file">Removing a file</a></h2>
+<p>If you want to remove a file, you can use <code>git rm</code> to remove the file <strong>and</strong> stage this change for inclusion in the next commit:</p>
+<pre><code class="language-sh">git rm filename
+</code></pre>
+<div id="admonition-tip-1" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-tip-1">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>If the file has any uncommitted changes, git will refuse to remove the file.
+You can override this behaviour by running:</p>
+<pre><code class="language-sh">git rm --force filename
+</code></pre>
+</div>
+</div>
+<h2 id="inspecting-the-staged-changes"><a class="header" href="#inspecting-the-staged-changes">Inspecting the staged changes</a></h2>
+<p>To verify that you have staged all of the desired changes, you can view the staged changes by running:</p>
+<pre><code class="language-sh">git diff --cached
+</code></pre>
+<p>You can view the staged changes for a specific file by running:</p>
+<pre><code class="language-sh">git diff --cached filename
+</code></pre>
+<h2 id="undoing-a-staged-change"><a class="header" href="#undoing-a-staged-change">Undoing a staged change</a></h2>
+<p>You may sometimes stage a change for inclusion in the next commit, but decide later that you don't want to include it in the next commit.
+You can undo staged changes to a file by running:</p>
+<pre><code class="language-sh">git restore --staged filename
+</code></pre>
+<div id="admonition-note-1" class="admonition note">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-note-1">
+<p>Note</p>
+</a>
+</div>
+<div>
+<p>This <strong>will not modify</strong> the contents of the file.</p>
+</div>
+</div>
+<h2 id="creating-a-new-commit"><a class="header" href="#creating-a-new-commit">Creating a new commit</a></h2>
+<p>Once you have staged all of the changes that you want to include in the commit, create the commit by running:</p>
+<pre><code class="language-sh">git commit
+</code></pre>
+<p>This will open your <a href="using-git/first-time-git-setup.html">chosen editor</a> and prompt you to write the <a href="using-git/../version-control/how-do-I-write-a-commit-message.html">commit message</a>.</p>
+<div id="admonition-tip-2" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-tip-2">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>If you decide that you don't want to create the commit, you can abort this action by closing your editor without saving a commit message.</p>
+</div>
+</div>
+<h2 id="modifying-the-most-recent-commit"><a class="header" href="#modifying-the-most-recent-commit">Modifying the most recent commit</a></h2>
+<p>After you create a commit, you might decide that there are other changes that should be included in the commit.
+Git provides a simple way of modifying the most recent commit.</p>
+<div id="admonition-warning" class="admonition warning">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-warning">
+<p>Warning</p>
+</a>
+</div>
+<div>
+<p><strong>Do not modify the commit</strong> if you have already pushed it to another repository.
+Instead, record a new commit that includes the desired changes.</p>
+<p>Remember that your commit history should not be a highly-edited, polished view of your work, but should instead act as a lab book.</p>
+<p><strong>Do not worry about creating <a href="using-git/../version-control/what-should-I-commit.html">&quot;perfect&quot;</a> commits!</strong></p>
+</div>
+</div>
+<p>To modify the most recent commit, stage the changes that you want to commit (see the sections above) and add them to the most recent commit by running:</p>
+<pre><code class="language-sh">git commit --amend
+</code></pre>
+<p>This will open your <a href="using-git/first-time-git-setup.html">chosen editor</a> and allow you to modify the commit message.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-remote-repository"><a class="header" href="#creating-a-remote-repository">Creating a remote repository</a></h1>
+<p>Once you have created a &quot;local&quot; repository (i.e., a repository that exists on your own computer), it is <a href="using-git/../version-control/what-is-a-repository.html">generally a good idea</a> to create a &quot;remote&quot; repository.
+You may choose to store this remote repository on a service such as GitHub, or on a University-provided platform.</p>
+<p>If you are using GitHub, you can choose to create a <strong>public</strong> repository (viewable by anyone, but you control who can make changes) or a <strong>private</strong> repository (you control who can view and/or make changes).</p>
+<h2 id="linking-your-local-and-remote-repositories"><a class="header" href="#linking-your-local-and-remote-repositories">Linking your local and remote repositories</a></h2>
+<p>Once you have created the remote repository, you need to link it to your local repository.
+This will allow you to &quot;push&quot; commits from your local repository to the remote repository, and to &quot;pull&quot; commits from the remote repository to your local repository.</p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/creating-a-remote-repository.html#admonition-note">
+<p>Note</p>
+</a>
+</div>
+<div>
+<p>When you create a new repository on services such as GitHub, they will give you instructions on how to link this new repository to your local repository.
+We also provide an example, below.</p>
+</div>
+</div>
+<p>A repository can be linked to more than one remote repository, so we need to choose a name to identify this remote repository.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/creating-a-remote-repository.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>The name &quot;origin&quot; is commonly used to identify the main remote repository.</p>
+</div>
+</div>
+<p>In this example, we link our local repository to the remote repository for this book (<code>https://github.com/robmoss/git-is-my-lab-book</code>) with the following command:</p>
+<pre><code class="language-sh">git remote add origin git@github.com:robmoss/git-is-my-lab-book.git
+</code></pre>
+<div id="admonition-note-1" class="admonition note">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/creating-a-remote-repository.html#admonition-note-1">
+<p>Note</p>
+</a>
+</div>
+<div>
+<p>Notice that the URL is similar to, <strong>but not identical to</strong>, the URL you use to view the repository in your web browser.</p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pushing-and-pulling-commits"><a class="header" href="#pushing-and-pulling-commits">Pushing and pulling commits</a></h1>
+<p>In general, we &quot;push&quot; commits from our local repository to a remote repository by running:</p>
+<pre><code class="language-sh">git push &lt;remote-repository&gt;
+</code></pre>
+<p>and &quot;pull&quot; commits from a remote repository into our local repository by running:</p>
+<pre><code class="language-sh">git pull &lt;remote-repository&gt;
+</code></pre>
+<p>where <code>&lt;remote-repository&gt;</code> is either a URL <strong>or</strong> the name of a <a href="using-git/creating-a-remote-repository.html">remote repository</a>.</p>
+<p>However, we generally want to push to, and pull from, the same remote repository every time.
+See the next section for an example of linking the main branch in your local repository with a corresponding &quot;upstream&quot; branch in your remote repository.</p>
+<h2 id="pushing-your-first-commit-to-a-remote-repository"><a class="header" href="#pushing-your-first-commit-to-a-remote-repository">Pushing your first commit to a remote repository</a></h2>
+<p>In order to push commits from your local repository to a <a href="using-git/creating-a-remote-repository.html">remote repository</a>, we need to create a branch in the remote repository that corresponds to the main branch of our local repository.
+This requires that you have <strong>created at least one commit</strong> in your local repository.</p>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/pushing-and-pulling-commits.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>This is a good time to create a <code>README.md</code> file and write a brief description of what this repository will contain.</p>
+</div>
+</div>
+<p>Once you have at least one commit in your local repository, you can create a corresponding <strong>upstream branch</strong> in the remote repository with the following command:</p>
+<pre><code class="language-sh">git push -u origin
+</code></pre>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/pushing-and-pulling-commits.html#admonition-note">
+<p>Note</p>
+</a>
+</div>
+<div>
+<p>Recall that we identify remote repositories by name.
+In this example, the remote repository is call &quot;origin&quot;.
+You can choose a different name when <a href="using-git/creating-a-remote-repository.html#linking-your-local-and-remote-repositories">linking your local and remote repositories</a>.</p>
+</div>
+</div>
+<p>Once you have defined the <strong>upstream branch</strong>, you can push commits by running:</p>
+<pre><code class="language-sh">git push
+</code></pre>
+<p>and pull commits by running:</p>
+<pre><code class="language-sh">git pull
+</code></pre>
+<p>without having to specify the remote repository.</p>
+<h2 id="forcing-updates-to-a-remote-repository"><a class="header" href="#forcing-updates-to-a-remote-repository">Forcing updates to a remote repository</a></h2>
+<p>By default, Git will refuse to push commits from a local branch to a remote branch if the remote branch contains any commits that are not in your local branch.
+This situation <strong>should not arise</strong> in general, and typically indicates that either someone else has pushed new commits to the remote branch (see the <a href="using-git/../collaborating/">Collaborating</a> section) or that you have altered the history of your local branch.</p>
+<p>If you are <strong>absolutely confident</strong> that your local history of commits should replace the contents of the remote branch, you can force this update by running:</p>
+<pre><code class="language-sh">git push --force
+</code></pre>
+<div id="admonition-tip-1" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/pushing-and-pulling-commits.html#admonition-tip-1">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>Unless you are confident that you understand <strong>why</strong> this situation has occurred, it is probably a good idea to ask for advice before running the above command.</p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-ignore-certain-files"><a class="header" href="#how-to-ignore-certain-files">How to ignore certain files</a></h1>
+<p>Your repository may contain files that you don't want to include in your commit history.
+For example, you may not want to include files of the following types:</p>
+<ul>
+<li><strong>Sensitive data files</strong> for which access must be strictly controlled.</li>
+<li><strong>Temporary files</strong> that do not contain useful information, such as:
+<ul>
+<li><code>.aux</code> files, which are generated when compiling LaTeX documents; and</li>
+<li><code>.pyc</code> files, which are generated when running Python code.</li>
+</ul>
+</li>
+<li><strong>Files that can be automatically generated</strong> from your commit history, such as:
+<ul>
+<li><code>.pdf</code> versions of LaTeX documents; and</li>
+<li>documentation generated from your code files.</li>
+</ul>
+</li>
+</ul>
+<p>You can instruct Git to ignore certain files by creating a <code>.gitignore</code> file.
+This is a plain text file, where each line defines a pattern that identifies files and directories which should be ignored.
+You can also add comments, which must start with a <code>#</code>, to explain the purpose of these patterns.</p>
+<p>For example, the following <code>.gitignore</code> file would make Git ignore all <code>.aux</code> and <code>.pyc</code> files, and the file <code>my-paper.pdf</code>:</p>
+<pre><code class="language-text"># Ignore all .aux files generated by LaTeX.
+*.aux
+# Ignore all byte-code files generated by Python.
+*.pyc
+# Ignore the PDF version of my paper.
+my-paper.pdf
+</code></pre>
+<p>If you have <strong>sensitive data files</strong>, one option is to store them all in a dedicated directory and add this directory to your <code>.gitignore</code> file:</p>
+<pre><code class="language-text"># Ignore all data files in the &quot;sensitive-data&quot; directory.
+sensitive-data
+</code></pre>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/how-to-ignore-certain-files.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>You <strong>can</strong> force Git to add an ignored file to a commit by running:</p>
+<pre><code class="language-sh">git add --force my-paper.pdf
+</code></pre>
+<p>But it would generally be better to update your <code>.gitignore</code> file so that it stops ignoring these files.</p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-create-and-use-tags"><a class="header" href="#how-to-create-and-use-tags">How to create and use tags</a></h1>
+<p>Tags allow you to <a href="using-git/../version-control/what-is-a-tag.html">bookmark</a> important points in your commit history.</p>
+<p>You can use tags to identify milestones such as:</p>
+<ul>
+<li>Adding specific features to your model or data analysis (e.g., <code>feature-age-dependent-mixing</code>);</li>
+<li>Completing objectives in your research plan (e.g., <code>objective-1</code>, <code>objective-2</code>);</li>
+<li>Completed manuscript drafts (e.g., <code>draft-1</code>, <code>draft-2</code>); and</li>
+<li>Manuscript submission and revisions (e.g., <code>submitted</code>, <code>revision-1</code>).</li>
+</ul>
+<h2 id="tagging-the-current-commit"><a class="header" href="#tagging-the-current-commit">Tagging the current commit</a></h2>
+<p>You can add a tag (in this example, &quot;my-tag&quot;) to the current commit by running:</p>
+<pre><code class="language-sh">git tag -a my-tag
+</code></pre>
+<p>This will open your <a href="using-git/first-time-git-setup.html">chosen editor</a> and ask you to write a description for this tag.</p>
+<h2 id="pushing-tags-to-a-remote-repository"><a class="header" href="#pushing-tags-to-a-remote-repository">Pushing tags to a remote repository</a></h2>
+<p>By default, <code>git push</code> <strong>doesn't push tags to remote repositories</strong>.
+Instead, you have to explicitly push tags.
+You can push a tag (in this example, called &quot;my-tag&quot;) to a remote repository (in this example, called &quot;origin&quot;) by running:</p>
+<pre><code class="language-sh">git push origin my-tag
+</code></pre>
+<p>You can push all of your tags to a remote repository (in this example, called &quot;origin&quot;) by running:</p>
+<pre><code class="language-sh">git push origin --tags
+</code></pre>
+<h2 id="tagging-a-past-commit"><a class="header" href="#tagging-a-past-commit">Tagging a past commit</a></h2>
+<p>To add a tag to a previous commit, you can identify the commit by its hash.
+For example, you can inspect your commit history by running:</p>
+<pre><code class="language-sh">git log --oneline --no-decorate
+</code></pre>
+<p>If your commit history looks like:</p>
+<pre><code class="language-text">003cf6b Show how to ignore certain files
+339eb5a Show how to prepare and record commits
+6a7fb8b Show how to clone remote repositories
+...
+</code></pre>
+<p>where the current commit is <code>003cf6b</code> (&quot;Show how to ignore certain files&quot;), you can tag the previous commit (&quot;Show how to prepare and record commits&quot;) by running:</p>
+<pre><code class="language-sh">git tag -a my-tag 339eb5a
+</code></pre>
+<h2 id="listing-tags"><a class="header" href="#listing-tags">Listing tags</a></h2>
+<p>You can list all tags by running:</p>
+<pre><code class="language-sh">git tag
+</code></pre>
+<p>You can also list only tags that match a specific pattern (in this example, all tags beginning with &quot;my&quot;) by running:</p>
+<pre><code class="language-sh">git tag --list 'my*'
+</code></pre>
+<h2 id="deleting-tags"><a class="header" href="#deleting-tags">Deleting tags</a></h2>
+<p>You can delete a tag by running:</p>
+<pre><code class="language-sh">git tag --delete my-tag
+</code></pre>
+<h2 id="creating-a-branch-from-a-tag"><a class="header" href="#creating-a-branch-from-a-tag">Creating a branch from a tag</a></h2>
+<p>You can check out a tag and begin working on a new branch by running:</p>
+<pre><code class="language-sh">git checkout -b my-branch my-tag
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="inspecting-your-history"><a class="header" href="#inspecting-your-history">Inspecting your history</a></h1>
+<p>You can inspect your commit history at any time with the <code>git log</code> command.
+By default, this command will list every commit <strong>from the very first commit to the current commit</strong>, and for each commit it will show you:</p>
+<ul>
+<li>The commit identifier (&quot;hash&quot;), which uniquely identifies this commit;</li>
+<li>The person who created the commit (&quot;author&quot;);</li>
+<li>The date on which the commit was created; and</li>
+<li>The commit message.</li>
+</ul>
+<p>There are many ways to adjust <strong>which commits</strong> and <strong>what details</strong> that <code>git log</code> will show.</p>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>Each commit has a unique identifier (&quot;hash&quot;).
+These hashes are quite long, but in general you only need to provide the first 5-7 digits to uniquely identify a specific commit.</p>
+</div>
+</div>
+<h2 id="listing-commits-over-a-specific-time-interval"><a class="header" href="#listing-commits-over-a-specific-time-interval">Listing commits over a specific time interval</a></h2>
+<p>You can limit which commits <code>git log</code> will show by specifying a start time and/or an end time.</p>
+<div id="admonition-tip-1" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip-1">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>This can be extremely useful for generating <strong>progress reports</strong> and summarising your recent activity in team meetings.</p>
+</div>
+</div>
+<p>For example, you can view commits from the past week by running:</p>
+<pre><code class="language-sh">git log --since='7 days'
+git log --since='1 week'
+</code></pre>
+<p>You can view commits made between 1 and 2 weeks ago by running:</p>
+<pre><code class="language-sh">git log --since='2 weeks' --until='1 week'
+</code></pre>
+<p>You can view commits made between specific dates by running:</p>
+<pre><code class="language-sh">git log --since='2022/05/12' --until='2022/05/14'
+</code></pre>
+<h2 id="listing-commits-that-modify-a-specific-file"><a class="header" href="#listing-commits-that-modify-a-specific-file">Listing commits that modify a specific file</a></h2>
+<p>You can see which commits have made changes to a file by running:</p>
+<pre><code class="language-sh">git log -- filename
+</code></pre>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>Note the <code>--</code> argument that comes before the file name.
+This ensures that if the file name begins with a <code>-</code>, <code>git log</code> will not treat the file name as an option.</p>
+</div>
+</div>
+<h2 id="changing-how-commits-are-displayed"><a class="header" href="#changing-how-commits-are-displayed">Changing how commits are displayed</a></h2>
+<p>You can make <code>git log</code> display only the first 7 digits of each commit hash, and the first line of each commit message, by running:</p>
+<pre><code class="language-sh">git log --oneline
+</code></pre>
+<p>This can be a useful way to get a quick overview of the recent history.</p>
+<h2 id="viewing-the-contents-of-a-single-commit"><a class="header" href="#viewing-the-contents-of-a-single-commit">Viewing the contents of a single commit</a></h2>
+<p>You can identify a commit by its unique identifier (&quot;hash&quot;) or by its tag name (if it has been tagged), and view the commit with <code>git show</code>:</p>
+<pre><code class="language-sh">git show commit-hash
+git show tag-name
+</code></pre>
+<p>This will show the commit details <strong>and</strong> all of the changes that were recorded in this commit.</p>
+<div id="admonition-tip-2" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip-2">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>By default, <code>git show</code> will show you the most recent commit.</p>
+</div>
+</div>
+<h2 id="viewing-all-changes-over-a-specific-interval"><a class="header" href="#viewing-all-changes-over-a-specific-interval">Viewing all changes over a specific interval</a></h2>
+<p>You can view all of the changes that were made between two commits with the <code>git diff</code> command.</p>
+<div id="admonition-tip-3" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip-3">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>The <code>git diff</code> command shows the <strong>difference</strong> between two points in your commit history.</p>
+<p>Note that <code>git diff</code> <strong>does not</strong> support start and/or end times like <code>git log</code> does; you must use <strong>commit identifiers</strong>.</p>
+</div>
+</div>
+<p>For example, here is a subset of the commit history for <a href="https://github.com/robmoss/git-is-my-lab-book">this book's repository</a>:</p>
+<pre><code class="language-text">95eaae5 Note the need for a GitHub account and SSH key
+11085f0 Show how to create a branch from a tag
+9369482 Show how to create and use tags
+003cf6b Show how to ignore certain files
+339eb5a Show how to prepare and record commits
+6a7fb8b Show how to clone remote repositories
+6a49e10 Note that mdbook-admonish must be installed
+a8e6114 Fixed the URL for the UoM GitLab instance
+5192704 Add a merge conflict exercise
+</code></pre>
+<p>We can view all of the changes that were made <strong>after</strong> the bottom commit (<code>5192704</code>, &quot;Add a merge conflict exercise&quot;) up to <strong>and including</strong> the top commit (<code>95eaae5</code>, &quot;Note the need for a GitHub account and SSH key&quot;) by running:</p>
+<pre><code class="language-sh">git diff 5192704..95eaae5
+</code></pre>
+<p>In the above example, 8 files were changed, with a total of 310 new lines and 7 deleted lines.
+This is a lot of information!
+You can print a summary of these changes by running:</p>
+<pre><code class="language-sh">git diff --stat 5192704..95eaae5
+</code></pre>
+<p>This should show you the following details:</p>
+<pre><code class="language-text"> README.md                                       |   2 +-
+ src/SUMMARY.md                                  |   3 +
+ src/prerequisites.md                            |   2 +
+ src/using-git/cloning-an-existing-repository.md |  36 ++++++++++
+ src/using-git/creating-a-commit.md              | 146 +++++++++++++++++++++++++++++++++++++--
+ src/using-git/how-to-create-and-use-tags.md     |  89 ++++++++++++++++++++++++
+ src/using-git/how-to-ignore-certain-files.md    |  37 ++++++++++
+ src/version-control/what-is-a-repository.md     |   2 +-
+ 8 files changed, 310 insertions(+), 7 deletions(-)
+</code></pre>
+<p>This reveals that about half of the changes (146 new/deleted lines) were made to <code>src/using-git/creating-a-commit.md</code>.</p>
+<h2 id="viewing-changes-to-a-file-over-a-specific-interval"><a class="header" href="#viewing-changes-to-a-file-over-a-specific-interval">Viewing changes to a file over a specific interval</a></h2>
+<p>Similar to the <code>git log</code> command, you can limit the files that the <code>git diff</code> command will examine.
+For example, you can display only the changes made to <code>README.md</code> in the above example by running:</p>
+<pre><code class="language-sh">git diff 5192704..95eaae5 -- README.md
+</code></pre>
+<p>This should show you the following change:</p>
+<pre><code class="language-text">diff --git a/README.md b/README.md
+index 7956b65..a34f907 100644
+--- a/README.md
++++ b/README.md
+@@ -15,7 +15,7 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
+
+ ## Building the book
+
+-You can build this book by installing [mdBook](https://rust-lang.github.io/mdBook/) and running the following command in this directory:
++You can build this book by installing [mdBook](https://rust-lang.github.io/mdBook/) and [mdbook-admonish](https://github.com/tommilligan/mdbook-admonish/), and running the following command in this directory:
+
+ ```shell
+ mdbook build
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="where-did-this-line-come-from"><a class="header" href="#where-did-this-line-come-from">Where did this line come from?</a></h1>
+<p>Consider the <a href="using-git/../version-control/what-should-I-commit.html">What should I commit?</a> chapter.
+Imagine that we want to know when <strong>and why</strong> the following text was added:</p>
+<pre><code class="language-md">A helpful guideline is &quot;**commit early, commit often**&quot;.
+</code></pre>
+<p>If we can identify the relevant commit, we can then inspect the commit (using <code>git show &lt;commit&gt;</code>) to see all of the changes that it introduced.
+Ideally, the commit message will explain the reasons why this commit was made.
+This is one way in which <strong>your commit messages can act as a lab book</strong>.</p>
+<p>At the time of writing (commit <code>2a96324</code>), the contents of the <a href="using-git/../version-control/what-should-I-commit.html">What should I commit?</a> came from two commits:</p>
+<pre><code class="language-sh">git log --oneline src/version-control/what-should-I-commit.md
+</code></pre>
+<pre><code class="language-txt">3dfff1f Add notes about committing early and often
+9be780b Briefly describe key version control concepts
+</code></pre>
+<p>We can use the <code>git blame</code> command to identify the commit that last modified each line in this file:</p>
+<pre><code class="language-sh">git blame -s src/version-control/what-should-I-commit.md
+</code></pre>
+<pre><code class="language-txt">9be780b8  1) # What should I commit?
+9be780b8  2)
+9be780b8  3) A commit should represent a **unit of work**.
+9be780b8  4)
+9be780b8  5) If you've made changes that represent multiple units of work (e.g., changing how input data are processed, and adding a new model parameter) these should be saved as separate commits.
+9be780b8  6)
+9be780b8  7) Try describing out loud the changes you have made, and if you find yourself saying something like &quot;I did X and Y and Z&quot;, then the changes should probably divided into multiple commits.
+3dfff1fe  8)
+3dfff1fe  9) A helpful guideline is &quot;**commit early, commit often**&quot;.
+3dfff1fe 10)
+3dfff1fe 11) ## Commit early
+3dfff1fe 12)
+3dfff1fe 13) - Don't delay creating a commit because &quot;it's not ready yet&quot;.
+3dfff1fe 14)
+3dfff1fe 15) - A commit doesn't have to be &quot;perfect&quot;.
+3dfff1fe 16)
+3dfff1fe 17) ## Commit often
+3dfff1fe 18)
+3dfff1fe 19) - Small, focused commits are **extremely helpful** when trying to identify the cause of an unintended change in your code's behaviour or output.
+3dfff1fe 20)
+3dfff1fe 21) - There is no such thing as too many commits.
+</code></pre>
+<p>You can see that the first seven lines were last modified by commit <code>9be780b</code> (<em>Briefly describe key version control concepts</em>), while the rest of the file was last modified by commit <code>3dfff1f</code> (<em>Add notes about committing early and often</em>).
+So the text that we're interested in (line 9) was <strong>introduced by commit <code>3dfff1f</code></strong>.</p>
+<p>You can inspect this commit by running the following command:</p>
+<pre><code class="language-sh">git show 3dfff1f
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="where-did-this-problem-come-from"><a class="header" href="#where-did-this-problem-come-from">Where did this problem come from?</a></h1>
+<p>Let's find the commit that created the file <code>src/version-control/what-is-a-repository.md</code>.
+We could find this out using <code>git log</code>, but the point here is to illustrate how to use a script to <strong>find the commit that causes any arbitrary change</strong> to our repository.</p>
+<p>Once the commit has been found, you can inspect it (using <code>git show &lt;commit&gt;</code>) to see all of the changes this commit introduced <strong>and</strong> the commit message that (hopefully) explains the reasons why this commit was made.
+This is one way in which <strong>your commit messages can act as a lab book</strong>.</p>
+<ol>
+<li>
+<p>Create a Python script called <code>my_test.py</code> with the following contents:</p>
+<pre><code class="language-py">#!/usr/bin/env python3
+from pathlib import Path
+import sys
+
+expected_file = Path('src') / 'version-control' / 'what-is-a-repository.md'
+
+if expected_file.exists():
+    # This file is the &quot;new&quot; thing that we want to detect.
+    sys.exit(1)
+else:
+    # The file does not exist, this commit is &quot;old&quot;.
+    sys.exit(0)
+</code></pre>
+<p>For reference, here is an equivalent R script:</p>
+<pre><code class="language-R">#!/usr/bin/Rscript --vanilla
+
+expected_file &lt;- file.path('src', 'version-control', 'what-is-a-repository.md')
+
+if (file.exists(expected_file)) {
+    # This file is the &quot;new&quot; thing that we want to detect.
+    quit(status = 1)
+} else {
+    # The file does not exist, this commit is &quot;old&quot;.
+    quit(status = 0)
+}
+</code></pre>
+</li>
+<li>
+<p>Select the commit range over which to search.
+We know that the file exists in the commit <code>3dfff1f</code> (<em>Add notes about committing early and often</em>), and it did not exist in the very first commit (<code>5a19b02</code>).</p>
+</li>
+<li>
+<p>Instruct Git to start searching with the following command:</p>
+<pre><code class="language-sh">git bisect start 3dfff1f 5a19b02
+</code></pre>
+<p>Note that we specify <strong>the newer commit first</strong>, and then the older commit.</p>
+<p>Git will inform you about the search progress, and which commit is currently being investigated.</p>
+<pre><code class="language-txt">Bisecting: 7 revisions left to test after this (roughly 3 steps)
+[92f1375db21dd8a35ca141365a477b963dbbf6dc] Add CC-BY-SA license text and badge
+</code></pre>
+</li>
+<li>
+<p>Instruct Git to use the script <code>my_test.py</code> to check each commit with the following command:</p>
+<pre><code class="language-sh">git bisect run ./my_test.py
+</code></pre>
+<p>It will continue to report the search progress and <strong>automatically identify</strong> the commit that we're looking for:</p>
+<pre><code class="language-txt">running  './my_test.py'
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[9be780b8785d67ee191b2c0b113270059c9e0c3a] Briefly describe key version control concepts
+running  './my_test.py'
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[055906f28da146a2d012b7c1c0e4707503ed1b11] Display example commit message as plain text
+running  './my_test.py'
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[1251357ab5b41d511deb48cd5386cae37eec6751] Rename the &quot;What is a repository?&quot; source file
+running  './my_test.py'
+1251357ab5b41d511deb48cd5386cae37eec6751 is the first bad commit
+commit 1251357ab5b41d511deb48cd5386cae37eec6751
+Author: Rob Moss &lt;robm.dev@gmail.com&gt;
+Date:   Sun Apr 17 21:41:43 2022 +1000
+
+    Rename the &quot;What is a repository?&quot; source file
+
+    The file name was missing the word &quot;a&quot; and did not match the title.
+
+ src/SUMMARY.md                              |  2 +-
+ src/version-control/what-is-a-repository.md | 18 ++++++++++++++++++
+ src/version-control/what-is-repository.md   | 18 ------------------
+ 3 files changed, 19 insertions(+), 19 deletions(-)
+ create mode 100644 src/version-control/what-is-a-repository.md
+ delete mode 100644 src/version-control/what-is-repository.md
+</code></pre>
+</li>
+<li>
+<p>To quit the search and return to your current commit, run the following command:</p>
+<pre><code class="language-sh">git bisect reset
+</code></pre>
+</li>
+<li>
+<p>You can then <a href="using-git/inspecting-your-history.html">inspect this commit</a> by running the following command:</p>
+<pre><code class="language-sh">git show 1251357
+</code></pre>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-use-branches"><a class="header" href="#how-to-use-branches">How to use branches?</a></h1>
+<p>Recall that <a href="using-git/../version-control/what-is-a-branch.html">branches</a> allow you to work on different ideas or tasks in parallel, within a single repository.
+In this chapter, we will show you how create and use branches.
+In the <a href="using-git/../collaborating/">Collaborating</a> section, we will show you how branches can allow multiple people to work together on code and papers, and how you can use branches for <strong>peer code review</strong>.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/how-to-use-branches.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>Branches, like <a href="using-git/how-to-create-and-use-tags.html">tags</a>, are identified by name.
+Common naming conventions include:</p>
+<ul>
+<li><code>feature/some-new-thing</code> for adding something new (a new data analysis, a new model feature, etc); and</li>
+<li><code>bugfix/some-problem</code> for fixing something that isn't working as intended (e.g., perhaps there's a mistake in a data analysis script).</li>
+</ul>
+<p>You can choose your own conventions, but make sure that you choose <strong>meaningful</strong> names.</p>
+<p><strong>Do not</strong> use names like <code>branch1</code>, <code>branch2</code>, etc.</p>
+</div>
+</div>
+<h2 id="creating-a-new-branch"><a class="header" href="#creating-a-new-branch">Creating a new branch</a></h2>
+<p>You can create a new branch (in this example, called &quot;my-new-branch&quot;) that starts from the current commit by running:</p>
+<pre><code class="language-sh">git checkout -b my-new-branch
+</code></pre>
+<p>You can also create a new branch that starts from a specific commit, tag, or branch in your repository:</p>
+<pre><code class="language-sh">git checkout -b my-new-branch 95eaae5          # From an existing commit
+git checkout -b my-new-branch my-tag-name      # From an existing tag
+git checkout -b my-new-branch my-other-branch  # From an existing branch
+</code></pre>
+<p>You can then create a corresponding <strong>upstream branch</strong> in your remote repository (in this example, called &quot;origin&quot;) by running:</p>
+<pre><code class="language-sh">git push -u origin
+</code></pre>
+<h2 id="working-on-a-remote-branch"><a class="header" href="#working-on-a-remote-branch">Working on a remote branch</a></h2>
+<p>If there is a branch in your remote repository that you want to work on, you can make a local copy by running:</p>
+<pre><code class="language-sh">git checkout remote-branch-name
+</code></pre>
+<p>This will create a local branch with the same name (in this example, &quot;remote-branch-name&quot;).</p>
+<h2 id="listing-branches"><a class="header" href="#listing-branches">Listing branches</a></h2>
+<p>You can list all of the branches in your repository by running:</p>
+<pre><code class="language-sh">git branch
+</code></pre>
+<p>This will also highlight the current branch.</p>
+<h2 id="switching-between-branches"><a class="header" href="#switching-between-branches">Switching between branches</a></h2>
+<p>You can switch from your current branch to another branch (in this example, called &quot;other-branch&quot;) by running:</p>
+<pre><code class="language-sh">git checkout other-branch
+</code></pre>
+<div id="admonition-info-1" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/how-to-use-branches.html#admonition-info-1">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>Git will not let you switch branches if you have any uncommitted changes.</p>
+<p>One way to avoid this issue is to record the current changes as a new commit, and explain in the commit message that this is a snapshot of work in progress.</p>
+<p>A second option is to discard the uncommitted changes to each file by running:</p>
+<pre><code class="language-sh">git restore file1 file2 file3 ... fileN
+</code></pre>
+</div>
+</div>
+<h2 id="pushing-and-pulling-commits-1"><a class="header" href="#pushing-and-pulling-commits-1">Pushing and pulling commits</a></h2>
+<p>Once you have created a branch, you can use <code>git push</code> to &quot;push&quot; your commits to the remote repository, and <code>git pull</code> to &quot;pull&quot; commits from the remote repository.
+See <a href="using-git/pushing-and-pulling-commits.html">Pushing and pulling commits</a> for details.</p>
+<h2 id="inspecting-branch-histories"><a class="header" href="#inspecting-branch-histories">Inspecting branch histories</a></h2>
+<p>You can use <code>git log</code> to inspect the commit history of any branch:</p>
+<pre><code class="language-sh">git log branch-name
+</code></pre>
+<p>Remember that there are <a href="using-git/inspecting-your-history.html">many ways to control</a> what <code>git log</code> will show you.</p>
+<p>Similarly, you can use <code>git diff</code> to compare the changes in any two branches:</p>
+<pre><code class="language-sh">git diff first-branch second-branch
+</code></pre>
+<p>Again, there are <a href="using-git/inspecting-your-history.html">ways to control</a> what <code>git diff</code> will show you.</p>
+<h2 id="merging-branches"><a class="header" href="#merging-branches">Merging branches</a></h2>
+<p>You may reach a point where you want to incorporate the changes from one branch into another branch.
+This is referred to as &quot;merging&quot; one branch into another, and is illustrated in the <a href="using-git/../version-control/what-is-a-branch.html">What is a branch?</a> chapter.</p>
+<p>For example, you might have completed a new feature for your model or data analysis, and now want to merge this back into your main branch.</p>
+<p>First, <strong>ensure that the current branch</strong> is the branch you want to merge the changes <strong>into</strong> (this is often your main or master branch).
+You can them merge the changes <strong>from</strong> another branch (in this example, called &quot;other-branch&quot;) by running:</p>
+<pre><code class="language-sh">git merge other-branch
+</code></pre>
+<p>This can have two different results:</p>
+<ol>
+<li>
+<p>The commits from <code>other-branch</code> were merged successfully into the current branch; or</p>
+</li>
+<li>
+<p>There were <strong>conflicting changes</strong> (referred to as a &quot;merge conflict&quot;).</p>
+</li>
+</ol>
+<p>In the next chapter we will show you <a href="using-git/how-to-resolve-merge-conflicts.html">how to resolve merge conflicts</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-resolve-merge-conflicts"><a class="header" href="#how-to-resolve-merge-conflicts">How to resolve merge conflicts?</a></h1>
+<p>A merge conflict can occur when we try to merge one branch into another, if the two branches introduce any conflicting changes.</p>
+<p>For example, consider trying to merge two branches that make the following changes to the same line of the file <code>test.txt</code>:</p>
+<ol>
+<li>
+<p>On the branch <code>my-new-branch</code>:</p>
+<pre><code class="language-diff"> First line
+-Second line
++My new second line
+ Third line
+</code></pre>
+</li>
+<li>
+<p>On the main branch:</p>
+<pre><code class="language-diff"> First line
+-Second line
++A different second line
+ Third line
+</code></pre>
+</li>
+</ol>
+<p>When we attempt to merge <code>my-new-branch</code> into the main branch, <code>git merge my-new-branch</code> will tell us:</p>
+<pre><code class="language-text">Auto-merging test.txt
+CONFLICT (content): Merge conflict in test.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+<p>The <code>test.txt</code> file will now include the conflicting changes, which we can inspect with <code>git diff</code>:</p>
+<pre><code class="language-diff">diff --cc test.txt
+index 18712c4,bc576a6..0000000
+--- a/test.txt
++++ b/test.txt
+@@@ -1,3 -1,3 +1,7 @@@
+  First line
+++&lt;&lt;&lt;&lt;&lt;&lt;&lt; ours
+ +A different second line
+++=======
++ My new second line
+++&gt;&gt;&gt;&gt;&gt;&gt;&gt; theirs
+  Third line
+</code></pre>
+<p>Note that this two-day diff shows:</p>
+<ol>
+<li>&quot;our&quot; changes: from the commits on the branch that we are <strong>merging into</strong>; and</li>
+<li>&quot;their&quot; changes: from the commits on the branch that we are <strong>merging from</strong>.</li>
+</ol>
+<p>Each conflict is surrounded by <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> markers, and the conflicting changes are separated by a <code>=======</code> marker.</p>
+<h2 id="resolving-the-conflicts"><a class="header" href="#resolving-the-conflicts">Resolving the conflicts</a></h2>
+<p>We can edit <code>test.txt</code> to reconcile these changes, and the commit our fix.
+For example, we might decide that <code>test.txt</code> should have the following contents:</p>
+<pre><code class="language-text">First line
+The corrected second line
+Third line
+</code></pre>
+<p>We can then commit these changes to resolve the merge conflict:</p>
+<pre><code class="language-sh">git add test.txt
+git commit -m &quot;Resolved the merge conflict&quot;
+</code></pre>
+<h2 id="cancelling-the-merge"><a class="header" href="#cancelling-the-merge">Cancelling the merge</a></h2>
+<p>Alternatively, you may decide you don't want to merge these two branches, in which case you cancel the merge by running:</p>
+<pre><code class="language-sh">git merge --abort
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exercise-resolve-a-merge-conflict"><a class="header" href="#exercise-resolve-a-merge-conflict">Exercise: resolve a merge conflict</a></h1>
+<p>We have created a <a href="https://github.com/robmoss/gimlb-simple-merge-example">public repository</a> that you can use to try resolving a merge conflict yourself.
+This repository includes some example data and a script that performs some basic data analysis.</p>
+<p>First, obtain a local copy (a &quot;clone&quot;) of this repository by running:</p>
+<pre><code class="language-sh">git clone https://github.com/robmoss/gimlb-simple-merge-example.git
+cd gimlb-simple-merge-example
+</code></pre>
+<h2 id="the-repository-history"><a class="header" href="#the-repository-history">The repository history</a></h2>
+<p>You can inspect the repository history by running <code>git log</code>.
+Some key details to notice are:</p>
+<ol>
+<li>
+<p>The first commit created the following files:</p>
+<ul>
+<li><code>README.md</code></li>
+<li><code>LICENSE</code></li>
+<li><code>analysis/initial_exploration.R</code></li>
+<li><code>input_data/data.csv</code></li>
+</ul>
+</li>
+<li>
+<p>The second commit created the following file:</p>
+<ul>
+<li><code>outputs/summary.csv</code></li>
+</ul>
+<p>This commit has been given the <strong>tag</strong> <code>first_milestone</code>.</p>
+</li>
+<li>
+<p>From this <code>first_milestone</code> tag, two branches were created:</p>
+<ul>
+<li>
+<p>The <code>feature/second-data-set</code> branch adds a second data set and updates the analysis script to inspect both data sets.</p>
+</li>
+<li>
+<p>The <code>feature/calculate-rate-of-change</code> branch changes which summary statistics are calculated for the original data set.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The most recent commit merges both branches back into the <code>master</code> branch and resolves any merge conflicts.
+This commit has been given the <strong>tag</strong> <code>second_milestone</code>.</p>
+</li>
+</ol>
+<h2 id="your-task"><a class="header" href="#your-task">Your task</a></h2>
+<p>You will create a new branch which will start at the <code>first_milestone</code> tag, and then merge the two feature branches into this new branch, resolving any merge conflicts that arise.
+You can then compare your results to the most recent commit on the <code>master</code> branch.</p>
+<ol>
+<li>
+<p>Create local copies of the two feature branches, by running:</p>
+<pre><code class="language-sh">git checkout feature/second-data-set
+git checkout feature/calculate-rate-of-change
+</code></pre>
+</li>
+<li>
+<p>Create a new branch (we'll call it <code>my-branch</code>) from the <code>first_milestone</code> tag, by running:</p>
+<pre><code class="language-sh">git checkout -b my-branch first_milestone
+</code></pre>
+</li>
+<li>
+<p>Merge the <code>feature/second-data-set</code> branch into <code>my-branch</code>, by running:</p>
+<pre><code class="language-sh">git merge feature/second-data-set
+</code></pre>
+</li>
+<li>
+<p>Merge the <code>feature/calculate-rate-of-change</code> branch into <code>my-branch</code>, by running:</p>
+<pre><code class="language-sh">git merge feature/calculate-rate-of-change
+</code></pre>
+<p>This will result in a <strong>merge conflict</strong>, and now you need to decide how to resolve each conflict!
+Once you have resolved the conflicts, create a commit that records all of your changes (see the <a href="using-git/how-to-resolve-merge-conflicts.html">previous chapter</a> for an example).</p>
+</li>
+</ol>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/exercise-resolve-a-merge-conflict.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>You may find it helpful to inspect the commits in each of the feature branches to understand how they have changed the files in which the conflicts have occurred.</p>
+</div>
+</div>
+<p>Once you have created a commit that resolves these conflicts, see how similar or different the contents of your commit are to the corresponding commit in the master branch (which has been tagged <code>second_milestone</code>).
+You can inspect this commit by running:</p>
+<pre><code class="language-sh">git show second_milestone
+</code></pre>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/exercise-resolve-a-merge-conflict.html#admonition-note">
+<p>Note</p>
+</a>
+</div>
+<div>
+<p>You may have resolved the conflicts differently to the <code>second_milestone</code> commit, <strong>and that's perfectly fine</strong> as long as they have the same effect.</p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="collaborating"><a class="header" href="#collaborating">Collaborating</a></h1>
+<p>This section demonstrates how to use Git for collaborative research, enabling multiple people to work on the same code or paper in parallel.
+This includes deciding how to structure your repository, how to use branches for each collaborator, and how to use tags to track your progress.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="collaborating/index.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>We also show how these skills support <strong>peer code review</strong>, so that you can share knowledge with, and learn from, your colleagues as part of your regular activity.</p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="collaborating-on-code"><a class="header" href="#collaborating-on-code">Collaborating on code</a></h1>
+<p>Once you are comfortable with creating commits, working in branches, and merging branches, you can use these skills to <strong>write code collaboratively as a team</strong>.</p>
+<p>The precise workflow will depend on the nature of your research and on the collaborators in your team, but there are some general guidelines that you may find helpful:</p>
+<ul>
+<li>
+<p>Agree on a <a href="collaborating/coding-style-guides.html">style guide</a>.</p>
+</li>
+<li>
+<p>Work on separate features in <a href="collaborating/sharing-a-branch.html">separate branches</a>.</p>
+</li>
+<li>
+<p>Use <a href="collaborating/peer-code-review.html">peer code review</a> before merging changes from these branches.</p>
+</li>
+<li>
+<p>Consider using <a href="collaborating/continuous-integration.html">continuous integration</a> to:</p>
+<ul>
+<li>Run <a href="collaborating/../testing/">test cases</a> and detect bugs as early as possible; and</li>
+<li>Verify that code meets your chosen style guide.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="collaborating-on-a-paper"><a class="header" href="#collaborating-on-a-paper">Collaborating on a paper</a></h1>
+<p>Once you are comfortable with creating commits, working in branches, and merging branches, you can use these skills to <strong>write papers collaboratively as a team</strong>.
+This approach is particularly useful if you are writing a paper in LaTeX.</p>
+<p>Here are some general guidelines that you may find useful:</p>
+<ul>
+<li>
+<p>Divide the paper into <a href="https://www.overleaf.com/learn/latex/Management_in_a_large_project">separate LaTeX files</a> for each section.</p>
+</li>
+<li>
+<p>Use <a href="collaborating/../using-git/how-to-create-and-use-tags.html">tags</a> to identify milestones such as draft versions and revisions.</p>
+</li>
+<li>
+<p>Consider creating a <a href="collaborating/sharing-a-branch.html">separate branch</a> for each collaborator.</p>
+<ul>
+<li>Merge these branches when completing a major draft or revision.</li>
+</ul>
+</li>
+<li>
+<p>Use <a href="https://www.overleaf.com/learn/latex/Articles/Using_Latexdiff_For_Marking_Changes_To_Tex_Documents">latexdiff</a> to show tracked changes between the current version and a previous commit/tag:</p>
+<pre><code class="language-sh">latexdiff-git --flatten -r tag-name paper.tex
+</code></pre>
+</li>
+<li>
+<p>Collaborators who will provide feedback, rather than contributing directly to the writing process, can do this by:</p>
+<ul>
+<li>Annotating PDF versions of the paper; or</li>
+<li>Providing comments in response to a <a href="collaborating/merge-pull-requests.html">merge/pull request</a>.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sharing-a-repository"><a class="header" href="#sharing-a-repository">Sharing a repository</a></h1>
+<p>The easiest way to share a repository with collaborators is to have a single remote repository that all collaborators can access.
+This repository could be located on a platform such as GitHub, GitLab, or Bitbucket, or on a platform provided by your University or Institute.</p>
+<p>Theses platforms allow you to create <strong>public</strong> repositories and <strong>private</strong> repositories.</p>
+<ul>
+<li>
+<p>Everybody can view the contents of a public repository.</p>
+</li>
+<li>
+<p>You control who can view the contents of a private repository.</p>
+</li>
+<li>
+<p>For both types of repository, <strong>you control who can make changes</strong> to the repository, such as creating commits and branches.</p>
+</li>
+</ul>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="collaborating/sharing-a-repository.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>You should decide whether a public repository or a private repository suits you best.</p>
+</div>
+</div>
+<h2 id="giving-collaborators-access-to-your-remote-repository"><a class="header" href="#giving-collaborators-access-to-your-remote-repository">Giving collaborators access to your remote repository</a></h2>
+<p>The steps required to do this differ depending on which platform you are using.
+Here, we will describe how to give collaborators access to a repository on GitHub.
+For further details, see the <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository">GitHub documentation</a>.</p>
+<ul>
+<li>
+<p>Open the main page of your GitHub repository.</p>
+</li>
+<li>
+<p>Click on the &quot;Settings&quot; tab in the top navigation bar.</p>
+</li>
+<li>
+<p>Click on the &quot;Collaborators&quot; item in the left sidebar.</p>
+</li>
+<li>
+<p>Click on the &quot;Add people&quot; button.</p>
+</li>
+<li>
+<p>Search for collaborators by entering their GitHub user name, their full name, or their email address.</p>
+</li>
+<li>
+<p>Click the &quot;Add <NAME> to this repository&quot; button.</p>
+</li>
+</ul>
+<p>This will send an invitation to the collaborator.
+If they accept this invitation, they will have access to your repository.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sharing-a-branch"><a class="header" href="#sharing-a-branch">Sharing a branch</a></h1>
+<p>You might want a collaborator to work on a specific branch of your repository, so that you can keep their changes separate from your own work.
+Remember that you can merge commits from their branch into your own branches at any time.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="collaborating/sharing-a-branch.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>You need to ensure that your collaborator <a href="collaborating/sharing-a-repository.html">has access to the remote repository</a>.</p>
+</div>
+</div>
+<ol>
+<li>
+<p>Create a new branch for the collaborator, and give it a descriptive name.</p>
+<pre><code class="language-sh">git checkout -b collab/jamie
+</code></pre>
+<p>In this example we created a branch called &quot;collab/jamie&quot;, where &quot;collab&quot; is a prefix used to identify branches intended for collaborators, and the collaborator is called Jamie.</p>
+<p>Remember that you can <a href="collaborating/../using-git/how-to-use-branches.html">choose your own naming conventions</a>.</p>
+</li>
+<li>
+<p>Push this branch to your remote repository:</p>
+<pre><code class="language-sh">git push -u origin
+</code></pre>
+</li>
+<li>
+<p>Your collaborator can then make a local copy of this branch:</p>
+<pre><code class="language-sh">git clone --single-branch --branch collab/jamie repository-url
+</code></pre>
+</li>
+<li>
+<p>They can then create commits and push them to your remote repository with <code>git push</code>.</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mergepull-requests"><a class="header" href="#mergepull-requests">Merge/Pull requests</a></h1>
+<p>Recall that <a href="collaborating/../using-git/how-to-use-branches.html#merging-branches">incorporating the changes from one branch into another branch</a> is referred to as a &quot;merge&quot;.
+You can merge one branch into another branch by taking the following steps:</p>
+<ol>
+<li>
+<p>Checking out the branch you want to merge the changes <strong>into</strong>:</p>
+<pre><code class="language-sh">git checkout -b my-branch
+</code></pre>
+</li>
+<li>
+<p>Merging the changes <strong>from</strong> the other branch:</p>
+<pre><code class="language-sh">git merge other-branch
+</code></pre>
+</li>
+</ol>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="collaborating/merge-pull-requests.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>It's a good idea to <strong>review these changes</strong> before you merge them.</p>
+<p>If possible, it's even better to have <strong>someone else</strong> review the changes.</p>
+</div>
+</div>
+<p>You can use <code>git diff</code> to <a href="collaborating/../using-git/how-to-use-branches.html#inspecting-branch-histories">view differences between branches</a>.
+However, platforms such as GitHub and GitLab offer an easier approach: &quot;pull requests&quot; (also called &quot;merge requests&quot;).</p>
+<h2 id="creating-a-pull-request-on-github"><a class="header" href="#creating-a-pull-request-on-github">Creating a pull request on GitHub</a></h2>
+<p>The steps required to create a pull request differ depending on which platform you are using.
+Here, we will describe how to create a pull request on GitHub.
+For further details, see the <a href="https://docs.github.com/en/pull-requests">GitHub documentation</a>.</p>
+<ul>
+<li>
+<p>Open the main page of your GitHub repository.</p>
+</li>
+<li>
+<p>In the &quot;Branch&quot; menu, select the branch that contains the changes you want to merge.</p>
+</li>
+<li>
+<p>Open the &quot;Contribute&quot; menu.
+This should be located on the right-hand side, above the list of files.</p>
+</li>
+<li>
+<p>Click the &quot;Open pull request&quot; button.</p>
+</li>
+<li>
+<p>In the &quot;base&quot; menu, select the branch you want to merge the changes <strong>into</strong>.</p>
+</li>
+<li>
+<p>Enter a descriptive title for the pull request.</p>
+</li>
+<li>
+<p>In the message editor, write a summary of the changes in this branch, and identify <strong>specific questions or objectives</strong> that you want the reviewer to address.</p>
+</li>
+<li>
+<p>Select <strong>potential reviewers</strong> by clicking on the &quot;Reviewers&quot; link in the right-hand sidebar.</p>
+</li>
+<li>
+<p>Click the &quot;Create pull request&quot; button.</p>
+</li>
+</ul>
+<p>Once the pull request has been created, the reviewer(s) can review your changes and discuss their feedback and suggestions with you.</p>
+<h2 id="merging-a-pull-request-on-github"><a class="header" href="#merging-a-pull-request-on-github">Merging a pull request on GitHub</a></h2>
+<p>When the pull request has been reviewed to your satisfaction, you can merge these changes by clicking the &quot;Merge pull request&quot; button.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="collaborating/merge-pull-requests.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>If the pull request has merge conflicts (e.g., if the branch you're merging <strong>into</strong> contains new commits), you will need to <a href="collaborating/../using-git/how-to-resolve-merge-conflicts.html">resolve these conflicts</a>.</p>
+</div>
+</div>
+<p>For further details about merging pull requests on GitHub, see the <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request">GitHub documentation</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="an-example-pull-request"><a class="header" href="#an-example-pull-request">An example pull request</a></h1>
+<p>The initial draft of each chapter in this section were proposed in a <a href="https://github.com/robmoss/git-is-my-lab-book/pull/8">pull request</a>.</p>
+<p>When this pull request was created, the branch added four new commits:</p>
+<pre><code class="language-text">85594bf Add some guidelines for collaboration workflows
+678499b Discuss coding style guides
+2b9ff70 Discuss merge/pull requests and peer code review
+6cc6f54 Discuss repository structure and licenses
+</code></pre>
+<p>and the author (Rob Moss) asked the reviewer (Eamon Conway) to address several details in particular.</p>
+<p>Eamon made several suggestions in their <a href="https://github.com/robmoss/git-is-my-lab-book/pull/8#issuecomment-1139216530">initial response</a>, including:</p>
+<ul>
+<li>
+<p>Moving the <a href="collaborating/../using-git/how-to-structure-a-repository.html">How to structure a repository</a> and <a href="collaborating/../using-git/choosing-a-license.html">Choosing a license</a> chapters to the <a href="collaborating/../using-git/">Effective use of git</a> section;</p>
+</li>
+<li>
+<p>Starting this section with the <a href="collaborating/collaborating-on-code.html">Collaborating on code</a> chapter; and</p>
+</li>
+<li>
+<p>Agreeing that we should use <a href="https://github.com/robmoss/git-is-my-lab-book/pull/8">this pull request</a> as an example in this book.</p>
+</li>
+</ul>
+<p>In response, Rob pushed two commits that addressed the first two points above:</p>
+<pre><code class="language-text">e1d1dd9 Move collaboration guidelines to the start
+3f78ef8 Move the repository structure and license chapters
+</code></pre>
+<p>and then wrote this chapter to show how <strong>we used <a href="https://github.com/robmoss/git-is-my-lab-book/pull/8">a pull request</a> to draft this book section</strong>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="peer-code-review"><a class="header" href="#peer-code-review">Peer code review</a></h1>
+<p>Once you're comfortable in using <a href="collaborating/merge-pull-requests.html">merge/pull requests</a> to review changes in a branch, you can use this approach for peer code review.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>Remember that code review is a <strong>discussion and critique</strong> of a person's work.
+The code author will naturally feel that they own the code, and the reviewer needs to respect this.</p>
+</div>
+</div>
+<p>For further advice and suggestions on how to conduct peer code review, please see the <a href="collaborating/../references.html#performing-peer-code-review">Performing peer code review</a> references.</p>
+<h2 id="define-the-goals-of-a-peer-review"><a class="header" href="#define-the-goals-of-a-peer-review">Define the goals of a peer review</a></h2>
+<p>In creating a pull request and inviting someone to review your work, the pull request description should include the following details:</p>
+<ul>
+<li>
+<p>An overview of the work included in the pull request: what have you done, why have you done it?</p>
+</li>
+<li>
+<p>You may also want to explain how this work fits into the broader context of your research project.</p>
+</li>
+<li>
+<p>Identify <strong>specific questions or tasks</strong> that you would like the reviewer to address.
+For example, you might ask the reviewer to address one or more of the following questions:</p>
+<ul>
+<li>
+<p>Can the reviewer run your code and reproduce the outputs?</p>
+</li>
+<li>
+<p>Is the code easy to understand?</p>
+</li>
+<li>
+<p>If you have a <a href="collaborating/coding-style-guides.html">style guide</a>, is the code formatted appropriately?</p>
+</li>
+<li>
+<p>Do the model equation or data analysis steps seem sensible?</p>
+</li>
+<li>
+<p>If you have written documentation, is it easy to understand?</p>
+</li>
+<li>
+<p>Can the reviewer suggest how to improve or rewrite a specific piece of code?</p>
+</li>
+</ul>
+</li>
+</ul>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>Make the reviewer's job easier by giving them small amounts of code to review.</p>
+</div>
+</div>
+<h2 id="guidelines-for-reviewing-other-peoples-code"><a class="header" href="#guidelines-for-reviewing-other-peoples-code">Guidelines for reviewing other people's code</a></h2>
+<p>Peer code review is an opportunity for the author and the reviewer to <strong>learn from each other</strong> and improve a piece of code.</p>
+<div id="admonition-tip-1" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-tip-1">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>The most important guideline for the reviewer is to <strong>be kind</strong>.</p>
+<p>Treat other people's code the way you would want them to treat your code.</p>
+</div>
+</div>
+<ul>
+<li>
+<p><a href="https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/"><strong>Avoid saying &quot;you&quot;</strong></a>.
+Instead, say &quot;we&quot; or make the code the subject of the sentence.</p>
+<ul>
+<li>
+<p>Don't say &quot;You don't have a test for this function&quot;, but instead say &quot;We should test this function&quot;.</p>
+</li>
+<li>
+<p>Don't say &quot;Why did you write it this way?&quot;, but instead say &quot;What are the advantages of this approach?&quot;.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Ask questions</strong> rather than stating criticisms.</p>
+<ul>
+<li>Don't say &quot;This code is unclear&quot;, but instead say &quot;Can you help me understand how this code works?&quot;.</li>
+</ul>
+</li>
+<li>
+<p>Treat peer review as an opportunity to <strong>praise good work</strong>!</p>
+<ul>
+<li>
+<p>Don't be afraid to tell the author that a piece of code was very clear, easy to understand, or well written.</p>
+</li>
+<li>
+<p>Tell the author if reading their code made you aware of a useful function or package.</p>
+</li>
+<li>
+<p>Tell the author if reading their code gave you some ideas for your own code.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="complete-the-review"><a class="header" href="#complete-the-review">Complete the review</a></h2>
+<p>Once the peer code review is complete, and any corresponding updates to the code have been made, you can <a href="collaborating/merge-pull-requests.html">merge the branch</a>.</p>
+<h2 id="retain-a-record-of-the-review"><a class="header" href="#retain-a-record-of-the-review">Retain a record of the review</a></h2>
+<p>By using merge/pull requests to review code, the discussion between the author and the reviewer is recorded.
+This can be a useful reference for future code reviews.</p>
+<div id="admonition-tip-2" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-tip-2">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>Try to record all of the discussion in the pull request comments, even if the author and reviewer meet in person, so that you have a complete record of the review.</p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="coding-style-guides"><a class="header" href="#coding-style-guides">Coding style guides</a></h1>
+<p>A style guide defines rules and guidelines for how to structure and format your code.
+This can make code <strong>easier to write</strong>, because you don't need to worry about how to format your code.
+It can also make code <strong>easier to read</strong>, because consistent styling allows you to focus on the content.</p>
+<p>There are two types of tools that can help you use a style guide:</p>
+<ul>
+<li>
+<p>A <strong>formatter</strong> formats your code to make it consistent with a specific style; and</p>
+</li>
+<li>
+<p>A <strong>linter</strong> checks whether your code is consistent with a specific style.</p>
+</li>
+</ul>
+<h2 id="recommended-style-guides"><a class="header" href="#recommended-style-guides">Recommended style guides</a></h2>
+<p>Because programming languages can be very different from each other, style guides are usually defined for a single programming language.</p>
+<p>Here we list some of the most widely-used style guides for several common programming languages:</p>
+<ul>
+<li>
+<p>For R there is a <a href="https://style.tidyverse.org/">tidyverse style guide</a>.</p>
+<ul>
+<li>You can apply this style to your code with <a href="http://styler.r-lib.org/">styler</a>.</li>
+<li>You can check that your code conforms to this style with <a href="https://github.com/jimhester/lintr">lintr</a>.</li>
+</ul>
+</li>
+<li>
+<p>For Python there is <a href="https://black.readthedocs.io/">Black</a>, which defines a coding style and applies this style to your code.</p>
+</li>
+<li>
+<p>For C++ there is a <a href="https://google.github.io/styleguide/cppguide.html">Google C++ style guide</a>.</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="continuous-integration"><a class="header" href="#continuous-integration">Continuous integration</a></h1>
+<p>Continuous Integration (CI) is an automated process where code changes are merged in a central repository in order to run automated tests and other processes.
+This can provide rapid feedback while you develop your code and collaborate with others, as long as commits are regularly pushed to the central repository.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="collaborating/continuous-integration.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>This book is an example of Continuous Integration: every time a commit is pushed to the <a href="https://github.com/robmoss/git-is-my-lab-book">central repository</a>, the <a href="collaborating/robmoss.github.io/git-is-my-lab-book/">online book</a> is automatically updated.</p>
+<p>Because the central repository is hosted on GitHub, we use <a href="https://docs.github.com/en/actions/quickstart">GitHub Actions</a>. Note that this is a GitHub-specific CI system.
+You can view the update action for this book <a href="https://github.com/robmoss/git-is-my-lab-book/blob/master/.github/workflows/deploy.yml">here</a>.</p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reproducibility"><a class="header" href="#reproducibility">Reproducibility</a></h1>
+<p>This section demonstrates how to use version control and software testing to ensure that your research results can be independently reproduced by others.</p>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="reproducibility/index.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>Reproducibility is just as much about simple work habits as the tools used to share data and code.</p>
+<p>— <a href="https://doi.org/10.1002/bes2.1801">Jesse M. Alston and Jessica A. Rick</a></p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="testing"><a class="header" href="#testing">Testing</a></h1>
+<p>This section introduces the topic of software testing.
+Testing your code is an important part of any code-based research activity.
+Tests check whether your code behaves as intended, and can warn you if you introduce a bug or mistake into your code.</p>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="testing/index.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>Tests can show the presence of bugs, but <strong>not</strong> their absence.</p>
+<p>— <a href="https://en.wikiquote.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a></p>
+</div>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-and-hpc-platforms"><a class="header" href="#cloud-and-hpc-platforms">Cloud and HPC platforms</a></h1>
+<p>This section introduces computing platforms that allow you to generate outputs more quickly, and without relying on your own laptop or desktop computer.
+It also demonstrates how to use version control to ensure that the code running on these platforms is the same as the code on your laptop.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="case-studies"><a class="header" href="#case-studies">Case studies</a></h1>
+<p>This section contains interesting and useful examples of incorporating Git into a research activity, as contributed by EMCRs in our network.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fixing-a-bug-in-pypfilt"><a class="header" href="#fixing-a-bug-in-pypfilt">Fixing a bug in pypfilt</a></h1>
+<p>Author: Rob Moss (<code>rgmoss@unimelb.edu.au</code>)</p>
+<p>Project: <a href="https://pypfilt.readthedocs.io/">pypfilt</a>, a bootstrap particle filter for Python</p>
+<p>Date: 27 October 2021</p>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>I introduced a bug when I modified a function in my <a href="https://pypfilt.readthedocs.io/">pypfilt</a> package, and only detected the bug after I had created several more commits.</p>
+<p>To resolve this bug, I had to:</p>
+<ol>
+<li>
+<p>Notice the bug;</p>
+</li>
+<li>
+<p>Identify the cause of the bug;</p>
+</li>
+<li>
+<p>Write a test case to check whether the bug is present; and</p>
+</li>
+<li>
+<p>Fix the bug.</p>
+</li>
+</ol>
+<h2 id="notice-the-bug"><a class="header" href="#notice-the-bug">Notice the bug</a></h2>
+<p>I noticed that a regression test<sup class="footnote-reference"><a href="#regression">1</a></sup> was failing: re-running a set of model simulations was no longer generating the same output.
+The results had changed, but none of my recent commits should have had this effect.</p>
+<p><strong>I should have noticed this</strong> when I created the commit that introduced this bug, but:</p>
+<ul>
+<li>
+<p>I had not pushed the most recent commits to the upstream <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python">repository</a>, where all of the test cases are run automatically every time a new commit is pushed; and</p>
+</li>
+<li>
+<p>I had not run the test cases on my laptop after making each of the recent commits, because this takes a few minutes and I was lazy.</p>
+</li>
+</ul>
+<h2 id="identify-the-cause-of-the-bug"><a class="header" href="#identify-the-cause-of-the-bug">Identify the cause of the bug</a></h2>
+<p>I knew that the bug had been introduced quite recently, and I knew that it affected a specific function: <a href="https://pypfilt.readthedocs.io/en/latest/api/state.html#pypfilt.state.earlier_states"><code>earlier_states()</code></a>.
+Running <code>git blame src/pypfilt/state.py</code> indicated that the recent commit <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/408b5f13302e5edb5ae7866286927873ed0f0c96"><code>408b5f1</code></a> was a likely culprit, because it changed many lines in this function.</p>
+<p>In particular, I suspected the bug was occurring in the following loop, which steps backwards in time and handles the case where model simulations are reordered:</p>
+<pre><code class="language-python"># Start with the parent indices for the current particles, which allow us
+# to look back one time-step.
+parent_ixs = np.copy(hist['prev_ix'][ix])
+
+# Continue looking back one time-step, and only update the parent indices
+# at time-step T if the particles were resampled at time-step T+1.
+for i in range(1, steps):
+    step_ix = ix - i
+    if hist['resampled'][step_ix + 1, 0]:
+        parent_ixs = hist['prev_ix'][step_ix, parent_ixs]
+</code></pre>
+<p>In stepping through this code, I identified that the following line was incorrect:</p>
+<pre><code class="language-python">    if hist['resampled'][step_ix + 1, 0]:
+</code></pre>
+<p>and that changing <code>step_ix + 1</code> to <code>step_ix</code> <strong>should</strong> fix the bug.</p>
+<p><strong>Note:</strong> I could have used <code>git bisect</code> to identify the commit that introduced this bug, but running all of the test cases for each commit is relatively time-consuming; since I knew that the bug had been introduced quite recently, I chose to use <code>git blame</code>.</p>
+<h2 id="write-a-test-case"><a class="header" href="#write-a-test-case">Write a test case</a></h2>
+<p>I wrote a test case <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/blob/9dcf621618fe76281a486af7bfba364e7bd26c13/tests/test_earlier_state.py"><code>test_earlier_state()</code></a> that called this <a href="https://pypfilt.readthedocs.io/en/latest/api/state.html#pypfilt.state.earlier_states"><code>earlier_states()</code></a> function a number of times, and checked that each set of model simulations were returned in the correct order.</p>
+<p>This test case checks that:</p>
+<ol>
+<li>
+<p>If the model simulations were not reordered, the original ordering is always returned;</p>
+</li>
+<li>
+<p>If the model simulations were reordered at some time <code>t_0</code>, the original ordering is returned for times <code>t &lt; t_0</code>; and</p>
+</li>
+<li>
+<p>If the model simulations were reordered at some time <code>t_0</code>, the new ordering is returned for times <code>t &gt;= t_0</code>.</p>
+</li>
+</ol>
+<p>This test case failed when I reran the testing pipeline, which indicated that it identified the bug.</p>
+<h2 id="fix-the-bug"><a class="header" href="#fix-the-bug">Fix the bug</a></h2>
+<p>With the test case now written, I was able to verify that that changing <code>step_ix + 1</code> to <code>step_ix</code> <strong>did</strong> fix the bug.</p>
+<p>I added the test case and the bug fix in commit <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/9dcf621618fe76281a486af7bfba364e7bd26c13"><code>9dcf621</code></a>.</p>
+<p>In the commit message I indicated:</p>
+<ol>
+<li>
+<p>Where the bug was located: the <a href="https://pypfilt.readthedocs.io/en/latest/api/state.html#pypfilt.state.earlier_states"><code>earlier_states()</code></a> function;</p>
+</li>
+<li>
+<p>When the bug was introduced: commit <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/408b5f13302e5edb5ae7866286927873ed0f0c96"><code>408b5f1</code></a>; and</p>
+</li>
+<li>
+<p>Why the bug was not detected when I created commit <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/408b5f13302e5edb5ae7866286927873ed0f0c96"><code>408b5f1</code></a>.</p>
+</li>
+</ol>
+<div class="footnote-definition" id="regression"><sup class="footnote-definition-label">1</sup>
+<p>A regression test checks that a commit hasn't changed an existing behaviour or functionality.</p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-contribute-1"><a class="header" href="#how-to-contribute-1">How to contribute</a></h1>
+<h2 id="add-a-case-study"><a class="header" href="#add-a-case-study">Add a case study</a></h2>
+<p>If you've made use of Git in your research activities, <strong>please let us know!</strong>
+We're looking for <a href="case-studies/README.html">case studies</a> that highlight how EMCRs are using Git.
+See the instructions for suggesting new content (below).</p>
+<h2 id="provide-comments-and-feedback"><a class="header" href="#provide-comments-and-feedback">Provide comments and feedback</a></h2>
+<p>The easiest way to provide comments and feedback is to <a href="https://github.com/robmoss/git-is-my-lab-book/issues">create an issue</a>.
+Note that this requires a GitHub account.
+If you do not have a GitHub account, you can email any of the authors.
+Please include &quot;Git is my lab book&quot; in the subject line.</p>
+<h2 id="suggest-modifications-and-new-content"><a class="header" href="#suggest-modifications-and-new-content">Suggest modifications and new content</a></h2>
+<p>This book is written in Markdown and is published using <a href="https://rust-lang.github.io/mdBook/">mdBook</a>.
+You can suggest modifications and new content by:</p>
+<ul>
+<li>
+<p>Forking <a href="https://github.com/robmoss/git-is-my-lab-book">the book repository</a>;</p>
+</li>
+<li>
+<p>Adding, deleting, and/or modifying book chapters in the <code>src/</code> directory;</p>
+</li>
+<li>
+<p>Recording your changes in one or more git commits; and</p>
+</li>
+<li>
+<p><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">Creating a pull request</a>, so that we can review your suggestions.</p>
+</li>
+</ul>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="how-to-contribute.html#admonition-info">
+<p>Info</p>
+</a>
+</div>
+<div>
+<p>You can also edit any page by clicking the &quot;Suggest an edit&quot; button (<i class="fa fa-edit"></i>) in the top-right corner.
+This will start the process described above by forking the book repository.</p>
+</div>
+</div>
+<h2 id="adding-tabbed-code-blocks"><a class="header" href="#adding-tabbed-code-blocks">Adding tabbed code blocks</a></h2>
+<p>You can display multiple code blocks as a tabbed group by enclosing them in a <code>&lt;div class=&quot;tabbed-blocks&quot;&gt; ... &lt;/div&gt;</code> container.
+For example:</p>
+<pre><code class="language-md">&lt;div class=&quot;tabbed-blocks&quot;&gt;
+
+```python
+print(&quot;Hello world&quot;)
+```
+
+```R
+cat(&quot;Hello world\n&quot;)
+```
+
+```cpp
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; &quot;Hello World&quot;;
+    return 0;
+}
+```
+
+```sh
+echo &quot;Hello world&quot;
+```
+
+&lt;/div&gt;
+</code></pre>
+<p>produces:</p>
+<div class="tabbed-blocks">
+<pre><code class="language-python">print(&quot;Hello world&quot;)
+</code></pre>
+<pre><code class="language-R">cat(&quot;Hello world\n&quot;)
+</code></pre>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; &quot;Hello World&quot;;
+    return 0;
+}
+</code></pre>
+<pre><code class="language-sh">echo &quot;Hello world&quot;
+</code></pre>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contributors"><a class="header" href="#contributors">Contributors</a></h1>
+<p>Here is a list of the contributors who have helped develop these materials:</p>
+<ul>
+<li>Rob Moss (<a href="https://github.com/robmoss">robmoss</a>)</li>
+<li>Eamon Conway (<a href="https://github.com/EamonConway">EamonConway</a>)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="references"><a class="header" href="#references">References</a></h1>
+<h2 id="education-and-commentary-articles"><a class="header" href="#education-and-commentary-articles">Education and commentary articles</a></h2>
+<ul>
+<li>
+<p><a href="https://doi.org/10.1002/bes2.1801">A Beginner's Guide to Conducting Reproducible Research</a> describes key requirements for producing reproducible research outputs.</p>
+</li>
+<li>
+<p><a href="https://doi.org/10.7554/eLife.16800">Point of View: How open science helps researchers succeed</a> presents evidence that open research practices bring significant benefits to researchers.</p>
+</li>
+<li>
+<p><a href="https://doi.org/10.1371/journal.pcbi.1000424">A Quick Guide to Organizing Computational Biology Projects</a> suggests an approach for structuring a computational research repository.</p>
+</li>
+</ul>
+<h2 id="using-git-and-other-software-tools"><a class="header" href="#using-git-and-other-software-tools">Using Git and other software tools</a></h2>
+<ul>
+<li>
+<p>The Pro Git book is <a href="https://git-scm.com/book">available online</a>.
+It starts with an overview of Git basics and then covers every aspect of Git in great detail.</p>
+</li>
+<li>
+<p>The Software Carpentry Foundation publishes <a href="https://software-carpentry.org/lessons/">many lessons</a>, including <a href="https://swcarpentry.github.io/git-novice/">Version Control with Git</a>.</p>
+</li>
+</ul>
+<h2 id="performing-peer-code-review"><a class="header" href="#performing-peer-code-review">Performing peer code review</a></h2>
+<ul>
+<li>
+<p><a href="https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/">The Art of Giving and Receiving Code Reviews (Gracefully)</a></p>
+</li>
+<li>
+<p><a href="https://ropensci.org/blog/2018/11/29/codereview/">Code Review in the Lab</a></p>
+</li>
+<li>
+<p><a href="https://uwescience.github.io/neuroinformatics/2017/10/08/code-review.html">Scientific Code Review</a></p>
+</li>
+<li>
+<p><a href="https://www.semasoftware.com/blog/the-5-golden-rules-of-code-reviews">The 5 Golden Rules of Code Review</a></p>
+</li>
+</ul>
+<h2 id="high-performance-computing-platforms"><a class="header" href="#high-performance-computing-platforms">High-performance computing platforms</a></h2>
+<ul>
+<li>
+<p><a href="https://ardc.edu.au/services/nectar-research-cloud/how-to-access-the-ardc-nectar-research-cloud/">How to access the ARDC Nectar Research Cloud</a></p>
+</li>
+<li>
+<p><a href="https://docs.cloud.unimelb.edu.au/">Melbourne Research Cloud</a></p>
+</li>
+<li>
+<p><a href="https://dashboard.hpc.unimelb.edu.au/">High Performance Computing at University of Melbourne</a></p>
+</li>
+</ul>
+<h2 id="how-to-acknowledge-and-cite-research-software"><a class="header" href="#how-to-acknowledge-and-cite-research-software">How to acknowledge and cite research software</a></h2>
+<ul>
+<li>
+<p>The <a href="https://doi.org/10.5281/zenodo.5003989">ARDC Guide to making software citable</a> explains how to cite your code and assign it a DOI.</p>
+</li>
+<li>
+<p><a href="https://doi.org/10.12688/f1000research.26932.2">Recognizing the value
+of software: a software citation guide</a> provides further examples and guidance for ensuring your work receives proper attribution and credit.</p>
+</li>
+</ul>
+<h2 id="software-licensing"><a class="header" href="#software-licensing">Software licensing</a></h2>
+<ul>
+<li>
+<p><a href="https://choosealicense.com/">Choose an open source license</a> provides advice for selecting an appropriate license that meets your needs.</p>
+</li>
+<li>
+<p><a href="https://doi.org/10.1371/journal.pcbi.1002598">A Quick Guide to Software Licensing for the Scientist-Programmer</a> explains the various types of available licenses and provides advice for selecting a suitable license.</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="tabbed-code-blocks.js"></script>
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Collaborating on code - Git is my lab book</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../mdbook-admonish.css">
+        <link rel="stylesheet" href="../tabbed-code-blocks.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../index.html">Introduction</a></li><li class="chapter-item affix "><a href="../prerequisites.html">Prerequisites</a></li><li class="chapter-item "><a href="../version-control/index.html"><strong aria-hidden="true">1.</strong> Version control concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../version-control/what-is-version-control.html"><strong aria-hidden="true">1.1.</strong> What is version control?</a></li><li class="chapter-item "><a href="../version-control/what-is-a-repository.html"><strong aria-hidden="true">1.2.</strong> What is a repository?</a></li><li class="chapter-item "><a href="../version-control/what-is-a-commit.html"><strong aria-hidden="true">1.3.</strong> What is a commit?</a></li><li class="chapter-item "><a href="../version-control/what-should-I-commit.html"><strong aria-hidden="true">1.4.</strong> What should I commit?</a></li><li class="chapter-item "><a href="../version-control/how-do-I-write-a-commit-message.html"><strong aria-hidden="true">1.5.</strong> How do I write a commit message?</a></li><li class="chapter-item "><a href="../version-control/what-is-a-tag.html"><strong aria-hidden="true">1.6.</strong> What is a tag?</a></li><li class="chapter-item "><a href="../version-control/what-is-a-branch.html"><strong aria-hidden="true">1.7.</strong> What is a branch?</a></li><li class="chapter-item "><a href="../version-control/what-is-a-merge-conflict.html"><strong aria-hidden="true">1.8.</strong> What is a merge conflict?</a></li></ol></li><li class="chapter-item "><a href="../using-git/index.html"><strong aria-hidden="true">2.</strong> Effective use of git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../using-git/graphical-git-clients.html"><strong aria-hidden="true">2.1.</strong> Graphical Git clients</a></li><li class="chapter-item "><a href="../using-git/first-time-git-setup.html"><strong aria-hidden="true">2.2.</strong> First-time Git setup</a></li><li class="chapter-item "><a href="../using-git/creating-a-repository.html"><strong aria-hidden="true">2.3.</strong> Creating a repository</a></li><li class="chapter-item "><a href="../using-git/cloning-an-existing-repository.html"><strong aria-hidden="true">2.4.</strong> Cloning an existing repository</a></li><li class="chapter-item "><a href="../using-git/how-to-structure-a-repository.html"><strong aria-hidden="true">2.5.</strong> How to structure a repository</a></li><li class="chapter-item "><a href="../using-git/choosing-a-license.html"><strong aria-hidden="true">2.6.</strong> Choosing a license</a></li><li class="chapter-item "><a href="../using-git/creating-a-commit.html"><strong aria-hidden="true">2.7.</strong> Creating a commit</a></li><li class="chapter-item "><a href="../using-git/creating-a-remote-repository.html"><strong aria-hidden="true">2.8.</strong> Creating a remote repository</a></li><li class="chapter-item "><a href="../using-git/pushing-and-pulling-commits.html"><strong aria-hidden="true">2.9.</strong> Pushing and pulling commits</a></li><li class="chapter-item "><a href="../using-git/how-to-ignore-certain-files.html"><strong aria-hidden="true">2.10.</strong> How to ignore certain files</a></li><li class="chapter-item "><a href="../using-git/how-to-create-and-use-tags.html"><strong aria-hidden="true">2.11.</strong> How to create and use tags</a></li><li class="chapter-item "><a href="../using-git/inspecting-your-history.html"><strong aria-hidden="true">2.12.</strong> Inspecting your history</a></li><li class="chapter-item "><a href="../using-git/where-did-this-line-come-from.html"><strong aria-hidden="true">2.13.</strong> Where did this line come from?</a></li><li class="chapter-item "><a href="../using-git/where-did-this-problem-come-from.html"><strong aria-hidden="true">2.14.</strong> Where did this problem come from?</a></li><li class="chapter-item "><a href="../using-git/how-to-use-branches.html"><strong aria-hidden="true">2.15.</strong> How to use branches?</a></li><li class="chapter-item "><a href="../using-git/how-to-resolve-merge-conflicts.html"><strong aria-hidden="true">2.16.</strong> How to resolve merge conflicts?</a></li><li class="chapter-item "><a href="../using-git/exercise-resolve-a-merge-conflict.html"><strong aria-hidden="true">2.17.</strong> Exercise: resolve a merge conflict</a></li></ol></li><li class="chapter-item expanded "><a href="../collaborating/index.html"><strong aria-hidden="true">3.</strong> Collaborating</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../collaborating/collaborating-on-code.html" class="active"><strong aria-hidden="true">3.1.</strong> Collaborating on code</a></li><li class="chapter-item "><a href="../collaborating/collaborating-on-a-paper.html"><strong aria-hidden="true">3.2.</strong> Collaborating on a paper</a></li><li class="chapter-item "><a href="../collaborating/sharing-a-repository.html"><strong aria-hidden="true">3.3.</strong> Sharing a repository</a></li><li class="chapter-item "><a href="../collaborating/sharing-a-branch.html"><strong aria-hidden="true">3.4.</strong> Sharing a branch</a></li><li class="chapter-item "><a href="../collaborating/merge-pull-requests.html"><strong aria-hidden="true">3.5.</strong> Merge/Pull requests</a></li><li class="chapter-item "><a href="../collaborating/an-example-pull-request.html"><strong aria-hidden="true">3.6.</strong> An example pull request</a></li><li class="chapter-item "><a href="../collaborating/peer-code-review.html"><strong aria-hidden="true">3.7.</strong> Peer code review</a></li><li class="chapter-item "><a href="../collaborating/coding-style-guides.html"><strong aria-hidden="true">3.8.</strong> Coding style guides</a></li><li class="chapter-item "><a href="../collaborating/continuous-integration.html"><strong aria-hidden="true">3.9.</strong> Continuous integration</a></li></ol></li><li class="chapter-item "><a href="../reproducibility/index.html"><strong aria-hidden="true">4.</strong> Reproducibility</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">4.1.</strong> What is reproducible research?</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.2.</strong> Generating reproducible outputs</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.3.</strong> Ensuring that outputs are reproducible</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.4.</strong> Ensuring that output are up to date</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.5.</strong> Reproducible supplementary materials</div></li></ol></li><li class="chapter-item "><a href="../testing/index.html"><strong aria-hidden="true">5.</strong> Testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">5.1.</strong> What are tests for?</div></li><li class="chapter-item "><div><strong aria-hidden="true">5.2.</strong> Unit tests</div></li><li class="chapter-item "><div><strong aria-hidden="true">5.3.</strong> Integration tests</div></li><li class="chapter-item "><div><strong aria-hidden="true">5.4.</strong> Regression tests</div></li><li class="chapter-item "><div><strong aria-hidden="true">5.5.</strong> Testing stochastic models</div></li><li class="chapter-item "><div><strong aria-hidden="true">5.6.</strong> I found a bug, now what?</div></li></ol></li><li class="chapter-item "><a href="../high-performance-computing/index.html"><strong aria-hidden="true">6.</strong> Cloud and HPC platforms</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">6.1.</strong> Available platforms</div></li><li class="chapter-item "><div><strong aria-hidden="true">6.2.</strong> Synchronising code and outputs</div></li><li class="chapter-item "><div><strong aria-hidden="true">6.3.</strong> Making one thing run faster</div></li><li class="chapter-item "><div><strong aria-hidden="true">6.4.</strong> Running many things at the same time</div></li></ol></li><li class="chapter-item "><a href="../case-studies/index.html"><strong aria-hidden="true">7.</strong> Case studies</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../case-studies/moss-pypfilt-earlier-states.html"><strong aria-hidden="true">7.1.</strong> Fixing a bug in pypfilt</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><a href="../how-to-contribute.html">How to contribute</a></li><li class="chapter-item affix "><a href="../contributors.html">Contributors</a></li><li class="chapter-item affix "><a href="../references.html">References</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Git is my lab book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/robmoss/git-is-my-lab-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/robmoss/git-is-my-lab-book/edit/master/src/collaborating/collaborating-on-code.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="collaborating-on-code"><a class="header" href="#collaborating-on-code">Collaborating on code</a></h1>
+<p>Once you are comfortable with creating commits, working in branches, and merging branches, you can use these skills to <strong>write code collaboratively as a team</strong>.</p>
+<p>The precise workflow will depend on the nature of your research and on the collaborators in your team, but there are some general guidelines that you may find helpful:</p>
+<ul>
+<li>
+<p>Agree on a <a href="coding-style-guides.html">style guide</a>.</p>
+</li>
+<li>
+<p>Work on separate features in <a href="sharing-a-branch.html">separate branches</a>.</p>
+</li>
+<li>
+<p>Use <a href="peer-code-review.html">peer code review</a> before merging changes from these branches.</p>
+</li>
+<li>
+<p>Consider using <a href="continuous-integration.html">continuous integration</a> to:</p>
+<ul>
+<li>Run <a href="../testing/">test cases</a> and detect bugs as early as possible; and</li>
+<li>Verify that code meets your chosen style guide.</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../collaborating/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../collaborating/collaborating-on-a-paper.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../collaborating/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../collaborating/collaborating-on-a-paper.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../tabbed-code-blocks.js"></script>
+    </body>
+</html>
