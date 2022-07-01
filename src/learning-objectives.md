@@ -5,7 +5,16 @@ These are skills that the reader should be able to demonstrate after reading thr
 
 ## Version control concepts
 
-After completing [this section](version-control/), you should be ale to identify how to apply version control concepts to some of your existing work.
+After completing [this section](version-control/), you should be able to identify how to apply version control concepts to some of your existing work.
+This includes be able to:
+
+- Identify projects and tasks for which version control would be suitable;
+
+- Categorise recent work activities into one or more commits;
+
+- Write commit messages that describe what changes you made and why you made them; and
+
+- Identify pieces of work that could be carried out in separate branches of a repository.
 
 ## Effective use of git
 
