@@ -1,6 +1,11 @@
 # Prerequisites
 
 These materials assume that the reader has a basic knowledge of the Bash command-line shell and using SSH to connect to remote computers.
+You should be comfortable with using the command-line to perform the following tasks:
+
+- Navigate your files and directories;
+- Create, copy, move, and delete files and directories; and
+- Work remotely using SSH.
 
 Please refer to the following materials for further details:
 
