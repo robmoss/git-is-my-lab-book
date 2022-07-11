@@ -9,6 +9,10 @@ The code author will naturally feel that they own the code, and the reviewer nee
 
 For further advice and suggestions on how to conduct peer code review, please see the [Performing peer code review](../references.md#performing-peer-code-review) references.
 
+```admonish tip
+Mention people who have reviewed your code in the acknowledgements section of the paper.
+```
+
 ## Define the goals of a peer review
 
 In creating a pull request and inviting someone to review your work, the pull request description should include the following details:

@@ -26,3 +26,10 @@ Once you've installed Git, you should define some important settings before you 
    ```sh
    git config --global init.defaultBranch main
    ```
+
+```admonish info
+If you use Windows, there are tools that can [improve your Git experience in PowerShell](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell).
+
+There are also tools for integrating Git into many common text editors.
+See *Git in other environments*, Appendix A of the [Pro Git book](https://git-scm.com/book/en/v2).
+```
