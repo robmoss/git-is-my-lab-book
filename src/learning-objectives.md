@@ -46,6 +46,8 @@ After completing [this section](collaborating/), you should be able to:
 
 - Create a **pull request**;
 
-- Use a pull request to **review a collaborator's work**; and
+- Use a pull request to **review a collaborator's work**;
 
-- Use a pull request to **merge a collaborator's work** into your main branch.
+- Use a pull request to **merge a collaborator's work** into your main branch; and
+
+- **Conduct peer code review** in a respectful manner.
