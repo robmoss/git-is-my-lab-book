@@ -1,6 +1,7 @@
 # Summary
 
 [Introduction](README.md)
+[Learning objectives](learning-objectives.md)
 [Prerequisites](prerequisites.md)
 
 - [Version control concepts](version-control/README.md)
@@ -12,6 +13,7 @@
   - [What is a tag?](version-control/what-is-a-tag.md)
   - [What is a branch?](version-control/what-is-a-branch.md)
   - [What is a merge conflict?](version-control/what-is-a-merge-conflict.md)
+  - [Exercise: using version control](version-control/exercise-using-version-control.md)
 
 - [Effective use of git](using-git/README.md)
   - [Graphical Git clients](using-git/graphical-git-clients.md)
@@ -30,6 +32,8 @@
   - [Where did this problem come from?](using-git/where-did-this-problem-come-from.md)
   - [How to use branches?](using-git/how-to-use-branches.md)
   - [How to resolve merge conflicts?](using-git/how-to-resolve-merge-conflicts.md)
+  - [Exercise: create a local repository](using-git/exercise-create-a-local-repository.md)
+  - [Exercise: use a remote repository](using-git/exercise-use-a-remote-repository.md)
   - [Exercise: resolve a merge conflict](using-git/exercise-resolve-a-merge-conflict.md)
 
 - [Collaborating](collaborating/README.md)
@@ -43,6 +47,13 @@
   - [Coding style guides](collaborating/coding-style-guides.md)
   - [Continuous integration](collaborating/continuous-integration.md)
 
+- [Reproducibility](reproducibility/README.md)
+  - [What is reproducible research?]()
+  - [Generating reproducible outputs]()
+  - [Ensuring that outputs are reproducible]()
+  - [Ensuring that output are up to date]()
+  - [Reproducible supplementary materials]()
+
 - [Testing](testing/README.md)
   - [What are tests for?]()
   - [Unit tests]()
@@ -50,13 +61,6 @@
   - [Regression tests]()
   - [Testing stochastic models]()
   - [I found a bug, now what?]()
-
-- [Reproducibility](reproducibility/README.md)
-  - [What is reproducible research?]()
-  - [Generating reproducible outputs]()
-  - [Ensuring that outputs are reproducible]()
-  - [Ensuring that output are up to date]()
-  - [Reproducible supplementary materials]()
 
 - [Cloud and HPC platforms](high-performance-computing/README.md)
   - [Available platforms]()
