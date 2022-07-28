@@ -37,3 +37,10 @@ Once you've installed Git, you should define some important settings before you 
    For example, it ensures that when you merge the green branch into the blue branch (as shown below) it records that commits *D*, *E*, and *F* came from the green branch.
 
    ![Merged branch](../version-control/branch-3.png)
+
+```admonish info
+If you use Windows, there are tools that can [improve your Git experience in PowerShell](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell).
+
+There are also tools for integrating Git into many common text editors.
+See *Git in other environments*, Appendix A of the [Pro Git book](https://git-scm.com/book/en/v2).
+```
