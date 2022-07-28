@@ -1,6 +1,6 @@
 # Exercise: use a remote repository
 
-In this exercise, you will work use a remote repository to synchronise and merge changes between multiple local repositories, starting from the local `git-exercise` repository that you created in [the previous exercise](exercise-create-a-local-repository.md).
+In this exercise, you will use a remote repository to synchronise and merge changes between multiple local repositories, starting from the local `git-exercise` repository that you created in [the previous exercise](exercise-create-a-local-repository.md).
 
 ## Create a remote repository
 
@@ -32,7 +32,7 @@ In this exercise, you will work use a remote repository to synchronise and merge
 
 ## Merge the report into the original repository
 
-1. In your original `git-exercise` repository, check out the `feature/report` branch from the remote repository and verify that it now contains the file `report.md`.
+1. In your original `git-exercise` repository, checkout the `feature/report` branch from the remote repository and verify that it now contains the file `report.md`.
 
 2. Merge this branch into your `main` or `master` branch, and add a new tag `milestone-3-report`.
 
@@ -40,7 +40,7 @@ In this exercise, you will work use a remote repository to synchronise and merge
 
 ## Update the new local repository
 
-1. In your `git-exercise-2` repository, check out the `main` or `master` branch and pull changes from the remote repository.
+1. In your `git-exercise-2` repository, checkout the `main` or `master` branch and pull changes from the remote repository.
    It should now contain the file `report.md`.
 
 ```admonish info
