@@ -32,7 +32,8 @@ This will start the process described above by forking the book repository.
 ```
 
 ```admonish tip
-When editing Markdown content, please **write each sentence on a separate line**, and ensure that your text editor **removes trailing whitespace**.
+When editing Markdown content, please **start each sentence on a separate line**.
+Also check that your text editor **removes trailing whitespace**.
 
 This ensures that each commit will contain only the modified sentences, and makes it easier to inspect the repository history.
 ```
