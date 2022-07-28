@@ -7,7 +7,6 @@ In this section we have introduced version control, and outlined how it can be [
 - Identifying when a specific change was made; and
 - Sharing your research with collaborators.
 
-
 ```admonish info
 We'd now like you think about how version control might be useful to you and your research.
 ````
@@ -23,7 +22,7 @@ For example:
 
 - When collaborating on a research project, have you ever had challenges in making sure that everyone was working with the most recent files?
 
-We'd also like you to consider how version control might be applied to your current work.
+How can you use version control in your current research project(s)?
 
 - Do you have an existing project or piece of code that could benefit from being stored in a repository?
 
@@ -32,3 +31,5 @@ We'd also like you to consider how version control might be applied to your curr
 - If so, what would you write for the commit messages?
 
 - Have you written some exploratory code or analysis that could be stored in a separate branch?
+
+Having looked at the use of version control in the past and present, how would using version control benefit you?
