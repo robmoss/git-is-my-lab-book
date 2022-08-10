@@ -13,6 +13,8 @@ You can [view this book online][book].
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][license].
 
+The tabbed code block code (`tabbed-code-blocks.css` and `tabbed-code-blocks.js`) is dual-licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License][license] and the [MIT License](LICENSE-MIT).
+
 ## Requirements
 
 To build this book, you must have the following programs installed:
