@@ -33,5 +33,5 @@ mdbook serve --open
 
 This will automatically rebuild the book whenever you edit the contents.
 
-[book]: https://robmoss.github.io/git-is-my-lab-book/
+[book]: https://git-is-my-lab-book.net/
 [license]: http://creativecommons.org/licenses/by-sa/4.0/
