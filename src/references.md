@@ -15,6 +15,10 @@
 
 - The Software Carpentry Foundation publishes [many lessons](https://software-carpentry.org/lessons/), including [Version Control with Git](https://swcarpentry.github.io/git-novice/).
 
+- [A Quick Introduction to Version Control with Git and GitHub](https://doi.org/10.1371/journal.pcbi.1004668) provides a short guide to using Git and GitHub.
+  It presents an example of analysing publicly available ChIP-seq data with Python.
+  The repository for the article is also [publicly available](https://github.com/jdblischak/git-for-science).
+
 ## Performing peer code review
 
 - [The Art of Giving and Receiving Code Reviews (Gracefully)](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/)
@@ -24,6 +28,10 @@
 - [Scientific Code Review](https://uwescience.github.io/neuroinformatics/2017/10/08/code-review.html)
 
 - [The 5 Golden Rules of Code Review](https://www.semasoftware.com/blog/the-5-golden-rules-of-code-reviews)
+
+## Computational research practices
+
+- [A simple kit to use computational notebooks for more openness, reproducibility, and productivity in research](https://doi.org/10.1371/journal.pcbi.1010356) provides some good recommendations for organising a project repository and setting up a reproducible workflow using computational notebooks.
 
 ## High-performance computing platforms
 
