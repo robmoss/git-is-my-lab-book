@@ -14,6 +14,7 @@ additional-css = ["mdbook-admonish.css", "tabbed-code-blocks.css"]
 additional-js = ["tabbed-code-blocks.js"]
 git-repository-url = "https://github.com/robmoss/git-is-my-lab-book"
 edit-url-template = "https://github.com/robmoss/git-is-my-lab-book/edit/master/{path}"
+cname = "git-is-my-lab-book.net"
 
 [output.html.fold]
 enable = true
