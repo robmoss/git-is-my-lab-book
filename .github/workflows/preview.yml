@@ -9,9 +9,6 @@ on:
       - reopened
       - synchronize
       - closed
-    branches-ignore:
-      - master
-      - gh-pages
 
 concurrency: preview-${{ github.ref }}
 
