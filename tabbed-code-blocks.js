@@ -15,6 +15,7 @@ const tab_names = new Map();
 tab_names.set("language-python", "Python");
 tab_names.set("language-py", "Python");
 tab_names.set("language-R", "R");
+tab_names.set("language-rust", "Rust");
 tab_names.set("language-cpp", "C++");
 tab_names.set("language-sh", "Shell");
 tab_names.set("language-shell", "Shell");

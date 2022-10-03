@@ -67,6 +67,12 @@ int main() {
 echo "Hello world"
 ```
 
+```rust
+fn main() {
+    println!("Hello World");
+}
+```
+
 </div>
 ~~~
 
@@ -93,6 +99,12 @@ int main() {
 
 ```sh
 echo "Hello world"
+```
+
+```rust
+fn main() {
+    println!("Hello World");
+}
 ```
 
 </div>
