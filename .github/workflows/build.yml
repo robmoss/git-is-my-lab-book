@@ -1,0 +1,22 @@
+# Build, but do not deploy, the book on all branches except `master`.
+
+name: Build
+on:
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Install mdbook
+      run: |
+        make install
+        echo $(pwd)/mdbook >> $GITHUB_PATH
+    - name: Build the book
+      run: |
+        mdbook build
