@@ -1,4 +1,6 @@
 /* Implement tabbed code blocks for mdBook. */
+/* SPDX-License-Identifier: MIT OR CC-BY-SA-4.0 */
+/* SPDX-FileCopyrightText: 2022 Rob Moss <robm.dev@gmail.com> */
 
 .tabbed-blocks ul.tab-bar {
     padding: 0;
