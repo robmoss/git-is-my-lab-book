@@ -8,4 +8,7 @@ This book is an example of Continuous Integration: every time a commit is pushed
 
 Because the central repository is hosted on GitHub, we use [GitHub Actions](https://docs.github.com/en/actions/quickstart). Note that this is a GitHub-specific CI system.
 You can view the update action for this book [here](https://github.com/robmoss/git-is-my-lab-book/blob/master/.github/workflows/deploy.yml).
+
+We also use CI to publish each pull request, so that contributions can be previewed during the review process.
+We added this feature in [this pull request](https://github.com/robmoss/git-is-my-lab-book/pull/26).
 ```

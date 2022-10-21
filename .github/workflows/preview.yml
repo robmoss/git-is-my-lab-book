@@ -1,0 +1,38 @@
+# Build pull requests and deploy.
+
+name: Deploy PR previews
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install mdbook
+        run: |
+          make install
+          echo $(pwd)/mdbook >> $GITHUB_PATH
+
+      - name: Build the book
+        run: |
+          mdbook build
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          force: false
+          clean-exclude: pr-preview/
+          source-dir: book/html
