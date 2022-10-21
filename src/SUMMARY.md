@@ -70,6 +70,7 @@
 
 - [Case studies](case-studies/README.md)
   - [Fixing a bug in pypfilt](case-studies/moss-pypfilt-earlier-states.md)
+  - [Incorrect data in a pre-print figure](case-studies/moss-incorrect-data-pre-print.md)
 
 -----------
 
