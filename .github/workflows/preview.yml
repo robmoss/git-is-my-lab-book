@@ -30,7 +30,11 @@ jobs:
         run: |
           mdbook build
 
+      # NOTE: we can only deploy PR previews from the original repository.
+      # This action fails when the PR originates from a forked repository;
+      # see https://github.com/rossjrw/pr-preview-action/issues/3 for details.
       - name: Deploy preview
+        if: github.event.pull_request.head.repo.full_name == github.repository
         uses: rossjrw/pr-preview-action@v1
         with:
           force: false
