@@ -22,3 +22,4 @@ Consider two branches that make conflicting changes to the same line of a file:
 
 There is no way to automatically reconcile these two branches, and **we have to fix this conflict manually**.
 This means that we need to decide what the true result should be, edit the file to resolve these conflicting changes, and commit our modifications.
+Hi Rob
