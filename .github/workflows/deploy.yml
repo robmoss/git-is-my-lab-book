@@ -28,3 +28,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: book/html
+          force: false
+          clean-exclude: pr-preview/
