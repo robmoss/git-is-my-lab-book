@@ -40,6 +40,11 @@ In creating a pull request and inviting someone to review your work, the pull re
 Make the reviewer's job easier by giving them small amounts of code to review.
 ```
 
+## Finding a reviewer
+
+On GitHub we have started a [peer-review team](https://github.com/orgs/spectrum-spark/teams/peer-review).
+We encourage you to post on the discussion board, to find like-minded members to review your code. 
+
 ## Guidelines for reviewing other people's code
 
 Peer code review is an opportunity for the author and the reviewer to **learn from each other** and improve a piece of code.
