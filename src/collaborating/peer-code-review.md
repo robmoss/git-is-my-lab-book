@@ -43,7 +43,7 @@ Make the reviewer's job easier by giving them small amounts of code to review.
 ## Finding a reviewer
 
 On GitHub we have started a [peer-review team](https://github.com/orgs/spectrum-spark/teams/peer-review).
-We encourage you to post on the discussion board, to find likeminded members to review your code. 
+We encourage you to post on the discussion board, to find like-minded members to review your code. 
 
 ## Guidelines for reviewing other people's code
 
