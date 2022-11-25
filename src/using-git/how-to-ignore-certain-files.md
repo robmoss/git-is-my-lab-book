@@ -15,6 +15,14 @@ You can instruct Git to ignore certain files by creating a `.gitignore` file.
 This is a plain text file, where each line defines a pattern that identifies files and directories which should be ignored.
 You can also add comments, which must start with a `#`, to explain the purpose of these patterns.
 
+```admonish tip
+If your editor will not accept `.gitignore` as a file name, you can create a `.gitignore` file in your repository by running:
+
+~~~sh
+touch .gitignore
+~~~
+```
+
 For example, the following `.gitignore` file would make Git ignore all `.aux` and `.pyc` files, and the file `my-paper.pdf`:
 
 ```text
