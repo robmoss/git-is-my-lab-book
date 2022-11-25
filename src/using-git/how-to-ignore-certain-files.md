@@ -16,7 +16,7 @@ This is a plain text file, where each line defines a pattern that identifies fil
 You can also add comments, which must start with a `#`, to explain the purpose of these patterns.
 
 ```admonish tip
-If your system will not accept `.gitignore` as a file name, you can create a `.gitignore` file in your repository by running:
+If your editor will not accept `.gitignore` as a file name, you can create a `.gitignore` file in your repository by running:
 
 ~~~sh
 touch .gitignore
