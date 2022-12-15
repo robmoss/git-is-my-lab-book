@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function(){
     AsciinemaPlayer.create(
         'where-did-this-line-come-from.cast',
         document.getElementById('demo'),
-        { poster: 'npt:0:1' });
+        { poster: 'npt:0:1', theme: 'dracula' });
 });
 </script>
 
