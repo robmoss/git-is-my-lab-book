@@ -60,3 +60,17 @@ You can inspect this commit by running the following command:
 ```sh
 git show 3dfff1f
 ```
+
+<div class="tabbed-blocks">
+
+<div id="demo" class="tabbed-block" data-tab-title="Video demonstration"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+    AsciinemaPlayer.create(
+        'where-did-this-line-come-from.cast',
+        document.getElementById('demo'),
+        { poster: 'npt:0:1' });
+});
+</script>
+
+</div>
