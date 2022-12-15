@@ -28,7 +28,8 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="mdbook-admonish.css">
         <link rel="stylesheet" href="tabbed-code-blocks.css">
-        <link rel="stylesheet" href="asciinema-player.css">
+        <link rel="stylesheet" href="asciinema/asciinema-player.css">
+        <link rel="stylesheet" href="asciinema/asciinema-theme-dracula.css">
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -1258,7 +1259,7 @@ document.addEventListener("DOMContentLoaded", function(){
     AsciinemaPlayer.create(
         'where-did-this-line-come-from.cast',
         document.getElementById('demo'),
-        { poster: 'npt:0:1' });
+        { poster: 'npt:0:1', theme: 'dracula' });
 });
 </script>
 </div>
@@ -2588,7 +2589,7 @@ of software: a software citation guide</a> provides further examples and guidanc
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src="tabbed-code-blocks.js"></script>
-        <script type="text/javascript" src="asciinema-player.min.js"></script>
+        <script type="text/javascript" src="asciinema/asciinema-player.min.js"></script>
         <script type="text/javascript">
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
