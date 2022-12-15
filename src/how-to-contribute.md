@@ -108,3 +108,24 @@ fn main() {
 ```
 
 </div>
+
+## Adding terminal session recordings
+
+You can use [asciinema](https://asciinema.org/) to record a terminal session, and display this recorded session with a small amount of HTML and JavaScript.
+For example, the following code is used to display the `where-did-this-line-come-from.cast` recording in a tab called "Video demonstration", as shown in [Where did this line come from?](using-git/where-did-this-line-come-from.md) chapter:
+
+~~~md
+<div class="tabbed-blocks">
+
+<div id="demo" class="tabbed-block" data-tab-title="Video demonstration"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+    AsciinemaPlayer.create(
+        'where-did-this-line-come-from.cast',
+        document.getElementById('demo'),
+        { poster: 'npt:0:1', theme: 'dracula' });
+});
+</script>
+
+</div>
+~~~
