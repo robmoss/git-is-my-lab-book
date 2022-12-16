@@ -401,4 +401,3 @@
 [95.856434, "o", "\r\n"]
 [95.861176, "o", "\u001b[?1h\u001b=\r\u001b[33mcommit ff5f3d843e6c70e5fa4664051e63dac24f3fb19f\u001b[m\u001b[33m (\u001b[m\u001b[1;36mHEAD -> \u001b[m\u001b[1;32mmaster\u001b[m\u001b[33m)\u001b[m\u001b[m\r\nAuthor: Rob Moss <robm.dev@gmail.com>\u001b[m\r\nDate:   Fri Dec 16 11:24:36 2022 +1100\u001b[m\r\n\u001b[m\r\n    Now show how to use vim for commit messages\u001b[m\r\n\u001b[m\r\n\u001b[33mcommit fcaea6dc71e94bb430dc2adb014b1087f9da1ba2\u001b[m\u001b[m\r\nAuthor: Rob Moss <robm.dev@gmail.com>\u001b[m\r\nDate:   Fri Dec 16 11:23:51 2022 +1100\u001b[m\r\n\u001b[m\r\n    Show how to use nano for writing commit messages\u001b[m\r\n\r\u001b[K\u001b[?1l\u001b>"]
 [95.861908, "o", "\u001b]2;(x1::git-editor-example)\u0007\u001b[32;1m(x1::git-editor-example)\u001b[0m "]
-[102.406587, "o", "exit\r\n"]
