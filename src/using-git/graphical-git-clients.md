@@ -1,12 +1,13 @@
 # Graphical Git clients
 
-While Git is a command-line program, there are other ways to work with Git repositories:
+Git is a command-line program. In this book we will primarily show how to use Git **from the command-line**. If you don't have Git already installed on your computer, see these [instructions for installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+Other than command-line, there are other ways to work with Git repositories:
 
 - There are many [graphical clients](https://git-scm.com/downloads/guis) that you can download and use;
 
-- Many editors include Git support (e.g., [Atom](https://atom.io/), [RStudio](https://www.rstudio.com/), [Visual Studio Code](https://code.visualstudio.com/)); and
+- Many editors include **built-in** Git support (e.g., [Atom](https://atom.io/), [RStudio](https://www.rstudio.com/), [Visual Studio Code](https://code.visualstudio.com/)); and
 
 - Online platforms such as [GitHub](https://github.com/), [GitLab](https://gitlab.com/public), and [Bitbucket](https://bitbucket.org/) also provide a graphical interface for common Git actions.
 
-In this book we will primarily show how to use Git **from the command-line**, but all of the concepts and terminology should also apply to all of the tools described above.
-If you don't have Git already installed on your computer, see these [instructions for installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+All of the concepts and terminology you will learn in this book should also apply to all of the tools described above.
