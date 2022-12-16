@@ -5,8 +5,10 @@
         <meta charset="UTF-8">
         <title>Git is my lab book</title>
         <meta name="robots" content="noindex" />
+
+
         <!-- Custom HTML head -->
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -17,9 +19,11 @@
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
         <link rel="stylesheet" href="css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
@@ -30,16 +34,17 @@
         <link rel="stylesheet" href="tabbed-code-blocks.css">
         <link rel="stylesheet" href="asciinema/asciinema-player.css">
         <link rel="stylesheet" href="asciinema/asciinema-theme-dracula.css">
+
     </head>
     <body>
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -55,7 +60,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -67,7 +72,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -88,7 +93,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -98,7 +103,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -118,6 +123,7 @@
                         <a href="https://github.com/robmoss/git-is-my-lab-book" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -131,8 +137,9 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -267,9 +274,8 @@ You should be comfortable with using the command-line to perform the following t
 </ul>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="prerequisites.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="prerequisites.html#admonition-info"></a></p>
 </div>
 <div>
 <p>If you use Windows, you may want to use PowerShell instead of Bash, in which case please refer to this <a href="https://doi.org/10.46430/phen0054">Introduction to the Windows Command Line with Powershell</a>.</p>
@@ -280,9 +286,8 @@ You should be comfortable with using the command-line to perform the following t
 <p>This section provides a high-level introduction to the concepts that you should understand in order to make effective use of version control.</p>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="version-control/index.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="version-control/index.html#admonition-info"></a></p>
 </div>
 <div>
 <p>Version control can turn your files into a lab book that captures the broader context of your research activities and that you can easily search and reproduce.</p>
@@ -373,9 +378,8 @@ Explain what changes were made and <strong>why</strong> they were made.
 This can help collaborators understand what we have done, but more importantly is acts as a record for our future selves.</p>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="version-control/how-do-I-write-a-commit-message.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="version-control/how-do-I-write-a-commit-message.html#admonition-info"></a></p>
 </div>
 <div>
 <p>Have you ever looked at code you wrote a long time ago <em>and wondered what you were thinking?</em></p>
@@ -416,9 +420,8 @@ Common uses of tags include:</p>
 They can be used for units of work that are too large to be a single commit.</p>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="version-control/what-is-a-branch.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="version-control/what-is-a-branch.html#admonition-info"></a></p>
 </div>
 <div>
 <p>It is easy to switch between branches!
@@ -467,9 +470,8 @@ This means that we need to decide what the true result should be, edit the file 
 </ul>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="version-control/exercise-using-version-control.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="version-control/exercise-using-version-control.html#admonition-info"></a></p>
 </div>
 <div>
 <p>We'd now like you think about how version control might be useful to you and your research.
@@ -512,9 +514,8 @@ For example:</p>
 <p>This section shows how to use the <code>git</code> command-line program to record your work, to inspect your commit history, and to search this commit history to identify commits that make specific changes or have specific effects.</p>
 <div id="admonition-reminder" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/index.html#admonition-reminder">
 <p>Reminder</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/index.html#admonition-reminder"></a></p>
 </div>
 <div>
 <p>Remember to <a href="using-git/../version-control/what-should-I-commit.html">commit early and commit often</a>.
@@ -557,9 +558,8 @@ git config --global user.email &quot;my.name@some-university.edu.au&quot;
 </ol>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/first-time-git-setup.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/first-time-git-setup.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>Please see <a href="using-git/choosing-your-git-editor.html">Choosing your Git editor</a> for details.</p>
@@ -583,9 +583,8 @@ For example, it ensures that when you merge the green branch into the blue branc
 </ol>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/first-time-git-setup.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/first-time-git-setup.html#admonition-info"></a></p>
 </div>
 <div>
 <p>If you use Windows, there are tools that can <a href="https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell">improve your Git experience in PowerShell</a>.</p>
@@ -598,9 +597,8 @@ See <em>Git in other environments</em>, Appendix A of the <a href="https://git-s
 See below for brief instructions on how to use these editors.</p>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/choosing-your-git-editor.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/choosing-your-git-editor.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>This editor is <strong>only used for writing commit messages</strong>.
@@ -619,14 +617,14 @@ document.addEventListener("DOMContentLoaded", function(){
 </script>
 </div>
 <h2 id="how-to-use-nano"><a class="header" href="#how-to-use-nano">How to use nano</a></h2>
-<p>Once you have written your commit message, press <code>Ctrl+O</code> to save the commit message, then press <code>Ctrl+X</code> to quit the editor.</p>
-<p><strong>To quit without saving</strong> press <code>Ctrl+X</code>.
+<p>Once you have written your commit message, press <kbd>Ctrl</kbd> + <kbd>O</kbd> and then <kbd>Enter</kbd> to save the commit message, then press <kbd>Ctrl</kbd> + <kbd>X</kbd> to quit the editor.</p>
+<p><strong>To quit without saving</strong> press <kbd>Ctrl</kbd> + <kbd>X</kbd>.
 If you have made any changes, <code>nano</code> will ask if you want to save them.
-Press <code>n</code> to quit without saving these changes.</p>
+Press <kbd>n</kbd> to quit without saving these changes.</p>
 <h2 id="how-to-use-vim"><a class="header" href="#how-to-use-vim">How to use vim</a></h2>
-<p>You need to press <code>i</code> (switch to insert mode) before you can write your commit message.
-Once you have written your commit message, press <code>Esc</code> and then type <code>:wq</code> to save your changes and quit the editor.</p>
-<p><strong>To quit without saving</strong> press <code>Esc</code> and then type <code>:q!</code>.</p>
+<p>You need to press <kbd>i</kbd> (switch to insert mode) before you can write your commit message.
+Once you have written your commit message, press <kbd>Esc</kbd> and then type <kbd>:wq</kbd> to save your changes and quit the editor.</p>
+<p><strong>To quit without saving</strong> press <kbd>Esc</kbd> and then type <kbd>:q!</kbd>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-repository"><a class="header" href="#creating-a-repository">Creating a repository</a></h1>
 <p>You can create repositories by running <code>git init</code>.
 This will create a <code>.git</code> directory that will contain all of the repository information.</p>
@@ -645,9 +643,8 @@ This will create a <code>.git</code> directory that will contain all of the repo
 </ol>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/creating-a-repository.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/creating-a-repository.html#admonition-info"></a></p>
 </div>
 <div>
 <p>Git will create the repository directory if it does not exist.</p>
@@ -658,9 +655,8 @@ This will create a <code>.git</code> directory that will contain all of the repo
 To do this, you need to know the remote repository's URL.</p>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/cloning-an-existing-repository.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/cloning-an-existing-repository.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>For GitHub repositories, there should be a green button labelled &quot;Code&quot;.
@@ -676,9 +672,8 @@ Click on this button, and it will provide you with the URL.</p>
 <p>This will create a local copy in the directory <code>git-is-my-lab-book</code>.</p>
 <div id="admonition-note" class="admonition note">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/cloning-an-existing-repository.html#admonition-note">
 <p>Note</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/cloning-an-existing-repository.html#admonition-note"></a></p>
 </div>
 <div>
 <p>If you have a GitHub account and have set up an SSH key, you can clone GitHub repositories using your SSH key.
@@ -710,9 +705,8 @@ For example, your repository might contain any of these different file types, an
 They can also <strong>help you</strong> when you return to a project after several weeks or months.</p>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/how-to-structure-a-repository.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/how-to-structure-a-repository.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>Have you ever asked yourself &quot;where is the file that contains X&quot;?</p>
@@ -743,9 +737,8 @@ Help your collaborators understand where they need to look in order to find some
 <p>A license specifies the conditions under which others may use, modify, and/or distribute your work.</p>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/choosing-a-license.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/choosing-a-license.html#admonition-info"></a></p>
 </div>
 <div>
 <p>Simply making a repository publicly accessible is <strong>not sufficient</strong> to allow others to make use of your work.
@@ -781,9 +774,8 @@ This should be accompanied by <a href="using-git/../version-control/how-do-I-wri
 <p>We will now show how to perform these steps.</p>
 <div id="admonition-note" class="admonition note">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-note">
 <p>Note</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-note"></a></p>
 </div>
 <div>
 <p>At any time, you can see a summary of the changes in your repository, and which ones are staged to be committed, by running:</p>
@@ -812,9 +804,8 @@ This should be accompanied by <a href="using-git/../version-control/how-do-I-wri
 <p>This will show you each of the changes in turn, and allow you select which ones to stage.</p>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>This interactive selection mode is very flexible; you can enter <code>?</code> at any of the prompts to see the range of available actions.</p>
@@ -830,9 +821,8 @@ This should be accompanied by <a href="using-git/../version-control/how-do-I-wri
 </code></pre>
 <div id="admonition-tip-1" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-tip-1">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-tip-1"></a></p>
 </div>
 <div>
 <p>If the file has any uncommitted changes, git will refuse to remove the file.
@@ -855,9 +845,8 @@ You can undo staged changes to a file by running:</p>
 </code></pre>
 <div id="admonition-note-1" class="admonition note">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-note-1">
 <p>Note</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-note-1"></a></p>
 </div>
 <div>
 <p>This <strong>will not modify</strong> the contents of the file.</p>
@@ -870,9 +859,8 @@ You can undo staged changes to a file by running:</p>
 <p>This will open your <a href="using-git/first-time-git-setup.html">chosen editor</a> and prompt you to write the <a href="using-git/../version-control/how-do-I-write-a-commit-message.html">commit message</a>.</p>
 <div id="admonition-tip-2" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-tip-2">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-tip-2"></a></p>
 </div>
 <div>
 <p>Note that the commit <strong>will not be created until you exit the editor</strong>.</p>
@@ -885,9 +873,8 @@ You can undo staged changes to a file by running:</p>
 Git provides a simple way of modifying the most recent commit.</p>
 <div id="admonition-warning" class="admonition warning">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-warning">
 <p>Warning</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/creating-a-commit.html#admonition-warning"></a></p>
 </div>
 <div>
 <p><strong>Do not modify the commit</strong> if you have already pushed it to another repository.
@@ -909,9 +896,8 @@ You may choose to store this remote repository on a service such as GitHub, or o
 This will allow you to &quot;push&quot; commits from your local repository to the remote repository, and to &quot;pull&quot; commits from the remote repository to your local repository.</p>
 <div id="admonition-note" class="admonition note">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/creating-a-remote-repository.html#admonition-note">
 <p>Note</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/creating-a-remote-repository.html#admonition-note"></a></p>
 </div>
 <div>
 <p>When you create a new repository on services such as GitHub, they will give you instructions on how to link this new repository to your local repository.
@@ -921,9 +907,8 @@ We also provide an example, below.</p>
 <p>A repository can be linked to more than one remote repository, so we need to choose a name to identify this remote repository.</p>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/creating-a-remote-repository.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/creating-a-remote-repository.html#admonition-info"></a></p>
 </div>
 <div>
 <p>The name &quot;origin&quot; is commonly used to identify the main remote repository.</p>
@@ -934,9 +919,8 @@ We also provide an example, below.</p>
 </code></pre>
 <div id="admonition-note-1" class="admonition note">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/creating-a-remote-repository.html#admonition-note-1">
 <p>Note</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/creating-a-remote-repository.html#admonition-note-1"></a></p>
 </div>
 <div>
 <p>Notice that the URL is similar to, <strong>but not identical to</strong>, the URL you use to view the repository in your web browser.</p>
@@ -957,9 +941,8 @@ See the next section for an example of linking the main branch in your local rep
 This requires that you have <strong>created at least one commit</strong> in your local repository.</p>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/pushing-and-pulling-commits.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/pushing-and-pulling-commits.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>This is a good time to create a <code>README.md</code> file and write a brief description of what this repository will contain.</p>
@@ -970,9 +953,8 @@ This requires that you have <strong>created at least one commit</strong> in your
 </code></pre>
 <div id="admonition-note" class="admonition note">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/pushing-and-pulling-commits.html#admonition-note">
 <p>Note</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/pushing-and-pulling-commits.html#admonition-note"></a></p>
 </div>
 <div>
 <p>Recall that we identify remote repositories by name.
@@ -995,9 +977,8 @@ This situation <strong>should not arise</strong> in general, and typically indic
 </code></pre>
 <div id="admonition-tip-1" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/pushing-and-pulling-commits.html#admonition-tip-1">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/pushing-and-pulling-commits.html#admonition-tip-1"></a></p>
 </div>
 <div>
 <p>Unless you are confident that you understand <strong>why</strong> this situation has occurred, it is probably a good idea to ask for advice before running the above command.</p>
@@ -1026,9 +1007,8 @@ This is a plain text file, where each line defines a pattern that identifies fil
 You can also add comments, which must start with a <code>#</code>, to explain the purpose of these patterns.</p>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/how-to-ignore-certain-files.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/how-to-ignore-certain-files.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>If your editor will not accept <code>.gitignore</code> as a file name, you can create a <code>.gitignore</code> file in your repository by running:</p>
@@ -1050,9 +1030,8 @@ sensitive-data
 </code></pre>
 <div id="admonition-tip-1" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/how-to-ignore-certain-files.html#admonition-tip-1">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/how-to-ignore-certain-files.html#admonition-tip-1"></a></p>
 </div>
 <div>
 <p>You <strong>can</strong> force Git to add an ignored file to a commit by running:</p>
@@ -1125,9 +1104,8 @@ By default, this command will list every commit <strong>from the very first comm
 <p>There are many ways to adjust <strong>which commits</strong> and <strong>what details</strong> that <code>git log</code> will show.</p>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>Each commit has a unique identifier (&quot;hash&quot;).
@@ -1138,9 +1116,8 @@ These hashes are quite long, but in general you only need to provide the first 5
 <p>You can limit which commits <code>git log</code> will show by specifying a start time and/or an end time.</p>
 <div id="admonition-tip-1" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip-1">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip-1"></a></p>
 </div>
 <div>
 <p>This can be extremely useful for generating <strong>progress reports</strong> and summarising your recent activity in team meetings.</p>
@@ -1162,9 +1139,8 @@ git log --since='1 week'
 </code></pre>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-info"></a></p>
 </div>
 <div>
 <p>Note the <code>--</code> argument that comes before the file name.
@@ -1184,9 +1160,8 @@ git show tag-name
 <p>This will show the commit details <strong>and</strong> all of the changes that were recorded in this commit.</p>
 <div id="admonition-tip-2" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip-2">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip-2"></a></p>
 </div>
 <div>
 <p>By default, <code>git show</code> will show you the most recent commit.</p>
@@ -1196,9 +1171,8 @@ git show tag-name
 <p>You can view all of the changes that were made between two commits with the <code>git diff</code> command.</p>
 <div id="admonition-tip-3" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip-3">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/inspecting-your-history.html#admonition-tip-3"></a></p>
 </div>
 <div>
 <p>The <code>git diff</code> command shows the <strong>difference</strong> between two points in your commit history.</p>
@@ -1409,9 +1383,8 @@ In this chapter, we will show you how create and use branches.
 In the <a href="using-git/../collaborating/">Collaborating</a> section, we will show you how branches can allow multiple people to work together on code and papers, and how you can use branches for <strong>peer code review</strong>.</p>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/how-to-use-branches.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/how-to-use-branches.html#admonition-info"></a></p>
 </div>
 <div>
 <p>Branches, like <a href="using-git/how-to-create-and-use-tags.html">tags</a>, are identified by name.
@@ -1452,9 +1425,8 @@ git checkout -b my-new-branch my-other-branch  # From an existing branch
 </code></pre>
 <div id="admonition-info-1" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/how-to-use-branches.html#admonition-info-1">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/how-to-use-branches.html#admonition-info-1"></a></p>
 </div>
 <div>
 <p>Git will not let you switch branches if you have any uncommitted changes.</p>
@@ -1641,9 +1613,8 @@ Record your changes in a new commit.</p>
 </ul>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/exercise-create-a-local-repository.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/exercise-create-a-local-repository.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>To answer some of these questions, you may need to run <code>git</code> commands.</p>
@@ -1707,9 +1678,8 @@ It should now contain the file <code>report.md</code>.</li>
 </ol>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/exercise-use-a-remote-repository.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/exercise-use-a-remote-repository.html#admonition-info"></a></p>
 </div>
 <div>
 <p>Congratulations!
@@ -1806,9 +1776,8 @@ Once you have resolved the conflicts, create a commit that records all of your c
 </ol>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/exercise-resolve-a-merge-conflict.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/exercise-resolve-a-merge-conflict.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>You may find it helpful to inspect the commits in each of the feature branches to understand how they have changed the files in which the conflicts have occurred.</p>
@@ -1822,9 +1791,8 @@ You can inspect this commit by running:</p>
 <p>How does your resolution compare to this commit?</p>
 <div id="admonition-note" class="admonition note">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="using-git/exercise-resolve-a-merge-conflict.html#admonition-note">
 <p>Note</p>
-</a>
+<p><a class="admonition-anchor-link" href="using-git/exercise-resolve-a-merge-conflict.html#admonition-note"></a></p>
 </div>
 <div>
 <p>You may have resolved the conflicts differently to the <code>second_milestone</code> commit, <strong>and that's perfectly fine</strong> as long as they have the same effect.</p>
@@ -1835,9 +1803,8 @@ You can inspect this commit by running:</p>
 This includes deciding how to structure your repository, how to use branches for each collaborator, and how to use tags to track your progress.</p>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="collaborating/index.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="collaborating/index.html#admonition-info"></a></p>
 </div>
 <div>
 <p>We also show how these skills support <strong>peer code review</strong>, so that you can share knowledge with, and learn from, your colleagues as part of your regular activity.</p>
@@ -1911,9 +1878,8 @@ This repository could be located on a platform such as GitHub, GitLab, or Bitbuc
 </ul>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="collaborating/sharing-a-repository.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="collaborating/sharing-a-repository.html#admonition-info"></a></p>
 </div>
 <div>
 <p>You should decide whether a public repository or a private repository suits you best.</p>
@@ -1950,9 +1916,8 @@ If they accept this invitation, they will have access to your repository.</p>
 Remember that you can merge commits from their branch into your own branches at any time.</p>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="collaborating/sharing-a-branch.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="collaborating/sharing-a-branch.html#admonition-info"></a></p>
 </div>
 <div>
 <p>You need to ensure that your collaborator <a href="collaborating/sharing-a-repository.html">has access to the remote repository</a>.</p>
@@ -1997,9 +1962,8 @@ You can merge one branch into another branch by taking the following steps:</p>
 </ol>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="collaborating/merge-pull-requests.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="collaborating/merge-pull-requests.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>It's a good idea to <strong>review these changes</strong> before you merge them.</p>
@@ -2047,9 +2011,8 @@ This should be located on the right-hand side, above the list of files.</p>
 <p>When the pull request has been reviewed to your satisfaction, you can merge these changes by clicking the &quot;Merge pull request&quot; button.</p>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="collaborating/merge-pull-requests.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="collaborating/merge-pull-requests.html#admonition-info"></a></p>
 </div>
 <div>
 <p>If the pull request has merge conflicts (e.g., if the branch you're merging <strong>into</strong> contains new commits), you will need to <a href="collaborating/../using-git/how-to-resolve-merge-conflicts.html">resolve these conflicts</a>.</p>
@@ -2086,9 +2049,8 @@ This should be located on the right-hand side, above the list of files.</p>
 <p>Once you're comfortable in using <a href="collaborating/merge-pull-requests.html">merge/pull requests</a> to review changes in a branch, you can use this approach for peer code review.</p>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-info"></a></p>
 </div>
 <div>
 <p>Remember that code review is a <strong>discussion and critique</strong> of a person's work.
@@ -2098,9 +2060,8 @@ The code author will naturally feel that they own the code, and the reviewer nee
 <p>For further advice and suggestions on how to conduct peer code review, please see the <a href="collaborating/../references.html#performing-peer-code-review">Performing peer code review</a> references.</p>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>Mention people who have reviewed your code in the acknowledgements section of the paper.</p>
@@ -2142,9 +2103,8 @@ For example, you might ask the reviewer to address one or more of the following 
 </ul>
 <div id="admonition-tip-1" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-tip-1">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-tip-1"></a></p>
 </div>
 <div>
 <p>Make the reviewer's job easier by giving them small amounts of code to review.</p>
@@ -2157,9 +2117,8 @@ We encourage you to post on the discussion board, to find like-minded members to
 <p>Peer code review is an opportunity for the author and the reviewer to <strong>learn from each other</strong> and improve a piece of code.</p>
 <div id="admonition-tip-2" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-tip-2">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-tip-2"></a></p>
 </div>
 <div>
 <p>The most important guideline for the reviewer is to <strong>be kind</strong>.</p>
@@ -2207,9 +2166,8 @@ Instead, say &quot;we&quot; or make the code the subject of the sentence.</p>
 This can be a useful reference for future code reviews.</p>
 <div id="admonition-tip-3" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-tip-3">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="collaborating/peer-code-review.html#admonition-tip-3"></a></p>
 </div>
 <div>
 <p>Try to record all of the discussion in the pull request comments, even if the author and reviewer meet in person, so that you have a complete record of the review.</p>
@@ -2251,9 +2209,8 @@ It can also make code <strong>easier to read</strong>, because consistent stylin
 This can provide rapid feedback while you develop your code and collaborate with others, as long as commits are regularly pushed to the central repository.</p>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="collaborating/continuous-integration.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="collaborating/continuous-integration.html#admonition-info"></a></p>
 </div>
 <div>
 <p>This book is an example of Continuous Integration: every time a commit is pushed to the <a href="https://github.com/robmoss/git-is-my-lab-book">central repository</a>, the <a href="https://git-is-my-lab-book.net/">online book</a> is automatically updated.</p>
@@ -2267,9 +2224,8 @@ We added this feature in <a href="https://github.com/robmoss/git-is-my-lab-book/
 <p>This section demonstrates how to use version control and software testing to ensure that your research results can be independently reproduced by others.</p>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="reproducibility/index.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="reproducibility/index.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>Reproducibility is just as much about simple work habits as the tools used to share data and code.</p>
@@ -2282,9 +2238,8 @@ Testing your code is an important part of any code-based research activity.
 Tests check whether your code behaves as intended, and can warn you if you introduce a bug or mistake into your code.</p>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="testing/index.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="testing/index.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>Tests can show the presence of bugs, but <strong>not</strong> their absence.</p>
@@ -2448,9 +2403,8 @@ You can suggest modifications and new content by:</p>
 </ul>
 <div id="admonition-info" class="admonition info">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="how-to-contribute.html#admonition-info">
 <p>Info</p>
-</a>
+<p><a class="admonition-anchor-link" href="how-to-contribute.html#admonition-info"></a></p>
 </div>
 <div>
 <p>You can also edit any page by clicking the &quot;Suggest an edit&quot; button (<i class="fa fa-edit"></i>) in the top-right corner.
@@ -2459,9 +2413,8 @@ This will start the process described above by forking the book repository.</p>
 </div>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
-<a class="admonition-anchor-link" href="how-to-contribute.html#admonition-tip">
 <p>Tip</p>
-</a>
+<p><a class="admonition-anchor-link" href="how-to-contribute.html#admonition-tip"></a></p>
 </div>
 <div>
 <p>When editing Markdown content, please <strong>start each sentence on a separate line</strong>.
@@ -2520,8 +2473,7 @@ int main() {
 </code></pre>
 <pre><pre class="playground"><code class="language-rust">fn main() {
     println!(&quot;Hello World&quot;);
-}
-</code></pre></pre>
+}</code></pre></pre>
 </div>
 <h2 id="adding-terminal-session-recordings"><a class="header" href="#adding-terminal-session-recordings">Adding terminal session recordings</a></h2>
 <p>You can use <a href="https://asciinema.org/">asciinema</a> to record a terminal session, and display this recorded session with a small amount of HTML and JavaScript.
@@ -2632,33 +2584,44 @@ of software: a software citation guide</a> provides further examples and guidanc
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
             </nav>
 
         </div>
 
-        <script type="text/javascript">
+
+
+
+        <script>
             window.playground_copyable = true;
         </script>
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script type="text/javascript" src="tabbed-code-blocks.js"></script>
-        <script type="text/javascript" src="asciinema/asciinema-player.min.js"></script>
-        <script type="text/javascript">
+        <script src="tabbed-code-blocks.js"></script>
+        <script src="asciinema/asciinema-player.min.js"></script>
+
+        <script>
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
+
     </body>
 </html>
