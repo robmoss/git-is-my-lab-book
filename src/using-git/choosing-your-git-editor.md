@@ -24,15 +24,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 ## How to use nano
 
-Once you have written your commit message, press `Ctrl+O` to save the commit message, then press `Ctrl+X` to quit the editor.
+Once you have written your commit message, press <kbd>Ctrl</kbd> + <kbd>O</kbd> and then <kbd>Enter</kbd> to save the commit message, then press <kbd>Ctrl</kbd> + <kbd>X</kbd> to quit the editor.
 
-**To quit without saving** press `Ctrl+X`.
+**To quit without saving** press <kbd>Ctrl</kbd> + <kbd>X</kbd>.
 If you have made any changes, `nano` will ask if you want to save them.
-Press `n` to quit without saving these changes.
+Press <kbd>n</kbd> to quit without saving these changes.
 
 ## How to use vim
 
-You need to press `i` (switch to insert mode) before you can write your commit message.
-Once you have written your commit message, press `Esc` and then type `:wq` to save your changes and quit the editor.
+You need to press <kbd>i</kbd> (switch to insert mode) before you can write your commit message.
+Once you have written your commit message, press <kbd>Esc</kbd> and then type <kbd>:wq</kbd> to save your changes and quit the editor.
 
-**To quit without saving** press `Esc` and then type `:q!`.
+**To quit without saving** press <kbd>Esc</kbd> and then type <kbd>:q!</kbd>.
