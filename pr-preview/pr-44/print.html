@@ -554,6 +554,20 @@ git config --global user.email &quot;my.name@some-university.edu.au&quot;
 <pre><code class="language-sh">git config --global core.editor &quot;C:/Program Files/My Editor/editor.exe&quot;
 </code></pre>
 </li>
+</ol>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<a class="admonition-anchor-link" href="using-git/first-time-git-setup.html#admonition-tip">
+<p>Tip</p>
+</a>
+</div>
+<div>
+<p>This editor is <strong>only used for writing commit messages</strong>.
+It is entirely separate from your choice of editor for any other task.
+Please see the <a href="using-git/first-time-git-setup.html#demo">demonstration below</a> for an example.</p>
+</div>
+</div>
+<ol start="3">
 <li>
 <p>By default, Git will create a branch called <code>master</code> when you create a new repository.
 You can set a different name for this initial branch:</p>
@@ -580,6 +594,17 @@ For example, it ensures that when you merge the green branch into the blue branc
 <p>There are also tools for integrating Git into many common text editors.
 See <em>Git in other environments</em>, Appendix A of the <a href="https://git-scm.com/book/en/v2">Pro Git book</a>.</p>
 </div>
+</div>
+<div class="tabbed-blocks">
+<div id="demo" class="tabbed-block" data-tab-title="Video demonstration"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+    AsciinemaPlayer.create(
+        'git-editor-example.cast',
+        document.getElementById('demo'),
+        { poster: 'npt:0:1', theme: 'dracula' });
+});
+</script>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-repository"><a class="header" href="#creating-a-repository">Creating a repository</a></h1>
 <p>You can create repositories by running <code>git init</code>.
