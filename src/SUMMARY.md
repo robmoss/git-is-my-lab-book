@@ -18,6 +18,7 @@
 - [Effective use of git](using-git/README.md)
   - [Graphical Git clients](using-git/graphical-git-clients.md)
   - [First-time Git setup](using-git/first-time-git-setup.md)
+  - [Choosing your Git editor](using-git/choosing-your-git-editor.md)
   - [Creating a repository](using-git/creating-a-repository.md)
   - [Cloning an existing repository](using-git/cloning-an-existing-repository.md)
   - [How to structure a repository](using-git/how-to-structure-a-repository.md)

@@ -22,9 +22,7 @@ Once you've installed Git, you should define some important settings before you 
    ```
 
    ```admonish tip
-   This editor is **only used for writing commit messages**.
-   It is entirely separate from your choice of editor for any other task.
-   Please see the [demonstration below](#demo) for an example.
+   Please see [Choosing your Git editor](choosing-your-git-editor.md) for details.
    ```
 
 3. By default, Git will create a branch called `master` when you create a new repository.
@@ -51,17 +49,3 @@ If you use Windows, there are tools that can [improve your Git experience in Pow
 There are also tools for integrating Git into many common text editors.
 See *Git in other environments*, Appendix A of the [Pro Git book](https://git-scm.com/book/en/v2).
 ```
-
-<div class="tabbed-blocks">
-
-<div id="demo" class="tabbed-block" data-tab-title="Video demonstration"></div>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-    AsciinemaPlayer.create(
-        'git-editor-example.cast',
-        document.getElementById('demo'),
-        { poster: 'npt:0:1', theme: 'dracula' });
-});
-</script>
-
-</div>
