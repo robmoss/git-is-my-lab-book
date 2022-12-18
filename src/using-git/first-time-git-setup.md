@@ -38,6 +38,14 @@ Once you've installed Git, you should define some important settings before you 
 
    ![Merged branch](../version-control/branch-3.png)
 
+5. Adjust how Git shows merge conflicts:
+
+   ```sh
+   git config --global merge.conflictstyle diff3
+   ```
+
+   This will be useful when we look at [how to use branches](how-to-use-branches.md) and [how to resolve merge conflicts](how-to-resolve-merge-conflicts.md).
+
 ```admonish info
 If you use Windows, there are tools that can [improve your Git experience in PowerShell](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell).
 
