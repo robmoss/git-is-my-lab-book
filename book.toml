@@ -20,6 +20,7 @@ additional-css = [
 additional-js = [
     "tabbed-code-blocks.js",
     "asciinema/asciinema-player.min.js",
+    "asciinema/wrapper.js",
     ]
 git-repository-url = "https://github.com/robmoss/git-is-my-lab-book"
 edit-url-template = "https://github.com/robmoss/git-is-my-lab-book/edit/master/{path}"

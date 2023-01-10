@@ -10,15 +10,22 @@ It is entirely separate from your choice of editor for any other task, such as w
 
 <div class="tabbed-blocks">
 
-<div id="demo" class="tabbed-block" data-tab-title="Git editor example"></div>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-    AsciinemaPlayer.create(
-        'git-editor-example.cast',
-        document.getElementById('demo'),
-        { poster: 'npt:0:1', theme: 'dracula' });
-});
-</script>
+<div class="tabbed-block" data-tab-title="Git editor example">
+  <div id="demo"></div>
+
+  Video timeline:
+  <ol>
+    <li><a data-video="demo" data-seek-to="4" href="javascript:;">Overview</a></li>
+    <li><a data-video="demo" data-seek-to="17" href="javascript:;">Show how to use nano</a></li>
+    <li><a data-video="demo" data-seek-to="71" href="javascript:;">Show how to use vim</a></li>
+  </ol>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function(){
+      addAsciinemaPlayer('git-editor-example.cast', 'demo');
+  });
+  </script>
+</div>
 
 </div>
 
