@@ -190,32 +190,39 @@ Some key details to notice are:</p>
 </ul>
 </li>
 <li>
-<p>The most recent commit merges both branches back into the <code>master</code> branch and resolves any merge conflicts.
-This commit has been given the <strong>tag</strong> <code>second_milestone</code>.</p>
+<p>The <code>example-solution</code> branch merges both feature branches and resolves any merge conflicts.
+This branch has been given the <strong>tag</strong> <code>second_milestone</code>.</p>
 </li>
 </ol>
 <h2 id="your-task"><a class="header" href="#your-task">Your task</a></h2>
-<p>You will create a new branch which will start at the <code>first_milestone</code> tag, and then merge the two feature branches into this new branch, resolving any merge conflicts that arise.
-You can then compare your results to the most recent commit on the <code>master</code> branch.</p>
+<p>You will start with the <code>master</code> branch, which contains the commits up to the <code>first_milestone</code> tag, and then merge the two feature branches into this branch, resolving any merge conflicts that arise.
+You can then compare your results to the <code>example-solution</code> branch.</p>
 <ol>
 <li>
-<p>Create local copies of the two feature branches, by running:</p>
+<p>Obtain a local copy of this repository, by running:</p>
+<pre><code class="language-sh">git clone https://github.com/robmoss/gimlb-simple-merge-example.git
+cd gimlb-simple-merge-example
+</code></pre>
+</li>
+<li>
+<p>Create local copies of the two feature branches and the example solution, by running:</p>
 <pre><code class="language-sh">git checkout feature/second-data-set
 git checkout feature/calculate-rate-of-change
+git checkout example-solution
 </code></pre>
 </li>
 <li>
-<p>Create a new branch (we'll call it <code>my-branch</code>) from the <code>first_milestone</code> tag, by running:</p>
-<pre><code class="language-sh">git checkout -b my-branch first_milestone
+<p>Return to the <code>master</code> branch, by running:</p>
+<pre><code class="language-sh">git checkout master
 </code></pre>
 </li>
 <li>
-<p>Merge the <code>feature/second-data-set</code> branch into <code>my-branch</code>, by running:</p>
+<p>Merge the <code>feature/second-data-set</code> branch into <code>master</code>, by running:</p>
 <pre><code class="language-sh">git merge feature/second-data-set
 </code></pre>
 </li>
 <li>
-<p>Merge the <code>feature/calculate-rate-of-change</code> branch into <code>my-branch</code>, by running:</p>
+<p>Merge the <code>feature/calculate-rate-of-change</code> branch into <code>master</code>, by running:</p>
 <pre><code class="language-sh">git merge feature/calculate-rate-of-change
 </code></pre>
 <p>This will result in a <strong>merge conflict</strong>, and now you need to decide how to resolve each conflict!
@@ -232,9 +239,12 @@ Once you have resolved the conflicts, create a commit that records all of your c
 </div>
 </div>
 <h2 id="self-evaluation"><a class="header" href="#self-evaluation">Self evaluation</a></h2>
-<p>Once you have created a commit that resolves these conflicts, see how similar or different the contents of your commit are to the corresponding commit in the master branch (which has been tagged <code>second_milestone</code>).
+<p>Once you have created a commit that resolves these conflicts, see how similar or different the contents of your commit are to the corresponding commit in the <code>example-solution</code> branch (which has been tagged <code>second_milestone</code>).
 You can inspect this commit by running:</p>
-<pre><code class="language-sh">git show second_milestone
+<pre><code class="language-sh">git show example-solution
+</code></pre>
+<p>You can compare this commit to your solution by running:</p>
+<pre><code class="language-sh">git diff example-solution
 </code></pre>
 <p>How does your resolution compare to this commit?</p>
 <div id="admonition-note" class="admonition note">
@@ -243,7 +253,7 @@ You can inspect this commit by running:</p>
 <p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
 </div>
 <div>
-<p>You may have resolved the conflicts differently to the <code>second_milestone</code> commit, <strong>and that's perfectly fine</strong> as long as they have the same effect.</p>
+<p>You may have resolved the conflicts differently to the <code>example-solution</code> branch, <strong>and that's perfectly fine</strong> as long as they have the same effect.</p>
 </div>
 </div>
 
