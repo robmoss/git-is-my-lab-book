@@ -23,6 +23,10 @@ It is entirely separate from your choice of editor for any other task, such as w
 
 </div>
 
+```admonish note
+You can pause the video to **select and copy any of the text**, such as the ` git config --global core.editor` commands.
+```
+
 ## How to use nano
 
 Once you have written your commit message, press <kbd>Ctrl</kbd> + <kbd>O</kbd> and then <kbd>Enter</kbd> to save the commit message, then press <kbd>Ctrl</kbd> + <kbd>X</kbd> to quit the editor.
