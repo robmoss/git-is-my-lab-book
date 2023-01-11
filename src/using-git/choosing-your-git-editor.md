@@ -11,7 +11,7 @@ It is entirely separate from your choice of editor for any other task, such as w
 <div class="tabbed-blocks">
 
 <div class="tabbed-block" data-tab-title="Git editor example">
-  <div id="demo"></div>
+  <div id="demo" data-cast-file="git-editor-example.cast"></div>
 
   Video timeline:
   <ol>
@@ -19,12 +19,6 @@ It is entirely separate from your choice of editor for any other task, such as w
     <li><a data-video="demo" data-seek-to="17" href="javascript:;">Show how to use nano</a></li>
     <li><a data-video="demo" data-seek-to="71" href="javascript:;">Show how to use vim</a></li>
   </ol>
-
-  <script>
-  document.addEventListener("DOMContentLoaded", function(){
-      addAsciinemaPlayer('git-editor-example.cast', 'demo');
-  });
-  </script>
 </div>
 
 </div>

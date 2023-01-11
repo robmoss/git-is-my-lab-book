@@ -118,12 +118,7 @@ For example, the following code is used to display the `where-did-this-line-come
 <div class="tabbed-blocks">
 
 <div class="tabbed-block" data-tab-title="Video demonstration">
-  <div id="demo"></div>
-  <script>
-  document.addEventListener("DOMContentLoaded", function(){
-      addAsciinemaPlayer('where-did-this-line-come-from.cast', 'demo');
-  });
-  </script>
+  <div id="demo" data-cast-file="where-did-this-line-come-from.cast"></div>
 </div>
 
 </div>
