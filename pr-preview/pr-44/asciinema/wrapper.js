@@ -38,9 +38,26 @@ function addAsciinemaPlayer(cast_file, container_id) {
 
     // Add an event handler for each element that seeks to the specified time.
     time_stamps.forEach(elt => {
+        // Ignore elements with invalid seek times.
+        const seek_to = parseInt(elt.getAttribute('data-seek-to'));
+        if (isNaN(seek_to) || seek_to < 0) {
+            return
+        }
+
         elt.addEventListener('click', () => {
             player.seek(elt.getAttribute('data-seek-to'));
         });
+
+        // Add a time-stamp to the end of the link text.
+        if (elt.tagName === 'A') {
+            const minutes = Math.floor(seek_to / 60).toString();
+            var seconds = (seek_to % 60).toString();
+            if (seconds.length < 2) {
+                seconds = '0' + seconds;
+            }
+            const time_stamp = ' (' + minutes + ':' + seconds + ')';
+            elt.insertAdjacentHTML('beforeend', time_stamp);
+        }
     });
 }
 
