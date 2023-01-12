@@ -2527,6 +2527,28 @@ For example, the following code is used to display the <code>where-did-this-line
 
 &lt;/div&gt;
 </code></pre>
+<p>You can also add links that jump to specific times in the video.
+Each link must have:</p>
+<ul>
+<li>A <code>data-video</code> attribute that identifies the video (in the example above, this is <code>&quot;demo&quot;</code>);</li>
+<li>A <code>data-seek-to</code> attribute that identifies the time (in seconds) to jump to; and</li>
+<li>A <code>href</code> attribute that is set to <code>&quot;javascript:;&quot;</code> (so that the link doesn't scroll the page).</li>
+</ul>
+<p>For example, the following example adds links that jump to 15 and 30 seconds into the video:</p>
+<pre><code class="language-md">&lt;div class=&quot;tabbed-blocks&quot;&gt;
+
+&lt;div class=&quot;tabbed-block&quot; data-tab-title=&quot;Video demonstration&quot;&gt;
+  &lt;div id=&quot;demo&quot; data-cast-file=&quot;where-did-this-line-come-from.cast&quot;&gt;&lt;/div&gt;
+
+  Video timeline:
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a data-video=&quot;demo&quot; data-seek-to=&quot;15&quot; href=&quot;javascript:;&quot;&gt;First link&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a data-video=&quot;demo&quot; data-seek-to=&quot;30&quot; href=&quot;javascript:;&quot;&gt;Second link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="contributors"><a class="header" href="#contributors">Contributors</a></h1>
 <p>Here is a list of the contributors who have helped develop these materials:</p>
 <ul>
