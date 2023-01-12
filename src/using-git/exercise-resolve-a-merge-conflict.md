@@ -100,3 +100,32 @@ How does your resolution compare to this commit?
 ```admonish note
 You may have resolved the conflicts differently to the `example-solution` branch, **and that's perfectly fine** as long as they have the same effect.
 ```
+
+## Example solution
+
+Here we present a recorded terminal session in which we clone this repository and resolve the merge conflict.
+
+```admonish tip
+You can use the video timeline (below) to jump to specific moments in this exercise.
+Remember that you can pause the recording at any point to **select and copy** any of the text.
+```
+
+<div class="tabbed-blocks">
+
+<div class="tabbed-block" data-tab-title="Resolving a merge conflict">
+  <div id="demo" data-cast-file="solution-resolve-a-merge-conflict.cast"></div>
+
+  Video timeline:
+  <ol>
+    <li><a data-video="demo" data-seek-to="0" href="javascript:;">Start: a quick look around</a></li>
+    <li><a data-video="demo" data-seek-to="54" href="javascript:;">Create local copies of branches</a></li>
+    <li><a data-video="demo" data-seek-to="104" href="javascript:;">Inspect the <code class="hljs">feature/second-data-set</code> branch</a></li>
+    <li><a data-video="demo" data-seek-to="184" href="javascript:;">Inspect the <code class="hljs">feature/calculate-rate-of-change</code> branch</a></li>
+    <li><a data-video="demo" data-seek-to="270" href="javascript:;">Merge the <code class="hljs">feature/second-data-set</code> branch</a></li>
+    <li><a data-video="demo" data-seek-to="293" href="javascript:;">Merge the <code class="hljs">feature/calculate-rate-of-change</code> branch</a></li>
+    <li><a data-video="demo" data-seek-to="305" href="javascript:;">Resolve the merge conflicts</a></li>
+    <li><a data-video="demo" data-seek-to="460" href="javascript:;">Compare to the example solution</a></li>
+  </ol>
+</div>
+
+</div>
