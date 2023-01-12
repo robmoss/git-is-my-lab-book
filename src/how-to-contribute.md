@@ -123,3 +123,28 @@ For example, the following code is used to display the `where-did-this-line-come
 
 </div>
 ~~~
+
+You can also add links that jump to specific times in the video.
+Each link must have:
+
++ A `data-video` attribute that identifies the video (in the example above, this is `"demo"`);
++ A `data-seek-to` attribute that identifies the time (in seconds) to jump to; and
++ A `href` attribute that is set to `"javascript:;"` (so that the link doesn't scroll the page).
+
+For example, the following example adds links that jump to 15 and 30 seconds into the video:
+
+~~~md
+<div class="tabbed-blocks">
+
+<div class="tabbed-block" data-tab-title="Video demonstration">
+  <div id="demo" data-cast-file="where-did-this-line-come-from.cast"></div>
+
+  Video timeline:
+  <ol>
+    <li><a data-video="demo" data-seek-to="15" href="javascript:;">First link</a></li>
+    <li><a data-video="demo" data-seek-to="30" href="javascript:;">Second link</a></li>
+  </ol>
+</div>
+
+</div>
+~~~
