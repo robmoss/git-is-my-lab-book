@@ -10,6 +10,8 @@
 
 ## Using Git and other software tools
 
+- NDP Software have created [an interactive Git cheat-sheet](https://ndpsoftware.com/git-cheatsheet.html) that shows how git commands interact with the local and upstream repositories, and provides brief documentation for many common examples.
+
 - The Pro Git book is [available online](https://git-scm.com/book).
   It starts with an overview of Git basics and then covers every aspect of Git in great detail.
 
