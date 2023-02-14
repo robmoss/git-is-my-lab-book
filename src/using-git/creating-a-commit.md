@@ -117,7 +117,11 @@ git commit
 This will open your [chosen editor](first-time-git-setup.md) and prompt you to write the [commit message](../version-control/how-do-I-write-a-commit-message.md).
 
 ```admonish tip
+Note that the commit **will not be created until you exit the editor**.
+
 If you decide that you don't want to create the commit, you can abort this action by closing your editor without saving a commit message.
+
+Please see [Choosing your Git editor](choosing-your-git-editor.md) for details.
 ```
 
 ## Modifying the most recent commit

@@ -20,6 +20,11 @@ Once you've installed Git, you should define some important settings before you 
    ```sh
    git config --global core.editor "C:/Program Files/My Editor/editor.exe"
    ```
+
+   ```admonish tip
+   Please see [Choosing your Git editor](choosing-your-git-editor.md) for details.
+   ```
+
 3. By default, Git will create a branch called `master` when you create a new repository.
    You can set a different name for this initial branch:
 

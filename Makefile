@@ -3,9 +3,9 @@
 #
 
 # The required version of each tool used to build the book.
-MDBOOK_VERSION := 0.4.18
-ADMONISH_VERSION := 1.6.0
-LINKCHECK_VERSION := 0.7.6
+MDBOOK_VERSION := 0.4.24
+ADMONISH_VERSION := 1.8.0
+LINKCHECK_VERSION := 0.7.7
 
 # Where to install mdbook and other required tools.
 TOOLS_DIR := $(CURDIR)/mdbook

@@ -60,3 +60,11 @@ You can inspect this commit by running the following command:
 ```sh
 git show 3dfff1f
 ```
+
+<div class="tabbed-blocks">
+
+<div class="tabbed-block" data-tab-title="Video demonstration">
+  <div id="demo" data-cast-file="where-did-this-line-come-from.cast"></div>
+</div>
+
+</div>
