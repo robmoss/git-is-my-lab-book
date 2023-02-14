@@ -34,34 +34,46 @@ function addTabsToGroup(group) {
     tab_bar.className = "tab-bar";
     group.prepend(tab_bar);
 
-    // Add a tab for each code block, and hide all but the first block.
-    // Note the use of the '>' combinator to only select top-level blocks.
-    const pre_elements = group.querySelectorAll(":scope > pre");
-    pre_elements.forEach((pre_elt, ix) => {
-        const tab_elt = addTabForCodeBlock(tab_bar, pre_elements, pre_elt);
+    // NOTE: recognised tab elements are `pre` blocks, and any elements that
+    // belong to the `tabbed-block` class.
+    const selector = ":scope > pre, :scope > .tabbed-block"
+    const block_elts = group.querySelectorAll(selector);
+
+    // Add a tab for each code block and custom tabbed block.
+    // We will hide all blocks except the first block.
+    block_elts.forEach((block_elt, ix) => {
+        // Identify the tab title for this block.
+        const title = getTabTitle(block_elt);
+        const tab_text = document.createTextNode(title);
+
+        // Create the button for this tab.
+        const tab_elt = document.createElement("li");
+        tab_elt.appendChild(tab_text);
+        tab_bar.appendChild(tab_elt);
+
+        // Add an event handler for switching between tabs.
+        addTabEventHandler(tab_elt, tab_bar, block_elts, block_elt);
+
         if (ix > 0) {
-            pre_elt.style.display = "none";
+            block_elt.style.display = "none";
         } else {
             tab_elt.classList.add(class_active);
         }
     });
 }
 
-function addTabForCodeBlock(tab_bar, pre_elts, pre_elt) {
-    // Find the code element, from which we can identify the language.
-    const code_elt = pre_elt.querySelector("code");
-    // Identify the code block language.
-    const tab_text = document.createTextNode(getTabTextForCode(code_elt));
-
-    // Create the button for this tab.
-    const tab_elt = document.createElement("li");
-    tab_elt.appendChild(tab_text);
-    tab_bar.appendChild(tab_elt);
-
-    // Add an event handler for switching between tabs.
-    addTabEventHandler(tab_elt, tab_bar, pre_elts, pre_elt);
-
-    return tab_elt;
+function getTabTitle(block_elt) {
+    const tab_attr = block_elt.attributes.getNamedItem("data-tab-title");
+    if (tab_attr !== null) {
+        return tab_attr.value
+    }
+    if (block_elt.tagName == "PRE") {
+        // Find the code element, from which we can identify the language.
+        const code_elt = block_elt.querySelector("code");
+        // Identify the code block language.
+        return getTabTextForCode(code_elt);
+    }
+    return default_tab_name;
 }
 
 function getTabTextForCode(code_elt) {
