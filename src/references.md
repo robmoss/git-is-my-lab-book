@@ -35,6 +35,8 @@
 
 - [A simple kit to use computational notebooks for more openness, reproducibility, and productivity in research](https://doi.org/10.1371/journal.pcbi.1010356) provides some good recommendations for organising a project repository and setting up a reproducible workflow using computational notebooks.
 
+- [Why code rusts](http://www.tdda.info/why-code-rusts) collects together some of reasons the behaviour of code changes over time.
+
 ## High-performance computing platforms
 
 - [How to access the ARDC Nectar Research Cloud](https://ardc.edu.au/services/nectar-research-cloud/how-to-access-the-ardc-nectar-research-cloud/)
