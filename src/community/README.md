@@ -21,6 +21,11 @@ We are planning to organise a *Community of Practice* that is open to researcher
 This includes — but is not limited to — any interested persons across the
 [SPECTRUM](https://www.spectrum.edu.au/) and [SPARK](https://www.spark.edu.au/) networks.
 
+```admonish tip
+No prior knowledge is required in order to participate.
+You only need an interest in (collectively) improving how we develop our scientific code.
+```
+
 - We envision holding **monthly meetings**.
   Each meeting should be physically hosted by one or more community members, with online participation available to community members who cannot attend in person.
 
