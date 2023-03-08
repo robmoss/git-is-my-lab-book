@@ -36,3 +36,26 @@ You only need an interest in (collectively) improving how we develop our scienti
   These notes will serve a resource for improving the existing materials and developing new content.
 
 In this way, we will ensure that the community acts as a **living curriculum** and make this curriculum publicly available.
+
+## Meeting times
+
+```admonish note
+The [World Clock Meeting Planner](https://www.timeanddate.com/worldclock/meeting.html) is helpful for scheduling meetings across multiple time zones.
+```
+
+We aim meet within **normal business hours** (9am-5pm) across the following time zones:
+
++ UTC+7: Western Indonesia, Thailand
++ UTC+8: Central Indonesia, Philippines, Singapore, Western Australia
++ UTC+9: Eastern Indonesia
++ UTC+9:30: Central Australia (no DST)
++ UTC+10: Eastern Australia (no DST)
++ UTC+12: New Zealand (no DST)
+
+Daylight savings in Australia and New Zealand ends on 2 April 2023.
+Relative to AEST (Eastern Australia) this means that meetings should start:
+
++ **No earlier than 12 noon** to accommodate Thailand and Indonesia; and
++ **No later than 2pm** to accommodate New Zealand.
+
+Depending on participant availability, we may need to extend our window to 8am-6pm.
