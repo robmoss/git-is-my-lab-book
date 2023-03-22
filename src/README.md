@@ -20,6 +20,8 @@ These materials are divided into the following sections:
 
 7. [Case studies](./case-studies/) where EMCRs showcase how their research activities are enabled and/or supported by these tools.
 
+8. We are organising a [Community of Practice](./community/) that will act as a living curriculum, and will use this section to record the findings and outputs of our community activities.
+
 ## How to contribute
 
 If you have any comments, feedback, or suggestions, please see the [How to contribute](how-to-contribute.md) page.

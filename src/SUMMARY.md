@@ -74,6 +74,8 @@
   - [Incorrect data in a pre-print figure](case-studies/moss-incorrect-data-pre-print.md)
   - [Pen and paper version control](case-studies/campbell-pen-and-paper-version-control.md)
 
+- [Community of Practice](community/README.md)
+
 -----------
 
 [How to contribute](how-to-contribute.md)
