@@ -75,6 +75,8 @@
   - [Pen and paper version control](case-studies/campbell-pen-and-paper-version-control.md)
 
 - [Community of Practice](community/README.md)
+  - [Meetings](community/meetings/README.md)
+    - [17 April 2023](community/meetings/2023-04-17.md)
 
 -----------
 
