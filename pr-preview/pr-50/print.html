@@ -2447,9 +2447,6 @@ The <a href="https://www.communityofpractice.ca/background/what-is-a-community-o
 <div style="break-before: page; page-break-before: always;"></div><h1 id="17-april-2023"><a class="header" href="#17-april-2023">17 April 2023</a></h1>
 <p>This is our initial meeting.
 The goal is to welcome people to the community and outline how we envision running these Community of Practice meetings.</p>
-<h2 id="acknowledgement-of-country"><a class="header" href="#acknowledgement-of-country">Acknowledgement of Country</a></h2>
-<h2 id="introductions"><a class="header" href="#introductions">Introductions</a></h2>
-<p>We may not have time for each participant to introduce themselves.</p>
 <h2 id="theme-reproducible-research"><a class="header" href="#theme-reproducible-research">Theme: Reproducible Research</a></h2>
 <p>Outline the theme and scope for this community.</p>
 <p>This is open to all researchers who share an interest in reproducible research and/or related topics and practices; <strong>no prior knowledge is required</strong>.</p>
@@ -2516,18 +2513,170 @@ For example:</p>
 <ul>
 <li>One option is a <a href="https://lists.unimelb.edu.au/info/reproducible-research-cop">dedicated mailing list</a>.</li>
 </ul>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<p>Info</p>
+<p><a class="admonition-anchor-link" href="community/meetings/2023-04-17.html#admonition-info"></a></p>
+</div>
+<div>
+<p>To function effectively as a community, we need to support asynchronous discussions in addition to scheduled meetings.</p>
+</div>
+</div>
+<p>The following options were suggested:</p>
+<ul>
+<li>
+<p>A <a href="https://slack.com/">Slack</a> workspace (Dave);</p>
+</li>
+<li>
+<p>A <a href="https://discord.com/">Discord</a> channel (TK);</p>
+</li>
+<li>
+<p>A <a href="https://teams.microsoft.com/">Teams</a> channel (Gerry); and</p>
+</li>
+<li>
+<p>A private <a href="https://github.com/">GitHub</a> repository, using the issue tracker (Alex).</p>
+</li>
+</ul>
+<p>Using a GitHub issue tracker might also serve as a gentle introduction to GitHub?</p>
 <h2 id="supporting-activities-and-resources"><a class="header" href="#supporting-activities-and-resources">Supporting activities and resources</a></h2>
 <p>Are there other activities that we could organise to help support the community?</p>
 <ul>
 <li>
-<p><a href="https://git-is-my-lab-book.net/">Git is my lab book</a></p>
+<p>We have online training materials: <a href="https://git-is-my-lab-book.net/">Git is my lab book</a></p>
 </li>
 <li>
-<p><a href="https://github.com/orgs/spectrum-spark/teams/peer-review">SPECTRUM/SPARK peer review team</a></p>
+<p>We also have a <a href="https://github.com/orgs/spectrum-spark/teams/peer-review">SPECTRUM/SPARK peer review team</a>, where people can make their code available for peer review.</p>
 </li>
 </ul>
 <h2 id="topics-for-future-meetings"><a class="header" href="#topics-for-future-meetings">Topics for future meetings</a></h2>
 <p>Solicit suggestions for topics, themes, challenges, showcases, etc, for future meetings.</p>
+<h3 id="version-control-from-theory-to-practice"><a class="header" href="#version-control-from-theory-to-practice">Version control: from theory to practice</a></h3>
+<p>A number of people mentioned now being sure how to get started, or starting with good intentions but ending up with a mess.</p>
+<ul>
+<li>
+<p>Dave D: go from principle to practice</p>
+</li>
+<li>
+<p>Ruarai: what other have found useful and applied in this space, what options are out there?</p>
+</li>
+<li>
+<p>Ollie: similar to David, start well but end up with a mess</p>
+</li>
+<li>
+<p>Michael: I'm a complete novice, git command lines are a foreign language to me! Looking for tips for someone who uses code a lot, experienced at coding but much less so on version control and the use of repositories. What are the first steps to incorporate?</p>
+</li>
+<li>
+<p>Angus: I'm also relatively new to git, using GitHub Desktop, not averse to command line stuff but I need to remember fewer arcane commands!</p>
+</li>
+<li>
+<p>Samik: I use TortoiseGit.</p>
+</li>
+<li>
+<p>Gray: resonate with Michael, doing most of my research on my own and describe stuff in a paper, not super git friendly, keen to learn.</p>
+</li>
+<li>
+<p>Lauren: everything that everyone has said so far! Have found some good guidelines for how to write reproducible code, starting from the basics all the way to niche topics. Can we use this as a way to share materials that we've sound useful? British Ecological Society have published guidelines. We could assemble good materials that go from basics.</p>
+</li>
+<li>
+<p>Gerry: I like the idea of reproducibility and I've done a terrible job of it in the past, my repository ends up with thousands of versions of different files, if you could help me solve it!</p>
+</li>
+<li>
+<p>Josh: Along the same lines of what's been stated but how best to share knowledge of git/best-practice with others in a new research team and also adjust to their methods of conducting reproducible research/version control/etc.</p>
+</li>
+<li>
+<p>Punya: not much to add, would really like to know more about version control, I have a basic understanding, what's the standard way of using it, reproducibility and documentation.</p>
+</li>
+<li>
+<p>Rachel: I strongly support this idea of code reproducibility; such forms of best practice frameworks can be disseminated to modellers in modelling consortia; they can be very helpful when auditing.</p>
+</li>
+<li>
+<p>Ella: we're migrating models from Excel to R.</p>
+</li>
+<li>
+<p>J'Belle: I work for a tiny, very remote health service at Au/PNG border, 17 sources of clinical data, massive challenges in reproducibility for QA. Looking to tap into your expertise. How do we manage so many sources of clinical data?</p>
+</li>
+</ul>
+<h3 id="working-with-less-technically-experienced-collaborators"><a class="header" href="#working-with-less-technically-experienced-collaborators">Working with less technically-experienced collaborators</a></h3>
+<p>How can we make best use of existing tools and practices, while working with collaborators who have less technical expertise/experience?</p>
+<ul>
+<li>
+<p>Alex: start a project with collaborators who may be less technically literate, how can they contribute without messing up reproducibility; options like docker are a little too complicated, how to motivate people, is there a simple solution?</p>
+</li>
+<li>
+<p>Angus: in theory you have reproducible code, you need to write a paper with low-tech collaborators, so running code and generating reports is hard, how do we collaborate on the writing side? RMarkdown or equivalents makes so much sense, but most colleagues will only look at Word. There are workarounds like pandoc.</p>
+</li>
+</ul>
+<h3 id="limitations-of-reproducibility"><a class="header" href="#limitations-of-reproducibility">Limitations of reproducibility</a></h3>
+<p>How far can/should we go in validating and demonstrating that our models and analyses are reproducible, how can we automate this, and how is this impacted when we cannot share the input data, or when our models are extremely large and complex?</p>
+<ul>
+<li>
+<p>Cam: some unique issues in the type of research we do; working with code makes it easy in some ways, as opposed to experimental conditions in real-world experiments. Our capacity is great, but so then is our burden. We should be exploring the limitations! The challenges in our area come down to implementation of stochastic models with lots of random processes, how can we do that well and make it part of what we practice? What are the limitations to reproducibility and how do we perceive the goals when we are working when the data cannot be shared? Often the data cannot be shared.</p>
+</li>
+<li>
+<p>Samik: similar to Cam, ways different people have produced reproducible research where the data cannot be shared, perhaps provide default examples as test cases.</p>
+</li>
+<li>
+<p>Michael: second Cam's points, particularly about reproducibility with confidential data, that's an issue I've hit multiple times. Usually have a side folder with the real dataset, and pipe through condensed/aggregated version that's okay to release.</p>
+</li>
+<li>
+<p>Jiahao: interested in how to build a platform, using agent based models, looked at lots of other models, but how can we bring it together so it would be easier to add a new variable or extend a model.</p>
+</li>
+<li>
+<p>Eamon: I'm a git fanatic, want to understand the development of code, get very annoyed when people share a repository as a single commit. How do you start the code, what file format does it expect? People that don't tag their git repositories with where they ran their data from — which commit? Use tags.</p>
+</li>
+<li>
+<p>Dion: interested in seeing what people are doing that look like good practice. Making sure that code/results are reproducible, in the sense that your code may be version controlled, but you've since made changes to code, parameters, input data, etc. How do you do a good job to shoe-horn that all into git, maybe use git for development and simultaneously using a separate repository for production stuff, and be able to look back and identify from the commit the code, data, intermediate files used along the way.</p>
+</li>
+<li>
+<p>Palang: I give you a paper with supplementary code, but rerunning the code produces very different results.</p>
+</li>
+<li>
+<p>May: most people have said what I wanted to say. I faced similar problems with running code, there's no error, but you get very different results from what's published in the paper. You don't know who is wrong!</p>
+</li>
+</ul>
+<h3 id="testing-and-documentation"><a class="header" href="#testing-and-documentation">Testing and documentation</a></h3>
+<p>How can we develop confidence in our own code, and in other people's code?</p>
+<ul>
+<li>
+<p>TK: to learn or see different conventions for writing code documentation, never got doxygen working to my satisfaction.</p>
+</li>
+<li>
+<p>Angus: how to come up with good tests, how, when, what things, coverage, automated ways of tests?</p>
+</li>
+<li>
+<p>Rahmat: when I learn code from others, it is very hard to learn the code. Code needs to be easy to understand. If I want to use other people's code and it is very hard to understand, I will just write the code myself! And sometimes when I run the code, I have difficulties in getting the results, many errors come up. Why? Perhaps the data have not been shared with the code. We need to include the data, but if the data cannot be provided, you need to provide similar data so that other can run the code. Use a language that others are familiar with.</p>
+</li>
+</ul>
+<h3 id="code-reuse"><a class="header" href="#code-reuse">Code reuse</a></h3>
+<ul>
+<li>
+<p>Pan: I am not sure about the term reproducibility in the context of coders. I know lab people really do reuse published protocols. Do coders actually reuse other people's code to do their work?</p>
+</li>
+<li>
+<p>Gerry: People often make their code into packages which others reuse. This could be a good topic for future meetings.</p>
+</li>
+</ul>
+<h3 id="using-chat-gpt-to-writecheck-code"><a class="header" href="#using-chat-gpt-to-writecheck-code">Using Chat GPT to write/check code</a></h3>
+<ul>
+<li>
+<p>Pan: I recently joined a meeting where they use Chat GPT to do coding to check coding. So I wonder if this group has any thought on how we make a good use of Chat GPT?</p>
+</li>
+<li>
+<p>Cam: Chat GPT is not reproducible, so it seems questionable to use it to check reproducibility.</p>
+</li>
+<li>
+<p>Alex: I don't entirely agree, it's very useful for improving the implementation of a function. In terms of generating reliable code, it's wonderful. It's a nightmare of evaluating existing code.</p>
+</li>
+<li>
+<p>Pan: people are using Chat GPT as an initial template.</p>
+</li>
+<li>
+<p>Eamon: If you ever find some code that’s got horrible documentation, chat GPT is surprisingly good at telling you how to use it</p>
+</li>
+<li>
+<p>Matt: nothing to add, happy to be along for the ride.</p>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-contribute-1"><a class="header" href="#how-to-contribute-1">How to contribute</a></h1>
 <h2 id="add-a-case-study"><a class="header" href="#add-a-case-study">Add a case study</a></h2>
 <p>If you've made use of Git in your research activities, <strong>please let us know!</strong>
