@@ -155,16 +155,24 @@
 <p>In this meeting we asked participants to share their experiences exploring the version control, reproducibility, and testing exercises in our <a href="https://github.com/rrcop/example-testing-and-reproducibility">example repository</a>.</p>
 <p>This repository serves an introduction to testing models and ensuring that their outputs are reproducible.
 It contains a simple stochastic model that draws samples from a normal distribution, and some tests that check whether the model outputs are consistent with our expectations.</p>
-<h2 id="reproducibility-and-stochasticity"><a class="header" href="#reproducibility-and-stochasticity">Reproducibility and stochasticity</a></h2>
-<p>Seeds, multiple RNGs, are other packages or libraries using their own RNGs or seeds, what happens if you run the model twice with the same seed?
-Do you include the seed in your published code?
-How to test code that won't always pass?</p>
 <h2 id="what-is-a-reproducible-environment"><a class="header" href="#what-is-a-reproducible-environment">What is a reproducible environment?</a></h2>
-<p>Do we need to start from scratch with a fresh Docker instance?
-We want to avoid &quot;well, it runs on my machine&quot; experiences.</p>
+<p>The exercise description was deliberately very open, but it may have been too vague:</p>
+<blockquote>
+<p>Define a reproducible environment in which the model can run.</p>
+</blockquote>
+<p>We avoided listing possible details for people to consider, such as software and package versions.
+Perhaps a better approach would have been to ask:</p>
+<blockquote>
+<p>If this code was provided as supporting materials for a paper, <strong>what other information would you need</strong> in order to run it and be confident of obtaining the same results as the original authors?</p>
+</blockquote>
+<p>The purpose of a reproducible environment is to define all of these details, so that you never have to say to someone &quot;well, it runs fine on my machine&quot;.</p>
+<h2 id="reproducibility-and-stochasticity"><a class="header" href="#reproducibility-and-stochasticity">Reproducibility and stochasticity</a></h2>
+<p>Many participants observed that the model <strong>was not reproducible</strong> unless we used a random number generator (RNG) with a known seed, which would ensure that the model produces the same output each time we run it.</p>
+<p>But what if you're using a package or library that internally uses their own RNG and/or seed?
+This may not be something you can fix, but you should be able to detect it by running the model multiple times with the same seed, and checking whether you get identical result each time.</p>
+<p>Another important question was raised: <strong>do you, or should you, include the RNG seed in your published code?</strong>
+This is probably a good idea, and suggested solutions included setting the seed at the very start of your code (so that it's immediately visible) or including it as a required model parameter.</p>
 <h2 id="writing-test-cases"><a class="header" href="#writing-test-cases">Writing test cases</a></h2>
-<p>These can scale from unit tests to integration tests.
-Write multiple tests, each acts as a slice of &quot;Swiss cheese&quot;, and many imperfect tests can provide a high degree of confidence in our code.</p>
 <div id="admonition-tip" class="admonition tip">
 <div class="admonition-title">
 <p>Tip</p>
@@ -174,6 +182,37 @@ Write multiple tests, each acts as a slice of &quot;Swiss cheese&quot;, and many
 <p>Write a test case <strong>every time you find a bug:</strong> ensure that the test case finds the bug, then fix the bug, then ensure that the test case passes.</p>
 </div>
 </div>
+<p>A test case is a piece of code that checks that something behaves as expected.
+This can be as simple as checking that a mathematical function returns an expected value, to running many model simulations and verifying that a summary statistic falls within an expected range.</p>
+<p>Rather than trying to write a single test that checks many different properties of a piece of code, it can be much simpler and quicker to write many separate tests that each check a single property.
+This can provide more detailed feedback when one or more test cases fail.</p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>This approach is similar to how we rely on multiple public health interventions to protect against disease outbreaks!
+Consider each test case as <a href="http://web.archive.org/web/20230604050412/https://www.nytimes.com/2020/12/05/health/coronavirus-swiss-cheese-infection-mackay.html">a slice of Swiss cheese</a> — many imperfect tests can provide a high degree of confidence in our code.</p>
+</div>
+</div>
+<h2 id="writing-test-cases-for-conditions-that-may-fail"><a class="header" href="#writing-test-cases-for-conditions-that-may-fail">Writing test cases for conditions that may fail</a></h2>
+<p>If you are testing a stochastic model, you may find certain test cases are difficult to write.</p>
+<p>For example, consider a stochastic SIR model where you want to test that an intervention reduces the number of cases in an outbreak.
+You may, however, observe that in a small proportion of simulations the intervention has no effect (or it may even increase the number of cases).</p>
+<p>One approach is to run many pairs of simulations and only check that the intervention reduced the number of cases at least X% of the time.
+You need to decide how many simulations to run, and what is an appropriate value for X%, <strong>but that's okay!</strong>
+Remember the Swiss cheese analogy, mentioned above.</p>
+<h2 id="testing-frameworks"><a class="header" href="#testing-frameworks">Testing frameworks</a></h2>
+<p>If you have more than 2 or 3 test cases, it's a good idea to use a testing framework to automatically find your test cases, run each test, record whether it passed or failed, and report the results.
+These frameworks are usually specific to a single programming language.</p>
+<p>Some commonly-used frameworks include:</p>
+<ul>
+<li>Python: <a href="https://docs.pytest.org/">pytest</a></li>
+<li>R: <a href="https://testthat.r-lib.org/">testthat</a></li>
+<li>Matlab: <a href="https://au.mathworks.com/help/matlab/matlab-unit-test-framework.html">included in the language</a></li>
+<li>Julia: <a href="https://docs.julialang.org/en/v1/stdlib/Test/">included in the language</a></li>
+</ul>
 <h2 id="github-actions"><a class="header" href="#github-actions">GitHub Actions</a></h2>
 <p>Multiple participants reported some difficulties in setting up <a href="https://docs.github.com/en/actions/learn-github-actions">GitHub actions</a> and knowing how to adapt available templates to their needs.
 See the following examples:</p>
@@ -190,6 +229,37 @@ See the following examples:</p>
 <div>
 <p>One downside of using GitHub Actions is the limited computation time of <a href="https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions">2,000 minutes per month</a>.
 This may not be suitable for large agent-based models and other long-running tasks.</p>
+</div>
+</div>
+<h2 id="pull-requests"><a class="header" href="#pull-requests">Pull requests</a></h2>
+<p>At the time of writing, <strong>three participants have contributed</strong> <a href="https://github.com/rrcop/example-testing-and-reproducibility/pulls/">pull requests</a>:</p>
+<ul>
+<li>
+<p>TK added <a href="https://github.com/rrcop/example-testing-and-reproducibility/pull/1">a default seed</a> so that the model outputs are reproducible.</p>
+</li>
+<li>
+<p>Micheal added <a href="https://github.com/rrcop/example-testing-and-reproducibility/pull/2">a MATLAB version</a> of the model and the test cases.</p>
+</li>
+<li>
+<p>Cam added <a href="https://github.com/rrcop/example-testing-and-reproducibility/pull/3">several features</a>, such as recording metadata about the Python environment and testing that the model outputs are reproducible.</p>
+</li>
+</ul>
+<div id="admonition-tip-1" class="admonition tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="#admonition-tip-1"></a></p>
+</div>
+<div>
+<p>If you make your own copy (&quot;fork&quot;) of the <a href="https://github.com/rrcop/example-testing-and-reproducibility">example repository</a>, you can create as many commits as you want.
+GitHub will display a message that says:</p>
+<blockquote>
+<p>This branch is <strong>N commits ahead</strong> of rrcop:master.</p>
+</blockquote>
+<p>Click on the &quot;N commits ahead&quot; link to see a summary of your new commits.
+You can then click the big green button &quot;Create pull request&quot;.</p>
+<p>This <strong>will not modify the example repository</strong>.
+Instead, it will create an overview of the changes between your code and the example repository.
+We can then review these changes, make suggestions, you can add new commits, etc, before deciding whether to add these changes to the example repository.</p>
 </div>
 </div>
 
