@@ -14,3 +14,5 @@ The [three characteristics](https://www.communityofpractice.ca/background/what-i
 2. Practice: Specific knowledge shared by community members; and
 
 3. Domain: A shared interest, problem, or concern.
+
+We meet as a community every 6 to 8 weeks, and capture observations in [meeting summaries](meetings/).
