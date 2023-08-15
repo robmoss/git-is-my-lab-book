@@ -78,6 +78,7 @@
   - [Meetings](community/meetings/README.md)
     - [17 April 2023](community/meetings/2023-04-17.md)
     - [13 June 2023](community/meetings/2023-06-13.md)
+    - [15 August 2023](community/meetings/2023-08-15.md)
 
 -----------
 
