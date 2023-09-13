@@ -4,6 +4,13 @@ These materials aim to support
 early- and mid-career researchers (EMCRs) in the
 [SPECTRUM](https://www.spectrum.edu.au/) and [SPARK](https://www.spark.edu.au/) networks to develop their computing skills, and to make effective use of available tools[^tools] and infrastructure[^infra].
 
+```admonish question
+Why dedicate time and effort to learning these skills?
+There are [many reasons](motivation.md)!
+```
+
+## Structure
+
 These materials are divided into the following sections:
 
 1. Understanding [version control](./version-control/), which provides you with a complete and annotated history of your work, and with powerful ways to search and examine this history.

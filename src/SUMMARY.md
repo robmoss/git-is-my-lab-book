@@ -1,6 +1,7 @@
 # Summary
 
 [Introduction](README.md)
+[Motivation](motivation.md)
 [Learning objectives](learning-objectives.md)
 [Prerequisites](prerequisites.md)
 
