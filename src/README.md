@@ -30,7 +30,7 @@ A piece of code is often useful beyond a single project or study.
 
 By applying the above skills in your research, you will be able to easily reproduce past results, extend your code to address new questions and problems, and allow others to build on your code in their own research.
 
-The benefits of good comptuational practices can pay off long after the project is finished.
+The benefits of good computational practices can pay off long after the project is finished.
 ```
 
 ## Structure
