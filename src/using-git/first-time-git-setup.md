@@ -2,6 +2,12 @@
 
 Once you've installed Git, you should define some important settings before you starting using Git.
 
+```admonish info
+We assume that you will want to set the git configuration for all repositories owned by your user.
+Therefore, we use the `--global` flag.
+Configuration files can be set for a single repository or the whole computer by replacing `--global` with `--local` or `--system` respectively.
+```
+
 1. Define your user name and email address.
    These details are included in **every commit that you create**.
 
