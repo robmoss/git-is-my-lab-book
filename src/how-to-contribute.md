@@ -38,6 +38,10 @@ Also check that your text editor **removes trailing whitespace**.
 This ensures that each commit will contain only the modified sentences, and makes it easier to inspect the repository history.
 ```
 
+```admonish tip
+When you add a new page, you must also **add the page to the table of contents** in [`src/SUMMARY.md`](https://github.com/robmoss/git-is-my-lab-book/edit/master/src/SUMMARY.md).
+```
+
 ## Adding tabbed code blocks
 
 You can display multiple code blocks as a tabbed group by enclosing them in a `<div class="tabbed-blocks"> ... </div>` container.
