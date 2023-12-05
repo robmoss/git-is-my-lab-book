@@ -52,6 +52,28 @@ Note that this two-day diff shows:
 
 Each conflict is surrounded by `<<<<<<<` and `>>>>>>>` markers, and the conflicting changes are separated by a `=======` marker.
 
+If we instruct Git to use a three-way diff (see [first-time Git setup](first-time-git-setup.md)), the conflict will be reported slightly differently:
+
+```diff
+diff --cc test.txt
+index 18712c4,bc576a6..0000000
+--- a/test.txt
++++ b/test.txt
+@@@ -1,3 -1,3 +1,7 @@@
+  First line
+++<<<<<<< ours
+ +A different second line
+++||||||| base
+++Second line
+++=======
++ My new second line
+++>>>>>>> theirs
+  Third line
+```
+
+In addition to showing "our" changes and "their changes", this three-way diff also shows the **original lines**, between the `|||||||` and `=======` markers.
+This extra information can help you decide how to best resolve the conflict.
+
 ## Resolving the conflicts
 
 We can edit `test.txt` to reconcile these changes, and the commit our fix.
