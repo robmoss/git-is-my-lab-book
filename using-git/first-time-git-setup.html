@@ -153,6 +153,17 @@
                     <main>
                         <h1 id="first-time-git-setup"><a class="header" href="#first-time-git-setup">First-time Git setup</a></h1>
 <p>Once you've installed Git, you should define some important settings before you starting using Git.</p>
+<div id="admonition-info" class="admonition info">
+<div class="admonition-title">
+<p>Info</p>
+<p><a class="admonition-anchor-link" href="#admonition-info"></a></p>
+</div>
+<div>
+<p>We assume that you will want to set the git configuration for all repositories owned by your user.
+Therefore, we use the <code>--global</code> flag.
+Configuration files can be set for a single repository or the whole computer by replacing <code>--global</code> with <code>--local</code> or <code>--system</code> respectively.</p>
+</div>
+</div>
 <ol>
 <li>
 <p>Define your user name and email address.
@@ -194,11 +205,17 @@ You can set a different name for this initial branch:</p>
 For example, it ensures that when you merge the green branch into the blue branch (as shown below) it records that commits <em>D</em>, <em>E</em>, and <em>F</em> came from the green branch.</p>
 <p><img src="../version-control/branch-3.png" alt="Merged branch" /></p>
 </li>
+<li>
+<p>Adjust how Git shows merge conflicts:</p>
+<pre><code class="language-sh">git config --global merge.conflictstyle diff3
+</code></pre>
+<p>This will be useful when we look at <a href="how-to-use-branches.html">how to use branches</a> and <a href="how-to-resolve-merge-conflicts.html">how to resolve merge conflicts</a>.</p>
+</li>
 </ol>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info-1" class="admonition info">
 <div class="admonition-title">
 <p>Info</p>
-<p><a class="admonition-anchor-link" href="#admonition-info"></a></p>
+<p><a class="admonition-anchor-link" href="#admonition-info-1"></a></p>
 </div>
 <div>
 <p>If you use Windows, there are tools that can <a href="https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell">improve your Git experience in PowerShell</a>.</p>
