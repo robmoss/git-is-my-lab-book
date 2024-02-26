@@ -2071,8 +2071,8 @@ The results had changed, but none of my recent commits should have had this effe
 </li>
 </ul>
 <h2 id="identify-the-cause-of-the-bug">Identify the cause of the bug<a class="headerlink" href="#identify-the-cause-of-the-bug" title="Permanent link">&para;</a></h2>
-<p>I knew that the bug had been introduced quite recently, and I knew that it affected a specific function: [<code>earlier_states()</code>].
-Running <code>git blame src/pypfilt/state.py</code> indicated that the recent commit [<code>408b5f1</code>] was a likely culprit, because it changed many lines in this function.</p>
+<p>I knew that the bug had been introduced quite recently, and I knew that it affected a specific function: <a href="https://pypfilt.readthedocs.io/en/latest/api/state.html#pypfilt.state.earlier_states">earlier_states()</a>.
+Running <code>git blame src/pypfilt/state.py</code> indicated that the recent commit <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/408b5f13302e5edb5ae7866286927873ed0f0c96">408b5f1</a> was a likely culprit, because it changed many lines in this function.</p>
 <p>In particular, I suspected the bug was occurring in the following loop, which steps backwards in time and handles the case where model simulations are reordered:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Start with the parent indices for the current particles, which allow us</span>
 <span class="c1"># to look back one time-step.</span>
@@ -2091,7 +2091,7 @@ Running <code>git blame src/pypfilt/state.py</code> indicated that the recent co
 <p>and that changing <code>step_ix + 1</code> to <code>step_ix</code> <strong>should</strong> fix the bug.</p>
 <p><strong>Note:</strong> I could have used <code>git bisect</code> to identify the commit that introduced this bug, but running all of the test cases for each commit is relatively time-consuming; since I knew that the bug had been introduced quite recently, I chose to use <code>git blame</code>.</p>
 <h2 id="write-a-test-case">Write a test case<a class="headerlink" href="#write-a-test-case" title="Permanent link">&para;</a></h2>
-<p>I wrote a test case [<code>test_earlier_state()</code>] that called this [<code>earlier_states()</code>] function a number of times, and checked that each set of model simulations were returned in the correct order.</p>
+<p>I wrote a test case <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/blob/9dcf621618fe76281a486af7bfba364e7bd26c13/tests/test_earlier_state.py">test_earlier_state()</a> that called this <a href="https://pypfilt.readthedocs.io/en/latest/api/state.html#pypfilt.state.earlier_states">earlier_states()</a> function a number of times, and checked that each set of model simulations were returned in the correct order.</p>
 <p>This test case checks that:</p>
 <ol>
 <li>
@@ -2107,17 +2107,17 @@ Running <code>git blame src/pypfilt/state.py</code> indicated that the recent co
 <p>This test case failed when I reran the testing pipeline, which indicated that it identified the bug.</p>
 <h2 id="fix-the-bug">Fix the bug<a class="headerlink" href="#fix-the-bug" title="Permanent link">&para;</a></h2>
 <p>With the test case now written, I was able to verify that that changing <code>step_ix + 1</code> to <code>step_ix</code> <strong>did</strong> fix the bug.</p>
-<p>I added the test case and the bug fix in commit [<code>9dcf621</code>].</p>
+<p>I added the test case and the bug fix in commit <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/9dcf621618fe76281a486af7bfba364e7bd26c13">9dcf621</a>.</p>
 <p>In the commit message I indicated:</p>
 <ol>
 <li>
-<p>Where the bug was located: the [<code>earlier_states()</code>] function;</p>
+<p>Where the bug was located: the <a href="https://pypfilt.readthedocs.io/en/latest/api/state.html#pypfilt.state.earlier_states">earlier_states()</a> function;</p>
 </li>
 <li>
-<p>When the bug was introduced: commit [<code>408b5f1</code>]; and</p>
+<p>When the bug was introduced: commit <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/408b5f13302e5edb5ae7866286927873ed0f0c96">408b5f1</a>; and</p>
 </li>
 <li>
-<p>Why the bug was not detected when I created commit [<code>408b5f1</code>].</p>
+<p>Why the bug was not detected when I created commit <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/408b5f13302e5edb5ae7866286927873ed0f0c96">408b5f1</a>.</p>
 </li>
 </ol>
 <div class="footnote">
