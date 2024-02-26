@@ -13,25 +13,28 @@ You can [view this book online][book].
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][license].
 
-The tabbed code block code (`tabbed-code-blocks.css` and `tabbed-code-blocks.js`) is dual-licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License][license] and the [MIT License](LICENSE-MIT).
-
 ## Requirements
 
-To build this book, you must have the following programs installed:
+To build this book, you must have [Material for MkDocs][matmkdocs] installed.
+For example:
 
-- [mdBook 0.4.24](https://github.com/rust-lang/mdBook/releases/tag/v0.4.24)
-- [mdbook-admonish 1.8.0](https://github.com/tommilligan/mdbook-admonish/releases/tag/v1.8.0)
-- [mdbook-linkcheck 0.7.7](https://github.com/Michael-F-Bryan/mdbook-linkcheck/releases/tag/v0.7.7)
+```sh
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
 ## Building the book
 
-You can view this book in your browser by running the following command in this directory:
+You can view this book in your browser by running the following commands in this directory:
 
 ```shell
-mdbook serve --open
+source venv/bin/activate
+mkdocs serve
 ```
 
 This will automatically rebuild the book whenever you edit the contents.
 
 [book]: https://git-is-my-lab-book.net/
-[license]: http://creativecommons.org/licenses/by-sa/4.0/
+[license]: https://creativecommons.org/licenses/by-sa/4.0/
+[matmkdocs]: https://squidfunk.github.io/mkdocs-material/
