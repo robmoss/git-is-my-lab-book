@@ -33,8 +33,8 @@ The results had changed, but none of my recent commits should have had this effe
 
 ## Identify the cause of the bug
 
-I knew that the bug had been introduced quite recently, and I knew that it affected a specific function: [`earlier_states()`].
-Running `git blame src/pypfilt/state.py` indicated that the recent commit [`408b5f1`] was a likely culprit, because it changed many lines in this function.
+I knew that the bug had been introduced quite recently, and I knew that it affected a specific function: [earlier_states()].
+Running `git blame src/pypfilt/state.py` indicated that the recent commit [408b5f1] was a likely culprit, because it changed many lines in this function.
 
 In particular, I suspected the bug was occurring in the following loop, which steps backwards in time and handles the case where model simulations are reordered:
 
@@ -64,7 +64,7 @@ and that changing `step_ix + 1` to `step_ix` **should** fix the bug.
 
 ## Write a test case
 
-I wrote a test case [`test_earlier_state()`] that called this [`earlier_states()`] function a number of times, and checked that each set of model simulations were returned in the correct order.
+I wrote a test case [test_earlier_state()] that called this [earlier_states()] function a number of times, and checked that each set of model simulations were returned in the correct order.
 
 This test case checks that:
 
@@ -80,21 +80,21 @@ This test case failed when I reran the testing pipeline, which indicated that it
 
 With the test case now written, I was able to verify that that changing `step_ix + 1` to `step_ix` **did** fix the bug.
 
-I added the test case and the bug fix in commit [`9dcf621`].
+I added the test case and the bug fix in commit [9dcf621].
 
 In the commit message I indicated:
 
-1. Where the bug was located: the [`earlier_states()`] function;
+1. Where the bug was located: the [earlier_states()] function;
 
-2. When the bug was introduced: commit [`408b5f1`]; and
+2. When the bug was introduced: commit [408b5f1]; and
 
-3. Why the bug was not detected when I created commit [`408b5f1`].
+3. Why the bug was not detected when I created commit [408b5f1].
 
 [^regression]: A regression test checks that a commit hasn't changed an existing behaviour or functionality.
 
 [pypfilt]: https://pypfilt.readthedocs.io/
-[`earlier_states()`]: https://pypfilt.readthedocs.io/en/latest/api/state.html#pypfilt.state.earlier_states
+[earlier_states()]: https://pypfilt.readthedocs.io/en/latest/api/state.html#pypfilt.state.earlier_states
 [repository]: https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python
-[`408b5f1`]: https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/408b5f13302e5edb5ae7866286927873ed0f0c96
-[`test_earlier_state()`]: https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/blob/9dcf621618fe76281a486af7bfba364e7bd26c13/tests/test_earlier_state.py
-[`9dcf621`]: https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/9dcf621618fe76281a486af7bfba364e7bd26c13
+[408b5f1]: https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/408b5f13302e5edb5ae7866286927873ed0f0c96
+[test_earlier_state()]: https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/blob/9dcf621618fe76281a486af7bfba364e7bd26c13/tests/test_earlier_state.py
+[9dcf621]: https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/9dcf621618fe76281a486af7bfba364e7bd26c13
