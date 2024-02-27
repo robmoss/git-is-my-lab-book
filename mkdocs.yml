@@ -21,6 +21,8 @@ markdown_extensions:
 
 theme:
   name: "material"
+  favicon: "logo.png"
+  logo: "logo.svg"
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
