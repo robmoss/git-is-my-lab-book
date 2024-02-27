@@ -43,6 +43,7 @@ theme:
         name: Switch to system preference
   features:
     # Navigation settings
+    - navigation.footer
     - navigation.indexes
     - navigation.top
     - toc.follow
