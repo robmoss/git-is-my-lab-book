@@ -68,7 +68,7 @@ nav:
   - "Introduction": "README.md"
   - "Learning objectives": "learning-objectives.md"
   - "Prerequisites": "prerequisites.md"
-  - "Version control concepts":
+  - "1. Version control concepts":
     - "version-control/README.md"
     - "What is version control?": "version-control/what-is-version-control.md"
     - "What is a repository?": "version-control/what-is-a-repository.md"
@@ -79,7 +79,7 @@ nav:
     - "What is a branch?": "version-control/what-is-a-branch.md"
     - "What is a merge conflict?": "version-control/what-is-a-merge-conflict.md"
     - "Exercise: using version control": "version-control/exercise-using-version-control.md"
-  - "Effective use of git":
+  - "2. Effective use of git":
     - "using-git/README.md"
     - "Graphical Git clients": "using-git/graphical-git-clients.md"
     - "First-time Git setup": "using-git/first-time-git-setup.md"
@@ -101,7 +101,7 @@ nav:
     - "Exercise: create a local repository": "using-git/exercise-create-a-local-repository.md"
     - "Exercise: use a remote repository": "using-git/exercise-use-a-remote-repository.md"
     - "Exercise: resolve a merge conflict": "using-git/exercise-resolve-a-merge-conflict.md"
-  - "Collaborating":
+  - "3. Collaborating":
     - "collaborating/README.md"
     - "Collaborating on code": "collaborating/collaborating-on-code.md"
     - "Collaborating on a paper": "collaborating/collaborating-on-a-paper.md"
@@ -112,18 +112,18 @@ nav:
     - "Peer code review": "collaborating/peer-code-review.md"
     - "Coding style guides": "collaborating/coding-style-guides.md"
     - "Continuous integration": "collaborating/continuous-integration.md"
-  - "Reproducibility":
+  - "4. Reproducibility":
     - "reproducibility/README.md"
-  - "Testing":
+  - "5. Testing":
     - "testing/README.md"
-  - "Cloud and HPC platforms":
+  - "6. Cloud and HPC platforms":
     - "high-performance-computing/README.md"
-  - "Case studies":
+  - "7. Case studies":
     - "case-studies/README.md"
     - "Fixing a bug in pypfilt": "case-studies/moss-pypfilt-earlier-states.md"
     - "Incorrect data in a pre-print figure": "case-studies/moss-incorrect-data-pre-print.md"
     - "Pen and paper version control": "case-studies/campbell-pen-and-paper-version-control.md"
-  - "Community of Practice":
+  - "8. Community of Practice":
     - "community/README.md"
     - "Meetings":
       - "community/meetings/README.md"
