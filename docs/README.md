@@ -33,6 +33,18 @@ Hopefully some of the following reasons resonate with you.
 
     **The benefits of good practices can continue to pay off long after the project is finished**.
 
+## The FAIR Guiding Principles
+
+Published in 2016, [The FAIR Guiding Principles for scientific data management and stewardship](https://doi.org/10.1038/sdata.2016.18) proposed guidelines for making valuable scientific outputs "FAIR": Findable, Accessible, Interoperable, and Reusable.
+
+The principles were originally developed for, and applied to, research data.
+The FAIR for Research Software (FAIR4RS) Working Group has adapted these principles to create [the FAIR Principles for Research Software](https://doi.org/10.1038/s41597-022-01710-x).
+Of particular relevance to these materials is the fourth FAIR4RS principle:
+
+!!! info "FAIR4RS Principle: Reusable"
+
+    Software is both usable (can be executed) and reusable (**can be understood, modified, built upon, or incorporated into other software**).
+
 ## Structure
 
 These materials are divided into the following sections:
