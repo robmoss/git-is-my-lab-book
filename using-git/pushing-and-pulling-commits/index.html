@@ -2049,7 +2049,11 @@ This requires that you have <strong>created at least one commit</strong> in your
 <p>This is a good time to create a <code>README.md</code> file and write a brief description of what this repository will contain.</p>
 </div>
 <p>Once you have at least one commit in your local repository, you can create a corresponding <strong>upstream branch</strong> in the remote repository with the following command:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>&lt;branch-name&gt;
+</code></pre></div>
+<p>The default branch will probably be called <code>"main"</code> or <code>"master"</code>, depending on your <a href="../first-time-git-setup/">Git settings</a>.
+You can identify the branch name by running:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2063,7 +2067,7 @@ You can choose a different name when <a href="../creating-a-remote-repository/#l
 <p>and pull commits by running:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull
 </code></pre></div>
-<p>without having to specify the remote repository.</p>
+<p>without having to specify the remote repository or branch name.</p>
 <h2 id="forcing-updates-to-a-remote-repository">Forcing updates to a remote repository<a class="headerlink" href="#forcing-updates-to-a-remote-repository" title="Permanent link">&para;</a></h2>
 <p>By default, Git will refuse to push commits from a local branch to a remote branch if the remote branch contains any commits that are not in your local branch.
 This situation <strong>should not arise</strong> in general, and typically indicates that either someone else has pushed new commits to the remote branch (see the <a href="../../collaborating/">Collaborating</a> section) or that you have altered the history of your local branch.</p>
