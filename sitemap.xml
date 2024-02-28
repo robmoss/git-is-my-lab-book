@@ -131,6 +131,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://git-is-my-lab-book.net/community/meetings/2024-02-19/</loc>
+         <lastmod>2024-02-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://git-is-my-lab-book.net/high-performance-computing/</loc>
          <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
