@@ -35,7 +35,7 @@ git checkout -b my-new-branch my-other-branch  # From an existing branch
 You can then create a corresponding **upstream branch** in your remote repository (in this example, called "origin") by running:
 
 ```sh
-git push -u origin
+git push -u origin my-new-branch
 ```
 
 ## Working on a remote branch

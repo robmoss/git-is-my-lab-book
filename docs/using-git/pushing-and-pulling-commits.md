@@ -29,7 +29,14 @@ This requires that you have **created at least one commit** in your local reposi
 Once you have at least one commit in your local repository, you can create a corresponding **upstream branch** in the remote repository with the following command:
 
 ```sh
-git push -u origin
+git push -u origin <branch-name>
+```
+
+The default branch will probably be called `"main"` or `"master"`, depending on your [Git settings](first-time-git-setup.md).
+You can identify the branch name by running:
+
+```sh
+git branch
 ```
 
 !!! note
@@ -50,7 +57,7 @@ and pull commits by running:
 git pull
 ```
 
-without having to specify the remote repository.
+without having to specify the remote repository or branch name.
 
 ## Forcing updates to a remote repository
 
