@@ -20,7 +20,7 @@ Remember that you can merge commits from their branch into your own branches at 
 2. Push this branch to your remote repository:
 
     ```sh
-    git push -u origin
+    git push -u origin collab/jamie
     ```
 
 3. Your collaborator can then make a local copy of this branch:
