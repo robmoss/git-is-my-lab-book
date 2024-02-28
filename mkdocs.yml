@@ -112,18 +112,36 @@ nav:
     - "Peer code review": "collaborating/peer-code-review.md"
     - "Coding style guides": "collaborating/coding-style-guides.md"
     - "Continuous integration": "collaborating/continuous-integration.md"
-  - "4. Reproducibility":
+  - "4. Project structure":
+    - "project-structure/README.md"
+    - "Define your workflow": "project-structure/workflow.md"
+    - "Automate common tasks": "project-structure/automating-tasks.md"
+    - "Explain how it works": "project-structure/explain-how-it-works.md"
+    - "Exercise: what works for you?": "project-structure/exercise-what-works-for-you.md"
+    - "Exercise: a good README": "project-structure/exercise-a-good-readme.md"
+  - "5. Writing code":
+    - "writing-code/README.md"
+    - "How we learn to write code": "writing-code/how-we-learn-to-write-code.md"
+    - "Cohesion and coupling": "writing-code/cohesion-coupling.md"
+    - "Behave nicely": "writing-code/behave-nicely.md"
+    - "Coding advice": "writing-code/coding-advice.md"
+    - "Create packages": "writing-code/create-packages.md"
+    - "Check your code": "writing-code/check-your-code.md"
+    - "Format your code": "writing-code/format-your-code.md"
+    - "Document your code": "writing-code/document-your-code.md"
+    - "Exercise: seek feedback": "writing-code/exercise-seek-feedback.md"
+  - "6. Reproducibility":
     - "reproducibility/README.md"
-  - "5. Testing":
+  - "7. Testing":
     - "testing/README.md"
-  - "6. Cloud and HPC platforms":
+  - "8. Cloud and HPC platforms":
     - "high-performance-computing/README.md"
-  - "7. Case studies":
+  - "9. Case studies":
     - "case-studies/README.md"
     - "Fixing a bug in pypfilt": "case-studies/moss-pypfilt-earlier-states.md"
     - "Incorrect data in a pre-print figure": "case-studies/moss-incorrect-data-pre-print.md"
     - "Pen and paper version control": "case-studies/campbell-pen-and-paper-version-control.md"
-  - "8. Community of Practice":
+  - "10. Community of Practice":
     - "community/README.md"
     - "Meetings":
       - "community/meetings/README.md"
