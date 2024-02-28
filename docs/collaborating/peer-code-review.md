@@ -7,7 +7,7 @@ Once you're comfortable in using [merge/pull requests](merge-pull-requests.md) t
     Remember that code review is a **discussion and critique** of a person's work.
     The code author will naturally feel that they own the code, and the reviewer needs to respect this.
 
-For further advice and suggestions on how to conduct peer code review, please see the [Performing peer code review](../references.md#performing-peer-code-review) references.
+For further advice and suggestions on how to conduct peer code review, please see the [Performing peer code review](../resources.md#performing-peer-code-review) resources.
 
 !!! tip
 
