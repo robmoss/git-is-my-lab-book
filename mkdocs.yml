@@ -114,6 +114,7 @@ nav:
     - "Continuous integration": "collaborating/continuous-integration.md"
   - "4. Reproducibility":
     - "reproducibility/README.md"
+    - "What is reproducible research?": "reproducibility/what-is-reproducible-research.md"
   - "5. Testing":
     - "testing/README.md"
   - "6. Cloud and HPC platforms":
