@@ -15,4 +15,4 @@ The [three characteristics](https://www.communityofpractice.ca/background/what-i
 
 3. Domain: A shared interest, problem, or concern.
 
-We meet as a community every 6 to 8 weeks, and capture observations in [meeting summaries](meetings/README.md).
+We regularly meet as a community, report [meeting summaries](meetings/README.md), and collect [case studies](case-studies/README.md) that showcase examples and best practices.

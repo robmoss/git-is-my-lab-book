@@ -3,7 +3,7 @@
 ## Add a case study
 
 If you've made use of Git in your research activities, **please let us know!**
-We're looking for [case studies](case-studies/README.md) that highlight how EMCRs are using Git.
+We're looking for [case studies](community/case-studies/README.md) that highlight how EMCRs are using Git.
 See the instructions for suggesting new content (below).
 
 ## Provide comments and feedback
@@ -130,7 +130,7 @@ produces:
 ## Adding terminal session recordings
 
 You can use [asciinema](https://asciinema.org/) to record a terminal session, and display this recorded session with a small amount of HTML and JavaScript.
-For example, the following code is used to display the `where-did-this-line-come-from.cast` recording in a tab called "Video demonstration", as shown in [Where did this line come from?](using-git/where-did-this-line-come-from.md) chapter:
+For example, the following code is used to display the `where-did-this-line-come-from.cast` recording in a tab called "Video demonstration", as shown in [Where did this line come from?](guides/using-git/where-did-this-line-come-from.md) chapter:
 
 ```md
 === "Video demonstration"
@@ -145,7 +145,7 @@ Each link must have:
 + A `data-seek-to` attribute that identifies the time (in seconds) to jump to; and
 + A `href` attribute that is set to `"javascript:;"` (so that the link doesn't scroll the page).
 
-For example, the following code is used to display the video recording on the [Choosing your Git Editor](using-git/choosing-your-git-editor.md):
+For example, the following code is used to display the video recording on the [Choosing your Git Editor](guides/using-git/choosing-your-git-editor.md):
 
 ```md
 === "Git editor example"

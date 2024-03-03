@@ -3,6 +3,83 @@ site_url: "https://git-is-my-lab-book.net/"
 repo_url: "https://github.com/robmoss/git-is-my-lab-book"
 edit_uri: "edit/master/docs/"
 
+nav:
+  - "Introduction":
+    - README.md
+    - "How to contribute": how-to-contribute.md
+    - "Contributors": contributors.md
+  - "Orientation":
+    - orientation/README.md
+  - "Topical guides":
+    - guides/README.md
+    - "Learning objectives": guides/learning-objectives.md
+    - "Prerequisites": guides/prerequisites.md
+    - "1. Version control concepts":
+      - guides/version-control/README.md
+      - "What is version control?": guides/version-control/what-is-version-control.md
+      - "What is a repository?": guides/version-control/what-is-a-repository.md
+      - "What is a commit?": guides/version-control/what-is-a-commit.md
+      - "What should I commit?": guides/version-control/what-should-I-commit.md
+      - "How do I write a commit message?": guides/version-control/how-do-I-write-a-commit-message.md
+      - "What is a tag?": guides/version-control/what-is-a-tag.md
+      - "What is a branch?": guides/version-control/what-is-a-branch.md
+      - "What is a merge conflict?": guides/version-control/what-is-a-merge-conflict.md
+      - "Exercise: using version control": guides/version-control/exercise-using-version-control.md
+    - "2. Effective use of git":
+      - guides/using-git/README.md
+      - "Graphical Git clients": guides/using-git/graphical-git-clients.md
+      - "First-time Git setup": guides/using-git/first-time-git-setup.md
+      - "Choosing your Git editor": guides/using-git/choosing-your-git-editor.md
+      - "Creating a repository": guides/using-git/creating-a-repository.md
+      - "Cloning an existing repository": guides/using-git/cloning-an-existing-repository.md
+      - "How to structure a repository": guides/using-git/how-to-structure-a-repository.md
+      - "Choosing a license": guides/using-git/choosing-a-license.md
+      - "Creating a commit": guides/using-git/creating-a-commit.md
+      - "Creating a remote repository": guides/using-git/creating-a-remote-repository.md
+      - "Pushing and pulling commits": guides/using-git/pushing-and-pulling-commits.md
+      - "How to ignore certain files": guides/using-git/how-to-ignore-certain-files.md
+      - "How to create and use tags": guides/using-git/how-to-create-and-use-tags.md
+      - "Inspecting your history": guides/using-git/inspecting-your-history.md
+      - "Where did this line come from?": guides/using-git/where-did-this-line-come-from.md
+      - "Where did this problem come from?": guides/using-git/where-did-this-problem-come-from.md
+      - "How to use branches?": guides/using-git/how-to-use-branches.md
+      - "How to resolve merge conflicts?": guides/using-git/how-to-resolve-merge-conflicts.md
+      - "Exercise: create a local repository": guides/using-git/exercise-create-a-local-repository.md
+      - "Exercise: use a remote repository": guides/using-git/exercise-use-a-remote-repository.md
+      - "Exercise: resolve a merge conflict": guides/using-git/exercise-resolve-a-merge-conflict.md
+    - "3. Collaborating":
+      - guides/collaborating/README.md
+      - "Collaborating on code": guides/collaborating/collaborating-on-code.md
+      - "Collaborating on a paper": guides/collaborating/collaborating-on-a-paper.md
+      - "Sharing a repository": guides/collaborating/sharing-a-repository.md
+      - "Sharing a branch": guides/collaborating/sharing-a-branch.md
+      - "Merge/Pull requests": guides/collaborating/merge-pull-requests.md
+      - "An example pull request": guides/collaborating/an-example-pull-request.md
+      - "Peer code review": guides/collaborating/peer-code-review.md
+      - "Coding style guides": guides/collaborating/coding-style-guides.md
+      - "Continuous integration": guides/collaborating/continuous-integration.md
+    - "4. Reproducibility":
+      - guides/reproducibility/README.md
+    - "5. Testing":
+      - guides/testing/README.md
+    - "6. Cloud and HPC platforms":
+      - guides/high-performance-computing/README.md
+    - "Useful resources": guides/resources.md
+  - "Community":
+    - community/README.md
+    - "Meetings":
+      - community/meetings/README.md
+      - "17 April 2023": community/meetings/2023-04-17.md
+      - "13 June 2023": community/meetings/2023-06-13.md
+      - "15 August 2023": community/meetings/2023-08-15.md
+      - "18 October 2023": community/meetings/2023-10-18.md
+      - "19 February 2024": community/meetings/2024-02-19.md
+    - "Case studies":
+      - community/case-studies/README.md
+      - "Fixing a bug in pypfilt": community/case-studies/moss-pypfilt-earlier-states.md
+      - "Incorrect data in a pre-print figure": community/case-studies/moss-incorrect-data-pre-print.md
+      - "Pen and paper version control": community/case-studies/campbell-pen-and-paper-version-control.md
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -45,6 +122,8 @@ theme:
     # Navigation settings
     - navigation.footer
     - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
     - toc.follow
     - toc.integrate
@@ -63,75 +142,3 @@ extra_css:
 extra_javascript:
   - extra/asciinema-player.min.js
   - extra/wrapper.js
-
-nav:
-  - "Introduction": "README.md"
-  - "Learning objectives": "learning-objectives.md"
-  - "Prerequisites": "prerequisites.md"
-  - "1. Version control concepts":
-    - "version-control/README.md"
-    - "What is version control?": "version-control/what-is-version-control.md"
-    - "What is a repository?": "version-control/what-is-a-repository.md"
-    - "What is a commit?": "version-control/what-is-a-commit.md"
-    - "What should I commit?": "version-control/what-should-I-commit.md"
-    - "How do I write a commit message?": "version-control/how-do-I-write-a-commit-message.md"
-    - "What is a tag?": "version-control/what-is-a-tag.md"
-    - "What is a branch?": "version-control/what-is-a-branch.md"
-    - "What is a merge conflict?": "version-control/what-is-a-merge-conflict.md"
-    - "Exercise: using version control": "version-control/exercise-using-version-control.md"
-  - "2. Effective use of git":
-    - "using-git/README.md"
-    - "Graphical Git clients": "using-git/graphical-git-clients.md"
-    - "First-time Git setup": "using-git/first-time-git-setup.md"
-    - "Choosing your Git editor": "using-git/choosing-your-git-editor.md"
-    - "Creating a repository": "using-git/creating-a-repository.md"
-    - "Cloning an existing repository": "using-git/cloning-an-existing-repository.md"
-    - "How to structure a repository": "using-git/how-to-structure-a-repository.md"
-    - "Choosing a license": "using-git/choosing-a-license.md"
-    - "Creating a commit": "using-git/creating-a-commit.md"
-    - "Creating a remote repository": "using-git/creating-a-remote-repository.md"
-    - "Pushing and pulling commits": "using-git/pushing-and-pulling-commits.md"
-    - "How to ignore certain files": "using-git/how-to-ignore-certain-files.md"
-    - "How to create and use tags": "using-git/how-to-create-and-use-tags.md"
-    - "Inspecting your history": "using-git/inspecting-your-history.md"
-    - "Where did this line come from?": "using-git/where-did-this-line-come-from.md"
-    - "Where did this problem come from?": "using-git/where-did-this-problem-come-from.md"
-    - "How to use branches?": "using-git/how-to-use-branches.md"
-    - "How to resolve merge conflicts?": "using-git/how-to-resolve-merge-conflicts.md"
-    - "Exercise: create a local repository": "using-git/exercise-create-a-local-repository.md"
-    - "Exercise: use a remote repository": "using-git/exercise-use-a-remote-repository.md"
-    - "Exercise: resolve a merge conflict": "using-git/exercise-resolve-a-merge-conflict.md"
-  - "3. Collaborating":
-    - "collaborating/README.md"
-    - "Collaborating on code": "collaborating/collaborating-on-code.md"
-    - "Collaborating on a paper": "collaborating/collaborating-on-a-paper.md"
-    - "Sharing a repository": "collaborating/sharing-a-repository.md"
-    - "Sharing a branch": "collaborating/sharing-a-branch.md"
-    - "Merge/Pull requests": "collaborating/merge-pull-requests.md"
-    - "An example pull request": "collaborating/an-example-pull-request.md"
-    - "Peer code review": "collaborating/peer-code-review.md"
-    - "Coding style guides": "collaborating/coding-style-guides.md"
-    - "Continuous integration": "collaborating/continuous-integration.md"
-  - "4. Reproducibility":
-    - "reproducibility/README.md"
-  - "5. Testing":
-    - "testing/README.md"
-  - "6. Cloud and HPC platforms":
-    - "high-performance-computing/README.md"
-  - "7. Case studies":
-    - "case-studies/README.md"
-    - "Fixing a bug in pypfilt": "case-studies/moss-pypfilt-earlier-states.md"
-    - "Incorrect data in a pre-print figure": "case-studies/moss-incorrect-data-pre-print.md"
-    - "Pen and paper version control": "case-studies/campbell-pen-and-paper-version-control.md"
-  - "8. Community of Practice":
-    - "community/README.md"
-    - "Meetings":
-      - "community/meetings/README.md"
-      - "17 April 2023": "community/meetings/2023-04-17.md"
-      - "13 June 2023": "community/meetings/2023-06-13.md"
-      - "15 August 2023": "community/meetings/2023-08-15.md"
-      - "18 October 2023": "community/meetings/2023-10-18.md"
-      - "19 February 2024": "community/meetings/2024-02-19.md"
-  - "How to contribute": "how-to-contribute.md"
-  - "Contributors": "contributors.md"
-  - "Useful resources": "resources.md"
