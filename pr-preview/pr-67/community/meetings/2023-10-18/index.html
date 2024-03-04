@@ -2408,12 +2408,13 @@ One interesting recommendation in this guide is:</p>
 <li>
 <p>If files should be run <strong>in a particular order</strong>, prefix each file name with a number.
   For example:</p>
-<p>00_download.R
-  01_clean.R
-  02_summarise.R
-  ...
-  09_plot_figures.R
-  10_generate_tables.R</p>
+<div class="highlight"><pre><span></span><code>00_download.R
+01_clean.R
+02_summarise.R
+...
+09_plot_figures.R
+10_generate_tables.R
+</code></pre></div>
 </li>
 </ul>
 <h2 id="choosing-a-directory-structure">Choosing a directory structure<a class="headerlink" href="#choosing-a-directory-structure" title="Permanent link">&para;</a></h2>
@@ -2500,8 +2501,6 @@ When reviewing code, these differences can be somewhat distracting.</p>
 <li>
 <p>There are tools to automatically format your code ("formatters") and to warn about potential issues, such as unused variables ("linters").
   Here are some commonly-used formatters and linters for different languages:</p>
-</li>
-</ul>
 <table>
 <thead>
 <tr>
@@ -2532,6 +2531,8 @@ When reviewing code, these differences can be somewhat distracting.</p>
 </tr>
 </tbody>
 </table>
+</li>
+</ul>
 <h2 id="ai-tools-for-writing-and-reviewing-code">AI tools for writing and reviewing code<a class="headerlink" href="#ai-tools-for-writing-and-reviewing-code" title="Permanent link">&para;</a></h2>
 <p>There are AI tools that you can use to write, format, and review code, but <strong>you will need to check whether the code is correct</strong>.
 For example, <a href="https://github.com/features/copilot">GitHub Copilot</a> is a (commercial) tool that accepts natural-language descriptions and generates computer code.</p>
