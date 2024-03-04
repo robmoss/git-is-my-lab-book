@@ -15,4 +15,4 @@ The [three characteristics](https://www.communityofpractice.ca/background/what-i
 
 3. Domain: A shared interest, problem, or concern.
 
-We regularly meet as a community, report [meeting summaries](meetings/README.md), and collect [case studies](case-studies/README.md) that showcase examples and best practices.
+We regularly meet as a community, report [meeting summaries](meetings/README.md), and collect [case studies](case-studies/README.md) that showcase good practices.
