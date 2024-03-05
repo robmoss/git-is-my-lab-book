@@ -7,7 +7,7 @@ Suggested topics included:
 
 - How to set up common tools on your laptop (e.g., Python and R);
 - How to [organise your files](../guides/using-git/how-to-structure-a-repository.md);
-- How to write Markdown documents;
+- How to write Markdown documents (see Nick Tierney's book [RMarkdown for Scientists](https://rmd4sci.njtierney.com/));
 - How to format and lint your code;
 - How to set up git [on your own device](../guides/using-git/README.md) and [using platforms such as GitHub](../guides/collaborating/README.md);
 - How to recover [old versions of files](../guides/using-git/inspecting-your-history.md);
