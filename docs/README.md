@@ -4,6 +4,14 @@ These materials aim to support
 early- and mid-career researchers (EMCRs) in the
 [SPECTRUM](https://www.spectrum.edu.au/) and [SPARK](https://www.spark.edu.au/) networks to develop their computing skills, and to make effective use of available tools[^tools] and infrastructure[^infra].
 
+## Structure
+
+**Start with the basics:** our [orientation](orientation/README.md) tutorials provide overviews of essential skills, tools, templates, and suggested workflows.
+
+**Learn more about best practices:** our [topical guides](guides/README.md) explain a range of topics and provide exercises to test your understanding.
+
+**Come together as a community:** our [Community of Practice](community/README.md) is how we come together to share skills, knowledge, and experience.
+
 ## Motivation
 
 !!! question
