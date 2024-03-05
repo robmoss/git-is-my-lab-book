@@ -138,6 +138,7 @@ theme:
 extra_css:
   - extra/asciinema-player.css
   - extra/asciinema-theme-dracula.css
+  - extra/larger-admonitions.css
 
 extra_javascript:
   - extra/asciinema-player.min.js
