@@ -1,0 +1,5 @@
+/* Display admonitions with the same font size as the surrounding text. */
+.md-typeset .admonition,
+.md-typeset details {
+    font-size: inherit;
+}

@@ -89,7 +89,6 @@ You can view all of the changes that were made between two commits with the `git
     The `git diff` command shows the **difference** between two points in your commit history.
 
     Note that `git diff` **does not** support start and/or end times like `git log` does; you must use **commit identifiers**.
-```
 
 For example, here is a subset of the commit history for [this book's repository](https://github.com/robmoss/git-is-my-lab-book):
 
