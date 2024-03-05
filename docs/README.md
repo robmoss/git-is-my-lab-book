@@ -6,11 +6,11 @@ early- and mid-career researchers (EMCRs) in the
 
 ## Structure
 
-**Start with the basics:** our [orientation](orientation/README.md) tutorials provide overviews of essential skills, tools, templates, and suggested workflows.
+**Start with the basics:** Our [orientation](orientation/README.md) tutorials provide overviews of essential skills, tools, templates, and suggested workflows.
 
-**Learn more about best practices:** our [topical guides](guides/README.md) explain a range of topics and provide exercises to test your understanding.
+**Learn more about best practices:** Our [topical guides](guides/README.md) explain a range of topics and provide exercises to test your understanding.
 
-**Come together as a community:** our [Community of Practice](community/README.md) is how we come together to share skills, knowledge, and experience.
+**Come together as a community:** Our [Community of Practice](community/README.md) is how we come together to share skills, knowledge, and experience.
 
 ## Motivation
 
