@@ -11,13 +11,13 @@ Here are some general guidelines that you may find useful:
 
 - Consider creating a [separate branch](sharing-a-branch.md) for each collaborator.
 
-  - Merge these branches when completing a major draft or revision.
+    - Merge these branches when completing a major draft or revision.
 
 - Use [latexdiff](https://www.overleaf.com/learn/latex/Articles/Using_Latexdiff_For_Marking_Changes_To_Tex_Documents) to show tracked changes between the current version and a previous commit/tag:
 
-  ```sh
-  latexdiff-git --flatten -r tag-name paper.tex
-  ```
+    ```sh
+    latexdiff-git --flatten -r tag-name paper.tex
+    ```
 
 - Collaborators who will provide feedback, rather than contributing directly to the writing process, can do this by:
 
