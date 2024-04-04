@@ -151,6 +151,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://git-is-my-lab-book.net/guides/reproducibility/what-is-reproducible-research/</loc>
+         <lastmod>2024-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://git-is-my-lab-book.net/guides/testing/</loc>
          <lastmod>2024-04-04</lastmod>
          <changefreq>daily</changefreq>
