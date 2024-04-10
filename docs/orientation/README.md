@@ -3,6 +3,12 @@
 One of [our goals for 2024](../community/meetings/2024-02-19.md#orientation-materials) is to develop orientation materials for new students, postdocs, etc.
 There was broad interest in having a checklist, and example workflows for people to follow — particularly for projects that involve some form of code "hand over", to ensure that the recipients experience few problems in running the code themselves.
 
+!!! info "How to contribute"
+
+    If you want to suggest a topic, or provide feedback about existing content, please [submit an issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=&body=Please enter a short, descriptive title (above) and explain your idea here).
+
+    If you to contribute content, please fork [the repository](https://github.com/robmoss/git-is-my-lab-book), add your contributions, and create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+
 Suggested topics included:
 
 - How to set up common tools on your laptop (e.g., Python and R);
