@@ -51,3 +51,25 @@ After completing [this section](collaborating/README.md), you should be able to:
 - Use a pull request to **merge a collaborator's work** into your main branch; and
 
 - **Conduct peer code review** in a respectful manner.
+
+## Project structure
+
+After completing [this section](project-structure/README.md), you should be able to:
+
+- Understand how to structure a new project;
+
+- Understand how to separate "what to do" from "how to do it"; and
+
+- Structure your code to enable new experiments and analyses.
+
+## Writing code
+
+After completing [this section](writing-code/README.md), you should be able to:
+
+- Divide your code into functions and modules;
+
+- Ensure that your code is a clear expression of your ideas;
+
+- Structure your code into reusable packages; and
+
+- Take advantage of code formatters and code linters.
