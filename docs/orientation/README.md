@@ -9,6 +9,8 @@ There was broad interest in having a checklist, and example workflows for people
 
     If you to contribute content, please fork [the repository](https://github.com/robmoss/git-is-my-lab-book), add your contributions, and create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
+    See our [How to contribute](../how-to-contribute.md) page for more details.
+
 Suggested topics included:
 
 - How to set up common tools on your laptop (e.g., Python and R);
