@@ -5,11 +5,25 @@ There was broad interest in having a checklist, and example workflows for people
 
 !!! info "How to contribute"
 
-    If you want to suggest a topic, or provide feedback about existing content, please [submit an issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=&body=Please enter a short, descriptive title (above) and explain your idea here).
+    To **suggest a new topic**:
 
-    If you to contribute content, please fork [the repository](https://github.com/robmoss/git-is-my-lab-book), add your contributions, and create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+    * Use the search box (top of the page) and check if the topic already exists;
 
-    See our [How to contribute](../how-to-contribute.md) page for more details, and [current orientation guide issues](https://github.com/robmoss/git-is-my-lab-book/issues?q=is%3Aissue+is%3Aopen+label%3Aorientation).
+    * If the topic does not exist, [submit an issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=New Topic:&body=Please enter a short, descriptive title (above) and explain your idea here).
+
+    To **provide feedback about existing content**:
+
+    * If the topic does not exist, [submit an issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=Feedback:&body=Please enter a short, descriptive title (above) and provide your feedback here).
+
+    To **contribute new content**:
+
+    * Use the search box (top of the page) and check if similar content already exists;
+
+    * If there is no similar content, please fork [the repository](https://github.com/robmoss/git-is-my-lab-book), add your contributions, and create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+
+    * See our [How to contribute](../how-to-contribute.md) page for more details, such as formatting guidelines.
+
+    Current issues for the orientation guide are [listed here](https://github.com/robmoss/git-is-my-lab-book/issues?q=is%3Aissue+is%3Aopen+label%3Aorientation).
 
 Suggested topics included:
 
