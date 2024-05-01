@@ -9,11 +9,11 @@ There was broad interest in having a checklist, and example workflows for people
 
     * Use the search box (top of the page) and check if the topic already exists;
 
-    * If the topic does not exist, [submit an issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=New Topic:&body=Please enter a short, descriptive title (above) and explain your idea here).
+    * If the topic does not exist, submit a ["New Topic" issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=New Topic:&body=Please enter a short, descriptive title (above) and explain your idea here).
 
-    To **suggest a useful resource**: [submit an issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=Useful Resource:&body=Please enter a short, descriptive title (above) and include a link to the resource here).
+    To **suggest a useful resource**: submit a ["Useful Resource" issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=Useful Resource:&body=Please enter a short, descriptive title (above) and include a link to the resource here).
 
-    To **provide feedback about existing content**: [submit an issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=Feedback:&body=Please enter a short, descriptive title (above) and provide your feedback here).
+    To **provide feedback about existing content**: submit a ["Feedback" issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=Feedback:&body=Please enter a short, descriptive title (above) and provide your feedback here).
 
     To **contribute new content**:
 
