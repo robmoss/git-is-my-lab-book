@@ -19,7 +19,7 @@ There was broad interest in having a checklist, and example workflows for people
 
     * Use the search box (top of the page) and check if similar content already exists;
 
-    * If there is no similar content, please fork [the repository](https://github.com/robmoss/git-is-my-lab-book), add your contributions, and create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+    * If there is no similar content, please [create a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) of [this repository](https://github.com/robmoss/git-is-my-lab-book), add your contributions, and create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
     * See our [How to contribute](../how-to-contribute.md) page for more details, such as formatting guidelines.
 
