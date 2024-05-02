@@ -3,6 +3,28 @@
 One of [our goals for 2024](../community/meetings/2024-02-19.md#orientation-materials) is to develop orientation materials for new students, postdocs, etc.
 There was broad interest in having a checklist, and example workflows for people to follow — particularly for projects that involve some form of code "hand over", to ensure that the recipients experience few problems in running the code themselves.
 
+!!! info "How to contribute"
+
+    To **suggest a new topic**:
+
+    * Use the search box (top of the page) and check if the topic already exists;
+
+    * If the topic does not exist, submit a ["New Topic" issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=New Topic:&body=Please enter a short, descriptive title (above) and explain your idea here).
+
+    To **suggest a useful resource**: submit a ["Useful Resource" issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=Useful Resource:&body=Please enter a short, descriptive title (above) and include a link to the resource here).
+
+    To **provide feedback about existing content**: submit a ["Feedback" issue](https://github.com/robmoss/git-is-my-lab-book/issues/new?labels=orientation&title=Feedback:&body=Please enter a short, descriptive title (above) and provide your feedback here).
+
+    To **contribute new content**:
+
+    * Use the search box (top of the page) and check if similar content already exists;
+
+    * If there is no similar content, please [create a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) of [this repository](https://github.com/robmoss/git-is-my-lab-book), add your contributions, and create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+
+    * See our [How to contribute](../how-to-contribute.md) page for more details, such as formatting guidelines.
+
+    Current issues for the orientation guide are [listed here](https://github.com/robmoss/git-is-my-lab-book/issues?q=is%3Aissue+is%3Aopen+label%3Aorientation).
+
 Suggested topics included:
 
 - How to set up common tools on your laptop (e.g., Python and R);
