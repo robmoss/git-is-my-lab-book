@@ -10,7 +10,7 @@ In this project, I developed a compartmental model of pertussis to determine app
 While plotting some single model simulations, I noticed anomalies in the modelled output for two experiments.
 The first experiment had an order of magnitude more people in the infectious compartments than in the second experiment, even though there seemed to be far fewer infections occurring.
 This scenario did not fit with the parameter values that were being used.
-In the differential equation file for my model, in addition to extracting the state of the model (i.e. the population in each compartment at each time step), for ease of analysis I also extracted the cumulative number of infections up to that time step.
+In the differential equation file for my model, in addition to extracting the state of the model (i.e., the population in each compartment at each time step), for ease of analysis I also extracted the cumulative number of infections up to that time step.
 The calculation for this extraction of cumulative incidence was incorrect.
 
 ## The solution
@@ -26,4 +26,4 @@ I was able to determine which parts of my results would have been affected by th
 ## How version control helped
 
 Using a **pen and paper** form of version control enabled me to pinpoint the introduction of the error and identify the affected analyses, but it was a tedious process.
-While keeping an immaculate record of changes that I had made was invaluable, imagine how much simpler and faster the process would have been if I had been a regular user of an electronic version control system such as Git! 
+While keeping an immaculate record of changes that I had made was invaluable, imagine how much simpler and faster the process would have been if I had been a regular user of an electronic version control system such as Git!
