@@ -58,12 +58,30 @@ nav:
       - "Peer code review": guides/collaborating/peer-code-review.md
       - "Coding style guides": guides/collaborating/coding-style-guides.md
       - "Continuous integration": guides/collaborating/continuous-integration.md
-    - "4. Reproducibility":
+    - "4. Project structure":
+      - "guides/project-structure/README.md"
+      - "Define your workflow": "guides/project-structure/workflow.md"
+      - "Automate common tasks": "guides/project-structure/automating-tasks.md"
+      - "Explain how it works": "guides/project-structure/explain-how-it-works.md"
+      - "Exercise: what works for you?": "guides/project-structure/exercise-what-works-for-you.md"
+      - "Exercise: a good README": "guides/project-structure/exercise-a-good-readme.md"
+    - "5. Writing code":
+      - "guides/writing-code/README.md"
+      - "How we learn to write code": "guides/writing-code/how-we-learn-to-write-code.md"
+      - "Cohesion and coupling": "guides/writing-code/cohesion-coupling.md"
+      - "Behave nicely": "guides/writing-code/behave-nicely.md"
+      - "Coding advice": "guides/writing-code/coding-advice.md"
+      - "Create packages": "guides/writing-code/create-packages.md"
+      - "Check your code": "guides/writing-code/check-your-code.md"
+      - "Format your code": "guides/writing-code/format-your-code.md"
+      - "Document your code": "guides/writing-code/document-your-code.md"
+      - "Exercise: seek feedback": "guides/writing-code/exercise-seek-feedback.md"
+    - "6. Reproducibility":
       - guides/reproducibility/README.md
       - "What is reproducible research?": "guides/reproducibility/what-is-reproducible-research.md"
-    - "5. Testing":
+    - "7. Testing":
       - guides/testing/README.md
-    - "6. Cloud and HPC platforms":
+    - "8. Cloud and HPC platforms":
       - guides/high-performance-computing/README.md
     - "Useful resources": guides/resources.md
   - "Community":
