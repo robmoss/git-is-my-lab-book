@@ -2515,6 +2515,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -2563,11 +2567,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/meetings/2023-04-17/" class="md-nav__link">
+      <a href="../../../community/meetings/2024-05-09/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    17 April 2023
+    9 May 2024
   </span>
   
 
@@ -2584,11 +2588,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/meetings/2023-06-13/" class="md-nav__link">
+      <a href="../../../community/meetings/2024-04-11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    13 June 2023
+    11 April 2024
   </span>
   
 
@@ -2605,11 +2609,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/meetings/2023-08-15/" class="md-nav__link">
+      <a href="../../../community/meetings/2024-02-19/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    15 August 2023
+    19 February 2024
   </span>
   
 
@@ -2647,11 +2651,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/meetings/2024-02-19/" class="md-nav__link">
+      <a href="../../../community/meetings/2023-08-15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    19 February 2024
+    15 August 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/meetings/2023-06-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13 June 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/meetings/2023-04-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17 April 2023
   </span>
   
 
@@ -2841,30 +2887,23 @@
 <p>Your code should follow the <strong>principal of least surprise:</strong> behave in a way that most users will expect it to behave, and not astonish or surprise them.</p>
 </div>
 <h2 id="a-cake-analogy">A cake analogy<a class="headerlink" href="#a-cake-analogy" title="Permanent link">&para;</a></h2>
-<p>Suppose you have two colleagues who regularly bake cakes, and you decide you'd like one of them to bake you a lemon cake with chocolate icing.</p>
+<p>Suppose you have two colleagues who regularly bake cakes, and you decide you'd like one of them to bake you a chocolate cake.</p>
 <ul>
 <li>
-<p><strong>A nice colleague:</strong> you ask your colleague to bake a lemon cake with chocolate icing.</p>
+<p><strong>A nice colleague:</strong></p>
 <ul>
 <li>That evening, they go home and bake a cake.</li>
 <li>They bring the cake to work the next day.</li>
-<li>The cake tastes of lemon and is topped with chocolate icing.</li>
+<li>The cake tastes of chocolate.</li>
 </ul>
 </li>
 <li>
-<p><strong>A messy colleague:</strong> you ask your colleague to bake a lemon cake with chocolate icing.</p>
+<p><strong>A messy colleague:</strong></p>
 <ul>
-<li>They reply that they will make a cake</li>
-<li>The next day, they come into your office with the ingredients and a portable oven.</li>
-<li>They begin mixing ingredients, making a huge mess on your desk.</li>
-<li>You have to wait until the batter is mixed before they ask you for your choice of flavour.</li>
-<li>They don't have lemons, but add some orange zest to the batter.</li>
-<li>Once the cake is baked, they let it cool.</li>
-<li>One hour later they ask you what flavour icing you want.</li>
-<li>They don't have chocolate or cocoa, so they a different icing.</li>
-<li>They give you the cake.</li>
-<li>The cake tastes of orange and is topped with strawberry icing.</li>
-<li>Your office is covered in flour, sugar, and cake batter.</li>
+<li>They bring the ingredients and a portable oven into your office.</li>
+<li>They make a huge mess, splattering your desk and computer.</li>
+<li>The oven is noisy and makes the office uncomfortably warm.</li>
+<li>The cake tastes of vanilla, not chocolate.</li>
 </ul>
 </li>
 </ul>
@@ -2878,7 +2917,14 @@
   These make it harder for other people to use the code, or to run the code on high-performance computing platforms.</p>
 </li>
 <li>
-<p>Prefer using paths that are relative to the root directory of your project, such as <code>input-data/case-data/cases-for-2023.csv</code>.</p>
+<p>Prefer using paths that are relative to the root directory of your project, such as <code>input-data/case-data/cases-for-2023.csv</code>.
+  If you're using R, the <a href="https://here.r-lib.org/">here</a> package is extremely helpful.</p>
+</li>
+<li>
+<p>Warn the user before running tasks that take a long time to complete.</p>
+</li>
+<li>
+<p>Notify the user before downloading large files.</p>
 </li>
 </ul>
 
