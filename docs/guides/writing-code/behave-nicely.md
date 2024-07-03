@@ -12,27 +12,20 @@ Would you feel comfortable running someone else's code if you thought it might a
 
 ## A cake analogy
 
-Suppose you have two colleagues who regularly bake cakes, and you decide you'd like one of them to bake you a lemon cake with chocolate icing.
+Suppose you have two colleagues who regularly bake cakes, and you decide you'd like one of them to bake you a chocolate cake.
 
-- **A nice colleague:** you ask your colleague to bake a lemon cake with chocolate icing.
+- **A nice colleague:**
 
     - That evening, they go home and bake a cake.
     - They bring the cake to work the next day.
-    - The cake tastes of lemon and is topped with chocolate icing.
+    - The cake tastes of chocolate.
 
-- **A messy colleague:** you ask your colleague to bake a lemon cake with chocolate icing.
+- **A messy colleague:**
 
-    - They reply that they will make a cake
-    - The next day, they come into your office with the ingredients and a portable oven.
-    - They begin mixing ingredients, making a huge mess on your desk.
-    - You have to wait until the batter is mixed before they ask you for your choice of flavour.
-    - They don't have lemons, but add some orange zest to the batter.
-    - Once the cake is baked, they let it cool.
-    - One hour later they ask you what flavour icing you want.
-    - They don't have chocolate or cocoa, so they a different icing.
-    - They give you the cake.
-    - The cake tastes of orange and is topped with strawberry icing.
-    - Your office is covered in flour, sugar, and cake batter.
+    - They bring the ingredients and a portable oven into your office.
+    - They make a huge mess, splattering your desk and computer.
+    - The oven is noisy and makes the office uncomfortably warm.
+    - The cake tastes of vanilla, not chocolate.
 
 ## Some specific tips
 
@@ -42,3 +35,8 @@ Suppose you have two colleagues who regularly bake cakes, and you decide you'd l
   These make it harder for other people to use the code, or to run the code on high-performance computing platforms.
 
 - Prefer using paths that are relative to the root directory of your project, such as `input-data/case-data/cases-for-2023.csv`.
+  If you're using R, the [here](https://here.r-lib.org/) package is extremely helpful.
+
+- Warn the user before running tasks that take a long time to complete.
+
+- Notify the user before downloading large files.
