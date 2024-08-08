@@ -2,13 +2,15 @@
 
 This section contains summaries of each Community of Practice meeting.
 
+- [8 August 2024](2024-08-08.md): orientation guide planning.
+
 - [11 July 2024](2024-07-11.md): presentation from Nefel Tellioglu.
 
 - [13 June 2024](2024-06-13.md): presentation from Cam Zachreson.
 
 - [9 May 2024](2024-05-09.md): presentation from TK Le.
 
-- [11 April 2024](2024-04-11.md): ideas and resource for the orientation guide.
+- [11 April 2024](2024-04-11.md): ideas and resources for the orientation guide.
 
 - [19 February 2024](2024-02-19.md): identify goals and activities for 2024.
 
