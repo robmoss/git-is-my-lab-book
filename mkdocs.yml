@@ -88,6 +88,8 @@ nav:
     - community/README.md
     - "Meetings":
       - community/meetings/README.md
+      - "11 July 2024": community/meetings/2024-07-11.md
+      - "13 June 2024": community/meetings/2024-06-13.md
       - "9 May 2024": community/meetings/2024-05-09.md
       - "11 April 2024": community/meetings/2024-04-11.md
       - "19 February 2024": community/meetings/2024-02-19.md
@@ -105,6 +107,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - footnotes
+  - md_in_html
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
