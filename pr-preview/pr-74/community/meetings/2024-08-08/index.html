@@ -3002,7 +3002,7 @@ We began by asking participants what skills, tools, and knowledge they've found 
 <h2 id="core-tools-and-recommended-packages">Core tools and recommended packages<a class="headerlink" href="#core-tools-and-recommended-packages" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Key message</p>
-<p>There was strong interest in having <strong>opinionated recommendations</strong> for helpful software packages and libraries, based on their own experiences.</p>
+<p>There was strong interest in having <strong>opinionated recommendations</strong> for helpful software packages and libraries, based on our own experiences.</p>
 </div>
 <p>When we start out, we typically don't know what tools are available and how to choose between them.
 So having guidance and recommendations from more experienced members of our community can be valuable.</p>
@@ -3113,13 +3113,13 @@ For example, if you want to (a) analyse tabular data; and (b) use Python; then w
 </ul>
 <p>This initiated a broader discussion about improving the computational performance of our code and making use of high-performance computing (HPC) resources.</p>
 <p>Computational performance was an issue that <a href="../2024-07-11/#computational-performance">Nefel encountered</a> when constructing an agent-based model of pneumococcal disease, and she found that code optimisation is a skill that takes time to learn.</p>
-<p>We discussed several ways about using multiple CPUs to make code run more quickly:</p>
+<p>We discussed several ways about using multiple CPU cores to make code run more quickly:</p>
 <ul>
 <li>
-<p>Using libraries that automatically make use of multiple CPUs, such as <a href="https://future.apply.futureverse.org/">future.apply</a> for R, <a href="https://docs.python.org/3/library/concurrent.futures.html">concurrent.futures</a> for Python, and the <a href="https://pola.rs/">Polars</a> data-frame library.</p>
+<p>Using libraries that automatically make use of multiple CPU cores, such as <a href="https://future.apply.futureverse.org/">future.apply</a> for R, <a href="https://docs.python.org/3/library/concurrent.futures.html">concurrent.futures</a> for Python, and the <a href="https://pola.rs/">Polars</a> data-frame library.</p>
 </li>
 <li>
-<p>Where we want to run large numbers of simulations, the easiest approach can often be for each simulation to only use one CPU, and to run many simulations in parallel (e.g., on virtual machines that have many CPUs).
+<p>Where we want to run large numbers of simulations, the easiest approach can often be for each simulation to only use one CPU core, and to run many simulations in parallel (e.g., on virtual machines that have many CPU cores).
   However, as TK pointed out, if each simulation uses a large amount of RAM, it may not be possible to run many simulations in parallel with this approach.</p>
 </li>
 <li>
