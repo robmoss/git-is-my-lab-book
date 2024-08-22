@@ -196,3 +196,4 @@ extra_javascript:
 # Ignore TOML scripts for generating asciinema recordings.
 exclude_docs: |
   *.toml
+  *.yaml

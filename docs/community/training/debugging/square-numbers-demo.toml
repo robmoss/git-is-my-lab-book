@@ -15,7 +15,7 @@ post_nl_delay = [
 ]
 with_comments = false
 comments_at_top = false
-lines = [
+actions = [
     "./square_numbers.py",
     "./square_numbers.R",
     { action_id = "Marker", label = "END" },

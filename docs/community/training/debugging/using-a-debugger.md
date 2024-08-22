@@ -83,15 +83,31 @@ sequenceDiagram
         --8<-- "square_numbers.R"
         ```
 
-<div id="pdb-demo" data-cast-file="../square-numbers-pdb.cast"></div>
+=== "Python debugger"
 
-Video timeline:
+    <div id="pdb-demo" data-cast-file="../square-numbers-pdb.cast"></div>
 
-1. <a data-video="pdb-demo" data-seek-to="4.7" href="javascript:;">Set a breakpoint</a>
-2. <a data-video="pdb-demo" data-seek-to="9.081" href="javascript:;">Show current location</a>
-3. <a data-video="pdb-demo" data-seek-to="16.146" href="javascript:;">Step into `is_square()`</a>
-4. <a data-video="pdb-demo" data-seek-to="36.744" href="javascript:;">Return from `is_square()`</a>
-5. <a data-video="pdb-demo" data-seek-to="40.021" href="javascript:;">Show updated `squares` list</a>
-6. <a data-video="pdb-demo" data-seek-to="57.947" href="javascript:;">Add a conditional breakpoint</a>
-7. <a data-video="pdb-demo" data-seek-to="69.697" href="javascript:;">Stop at the conditional breakpoint</a>
-8. <a data-video="pdb-demo" data-seek-to="76.202" href="javascript:;">Continue until the script ends</a>
+    Video timeline:
+
+    1. <a data-video="pdb-demo" data-seek-to="4.7" href="javascript:;">Set a breakpoint</a>
+    2. <a data-video="pdb-demo" data-seek-to="9.081" href="javascript:;">Show current location</a>
+    3. <a data-video="pdb-demo" data-seek-to="16.146" href="javascript:;">Step into `is_square()`</a>
+    4. <a data-video="pdb-demo" data-seek-to="36.744" href="javascript:;">Return from `is_square()`</a>
+    5. <a data-video="pdb-demo" data-seek-to="40.021" href="javascript:;">Show updated `squares` list</a>
+    6. <a data-video="pdb-demo" data-seek-to="57.947" href="javascript:;">Add a conditional breakpoint</a>
+    7. <a data-video="pdb-demo" data-seek-to="69.697" href="javascript:;">Stop at the conditional breakpoint</a>
+    8. <a data-video="pdb-demo" data-seek-to="76.202" href="javascript:;">Continue until the script ends</a>
+
+=== "R debugger"
+
+    <div id="r-debug-demo" data-cast-file="../square-numbers-r-debug.cast"></div>
+
+    Video timeline:
+
+    1. <a data-video="r-debug-demo" data-seek-to="6.568" href="javascript:;">Set a breakpoint</a>
+    2. <a data-video="r-debug-demo" data-seek-to="23.548" href="javascript:;">Step into `is_square()`</a>
+    3. <a data-video="r-debug-demo" data-seek-to="29.654" href="javascript:;">Return from `is_square()`</a>
+    4. <a data-video="r-debug-demo" data-seek-to="33.505" href="javascript:;">Show updated `squares` list</a>
+    5. <a data-video="r-debug-demo" data-seek-to="47.751" href="javascript:;">Add a conditional breakpoint</a>
+    6. <a data-video="r-debug-demo" data-seek-to="67.77" href="javascript:;">Stop at the conditional breakpoint</a>
+    7. <a data-video="r-debug-demo" data-seek-to="74.546" href="javascript:;">Continue until the script ends</a>

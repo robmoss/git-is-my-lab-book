@@ -32,4 +32,6 @@ is_square <- function(value) {
   FALSE
 }
 
-main()
+if (! interactive()) {
+  main()
+}

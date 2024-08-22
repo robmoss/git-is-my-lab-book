@@ -9,4 +9,4 @@
 
 !!! info
 
-    See the [Resources](resourced.md) page for links to more of Julia Evans' articles, stories, and zines about debugging.
+    See the [Resources](resources.md) page for links to more of Julia Evans' articles, stories, and zines about debugging.
