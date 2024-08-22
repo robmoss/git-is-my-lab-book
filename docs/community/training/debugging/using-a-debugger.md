@@ -6,29 +6,19 @@
 
     Debuggers can help us to find errors because they show us what the code **is actually doing**.
 
-!!! info
-
-    Editors such as [RStudio](https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE), [PyCharm](https://www.jetbrains.com/pycharm/features/debugger.html), and [Spyder](https://docs.spyder-ide.org/current/panes/debugging.html) allow you to run a debugger inside the editor itself.
-
 !!! question
 
     What is the "state" of a running program?
 
 How to use a debugger to examine the program state:
 
-- [`breakpoint()`](https://docs.python.org/3/library/functions.html#breakpoint) and [`pdb`](https://docs.python.org/3/library/pdb.html#module-pdb) for Python
-- [`browser()`](https://rdrr.io/r/base/browser.html), [`debug()`](https://rdrr.io/r/base/debug.html) and [`traceback()`](https://rdrr.io/r/base/traceback.html) for base R
-- step over, step into, etc
-- Advanced R, chapter 22: [Debugging](https://adv-r.hadley.nz/debugging.html)
+- Breakpoints
+- Conditional breakpoints
+- Printing values
+- Stepping into and over lines
+- Understanding the call stack and interpreting tracebacks
 
-How to move up and down the call stack!
-
-- Start with some toy examples and some simple diagrams and asciinema videos.
-
-- Relate this to tracebacks!
-  When you know where a failure occurs, you can set a breakpoint and inspect the current state of the program, but also walk up the stack!
-
-## Example: Square numbers
+## Code: Square numbers
 
 [Square numbers](https://en.wikipedia.org/wiki/Square_number) are positive integers that are equal to the square of an integer.
 Here we have provided example Python and R scripts that print all of the square numbers between 1 and 100:
@@ -82,6 +72,21 @@ sequenceDiagram
         ```R title="square_numbers.R" linenums="1"
         --8<-- "square_numbers.R"
         ```
+
+## Stepping through the code
+
+The recorded terminal sessions demonstrate how to use Python and R debuggers from the command line.
+They cover:
+
+- How to define breakpoints;
+- How to inspect the current values of variables; and
+- How to step through, and over, lines of code.
+
+!!! tip "Interactive debugger sessions"
+
+    If your editor supports running a debugger, **use this feature!**
+    See these examples for [RStudio](https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE), [PyCharm](https://www.jetbrains.com/pycharm/features/debugger.html), and [Spyder](https://docs.spyder-ide.org/current/panes/debugging.html).
+
 
 === "Python debugger"
 
