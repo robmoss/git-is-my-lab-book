@@ -3126,9 +3126,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example-square-numbers" class="md-nav__link">
+  <a href="#code-square-numbers" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: Square numbers
+      Code: Square numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stepping-through-the-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stepping through the code
     </span>
   </a>
   
@@ -3279,32 +3288,19 @@
 <p>A debugger is a tool for examining the state of a running program.</p>
 <p>Debuggers can help us to find errors because they show us what the code <strong>is actually doing</strong>.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Editors such as <a href="https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE">RStudio</a>, <a href="https://www.jetbrains.com/pycharm/features/debugger.html">PyCharm</a>, and <a href="https://docs.spyder-ide.org/current/panes/debugging.html">Spyder</a> allow you to run a debugger inside the editor itself.</p>
-</div>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>What is the "state" of a running program?</p>
 </div>
 <p>How to use a debugger to examine the program state:</p>
 <ul>
-<li><a href="https://docs.python.org/3/library/functions.html#breakpoint"><code>breakpoint()</code></a> and <a href="https://docs.python.org/3/library/pdb.html#module-pdb"><code>pdb</code></a> for Python</li>
-<li><a href="https://rdrr.io/r/base/browser.html"><code>browser()</code></a>, <a href="https://rdrr.io/r/base/debug.html"><code>debug()</code></a> and <a href="https://rdrr.io/r/base/traceback.html"><code>traceback()</code></a> for base R</li>
-<li>step over, step into, etc</li>
-<li>Advanced R, chapter 22: <a href="https://adv-r.hadley.nz/debugging.html">Debugging</a></li>
+<li>Breakpoints</li>
+<li>Conditional breakpoints</li>
+<li>Printing values</li>
+<li>Stepping into and over lines</li>
+<li>Understanding the call stack and interpreting tracebacks</li>
 </ul>
-<p>How to move up and down the call stack!</p>
-<ul>
-<li>
-<p>Start with some toy examples and some simple diagrams and asciinema videos.</p>
-</li>
-<li>
-<p>Relate this to tracebacks!
-  When you know where a failure occurs, you can set a breakpoint and inspect the current state of the program, but also walk up the stack!</p>
-</li>
-</ul>
-<h2 id="example-square-numbers">Example: Square numbers<a class="headerlink" href="#example-square-numbers" title="Permanent link">&para;</a></h2>
+<h2 id="code-square-numbers">Code: Square numbers<a class="headerlink" href="#code-square-numbers" title="Permanent link">&para;</a></h2>
 <p><a href="https://en.wikipedia.org/wiki/Square_number">Square numbers</a> are positive integers that are equal to the square of an integer.
 Here we have provided example Python and R scripts that print all of the square numbers between 1 and 100:</p>
 <div id="square-numbers-demo" data-cast-file="../square-numbers-demo.cast"></div>
@@ -3484,6 +3480,19 @@ Here we have provided example Python and R scripts that print all of the square 
 </div>
 </div>
 </details>
+<h2 id="stepping-through-the-code">Stepping through the code<a class="headerlink" href="#stepping-through-the-code" title="Permanent link">&para;</a></h2>
+<p>The recorded terminal sessions demonstrate how to use Python and R debuggers from the command line.
+They cover:</p>
+<ul>
+<li>How to define breakpoints;</li>
+<li>How to inspect the current values of variables; and</li>
+<li>How to step through, and over, lines of code.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Interactive debugger sessions</p>
+<p>If your editor supports running a debugger, <strong>use this feature!</strong>
+See these examples for <a href="https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE">RStudio</a>, <a href="https://www.jetbrains.com/pycharm/features/debugger.html">PyCharm</a>, and <a href="https://docs.spyder-ide.org/current/panes/debugging.html">Spyder</a>.</p>
+</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Python debugger</label><label for="__tabbed_2_2">R debugger</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
