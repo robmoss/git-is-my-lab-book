@@ -1,0 +1,29 @@
+output_file = "square-numbers-demo.cast"
+start_delay = 0.3
+end_delay = 0.5
+typing_delay = [
+    0.05,
+    0.25,
+]
+pre_nl_delay = [
+    0.2,
+    0.2,
+]
+post_nl_delay = [
+    0.8,
+    1.0,
+]
+with_comments = false
+comments_at_top = false
+lines = [
+    "./square_numbers.py",
+    "./square_numbers.R",
+    { action_id = "Marker", label = "END" },
+    "exit",
+]
+cols = 80
+rows = 5
+
+[[filters]]
+filter_id = "EndMarkerFilter"
+end_label = "END"

@@ -103,6 +103,19 @@ nav:
       - "Fixing a bug in pypfilt": community/case-studies/moss-pypfilt-earlier-states.md
       - "Incorrect data in a pre-print figure": community/case-studies/moss-incorrect-data-pre-print.md
       - "Pen and paper version control": community/case-studies/campbell-pen-and-paper-version-control.md
+    - "Training events":
+      - community/training/README.md
+      - "Introduction to Debugging":
+        - community/training/debugging/README.md
+        - "Learning objectives": community/training/debugging/learning-objectives.md
+        - "Debugging manifesto": community/training/debugging/manifesto.md
+        - "What is debugging?": community/training/debugging/what-is-debugging.md
+        - "Why is debugging useful?": community/training/debugging/why-is-debugging-useful.md
+        - "Using a debugger": community/training/debugging/using-a-debugger.md
+        - "Example: Perfect numbers": community/training/debugging/example-perfect-numbers.md
+        - "Example: Python vs R": community/training/debugging/example-python-vs-r.md
+        - "Techniques and tools": community/training/debugging/techniques-and-tools.md
+        - "Resources": community/training/debugging/resources.md
 
 markdown_extensions:
   - admonition
@@ -115,7 +128,18 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
-  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: [
+        # Locate snippets relative to the documentation root directory.
+        "docs/",
+        # Locate snippets in the 2024 debugging workshop directory.
+        "docs/community/training/debugging",
+      ]
+  - pymdownx.superfences:
+     custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - toc:
@@ -168,3 +192,7 @@ extra_css:
 extra_javascript:
   - extra/asciinema-player.min.js
   - extra/wrapper.js
+
+# Ignore TOML scripts for generating asciinema recordings.
+exclude_docs: |
+  *.toml
