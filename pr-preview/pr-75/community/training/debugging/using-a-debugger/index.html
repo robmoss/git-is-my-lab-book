@@ -3440,7 +3440,9 @@ Here we have provided example Python and R scripts that print all of the square 
 <span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#!/usr/bin/env -S Rscript --vanilla</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#!/usr/bin/env -S Rscript --vanilla</span>
 <span class="c1">#</span>
 <span class="c1"># Print the square numbers between 1 and 100.</span>
 <span class="c1">#</span>
@@ -3474,14 +3476,18 @@ Here we have provided example Python and R scripts that print all of the square 
 <span class="w">  </span><span class="kc">FALSE</span>
 <span class="p">}</span>
 
-<span class="nf">main</span><span class="p">()</span>
+<span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="w"> </span><span class="nf">interactive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 </details>
-<div id="pdb-demo" data-cast-file="../square-numbers-pdb.cast"></div>
-
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Python debugger</label><label for="__tabbed_2_2">R debugger</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div id="pdb-demo" data-cast-file="../square-numbers-pdb.cast"></div></p>
 <p>Video timeline:</p>
 <ol>
 <li><a data-video="pdb-demo" data-seek-to="4.7" href="javascript:;">Set a breakpoint</a></li>
@@ -3493,6 +3499,22 @@ Here we have provided example Python and R scripts that print all of the square 
 <li><a data-video="pdb-demo" data-seek-to="69.697" href="javascript:;">Stop at the conditional breakpoint</a></li>
 <li><a data-video="pdb-demo" data-seek-to="76.202" href="javascript:;">Continue until the script ends</a></li>
 </ol>
+</div>
+<div class="tabbed-block">
+<p><div id="r-debug-demo" data-cast-file="../square-numbers-r-debug.cast"></div></p>
+<p>Video timeline:</p>
+<ol>
+<li><a data-video="r-debug-demo" data-seek-to="6.568" href="javascript:;">Set a breakpoint</a></li>
+<li><a data-video="r-debug-demo" data-seek-to="23.548" href="javascript:;">Step into <code>is_square()</code></a></li>
+<li><a data-video="r-debug-demo" data-seek-to="29.654" href="javascript:;">Return from <code>is_square()</code></a></li>
+<li><a data-video="r-debug-demo" data-seek-to="33.505" href="javascript:;">Show updated <code>squares</code> list</a></li>
+<li><a data-video="r-debug-demo" data-seek-to="47.751" href="javascript:;">Add a conditional breakpoint</a></li>
+<li><a data-video="r-debug-demo" data-seek-to="67.77" href="javascript:;">Stop at the conditional breakpoint</a></li>
+<li><a data-video="r-debug-demo" data-seek-to="74.546" href="javascript:;">Continue until the script ends</a></li>
+</ol>
+</div>
+</div>
+</div>
 
 
 
