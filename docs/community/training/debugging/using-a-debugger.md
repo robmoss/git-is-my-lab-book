@@ -85,7 +85,7 @@ They cover:
 !!! tip "Interactive debugger sessions"
 
     If your editor supports running a debugger, **use this feature!**
-    See these examples for [RStudio](https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE), [PyCharm](https://www.jetbrains.com/pycharm/features/debugger.html), and [Spyder](https://docs.spyder-ide.org/current/panes/debugging.html).
+    See these examples for [RStudio](https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE), [PyCharm](https://www.jetbrains.com/pycharm/features/debugger.html), [Spyder](https://docs.spyder-ide.org/current/panes/debugging.html), and [VS Code](https://code.visualstudio.com/docs/editor/debugging).
 
 
 === "Python debugger"
