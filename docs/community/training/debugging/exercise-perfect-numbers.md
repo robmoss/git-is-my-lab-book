@@ -30,7 +30,6 @@
 
     How should we begin investigating?
 
-
 !!! tip "Interactive debugger sessions"
 
     If your editor supports running a debugger, **use this feature!**
