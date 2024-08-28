@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://git-is-my-lab-book.net/community/training/debugging/using-a-debugger/">
       
       
-        <link rel="prev" href="../why-is-debugging-useful/">
+        <link rel="prev" href="../why-are-debuggers-useful/">
       
       
-        <link rel="next" href="../example-perfect-numbers/">
+        <link rel="next" href="../example-square-numbers/">
       
       
       <link rel="icon" href="../../../../logo.png">
@@ -2948,6 +2948,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -3059,11 +3063,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../why-is-debugging-useful/" class="md-nav__link">
+      <a href="../why-are-debuggers-useful/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Why is debugging useful?
+    Why are debuggers useful?
   </span>
   
 
@@ -3089,17 +3093,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Using a debugger
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3110,43 +3103,6 @@
 
       </a>
       
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#code-square-numbers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code: Square numbers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stepping-through-the-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stepping through the code
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3159,11 +3115,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../example-perfect-numbers/" class="md-nav__link">
+      <a href="../example-square-numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Example: Perfect numbers
+    Example: Square numbers
   </span>
   
 
@@ -3180,11 +3136,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../example-python-vs-r/" class="md-nav__link">
+      <a href="../exercise-perfect-numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Example: Python vs R
+    Exercise: Perfect numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercise-python-vs-r/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise: Python vs R
   </span>
   
 
@@ -3227,6 +3204,27 @@
   
   <span class="md-ellipsis">
     Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solutions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise solutions
   </span>
   
 
@@ -3283,64 +3281,35 @@
 
 
 <h1 id="using-a-debugger">Using a debugger<a class="headerlink" href="#using-a-debugger" title="Permanent link">&para;</a></h1>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>A debugger is a tool for examining the state of a running program.</p>
-<p>Debuggers can help us to find errors because they show us what the code <strong>is actually doing</strong>.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>What is the "state" of a running program?</p>
-</div>
-<p>How to use a debugger to examine the program state:</p>
+<p>The main features of a debugger are:</p>
 <ul>
-<li>Breakpoints</li>
-<li>Conditional breakpoints</li>
-<li>Printing values</li>
-<li>Stepping into and over lines</li>
-<li>Understanding the call stack and interpreting tracebacks</li>
+<li>
+<p><strong>Breakpoints:</strong> pause the program when a particular line of code is about to be executed;</p>
+</li>
+<li>
+<p><strong>Display/print:</strong> show the current value of local variables;</p>
+</li>
+<li>
+<p><strong>Next:</strong> execute the current line of code and pause at the next line;</p>
+</li>
+<li>
+<p><strong>Continue:</strong> continue executing code until the next breakpoint, or the code finishes.</p>
+</li>
 </ul>
-<h2 id="code-square-numbers">Code: Square numbers<a class="headerlink" href="#code-square-numbers" title="Permanent link">&para;</a></h2>
-<p><a href="https://en.wikipedia.org/wiki/Square_number">Square numbers</a> are positive integers that are equal to the square of an integer.
-Here we have provided example Python and R scripts that print all of the square numbers between 1 and 100:</p>
-<div id="square-numbers-demo" data-cast-file="../square-numbers-demo.cast"></div>
-
-<p>You can download these scripts to run on your own computer:</p>
+<p>Slightly more advanced features include:</p>
 <ul>
-<li><a href="../square_numbers.py">square_numbers.py</a></li>
-<li><a href="../square_numbers.R">square_numbers.R</a></li>
+<li>
+<p><strong>Conditional breakpoints:</strong> pause the program when a particular line of code is about to be executed <strong>and</strong> a specific condition is satisfied.</p>
+</li>
+<li>
+<p><strong>Step:</strong> execute the current line of code and pause at the first possible point — either the line in the current function <strong>or</strong> the first line in a function that is called.</p>
+</li>
 </ul>
-<p>Each script contains three functions:</p>
-<ul>
-<li><code>main()</code></li>
-<li><code>find_squares(lower_bound, upper_bound)</code></li>
-<li><code>is_square(value)</code></li>
-</ul>
-<p>The diagram below shows how <code>main()</code> calls <code>find_squares()</code>, which in turn calls <code>is_square()</code> many times.</p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant M as main()
-    participant F as find_squares()
-    participant I as is_square()
-    activate M
-    M -&gt;&gt;+ F: lower_bound = 1, upper_bound = 100
-    Note over F: squares = [ ]
-    F -&gt;&gt;+ I: value = 1
-    I -&gt;&gt;- F: True/False
-    F -&gt;&gt;+ I: value = 2
-    I -&gt;&gt;- F: True/False
-    F --&gt;&gt;+ I: ...
-    I --&gt;&gt;- F: ...
-    F -&gt;&gt;+ I: value = 100
-    I -&gt;&gt;- F: True/False
-    F -&gt;&gt;- M: squares = [...]
-    Note over M: print(squares)
-    deactivate M</code></pre>
-<details class="info">
-<summary>Source code</summary>
+<p>For example, consider the following code example:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">R</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">square_numbers.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3354,55 +3323,25 @@ Here we have provided example Python and R scripts that print all of the square 
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Print the square numbers between 1 and 100.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">first_function</span><span class="p">():</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">):</span>
+<span class="hll">        <span class="n">y</span> <span class="o">=</span> <span class="n">second_function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span>        <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">y</span>
+
+    <span class="k">return</span> <span class="n">total</span>
 
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">squares</span> <span class="o">=</span> <span class="n">find_squares</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">second_function</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">a</span>
+    <span class="k">return</span> <span class="n">result</span>
 
 
-<span class="k">def</span> <span class="nf">find_squares</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">):</span>
-    <span class="n">squares</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">value</span> <span class="o">=</span> <span class="n">lower_bound</span>
-    <span class="k">while</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="n">upper_bound</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">is_square</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-            <span class="n">squares</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-        <span class="n">value</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">squares</span>
-
-
-<span class="k">def</span> <span class="nf">is_square</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
+<span class="n">first_function</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">square_numbers.R</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3416,114 +3355,36 @@ Here we have provided example Python and R scripts that print all of the square 
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#!/usr/bin/env -S Rscript --vanilla</span>
-<span class="c1">#</span>
-<span class="c1"># Print the square numbers between 1 and 100.</span>
-<span class="c1">#</span>
-
-
-<span class="n">main</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">squares</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">find_squares</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">)</span>
-<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>
-<span class="p">}</span>
-
-
-<span class="n">find_squares</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span><span class="w"> </span><span class="n">upper_bound</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">squares</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">()</span>
-<span class="w">  </span><span class="n">value</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lower_bound</span>
-<span class="w">  </span><span class="nf">while </span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">upper_bound</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="nf">is_square</span><span class="p">(</span><span class="n">value</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">squares</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">squares</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="n">value</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">first_function</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">total</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span>
+<span class="w">  </span><span class="nf">for </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="m">49</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">second_function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">squares</span>
+<span class="w">  </span><span class="n">total</span>
 <span class="p">}</span>
 
-
-<span class="n">is_square</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nf">for </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="n">value</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nf">return</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="kc">FALSE</span>
+<span class="n">second_function</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span>
+<span class="w">  </span><span class="n">result</span>
 <span class="p">}</span>
 
-<span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="w"> </span><span class="nf">interactive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">}</span>
+<span class="nf">first_function</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
-</details>
-<h2 id="stepping-through-the-code">Stepping through the code<a class="headerlink" href="#stepping-through-the-code" title="Permanent link">&para;</a></h2>
-<p>The recorded terminal sessions demonstrate how to use Python and R debuggers from the command line.
-They cover:</p>
 <ul>
-<li>How to define breakpoints;</li>
-<li>How to inspect the current values of variables; and</li>
-<li>How to step through, and over, lines of code.</li>
+<li>
+<p>We can use a <strong>conditional breakpoint</strong> to pause on line 4 (highlighted) only when <code>x = 42</code>.</p>
+</li>
+<li>
+<p>We can then use <strong>step</strong> to begin executing line 4 and pause on line 11, where we will see that <code>a = 42</code>.</p>
+</li>
+<li>
+<p>If we instead used <strong>next</strong> at line 4 (highlighted), the debugger would execute line 4 and then pause on line 5.</p>
+</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Interactive debugger sessions</p>
-<p>If your editor supports running a debugger, <strong>use this feature!</strong>
-See these examples for <a href="https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE">RStudio</a>, <a href="https://www.jetbrains.com/pycharm/features/debugger.html">PyCharm</a>, <a href="https://docs.spyder-ide.org/current/panes/debugging.html">Spyder</a>, and <a href="https://code.visualstudio.com/docs/editor/debugging">VS Code</a>.</p>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Python debugger</label><label for="__tabbed_2_2">R debugger</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><div id="pdb-demo" data-cast-file="../square-numbers-pdb.cast"></div></p>
-<p>Video timeline:</p>
-<ol>
-<li><a data-video="pdb-demo" data-seek-to="4.7" href="javascript:;">Set a breakpoint</a></li>
-<li><a data-video="pdb-demo" data-seek-to="9.081" href="javascript:;">Show current location</a></li>
-<li><a data-video="pdb-demo" data-seek-to="16.146" href="javascript:;">Step into <code>is_square()</code></a></li>
-<li><a data-video="pdb-demo" data-seek-to="36.744" href="javascript:;">Return from <code>is_square()</code></a></li>
-<li><a data-video="pdb-demo" data-seek-to="40.021" href="javascript:;">Show updated <code>squares</code> list</a></li>
-<li><a data-video="pdb-demo" data-seek-to="57.947" href="javascript:;">Add a conditional breakpoint</a></li>
-<li><a data-video="pdb-demo" data-seek-to="69.697" href="javascript:;">Stop at the conditional breakpoint</a></li>
-<li><a data-video="pdb-demo" data-seek-to="76.202" href="javascript:;">Continue until the script ends</a></li>
-</ol>
-</div>
-<div class="tabbed-block">
-<p><div id="r-debug-demo" data-cast-file="../square-numbers-r-debug.cast"></div></p>
-<p>Video timeline:</p>
-<ol>
-<li><a data-video="r-debug-demo" data-seek-to="6.568" href="javascript:;">Set a breakpoint</a></li>
-<li><a data-video="r-debug-demo" data-seek-to="23.548" href="javascript:;">Step into <code>is_square()</code></a></li>
-<li><a data-video="r-debug-demo" data-seek-to="29.654" href="javascript:;">Return from <code>is_square()</code></a></li>
-<li><a data-video="r-debug-demo" data-seek-to="33.505" href="javascript:;">Show updated <code>squares</code> list</a></li>
-<li><a data-video="r-debug-demo" data-seek-to="47.751" href="javascript:;">Add a conditional breakpoint</a></li>
-<li><a data-video="r-debug-demo" data-seek-to="67.77" href="javascript:;">Stop at the conditional breakpoint</a></li>
-<li><a data-video="r-debug-demo" data-seek-to="74.546" href="javascript:;">Continue until the script ends</a></li>
-</ol>
-</div>
-</div>
-</div>
 
 
 
@@ -3561,7 +3422,7 @@ See these examples for <a href="https://support.posit.co/hc/en-us/articles/20561
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../why-is-debugging-useful/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Why is debugging useful?">
+          <a href="../why-are-debuggers-useful/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Why are debuggers useful?">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3571,20 +3432,20 @@ See these examples for <a href="https://support.posit.co/hc/en-us/articles/20561
                 Previous
               </span>
               <div class="md-ellipsis">
-                Why is debugging useful?
+                Why are debuggers useful?
               </div>
             </div>
           </a>
         
         
           
-          <a href="../example-perfect-numbers/" class="md-footer__link md-footer__link--next" aria-label="Next: Example: Perfect numbers">
+          <a href="../example-square-numbers/" class="md-footer__link md-footer__link--next" aria-label="Next: Example: Square numbers">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Example: Perfect numbers
+                Example: Square numbers
               </div>
             </div>
             <div class="md-footer__button md-icon">
