@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://git-is-my-lab-book.net/community/training/debugging/techniques-and-tools/">
+        <link rel="canonical" href="https://git-is-my-lab-book.net/community/training/debugging/building-your-skills/">
       
       
         <link rel="prev" href="../exercise-python-vs-r/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Techniques and tools - Git is my lab book</title>
+        <title>Building your skills - Git is my lab book</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#techniques-and-tools" class="md-skip">
+        <a href="#building-your-skills" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Techniques and tools
+              Building your skills
             
           </span>
         </div>
@@ -3181,7 +3181,7 @@
           
   
   <span class="md-ellipsis">
-    Techniques and tools
+    Building your skills
   </span>
   
 
@@ -3192,7 +3192,7 @@
         
   
   <span class="md-ellipsis">
-    Techniques and tools
+    Building your skills
   </span>
   
 
@@ -3347,7 +3347,7 @@
                   
 
   
-    <a href="https://github.com/robmoss/git-is-my-lab-book/edit/master/docs/community/training/debugging/techniques-and-tools.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/robmoss/git-is-my-lab-book/edit/master/docs/community/training/debugging/building-your-skills.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -3355,20 +3355,45 @@
   
 
 
-<h1 id="techniques-and-tools">Techniques and tools<a class="headerlink" href="#techniques-and-tools" title="Permanent link">&para;</a></h1>
+<h1 id="building-your-skills">Building your skills<a class="headerlink" href="#building-your-skills" title="Permanent link">&para;</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Whenever you debug some code, consider it as an opportunity to learn, reflect, and <a href="../manifesto/">build your debugging skills</a>.</p>
+<p>Pay attention to your experience — what worked well, and what would you do differently next time?</p>
+</div>
 <h2 id="identifying-errors">Identifying errors<a class="headerlink" href="#identifying-errors" title="Permanent link">&para;</a></h2>
-<p>How to read tracebacks?</p>
+<p><strong>TODO:</strong> explain how to read tracebacks.</p>
+<p>Write a failing test case, this allows you to verify that the bug can be reproduced.</p>
 <h2 id="developing-a-plan">Developing a plan<a class="headerlink" href="#developing-a-plan" title="Permanent link">&para;</a></h2>
-<p>Version control, last known good version, <code>git bisect</code>.</p>
+<p>What information might help you decide how to begin?</p>
+<p>Can you identify a recent "known good" version of the code that doesn't include the error?</p>
+<p>If you're using version control, have a look at your recent commits and check whether any of them are likely to have introduced or exposed this error.</p>
 <h2 id="searching-for-the-root-cause">Searching for the root cause<a class="headerlink" href="#searching-for-the-root-cause" title="Permanent link">&para;</a></h2>
-<p>Print statements, debuggers, REPLs, last good version, recent changes, assert statements, comment out code ...</p>
+<p>We've shown how a debugger allows you to pause your code and see what it's actually doing.
+This is extremely helpful!</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Other approaches may be useful, but avoid using trial-and-error.</p>
+</div>
+<p>To quickly confirm or rule out specific suspicions, you might consider using:</p>
+<ul>
+<li><code>print()</code> statements;</li>
+<li>using <code>assert()</code> to verify whether specific conditions are met;</li>
+<li>manually calling functions from an interactive session (a "<a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>");</li>
+<li>reverting or commenting out the most recent changes; or</li>
+<li>using <code>git bisect</code> to <a href="../../../../guides/using-git/where-did-this-problem-come-from/">identify the commit</a> that introduced the error.</li>
+</ul>
 <h2 id="fixing-the-root-cause">Fixing the root cause<a class="headerlink" href="#fixing-the-root-cause" title="Permanent link">&para;</a></h2>
-<p>Is there an optimal solution?
-Smallest change or least effect on the rest of your code?
-Does the best solution involve restructuring or modifying other parts of your code?</p>
+<p>Is there an optimal solution?</p>
+<p>This might be the solution that changes as little code as possible, or it might be a solution that involves modifying and/or restructuring other parts of your code.</p>
 <h2 id="after-its-fixed">After it's fixed<a class="headerlink" href="#after-its-fixed" title="Permanent link">&para;</a></h2>
-<p>Test cases, defensive programming, shorten the feedback loop, what coding practices might make such a mistake easier to find next time (e.g., small functions, frequent commits).</p>
-<p>Document your experience!</p>
+<p>If you didn't write a test case to identify the error (see above), now is the time to write a test case to ensure you don't even make the same error again.</p>
+<p>Are there other parts of your code where you might make a similar mistake, for which you could also write test cases?</p>
+<p>Are there coding practices that might make this kind of error easier to find next time?
+For example, this might involve dividing your code into smaller functions, using version control to record commits <a href="../../../../guides/version-control/what-should-I-commit/">early and often</a>.</p>
+<p>Have you considered defensive programming practices?
+For example, at the start of a function it can often be a good idea to check that all of the arguments have valid values.</p>
+<p>Are there tools or approaches that you haven't used before, and which might be worth trying next time?</p>
 
 
 

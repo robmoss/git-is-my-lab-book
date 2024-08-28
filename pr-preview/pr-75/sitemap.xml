@@ -106,6 +106,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://git-is-my-lab-book.net/community/training/debugging/building-your-skills/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://git-is-my-lab-book.net/community/training/debugging/example-square-numbers/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
@@ -137,11 +142,6 @@
     </url>
     <url>
          <loc>https://git-is-my-lab-book.net/community/training/debugging/solutions/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://git-is-my-lab-book.net/community/training/debugging/techniques-and-tools/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
