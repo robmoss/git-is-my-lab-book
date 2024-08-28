@@ -1,4 +1,4 @@
-# Perfect numbers
+# Exercise: Perfect numbers
 
 === "Overview"
 
@@ -22,13 +22,19 @@
     --8<-- "perfect_numbers.R"
     ```
 
-??? bug "But there's a problem ..."
+!!! bug "But there's a problem ..."
 
     If we run these scripts, we see that **they don't print anything**:
 
     <div id="demo" data-cast-file="../perfect-numbers-first-run.cast"></div>
 
     How should we begin investigating?
+
+
+!!! tip "Interactive debugger sessions"
+
+    If your editor supports running a debugger, **use this feature!**
+    See these examples for [RStudio](https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE), [PyCharm](https://www.jetbrains.com/pycharm/features/debugger.html), [Spyder](https://docs.spyder-ide.org/current/panes/debugging.html), and [VS Code](https://code.visualstudio.com/docs/editor/debugging).
 
 ??? note "Some initial thoughts ..."
 

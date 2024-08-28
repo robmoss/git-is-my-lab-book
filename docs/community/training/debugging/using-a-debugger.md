@@ -1,118 +1,65 @@
 # Using a debugger
 
-!!! tip
+The main features of a debugger are:
 
-    A debugger is a tool for examining the state of a running program.
+- **Breakpoints:** pause the program when a particular line of code is about to be executed;
 
-    Debuggers can help us to find errors because they show us what the code **is actually doing**.
+- **Display/print:** show the current value of local variables;
 
-!!! question
+- **Next:** execute the current line of code and pause at the next line;
 
-    What is the "state" of a running program?
+- **Continue:** continue executing code until the next breakpoint, or the code finishes.
 
-How to use a debugger to examine the program state:
+Slightly more advanced features include:
 
-- Breakpoints
-- Conditional breakpoints
-- Printing values
-- Stepping into and over lines
-- Understanding the call stack and interpreting tracebacks
+- **Conditional breakpoints:** pause the program when a particular line of code is about to be executed **and** a specific condition is satisfied.
 
-## Code: Square numbers
+- **Step:** execute the current line of code and pause at the first possible point — either the line in the current function **or** the first line in a function that is called.
 
-[Square numbers](https://en.wikipedia.org/wiki/Square_number) are positive integers that are equal to the square of an integer.
-Here we have provided example Python and R scripts that print all of the square numbers between 1 and 100:
+For example, consider the following code example:
 
-<div id="square-numbers-demo" data-cast-file="../square-numbers-demo.cast"></div>
+=== "Python"
 
-You can download these scripts to run on your own computer:
+    ```py linenums="1" hl_lines="4"
+    def first_function():
+        total = 0
+        for x in range(1, 50):
+            y = second_function(x)
+            total = total + y
 
-- [square_numbers.py](square_numbers.py)
-- [square_numbers.R](square_numbers.R)
-
-Each script contains three functions:
-
-- `main()`
-- `find_squares(lower_bound, upper_bound)`
-- `is_square(value)`
-
-The diagram below shows how `main()` calls `find_squares()`, which in turn calls `is_square()` many times.
-
-```mermaid
-sequenceDiagram
-    participant M as main()
-    participant F as find_squares()
-    participant I as is_square()
-    activate M
-    M ->>+ F: lower_bound = 1, upper_bound = 100
-    Note over F: squares = [ ]
-    F ->>+ I: value = 1
-    I ->>- F: True/False
-    F ->>+ I: value = 2
-    I ->>- F: True/False
-    F -->>+ I: ...
-    I -->>- F: ...
-    F ->>+ I: value = 100
-    I ->>- F: True/False
-    F ->>- M: squares = [...]
-    Note over M: print(squares)
-    deactivate M
-```
-
-??? info "Source code"
-
-    === "Python"
-
-        ```py title="square_numbers.py" linenums="1"
-        --8<-- "square_numbers.py"
-        ```
-
-    === "R"
-
-        ```R title="square_numbers.R" linenums="1"
-        --8<-- "square_numbers.R"
-        ```
-
-## Stepping through the code
-
-The recorded terminal sessions demonstrate how to use Python and R debuggers from the command line.
-They cover:
-
-- How to define breakpoints;
-- How to inspect the current values of variables; and
-- How to step through, and over, lines of code.
-
-!!! tip "Interactive debugger sessions"
-
-    If your editor supports running a debugger, **use this feature!**
-    See these examples for [RStudio](https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE), [PyCharm](https://www.jetbrains.com/pycharm/features/debugger.html), [Spyder](https://docs.spyder-ide.org/current/panes/debugging.html), and [VS Code](https://code.visualstudio.com/docs/editor/debugging).
+        return total
 
 
-=== "Python debugger"
+    def second_function(a):
+        result = 3 * a**2 + 5 * a
+        return result
 
-    <div id="pdb-demo" data-cast-file="../square-numbers-pdb.cast"></div>
 
-    Video timeline:
+    first_function()
+    ```
 
-    1. <a data-video="pdb-demo" data-seek-to="4.7" href="javascript:;">Set a breakpoint</a>
-    2. <a data-video="pdb-demo" data-seek-to="9.081" href="javascript:;">Show current location</a>
-    3. <a data-video="pdb-demo" data-seek-to="16.146" href="javascript:;">Step into `is_square()`</a>
-    4. <a data-video="pdb-demo" data-seek-to="36.744" href="javascript:;">Return from `is_square()`</a>
-    5. <a data-video="pdb-demo" data-seek-to="40.021" href="javascript:;">Show updated `squares` list</a>
-    6. <a data-video="pdb-demo" data-seek-to="57.947" href="javascript:;">Add a conditional breakpoint</a>
-    7. <a data-video="pdb-demo" data-seek-to="69.697" href="javascript:;">Stop at the conditional breakpoint</a>
-    8. <a data-video="pdb-demo" data-seek-to="76.202" href="javascript:;">Continue until the script ends</a>
+=== "R"
 
-=== "R debugger"
+    ```R linenums="1" hl_lines="4"
+    first_function <- function() {
+      total <- 0
+      for (x in seq(49)) {
+        y <- second_function(x)
+        total <- total + y
+      }
+      total
+    }
 
-    <div id="r-debug-demo" data-cast-file="../square-numbers-r-debug.cast"></div>
+    second_function <- function(a) {
+      result <- 3 * a^2 + 5 * a
+      result
+    }
 
-    Video timeline:
+    first_function()
+    ```
 
-    1. <a data-video="r-debug-demo" data-seek-to="6.568" href="javascript:;">Set a breakpoint</a>
-    2. <a data-video="r-debug-demo" data-seek-to="23.548" href="javascript:;">Step into `is_square()`</a>
-    3. <a data-video="r-debug-demo" data-seek-to="29.654" href="javascript:;">Return from `is_square()`</a>
-    4. <a data-video="r-debug-demo" data-seek-to="33.505" href="javascript:;">Show updated `squares` list</a>
-    5. <a data-video="r-debug-demo" data-seek-to="47.751" href="javascript:;">Add a conditional breakpoint</a>
-    6. <a data-video="r-debug-demo" data-seek-to="67.77" href="javascript:;">Stop at the conditional breakpoint</a>
-    7. <a data-video="r-debug-demo" data-seek-to="74.546" href="javascript:;">Continue until the script ends</a>
+- We can use a **conditional breakpoint** to pause on line 4 (highlighted) only when `x = 42`.
+
+- We can then use **step** to begin executing line 4 and pause on line 11, where we will see that `a = 42`.
+
+- If we instead used **next** at line 4 (highlighted), the debugger would execute line 4 and then pause on line 5.

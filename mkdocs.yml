@@ -110,12 +110,14 @@ nav:
         - "Learning objectives": community/training/debugging/learning-objectives.md
         - "Debugging manifesto": community/training/debugging/manifesto.md
         - "What is debugging?": community/training/debugging/what-is-debugging.md
-        - "Why is debugging useful?": community/training/debugging/why-is-debugging-useful.md
+        - "Why are debuggers useful?": community/training/debugging/why-are-debuggers-useful.md
         - "Using a debugger": community/training/debugging/using-a-debugger.md
-        - "Example: Perfect numbers": community/training/debugging/example-perfect-numbers.md
-        - "Example: Python vs R": community/training/debugging/example-python-vs-r.md
+        - "Example: Square numbers": community/training/debugging/example-square-numbers.md
+        - "Exercise: Perfect numbers": community/training/debugging/exercise-perfect-numbers.md
+        - "Exercise: Python vs R": community/training/debugging/exercise-python-vs-r.md
         - "Techniques and tools": community/training/debugging/techniques-and-tools.md
         - "Resources": community/training/debugging/resources.md
+        - "Exercise solutions": community/training/debugging/solutions.md
 
 markdown_extensions:
   - admonition
