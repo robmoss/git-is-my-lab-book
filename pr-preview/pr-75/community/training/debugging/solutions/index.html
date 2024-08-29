@@ -3217,17 +3217,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Exercise solutions
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3237,43 +3226,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#perfect-numbers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Perfect numbers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-vs-r" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python vs R
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3327,13 +3279,20 @@
 
 
 <h1 id="exercise-solutions">Exercise solutions<a class="headerlink" href="#exercise-solutions" title="Permanent link">&para;</a></h1>
-<h2 id="perfect-numbers">Perfect numbers<a class="headerlink" href="#perfect-numbers" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Please don't look as these solutions until you have attempted the exercises.</p>
+</div>
+<details class="abstract">
+<summary>Perfect numbers</summary>
 <p>Perfect numbers are equal to the sum of their proper divisors — all divisors except the number itself.</p>
 <p>For example, 6 is a perfect number.
 Its proper divisors are 1, 2, and 3, and 1 + 2 + 3 = 6.</p>
 <p>The mistake here is that  the <code>divisors_of()</code> function only returns divisors <strong>greater than one</strong>, and so the code fails to identify any of the true perfect numbers.</p>
 <p>Interestingly, this mistake did not result in the code mistakenly identifying any other numbers as perfect numbers.</p>
-<h2 id="python-vs-r">Python vs R<a class="headerlink" href="#python-vs-r" title="Permanent link">&para;</a></h2>
+</details>
+<details class="abstract">
+<summary>Python vs R</summary>
 <p>If you're only familiar with one of these two languages, you may be surprised to discover that they have some fundamental differences.
 In this exercise we demonstrated one consequence of the ways that these languages handle function arguments.</p>
 <div class="admonition quote">
@@ -3373,6 +3332,7 @@ Since assignment just <strong>creates references</strong> to objects, there's no
 <p class="admonition-title">Answer</p>
 <p>The value of β is different in the third combination.</p>
 </div>
+</details>
 
 
 
