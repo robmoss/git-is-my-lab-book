@@ -8,8 +8,6 @@
 
 ## Identifying errors
 
-**TODO:** explain how to read tracebacks.
-
 Write a failing test case, this allows you to verify that the bug can be reproduced.
 
 ## Developing a plan

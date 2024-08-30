@@ -110,6 +110,7 @@ nav:
         - "Learning objectives": community/training/debugging/learning-objectives.md
         - "Debugging manifesto": community/training/debugging/manifesto.md
         - "What is debugging?": community/training/debugging/what-is-debugging.md
+        - "Understanding error messages": community/training/debugging/understanding-error-messages.md
         - "Why are debuggers useful?": community/training/debugging/why-are-debuggers-useful.md
         - "Using a debugger": community/training/debugging/using-a-debugger.md
         - "Example: Square numbers": community/training/debugging/example-square-numbers.md
