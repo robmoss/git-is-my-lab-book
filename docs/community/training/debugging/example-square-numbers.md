@@ -62,6 +62,10 @@ They cover:
 - How to inspect the current values of variables; and
 - How to step through, and over, lines of code.
 
+!!! info "Manual breakpoints"
+
+    You can also create breakpoints in your code by calling [`breakpoint()`](https://docs.python.org/3/library/pdb.html) for Python, and [`browser()`](https://adv-r.hadley.nz/debugging.html#browser) for R.
+
 !!! tip "Interactive debugger sessions"
 
     If your editor supports running a debugger, **use this feature!**
