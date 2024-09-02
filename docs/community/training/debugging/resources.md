@@ -1,6 +1,6 @@
 # Resources
 
-- Julie Evans:
+- [Julia Evans](https://jvns.ca/) has written a lot of great materials about debugging:
     - [Debugging articles](https://jvns.ca/#debugging)
     - [Debugging stories](https://jvns.ca/#debugging-stories)
     - [The Pocket Guide to Debugging](https://jvns.ca/blog/2022/12/21/new-zine--the-pocket-guide-to-debugging/) (see the [table of contents](https://jvns.ca/images/debugging-guide-toc.png))
