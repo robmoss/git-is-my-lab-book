@@ -189,7 +189,7 @@ theme:
 
 extra_css:
   - extra/asciinema-player.css
-  - extra/asciinema-theme-dracula.css
+  - extra/asciinema-theme-gimlb.css
   - extra/larger-admonitions.css
 
 extra_javascript:
