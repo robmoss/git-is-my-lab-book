@@ -3475,6 +3475,60 @@
 See these examples for <a href="https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE">RStudio</a>, <a href="https://www.jetbrains.com/pycharm/features/debugger.html">PyCharm</a>, <a href="https://docs.spyder-ide.org/current/panes/debugging.html">Spyder</a>, and <a href="https://code.visualstudio.com/docs/editor/debugging">VS Code</a>.</p>
 </div>
 <h2 id="creating-breakpoints-when-something-fails">Creating breakpoints when something fails<a class="headerlink" href="#creating-breakpoints-when-something-fails" title="Permanent link">&para;</a></h2>
+<p>You may want to create a breakpoint when an error occurs.</p>
+<p>In Python, you can use a <code>try</code> statement to catch exceptions and create a breakpoint:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">print_c</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">])</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">print_c</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+<span class="hll">    <span class="nb">breakpoint</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+<p>In R, you can take a similar approach and use <code>tryCatch()</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">f</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">if </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="s">&quot;ten&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="n">x</span>
+<span class="p">}</span>
+
+<span class="n">g</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">x_max</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tryCatch</span><span class="p">(</span><span class="nf">sapply</span><span class="p">(</span><span class="nf">seq_len</span><span class="p">(</span><span class="n">x_max</span><span class="p">),</span><span class="w"> </span><span class="n">f</span><span class="p">),</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="kc">NULL</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">if </span><span class="p">(</span><span class="nf">is.null</span><span class="p">(</span><span class="n">result</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="nf">browser</span><span class="p">()</span>
+</span><span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">result</span>
+<span class="p">}</span>
+
+<span class="nf">g</span><span class="p">(</span><span class="m">9</span><span class="p">)</span><span class="w">  </span><span class="c1"># This completes without an error.</span>
+<span class="nf">g</span><span class="p">(</span><span class="m">12</span><span class="p">)</span><span class="w"> </span><span class="c1"># This triggers the breakpoint.</span>
+</code></pre></div></td></tr></table></div>
+<p>In R, you can also define a global error handler (e.g., <code>browser</code> or <code>recover</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="nf">options</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="n">recover</span><span class="p">)</span>
+
+<span class="nf">g</span><span class="p">(</span><span class="m">12</span><span class="p">)</span>
+</code></pre></div>
 
 
 
