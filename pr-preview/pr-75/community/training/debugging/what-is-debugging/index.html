@@ -3383,36 +3383,60 @@
 <p class="admonition-title">Info</p>
 <p>Debugging is the process of identifying and removing errors from computer software.</p>
 </div>
-<p>You need to <strong>identify (and reproduce) the problem</strong> and <strong>only then</strong> begin fixing it (ideally writing a test case first, to check that (a) you can identify the problem; and (b) to identify if you accidentally introduce the same, or similar, mistake in the future).</p>
+<p>You need to <strong>identify (and reproduce) the problem</strong> and <strong>only then</strong> begin fixing it.</p>
 <h2 id="action-1-identify-the-error">Action 1: Identify the error<a class="headerlink" href="#action-1-identify-the-error" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>First make sure that you can reproduce the error.</p>
 </div>
+<ul>
+<li>
 <p>What observations or outputs indicate the presence of this error?</p>
+</li>
+<li>
 <p>Is the error reproducible, or does it come and go?</p>
-<p>Write a failing test?</p>
+</li>
+<li>
+<p>Can you write a test case that identifies the error?
+  This can help ensure you don't introduce a similar error in the future.</p>
+</li>
+</ul>
 <h2 id="action-2-develop-a-plan">Action 2: Develop a plan<a class="headerlink" href="#action-2-develop-a-plan" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The visible error and its root cause may be located in very different parts of your code.</p>
 </div>
-<p>Identify like and unlikely suspects, what can we rule in/out?
-What parts of your code recently changed?
-When was the last time you might have noticed this error?</p>
+<ul>
+<li>
+<p>Identify which parts of your code are likely (and unlikely) to be the cause.</p>
+</li>
+<li>
+<p>What parts of your code recently changed?</p>
+</li>
+<li>
+<p>When was the last time you might have noticed this error?</p>
+</li>
+</ul>
 <h2 id="action-3-search-for-the-root-cause">Action 3: Search for the root cause<a class="headerlink" href="#action-3-search-for-the-root-cause" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>As much as possible, the search should be guided by <strong>facts</strong>, not <strong>assumptions</strong>.</p>
+<p>The search should be guided by <strong>facts</strong>, not <strong>assumptions</strong>.
+Simple errors can often hide <strong>in plain sight</strong>.</p>
 </div>
-<p>Our assumptions about the code can help us to develop a plan, but we need to verify whether our assumptions are actually true.</p>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code>Simple errors can often hide
-hide in plain sight and be
-surprisingly difficult to
-discover without assistance.
-</code></pre></div>
+<ul>
+<li>
 <p>Thinking "this looks right" is <strong>not a reliable indicator</strong> of whether a piece of code contains an error.</p>
+</li>
+<li>
+<p>Our assumptions about the code can help us to develop a plan, but we need to <strong>verify whether our assumptions are actually true</strong>.</p>
+</li>
+<li>
+<p>This can be done indirectly by adding print statements or writing test cases.</p>
+</li>
+<li>
+<p>It can also be done by directly inspecting the state of the program with a debugger — more on that shortly!</p>
+</li>
+</ul>
 <figure>
   <img align="left," alt="A horse with its head buried in a haystack." src="../headless-horse.jpg" width="50%" />
   <figcaption>Searching at random is like looking for a needle in a haystack.
@@ -3420,31 +3444,38 @@ discover without assistance.
   (<a href="https://flickr.com/photos/63567936@N00/4210167891/">Perry McKenna</a>, Flickr, 2009; CC BY 2.0)
   </figcaption>
 </figure>
-<p>Better approaches involve confirming what the code is <strong>actually doing</strong>.</p>
-<ul>
-<li>
-<p>This can be done using indirect approaches, such as adding print statements or writing test cases.</p>
-</li>
-<li>
-<p>It can also be done by directly inspecting the state of the program with a debugger — more on that shortly!</p>
-</li>
-</ul>
 <h2 id="action-4-fix-the-root-cause">Action 4: Fix the root cause<a class="headerlink" href="#action-4-fix-the-root-cause" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>It's worth considering if the root cause is a result of deliberate decisions or unintentional mistakes.</p>
 </div>
-<p>Don't start modifying/adding/removing lines based on suspicions or on the off chance that it might work.
-Without identifying the <strong>root cause</strong> of the error, there is no guarantee that making the error seem to disappear will actually have fixed the root cause.</p>
+<ul>
+<li>
+<p>Don't start modifying/adding/removing lines based on suspicions or relying on luck.</p>
+</li>
+<li>
+<p>Without identifying the <strong>root cause</strong>, making the visible error disappear may not fix the root cause.</p>
+</li>
+</ul>
 <h2 id="action-5-after-its-fixed">Action 5: After it's fixed<a class="headerlink" href="#action-5-after-its-fixed" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>This is the perfect time to reflect on your experience!</p>
 </div>
-<p>What can you learn from this experience?
-Can you avoid this mistake in the future?
-What parts of the process were the hardest or took the longest?
-Are the tools and techniques that might help you next time?</p>
+<ul>
+<li>
+<p>What can you learn from this experience?</p>
+</li>
+<li>
+<p>Can you avoid this mistake in the future?</p>
+</li>
+<li>
+<p>What parts of the process were the hardest or took the longest?</p>
+</li>
+<li>
+<p>Are the tools and techniques that might help you next time?</p>
+</li>
+</ul>
 
 
 
