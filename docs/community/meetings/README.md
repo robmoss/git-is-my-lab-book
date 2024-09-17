@@ -2,6 +2,8 @@
 
 This section contains summaries of each Community of Practice meeting.
 
+- [12 September 2024](2024-09-12.md): test run of our Introduction to Debugging workshop.
+
 - [8 August 2024](2024-08-08.md): orientation guide planning.
 
 - [11 July 2024](2024-07-11.md): presentation from Nefel Tellioglu.
