@@ -64,7 +64,7 @@ They cover:
 
 !!! info "Manual breakpoints"
 
-    You can also create breakpoints in your code by calling [`breakpoint()`](https://docs.python.org/3/library/pdb.html) for Python, and [`browser()`](https://adv-r.hadley.nz/debugging.html#browser) for R.
+    You can also create breakpoints in your code by calling [`breakpoint()`](https://docs.python.org/3/library/pdb.html) in Python, and [`browser()`](https://adv-r.hadley.nz/debugging.html#browser) in R.
 
 !!! tip "Interactive debugger sessions"
 
