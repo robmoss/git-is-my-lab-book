@@ -69,14 +69,17 @@ except KeyError:
 
 In R, you can take a similar approach and use `tryCatch()`:
 
-```R linenums="1" hl_lines="9"
+```R linenums="1" hl_lines="12"
 f <- function(x) {
   if (x == 10) { stop("ten") }
   x
 }
 
 g <- function(x_max) {
-  result <- tryCatch(sapply(seq_len(x_max), f), error = function(e) NULL)
+  result <- tryCatch(
+    sapply(seq_len(x_max), f),
+    error = function(e) NULL
+  )
   if (is.null(result)) {
     browser()
   }
