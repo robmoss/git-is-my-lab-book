@@ -6,7 +6,7 @@
 
 If there's an error in your code that causes the program to terminate, **read the error message** and see what it can tell you.
 
-Most of the time, the error message should allow to identify:
+Most of the time, the error message should allow you to identify:
 
 - **What went wrong?**
   For example, did it try to read data from a file that does not exist?
@@ -34,7 +34,7 @@ Below we have example Python and R scripts that produce an error.
 
 === "Python"
 
-    ### The error message
+    The error message is:
 
     ```text
     Traceback (most recent call last):
@@ -59,7 +59,7 @@ Below we have example Python and R scripts that produce an error.
 
 === "R"
 
-    ### The error message
+    The error message is:
 
     ```text
     Error in try_something() : Whoops, this failed
@@ -78,3 +78,45 @@ Below we have example Python and R scripts that produce an error.
         ```R title="stacktrace.R" linenums="1"
         --8<-- "stacktrace.R"
         ```
+
+## Very long stack traces
+
+You may get a very long stack trace when a error occurs deep within a software package or library.
+This means that the **cause** of the error, and location where the error is **reported** can be very far apart.
+
+For example, the following Python script has an incorrect parameter name on line 7 (``cbap`` should instead be ``cmap``):
+
+```py title="long_stacktrace.py" linenums="1" hl_lines="7"
+--8<-- "long_stacktrace.py"
+```
+
+And here is the stacktrace you should see when running this Python script:
+
+```text linenums="1" hl_lines="24"
+Traceback (most recent call last):
+  File "long_stacktrace.py", line 7, in <module>
+    plt.plot(example_counts, cbap=cm.Blues)
+  File "venv/lib/python3.10/site-packages/matplotlib/pyplot.py", line 3794, in plot
+    return gca().plot(
+  File "venv/lib/python3.10/site-packages/matplotlib/axes/_axes.py", line 1779, in plot
+    lines = [*self._get_lines(self, *args, data=data, **kwargs)]
+  File "venv/lib/python3.10/site-packages/matplotlib/axes/_base.py", line 296, in __call__
+    yield from self._plot_args(
+  File "venv/lib/python3.10/site-packages/matplotlib/axes/_base.py", line 534, in _plot_args
+    return [l[0] for l in result]
+  File "venv/lib/python3.10/site-packages/matplotlib/axes/_base.py", line 534, in <listcomp>
+    return [l[0] for l in result]
+  File "venv/lib/python3.10/site-packages/matplotlib/axes/_base.py", line 527, in <genexpr>
+    result = (make_artist(axes, x[:, j % ncx], y[:, j % ncy], kw,
+  File "venv/lib/python3.10/site-packages/matplotlib/axes/_base.py", line 335, in _makeline
+    seg = mlines.Line2D(x, y, **kw)
+  File "venv/lib/python3.10/site-packages/matplotlib/lines.py", line 407, in __init__
+    self._internal_update(kwargs)
+  File "venv/lib/python3.10/site-packages/matplotlib/artist.py", line 1216, in _internal_update
+    return self._update_props(
+  File "venv/lib/python3.10/site-packages/matplotlib/artist.py", line 1190, in _update_props
+    raise AttributeError(
+AttributeError: Line2D.set() got an unexpected keyword argument 'cbap'
+```
+
+While it **does** tell you the cause of the error, there are **ten function calls** between the root cause (line 3 of the stack trace) and the error (line 24 of the stack trace).
