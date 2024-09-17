@@ -92,7 +92,7 @@ For example, the following Python script has an incorrect parameter name on line
 
 And here is the stacktrace you should see when running this Python script:
 
-```text linenums="1" hl_lines="24"
+```text linenums="1" hl_lines="3 24"
 Traceback (most recent call last):
   File "long_stacktrace.py", line 7, in <module>
     plt.plot(example_counts, cbap=cm.Blues)
