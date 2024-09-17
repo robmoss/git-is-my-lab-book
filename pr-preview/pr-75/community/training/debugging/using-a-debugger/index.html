@@ -3023,27 +3023,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../manifesto/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Debugging manifesto
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../what-is-debugging/" class="md-nav__link">
         
   
@@ -3116,6 +3095,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Using a debugger
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3125,6 +3115,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#try-this-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try this yourself
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-breakpoints-when-something-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating breakpoints when something fails
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3206,6 +3233,27 @@
   
   <span class="md-ellipsis">
     Building your skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manifesto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging manifesto
   </span>
   
 
@@ -3327,12 +3375,15 @@
 <li>
 <p><strong>Step:</strong> execute the current line of code and pause at the first possible point — either the line in the current function <strong>or</strong> the first line in a function that is called.</p>
 </li>
+<li>
+<p><strong>Manual breakpoints:</strong> call <a href="https://docs.python.org/3/library/pdb.html"><code>breakpoint()</code></a> in Python, and <a href="https://adv-r.hadley.nz/debugging.html#browser"><code>browser()</code></a> in R, to pause the program at the current line.</p>
+</li>
 </ul>
 <p>For example, consider the following code example:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">R</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">first_demo.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3346,7 +3397,8 @@
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">first_function</span><span class="p">():</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">first_function</span><span class="p">():</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">):</span>
 <span class="hll">        <span class="n">y</span> <span class="o">=</span> <span class="n">second_function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -3360,11 +3412,12 @@
     <span class="k">return</span> <span class="n">result</span>
 
 
-<span class="n">first_function</span><span class="p">()</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">first_function</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total = </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">first_demo.R</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3378,7 +3431,8 @@
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">first_function</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">first_function</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">total</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span>
 <span class="w">  </span><span class="nf">for </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="m">49</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="hll"><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">second_function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -3392,7 +3446,8 @@
 <span class="w">  </span><span class="n">result</span>
 <span class="p">}</span>
 
-<span class="nf">first_function</span><span class="p">()</span>
+<span class="n">total</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">first_function</span><span class="p">()</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">&quot;Total =&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\n&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -3408,6 +3463,18 @@
 <p>If we instead used <strong>next</strong> at line 4 (highlighted), the debugger would execute line 4 and then pause on line 5.</p>
 </li>
 </ul>
+<h2 id="try-this-yourself">Try this yourself<a class="headerlink" href="#try-this-yourself" title="Permanent link">&para;</a></h2>
+<p>Download either demo script and try setting breakpoints and stepping through the code.</p>
+<ul>
+<li><a href="../first_demo.py">first_demo.py</a></li>
+<li><a href="../first_demo.R">first_demo.R</a></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Interactive debugger sessions</p>
+<p>If your editor supports running a debugger, <strong>use this feature!</strong>
+See these examples for <a href="https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE">RStudio</a>, <a href="https://www.jetbrains.com/pycharm/features/debugger.html">PyCharm</a>, <a href="https://docs.spyder-ide.org/current/panes/debugging.html">Spyder</a>, and <a href="https://code.visualstudio.com/docs/editor/debugging">VS Code</a>.</p>
+</div>
+<h2 id="creating-breakpoints-when-something-fails">Creating breakpoints when something fails<a class="headerlink" href="#creating-breakpoints-when-something-fails" title="Permanent link">&para;</a></h2>
 
 
 
