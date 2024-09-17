@@ -24,13 +24,21 @@ Below we have example Python and R scripts that produce an error.
 
     Can you identify where the error occurred, just by looking at the error message?
 
+!!! tip
+
+    R may not give you a useful stack trace unless you instruct it do so.
+    In the example, we use:
+
+    ```R
+    options(error = rlang::entrace)
+    ```
+
 === "Overview"
 
     You can download each script and run them on your own computer:
 
     - [stacktrace.py](stacktrace.py)
     - [stacktrace.R](stacktrace.R)
-
 
 === "Python"
 
