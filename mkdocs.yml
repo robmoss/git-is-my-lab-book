@@ -108,7 +108,6 @@ nav:
       - "Introduction to Debugging":
         - community/training/debugging/README.md
         - "Learning objectives": community/training/debugging/learning-objectives.md
-        - "Debugging manifesto": community/training/debugging/manifesto.md
         - "What is debugging?": community/training/debugging/what-is-debugging.md
         - "Understanding error messages": community/training/debugging/understanding-error-messages.md
         - "Why are debuggers useful?": community/training/debugging/why-are-debuggers-useful.md
@@ -117,6 +116,7 @@ nav:
         - "Exercise: Perfect numbers": community/training/debugging/exercise-perfect-numbers.md
         - "Exercise: Python vs R": community/training/debugging/exercise-python-vs-r.md
         - "Building your skills": community/training/debugging/building-your-skills.md
+        - "Debugging manifesto": community/training/debugging/manifesto.md
         - "Resources": community/training/debugging/resources.md
         - "Exercise solutions": community/training/debugging/solutions.md
 
