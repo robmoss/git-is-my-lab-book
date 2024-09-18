@@ -40,7 +40,7 @@ g(12) # This triggers the breakpoint.
 
 In R, you can also define a global error handler (e.g., `browser` or `recover`):
 
-```R
+```R linenums="19"
 options(error=recover)
 
 g(12)
