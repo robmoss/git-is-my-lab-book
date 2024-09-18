@@ -26,7 +26,7 @@ ValueError: Error saving dataset "00_to_04" with value [...] and type ndarray
 The error occurred on **line 1467** (highlighted above).
 This [piece of code](https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/blob/ada50f970e7787d97605dc11ed228640b0c72e1d/src/pypfilt/summary.py#L1458-L1469) looks like:
 
-```python linenums="1458"
+```python title="pypfilt/summary.py" linenums="1458"
 try:
     if isinstance(value, np.ndarray):
         save_dataset(time_scale, g, name, value, **kwargs)
@@ -43,7 +43,7 @@ except TypeError:
 
 So I added a `breakpoint()` call on line 1464 and ran the simulations again:
 
-```python linenums="1458" hl_lines="7"
+```python title="pypfilt/summary.py" linenums="1458" hl_lines="7"
 try:
     if isinstance(value, np.ndarray):
         save_dataset(time_scale, g, name, value, **kwargs)
@@ -85,7 +85,7 @@ except TypeError:
 
 Here is the [faulty code](https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/blob/ada50f970e7787d97605dc11ed228640b0c72e1d/src/pypfilt/obs.py#L450-L462) (in a different file!):
 
-```python linenums="450" hl_lines="4-12"
+```python title="pypfilt/obs.py" linenums="450" hl_lines="4-12"
 # Load the data table.
 fields = [io.time_field(time_col), (value_col, np.float64)]
 df = io.read_fields(time_scale, filename, fields)
@@ -103,7 +103,7 @@ return df
 
 And here is [the fix](https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/5463da78fe6a2dc41267575b12a72aa5a00d232c):
 
-```python linenums="450" hl_lines="4-8"
+```python title="pypfilt/obs.py" linenums="450" hl_lines="4-8"
 # Load the data table.
 fields = [io.time_field(time_col), (value_col, np.float64)]
 df = io.read_fields(time_scale, filename, fields)
