@@ -3409,8 +3409,8 @@ I used the breakpoint technique described on <a href="../when-something-fails/">
   File &quot;./run_model_simulations.py&quot;, line 633, in &lt;module&gt;
   File &quot;./run_model_simulations.py&quot;, line 56, in main
     results = run_simulations(
-  File &quot;./run_model_simulations.py&quot;, line 283, in run_simulations
-    return extract_results_tables(ctx, results)
+  File &quot;./run_model_simulations.py&quot;, line 282, in run_simulations
+    results = pypfilt.fit(ctx, filename=filename)
   File &quot;venv/lib/python3.10/site-packages/pypfilt/__init__.py&quot;, line 536, in fit
     ctx.component[&#39;summary&#39;].save_forecasts(ctx, results, filepath)
   File &quot;venv/lib/python3.10/site-packages/pypfilt/summary.py&quot;, line 1523, in save_forecasts
