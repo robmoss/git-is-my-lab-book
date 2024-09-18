@@ -3421,7 +3421,7 @@ ValueError: Error saving dataset &quot;00_to_04&quot; with value [...] and type 
 </code></pre></div></td></tr></table></div>
 <p>The error occurred on <strong>line 1467</strong> (highlighted above).
 This <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/blob/ada50f970e7787d97605dc11ed228640b0c72e1d/src/pypfilt/summary.py#L1458-L1469">piece of code</a> looks like:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1458</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">pypfilt/summary.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1458</span>
 <span class="normal">1459</span>
 <span class="normal">1460</span>
 <span class="normal">1461</span>
@@ -3446,7 +3446,7 @@ This <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/
     <span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
 </code></pre></div></td></tr></table></div>
 <p>So I added a <code>breakpoint()</code> call on line 1464 and ran the simulations again:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1458</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">pypfilt/summary.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1458</span>
 <span class="normal">1459</span>
 <span class="normal">1460</span>
 <span class="normal">1461</span>
@@ -3513,7 +3513,7 @@ This <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/
 </li>
 </ul>
 <p>Here is the <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/blob/ada50f970e7787d97605dc11ed228640b0c72e1d/src/pypfilt/obs.py#L450-L462">faulty code</a> (in a different file!):</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">450</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">pypfilt/obs.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">450</span>
 <span class="normal">451</span>
 <span class="normal">452</span>
 <span class="normal">453</span>
@@ -3540,7 +3540,7 @@ This <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/
 </span><span class="k">return</span> <span class="n">df</span>
 </code></pre></div></td></tr></table></div>
 <p>And here is <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/5463da78fe6a2dc41267575b12a72aa5a00d232c">the fix</a>:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">450</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">pypfilt/obs.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">450</span>
 <span class="normal">451</span>
 <span class="normal">452</span>
 <span class="normal">453</span>
