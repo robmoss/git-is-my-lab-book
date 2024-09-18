@@ -39,9 +39,9 @@ def do_third_step(task_num, quiet=True):
 
 
 def try_something():
-    raise ValueError("Whoops, this failed")
+    raise ValueError('Whoops, this failed')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     status = main()
     sys.exit(status)
