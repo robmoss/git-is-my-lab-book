@@ -113,6 +113,7 @@ nav:
         - "Why are debuggers useful?": community/training/debugging/why-are-debuggers-useful.md
         - "Using a debugger": community/training/debugging/using-a-debugger.md
         - "When something fails": community/training/debugging/when-something-fails.md
+        - "Real-world stories": community/training/debugging/real-world-stories.md
         - "Example: Square numbers": community/training/debugging/example-square-numbers.md
         - "Exercise: Perfect numbers": community/training/debugging/exercise-perfect-numbers.md
         - "Exercise: Python vs R": community/training/debugging/exercise-python-vs-r.md
