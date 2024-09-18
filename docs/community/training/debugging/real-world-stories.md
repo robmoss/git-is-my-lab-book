@@ -12,8 +12,8 @@ Traceback (most recent call last):
   File "./run_model_simulations.py", line 633, in <module>
   File "./run_model_simulations.py", line 56, in main
     results = run_simulations(
-  File "./run_model_simulations.py", line 283, in run_simulations
-    return extract_results_tables(ctx, results)
+  File "./run_model_simulations.py", line 282, in run_simulations
+    results = pypfilt.fit(ctx, filename=filename)
   File "venv/lib/python3.10/site-packages/pypfilt/__init__.py", line 536, in fit
     ctx.component['summary'].save_forecasts(ctx, results, filepath)
   File "venv/lib/python3.10/site-packages/pypfilt/summary.py", line 1523, in save_forecasts
