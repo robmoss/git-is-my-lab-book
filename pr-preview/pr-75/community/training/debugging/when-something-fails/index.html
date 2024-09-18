@@ -3383,10 +3383,12 @@
 <span class="nf">g</span><span class="p">(</span><span class="m">12</span><span class="p">)</span><span class="w"> </span><span class="c1"># This triggers the breakpoint.</span>
 </code></pre></div></td></tr></table></div>
 <p>In R, you can also define a global error handler (e.g., <code>browser</code> or <code>recover</code>):</p>
-<div class="highlight"><pre><span></span><code><span class="nf">options</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="n">recover</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nf">options</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="n">recover</span><span class="p">)</span>
 
 <span class="nf">g</span><span class="p">(</span><span class="m">12</span><span class="p">)</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 <details class="example">
 <summary>A real-world example</summary>
 <p>Last week (Tues 17 Sep, 2024) I encountered an error when running model simulations with my <a href="https://pypfilt.readthedocs.io/">pypfilt</a> Python library.
