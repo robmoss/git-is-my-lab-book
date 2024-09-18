@@ -136,6 +136,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://git-is-my-lab-book.net/community/training/debugging/real-world-stories/</loc>
+         <lastmod>2024-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://git-is-my-lab-book.net/community/training/debugging/resources/</loc>
          <lastmod>2024-09-18</lastmod>
          <changefreq>daily</changefreq>

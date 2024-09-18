@@ -14,7 +14,7 @@
         <link rel="prev" href="../using-a-debugger/">
       
       
-        <link rel="next" href="../example-square-numbers/">
+        <link rel="next" href="../real-world-stories/">
       
       
       <link rel="icon" href="../../../../logo.png">
@@ -2956,6 +2956,8 @@
       
         
       
+        
+      
     
     
       
@@ -3128,6 +3130,27 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../real-world-stories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Real-world stories
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3389,175 +3412,6 @@
 
 <span class="nf">g</span><span class="p">(</span><span class="m">12</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<details class="example">
-<summary>A real-world example</summary>
-<p>Last week (Tues 17 Sep, 2024) I encountered an error when running model simulations with my <a href="https://pypfilt.readthedocs.io/">pypfilt</a> Python library.
-I used the breakpoint technique described above, and identified the cause in <strong>less than 2 minutes</strong>.</p>
-<p>Here is the original stack trace that made me aware of the error:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>Traceback (most recent call last):
-  File &quot;./run_model_simulations.py&quot;, line 633, in &lt;module&gt;
-  File &quot;./run_model_simulations.py&quot;, line 56, in main
-    results = run_simulations(
-  File &quot;./run_model_simulations.py&quot;, line 283, in run_epidefend_by_age
-    return extract_results_tables(ctx, results)
-  File &quot;venv/lib/python3.10/site-packages/pypfilt/__init__.py&quot;, line 536, in fit
-    ctx.component[&#39;summary&#39;].save_forecasts(ctx, results, filepath)
-  File &quot;venv/lib/python3.10/site-packages/pypfilt/summary.py&quot;, line 1523, in save_forecasts
-    save_data(obs_group, key, value)
-<span class="hll">  File &quot;venv/lib/python3.10/site-packages/pypfilt/summary.py&quot;, line 1467, in save_data
-</span>    raise ValueError(
-ValueError: Error saving dataset &quot;00_to_04&quot; with value [...] and type ndarray
-</code></pre></div></td></tr></table></div>
-<p>The error occurred on <strong>line 1467</strong> (highlighted above).
-This <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/blob/ada50f970e7787d97605dc11ed228640b0c72e1d/src/pypfilt/summary.py#L1458-L1469">piece of code</a> looks like:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1458</span>
-<span class="normal">1459</span>
-<span class="normal">1460</span>
-<span class="normal">1461</span>
-<span class="normal">1462</span>
-<span class="normal">1463</span>
-<span class="normal">1464</span>
-<span class="normal">1465</span>
-<span class="normal">1466</span>
-<span class="normal">1467</span>
-<span class="normal">1468</span>
-<span class="normal">1469</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">try</span><span class="p">:</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
-        <span class="n">save_dataset</span><span class="p">(</span><span class="n">time_scale</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">g</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="s1">&#39;Error saving dataset &quot;</span><span class="si">{}</span><span class="s1">&quot; with value </span><span class="si">{}</span><span class="s1"> and type </span><span class="si">{}</span><span class="s1">&#39;</span>
-    <span class="p">)</span>
-    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-        <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-    <span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
-</code></pre></div></td></tr></table></div>
-<p>So I added a <code>breakpoint()</code> call on line 1464 and ran the simulations again:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1458</span>
-<span class="normal">1459</span>
-<span class="normal">1460</span>
-<span class="normal">1461</span>
-<span class="normal">1462</span>
-<span class="normal">1463</span>
-<span class="normal">1464</span>
-<span class="normal">1465</span>
-<span class="normal">1466</span>
-<span class="normal">1467</span>
-<span class="normal">1468</span>
-<span class="normal">1469</span>
-<span class="normal">1470</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">try</span><span class="p">:</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
-        <span class="n">save_dataset</span><span class="p">(</span><span class="n">time_scale</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">g</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="hll">    <span class="nb">breakpoint</span><span class="p">()</span>
-</span>    <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="s1">&#39;Error saving dataset &quot;</span><span class="si">{}</span><span class="s1">&quot; with value </span><span class="si">{}</span><span class="s1"> and type </span><span class="si">{}</span><span class="s1">&#39;</span>
-    <span class="p">)</span>
-    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-        <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-    <span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
-</code></pre></div></td></tr></table></div>
-<ul>
-<li>
-<p>I observed that <code>value</code> was a NumPy array.</p>
-</li>
-<li>
-<p>This meant that <code>isintance(value, np.ndarray)</code> was true.</p>
-</li>
-<li>
-<p>So the <code>save_dataset()</code> function on line 1460 was failing.</p>
-</li>
-<li>
-<p>I called <code>save_dataset()</code> and stepped into the function.</p>
-</li>
-<li>
-<p>This allowed me to <strong>identify the cause:</strong></p>
-<ul>
-<li>
-<p>When the <code>value</code> array was created, it originally had columns called <code>"arrival_date"</code> and <code>"count"</code>;</p>
-</li>
-<li>
-<p>The <code>"arrival_date"</code> column contains date values;</p>
-</li>
-<li>
-<p>Dates must be converted into strings when saving data as a HDF5 dataset;</p>
-</li>
-<li>
-<p>Metadata was attached to the <code>value</code> array, to indicate how to convert <code>"arrival_date"</code> values;</p>
-</li>
-<li>
-<p>But then the columns were then renamed to <code>"time"</code> and <code>"value"</code>;</p>
-</li>
-<li>
-<p>The metadata <strong>was not updated</strong>, so the <code>"time"</code> values were not converted into strings; and</p>
-</li>
-<li>
-<p>This caused <code>save_dataset()</code> to fail.</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>Here is the <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/blob/ada50f970e7787d97605dc11ed228640b0c72e1d/src/pypfilt/obs.py#L450-L462">faulty code</a> (in a different file!):</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">450</span>
-<span class="normal">451</span>
-<span class="normal">452</span>
-<span class="normal">453</span>
-<span class="normal">454</span>
-<span class="normal">455</span>
-<span class="normal">456</span>
-<span class="normal">457</span>
-<span class="normal">458</span>
-<span class="normal">459</span>
-<span class="normal">460</span>
-<span class="normal">461</span>
-<span class="normal">462</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Load the data table.</span>
-<span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="n">io</span><span class="o">.</span><span class="n">time_field</span><span class="p">(</span><span class="n">time_col</span><span class="p">),</span> <span class="p">(</span><span class="n">value_col</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read_fields</span><span class="p">(</span><span class="n">time_scale</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">fields</span><span class="p">)</span>
-<span class="hll"><span class="c1"># Rename the columns to &#39;time&#39; and &#39;value&#39;.</span>
-</span><span class="hll"><span class="n">rename_to</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class="hll">    <span class="n">time_col</span><span class="p">:</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span>
-</span><span class="hll">    <span class="n">value_col</span><span class="p">:</span> <span class="s1">&#39;value&#39;</span><span class="p">,</span>
-</span><span class="hll"><span class="p">}</span>
-</span><span class="hll"><span class="n">new_names</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span>
-</span><span class="hll">    <span class="n">rename_to</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">names</span>
-</span><span class="hll"><span class="p">)</span>
-</span><span class="hll"><span class="n">df</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="n">new_names</span>
-</span><span class="k">return</span> <span class="n">df</span>
-</code></pre></div></td></tr></table></div>
-<p>And here is <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/commit/5463da78fe6a2dc41267575b12a72aa5a00d232c">the fix</a>:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">450</span>
-<span class="normal">451</span>
-<span class="normal">452</span>
-<span class="normal">453</span>
-<span class="normal">454</span>
-<span class="normal">455</span>
-<span class="normal">456</span>
-<span class="normal">457</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Load the data table.</span>
-<span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="n">io</span><span class="o">.</span><span class="n">time_field</span><span class="p">(</span><span class="n">time_col</span><span class="p">),</span> <span class="p">(</span><span class="n">value_col</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read_fields</span><span class="p">(</span><span class="n">time_scale</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">fields</span><span class="p">)</span>
-<span class="hll"><span class="c1"># Rename the columns to &#39;time&#39; and &#39;value&#39;, and ensure that the dtype</span>
-</span><span class="hll"><span class="c1"># metadata is updated to reflect the renamed columns.</span>
-</span><span class="hll"><span class="n">fields_out</span> <span class="o">=</span> <span class="p">[</span><span class="n">io</span><span class="o">.</span><span class="n">time_field</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)]</span>
-</span><span class="hll"><span class="n">dtype_out</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">fields_dtype</span><span class="p">(</span><span class="n">time_scale</span><span class="p">,</span> <span class="n">fields_out</span><span class="p">)</span>
-</span><span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype_out</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 
 
 
@@ -3612,13 +3466,13 @@ This <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/
         
         
           
-          <a href="../example-square-numbers/" class="md-footer__link md-footer__link--next" aria-label="Next: Example: Square numbers">
+          <a href="../real-world-stories/" class="md-footer__link md-footer__link--next" aria-label="Next: Real-world stories">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Example: Square numbers
+                Real-world stories
               </div>
             </div>
             <div class="md-footer__button md-icon">
