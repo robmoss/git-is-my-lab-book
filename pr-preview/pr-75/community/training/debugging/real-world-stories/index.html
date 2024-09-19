@@ -3178,9 +3178,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rob-moss-python" class="md-nav__link">
+  <a href="#rob-moss-pypfilt-python" class="md-nav__link">
     <span class="md-ellipsis">
-      Rob Moss (Python)
+      Rob Moss: pypfilt (Python)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#michael-lydeamore-orcid-publications-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Michael Lydeamore: ORCID publications (R)
     </span>
   </a>
   
@@ -3389,7 +3398,7 @@
 
 
 <h1 id="real-world-stories">Real-world stories<a class="headerlink" href="#real-world-stories" title="Permanent link">&para;</a></h1>
-<h2 id="rob-moss-python">Rob Moss (Python)<a class="headerlink" href="#rob-moss-python" title="Permanent link">&para;</a></h2>
+<h2 id="rob-moss-pypfilt-python">Rob Moss: pypfilt (Python)<a class="headerlink" href="#rob-moss-pypfilt-python" title="Permanent link">&para;</a></h2>
 <p>Last week (Tues 17 Sep, 2024) I encountered an error when running model simulations with my <a href="https://pypfilt.readthedocs.io/">pypfilt</a> Python library.
 I used the breakpoint technique described on <a href="../when-something-fails/">the previous page</a>, and identified the cause in <strong>less than 2 minutes</strong>.</p>
 <p>Here is the original stack trace that made me aware of the error:</p>
@@ -3556,6 +3565,235 @@ This <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/
 </span><span class="hll"><span class="n">dtype_out</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">fields_dtype</span><span class="p">(</span><span class="n">time_scale</span><span class="p">,</span> <span class="n">fields_out</span><span class="p">)</span>
 </span><span class="hll"><span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype_out</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
+<h2 id="michael-lydeamore-orcid-publications-r">Michael Lydeamore: ORCID publications (R)<a class="headerlink" href="#michael-lydeamore-orcid-publications-r" title="Permanent link">&para;</a></h2>
+<p>I wrote the <code>get_publications_from_orcid()</code> function (shown below) to retrieve the publications associated with a specific <a href="https://orcid.org/">ORCID</a> ID, using the <a href="https://cran.r-project.org/web/packages/rorcid/index.html"><code>rorcid</code></a> package.</p>
+<div class="admonition info">
+<p class="admonition-title">Retrieving research publications</p>
+<p>This is now available as the <a href="https://github.com/numbats/achievement-scraper"><code>publicationsscraper</code></a> R package.</p>
+</div>
+<p>The function has some error-catching built in:</p>
+<ul>
+<li>
+<p>If the ORCID ID doesn't exist (Error 404) then the function returns this error to the user (the <code>tryCatch</code> part, lines 26-35);</p>
+</li>
+<li>
+<p>If DOIs aren't returned for a publication, they are filled with <code>NA</code> (using <code>purrr::map</code>, lines 50-63); and</p>
+</li>
+<li>
+<p>If the <code>works</code> frame is empty, or doesn't exist, the function returns an empty frame (handled by the <code>if</code> statement on line 36).</p>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#&#39; get_publications_from_orcid</span>
+<span class="c1">#&#39;</span>
+<span class="c1">#&#39; @description</span>
+<span class="c1">#&#39; The `get_publications_from_orcid` function retrieves publications for given ORCID IDs using the rorcid package.</span>
+<span class="c1">#&#39; It fetches all works associated with each ORCID ID and combines them into a single data frame.</span>
+<span class="c1">#&#39;</span>
+<span class="c1">#&#39; @param orcid_ids A character vector of ORCID IDs for which publication information is requested.</span>
+<span class="c1">#&#39;</span>
+<span class="c1">#&#39; @return A data frame containing all publications for the specified ORCID IDs.</span>
+<span class="c1">#&#39;</span>
+<span class="c1">#&#39; @importFrom rorcid orcid_works</span>
+<span class="c1">#&#39; @importFrom dplyr select bind_rows mutate</span>
+<span class="c1">#&#39; @importFrom tibble tibble</span>
+<span class="c1">#&#39; @importFrom magrittr %&gt;%</span>
+<span class="c1">#&#39;</span>
+<span class="c1">#&#39; @examples</span>
+<span class="c1">#&#39; \dontrun{get_publications_from_orcid(c(&quot;0000-0003-2531-9408&quot;, &quot;0000-0001-5738-1471&quot;))}</span>
+<span class="c1">#&#39;</span>
+<span class="c1">#&#39; @name get_publications_from_orcid</span>
+<span class="c1">#&#39; @export</span>
+<span class="n">get_publications_from_orcid</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">orcid_ids</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">orcid_ids</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.vector</span><span class="p">(</span><span class="n">orcid_ids</span><span class="p">)</span>
+<span class="w">  </span><span class="n">all_pubs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span>
+
+<span class="w">  </span><span class="nf">for </span><span class="p">(</span><span class="n">orcid_id</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">orcid_ids</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">pubs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tryCatch</span><span class="p">(</span>
+<span class="w">      </span><span class="n">rorcid</span><span class="o">::</span><span class="nf">orcid_works</span><span class="p">(</span><span class="n">orcid_id</span><span class="p">),</span>
+<span class="w">      </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nf">if </span><span class="p">(</span><span class="nf">inherits</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;http_404&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nf">stop</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;Invalid ORCID ID: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orcid_id</span><span class="p">))</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nf">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">is.null</span><span class="p">(</span><span class="n">pubs</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="o">$</span><span class="n">works</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">pubs</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="o">$</span><span class="n">works</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">all_pubs</span><span class="p">[[</span><span class="n">orcid_id</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pubs</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="o">$</span><span class="n">works</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">        </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span>
+<span class="w">          </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`title.title.value`</span><span class="p">,</span>
+<span class="w">          </span><span class="n">DOI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`external-ids.external-id`</span><span class="p">,</span>
+<span class="w">          </span><span class="n">authors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`source.assertion-origin-name.value`</span><span class="p">,</span>
+<span class="w">          </span><span class="n">publication_year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`publication-date.year.value`</span><span class="p">,</span>
+<span class="w">          </span><span class="n">journal_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`journal-title.value`</span>
+<span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">        </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">          </span><span class="c1"># the `external-ids` contains lots of things, not just DOI. It is a list containing a dataframe</span>
+<span class="w">          </span><span class="c1"># Mapping over that list, we can filter out just the &#39;doi&#39; type</span>
+<span class="w">          </span><span class="c1"># Then pull it into a character vector</span>
+<span class="w">          </span><span class="c1"># Overwrite DOI with this value</span>
+<span class="w">          </span><span class="n">DOI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">purrr</span><span class="o">::</span><span class="nf">map_chr</span><span class="p">(</span>
+<span class="w">            </span><span class="n">.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DOI</span><span class="p">,</span>
+<span class="w">            </span><span class="n">.f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="nf">if</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0L</span><span class="p">)</span>
+<span class="w">                </span><span class="nf">return</span><span class="p">(</span><span class="kc">NA</span><span class="p">)</span>
+<span class="w">              </span><span class="n">doi</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">filter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">`external-id-type`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;doi&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">                </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">pull</span><span class="p">(</span><span class="n">`external-id-value`</span><span class="p">)</span>
+
+<span class="w">              </span><span class="nf">if </span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">doi</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0L</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nf">return </span><span class="p">(</span><span class="kc">NA</span><span class="p">)</span>
+<span class="w">              </span><span class="p">}</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nf">return </span><span class="p">(</span><span class="n">doi</span><span class="p">[</span><span class="m">1</span><span class="p">])</span>
+<span class="w">              </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">          </span><span class="p">),</span>
+<span class="w">          </span><span class="n">orcid_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">orcid_id</span><span class="p">,</span>
+<span class="w">          </span><span class="n">publication_year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">publication_year</span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nf">return</span><span class="p">(</span><span class="n">dplyr</span><span class="o">::</span><span class="nf">bind_rows</span><span class="p">(</span><span class="n">all_pubs</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>But I ran into an unusual error: this function failed for some ORCID IDs with valid works.</p>
+<div class="highlight"><pre><span></span><code>&gt; get_publications_from_orcid(&quot;0000-0001-9379-0010&quot;)
+Error in `dplyr::select()`:
+! Can&#39;t subset columns that don&#39;t exist.
+✖ Column `source.assertion-origin-name.value` doesn&#39;t exist.
+Hide Traceback
+     ▆
+  1. ├─global get_publications_from_orcid(&quot;0000-0001-9379-0010&quot;)
+  2. │ ├─dplyr::mutate(...)
+  3. │ ├─dplyr::select(...)
+  4. │ └─dplyr:::select.data.frame(...)
+  5. │   └─tidyselect::eval_select(expr(c(...)), data = .data, error_call = error_call)
+  6. │     └─tidyselect:::eval_select_impl(...)
+  7. │       ├─tidyselect:::with_subscript_errors(...)
+  8. │       │ └─rlang::try_fetch(...)
+  9. │       │   └─base::withCallingHandlers(...)
+ 10. │       └─tidyselect:::vars_select_eval(...)
+ 11. │         └─tidyselect:::walk_data_tree(expr, data_mask, context_mask)
+ 12. │           └─tidyselect:::eval_c(expr, data_mask, context_mask)
+ 13. │             └─tidyselect:::reduce_sels(node, data_mask, context_mask, init = init)
+ 14. │               └─tidyselect:::walk_data_tree(new, data_mask, context_mask)
+ 15. │                 └─tidyselect:::as_indices_sel_impl(...)
+ 16. │                   └─tidyselect:::as_indices_impl(...)
+ 17. │                     └─tidyselect:::chr_as_locations(x, vars, call = call, arg = arg)
+ 18. │                       └─vctrs::vec_as_location(...)
+ 19. └─vctrs (local) `&lt;fn&gt;`()
+ 20.   └─vctrs:::stop_subscript_oob(...)
+ 21.     └─vctrs:::stop_subscript(...)
+ 22.       └─rlang::abort(...)
+</code></pre></div>
+<p>To debug this, I made liberal use of the <code>browser()</code> command and analysed each part of the <code>pubs</code> object.
+This quickly revealed the cause of the error:</p>
+<p>For ORCID works that <strong>are not</strong> journal publications (e.g., conference proceeedings), the <code>source.assertion-origin-name.value</code> column contains <code>NA</code> — in other words, these works <strong>have no authors</strong> defined.
+And if there are no journal publications associated with the ORCID ID, the <code>source.assertion-origin-name.value</code> column <strong>does not exist</strong>!</p>
+<p>The solution was to only select columns if they existed, by using <code>dplyr::matches()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">all_pubs</span><span class="p">[[</span><span class="n">orcid_id</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pubs</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="o">$</span><span class="n">works</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">        </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span>
+<span class="w">          </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">matches</span><span class="p">(</span><span class="s">&quot;title.title.value&quot;</span><span class="p">),</span>
+<span class="w">          </span><span class="n">DOI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">matches</span><span class="p">(</span><span class="s">&quot;external-ids.external-id&quot;</span><span class="p">),</span>
+<span class="w">          </span><span class="n">authors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">matches</span><span class="p">(</span><span class="s">&quot;source.assertion-origin-name.value&quot;</span><span class="p">),</span>
+<span class="w">          </span><span class="n">publication_year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">matches</span><span class="p">(</span><span class="s">&quot;publication-date.year.value&quot;</span><span class="p">),</span>
+<span class="w">          </span><span class="n">journal_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">matches</span><span class="p">(</span><span class="s">&quot;journal-title.value&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span>
+</code></pre></div>
+<p>and then adding any missing columns, filling them with a default value:</p>
+<div class="highlight"><pre><span></span><code><span class="n">append_column_if_missing</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">.data</span><span class="p">,</span><span class="w"> </span><span class="n">column</span><span class="p">,</span><span class="w"> </span><span class="n">default_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="n">current_columns</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">colnames</span><span class="p">(</span><span class="n">.data</span><span class="p">)</span>
+
+<span class="w">  </span><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="n">column</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">current_columns</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">return</span><span class="p">(</span>
+<span class="w">      </span><span class="n">.data</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">        </span><span class="nf">mutate</span><span class="p">(</span><span class="o">!!</span><span class="n">column</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">default_value</span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nf">return </span><span class="p">(</span><span class="n">.data</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># ... |&gt;</span>
+<span class="nf">append_column_if_missing</span><span class="p">(</span><span class="s">&quot;title&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">default_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA_character_</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="nf">append_column_if_missing</span><span class="p">(</span><span class="s">&quot;DOI&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">default_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA_character_</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="nf">append_column_if_missing</span><span class="p">(</span><span class="s">&quot;authors&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">default_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA_character_</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="nf">append_column_if_missing</span><span class="p">(</span><span class="s">&quot;publication_year&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">default_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA_integer_</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="nf">append_column_if_missing</span><span class="p">(</span><span class="s">&quot;journal_name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">default_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA_character_</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="c1"># ...</span>
+</code></pre></div>
 
 
 
