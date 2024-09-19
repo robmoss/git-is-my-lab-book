@@ -1,6 +1,6 @@
 # Real-world stories
 
-## Rob Moss (Python)
+## Rob Moss: pypfilt (Python)
 
 Last week (Tues 17 Sep, 2024) I encountered an error when running model simulations with my [pypfilt](https://pypfilt.readthedocs.io/) Python library.
 I used the breakpoint technique described on [the previous page](when-something-fails.md), and identified the cause in **less than 2 minutes**.
@@ -112,4 +112,173 @@ df = io.read_fields(time_scale, filename, fields)
 fields_out = [io.time_field('time'), ('value', np.float64)]
 dtype_out = io.fields_dtype(time_scale, fields_out)
 return df.astype(dtype_out)
+```
+
+## Michael Lydeamore: ORCID publications (R)
+
+I wrote the `get_publications_from_orcid()` function (shown below) to retrieve the publications associated with a specific [ORCID](https://orcid.org/) ID, using the [`rorcid`](https://cran.r-project.org/web/packages/rorcid/index.html) package.
+
+!!! info "Retrieving research publications"
+
+    This is now available as the [`publicationsscraper`](https://github.com/numbats/achievement-scraper) R package.
+
+The function has some error-catching built in:
+
+- If the ORCID ID doesn't exist (Error 404) then the function returns this error to the user (the `tryCatch` part, lines 26-35);
+
+- If DOIs aren't returned for a publication, they are filled with `NA` (using `purrr::map`, lines 50-63); and
+
+- If the `works` frame is empty, or doesn't exist, the function returns an empty frame (handled by the `if` statement on line 36).
+
+```R linenums="1"
+#' get_publications_from_orcid
+#'
+#' @description
+#' The `get_publications_from_orcid` function retrieves publications for given ORCID IDs using the rorcid package.
+#' It fetches all works associated with each ORCID ID and combines them into a single data frame.
+#'
+#' @param orcid_ids A character vector of ORCID IDs for which publication information is requested.
+#'
+#' @return A data frame containing all publications for the specified ORCID IDs.
+#'
+#' @importFrom rorcid orcid_works
+#' @importFrom dplyr select bind_rows mutate
+#' @importFrom tibble tibble
+#' @importFrom magrittr %>%
+#'
+#' @examples
+#' \dontrun{get_publications_from_orcid(c("0000-0003-2531-9408", "0000-0001-5738-1471"))}
+#'
+#' @name get_publications_from_orcid
+#' @export
+get_publications_from_orcid <- function(orcid_ids) {
+  orcid_ids <- as.vector(orcid_ids)
+  all_pubs <- list()
+
+  for (orcid_id in orcid_ids) {
+    pubs <- tryCatch(
+      rorcid::orcid_works(orcid_id),
+      error = function(e) {
+        if (inherits(e, "http_404")) {
+          stop(sprintf("Invalid ORCID ID: %s", orcid_id))
+        } else {
+          print(e)
+        }
+      }
+    )
+    if (!is.null(pubs[[1]]$works) && nrow(pubs[[1]]$works) > 0) {
+      all_pubs[[orcid_id]] <- pubs[[1]]$works |>
+        dplyr::select(
+          title = `title.title.value`,
+          DOI = `external-ids.external-id`,
+          authors = `source.assertion-origin-name.value`,
+          publication_year = `publication-date.year.value`,
+          journal_name = `journal-title.value`
+        ) |>
+        dplyr::mutate(
+          # the `external-ids` contains lots of things, not just DOI. It is a list containing a dataframe
+          # Mapping over that list, we can filter out just the 'doi' type
+          # Then pull it into a character vector
+          # Overwrite DOI with this value
+          DOI = purrr::map_chr(
+            .x = DOI,
+            .f = function(x) {
+              if(length(x) == 0L)
+                return(NA)
+              doi <- dplyr::filter(x, `external-id-type` == "doi") |>
+                dplyr::pull(`external-id-value`)
+
+              if (length(doi) == 0L) {
+                return (NA)
+              } else {
+                return (doi[1])
+              }
+            }
+          ),
+          orcid_id = orcid_id,
+          publication_year = as.numeric(publication_year)
+        )
+    }
+  }
+
+  return(dplyr::bind_rows(all_pubs))
+}
+```
+
+But I ran into an unusual error: this function failed for some ORCID IDs with valid works.
+
+```text
+> get_publications_from_orcid("0000-0001-9379-0010")
+Error in `dplyr::select()`:
+! Can't subset columns that don't exist.
+✖ Column `source.assertion-origin-name.value` doesn't exist.
+Hide Traceback
+     ▆
+  1. ├─global get_publications_from_orcid("0000-0001-9379-0010")
+  2. │ ├─dplyr::mutate(...)
+  3. │ ├─dplyr::select(...)
+  4. │ └─dplyr:::select.data.frame(...)
+  5. │   └─tidyselect::eval_select(expr(c(...)), data = .data, error_call = error_call)
+  6. │     └─tidyselect:::eval_select_impl(...)
+  7. │       ├─tidyselect:::with_subscript_errors(...)
+  8. │       │ └─rlang::try_fetch(...)
+  9. │       │   └─base::withCallingHandlers(...)
+ 10. │       └─tidyselect:::vars_select_eval(...)
+ 11. │         └─tidyselect:::walk_data_tree(expr, data_mask, context_mask)
+ 12. │           └─tidyselect:::eval_c(expr, data_mask, context_mask)
+ 13. │             └─tidyselect:::reduce_sels(node, data_mask, context_mask, init = init)
+ 14. │               └─tidyselect:::walk_data_tree(new, data_mask, context_mask)
+ 15. │                 └─tidyselect:::as_indices_sel_impl(...)
+ 16. │                   └─tidyselect:::as_indices_impl(...)
+ 17. │                     └─tidyselect:::chr_as_locations(x, vars, call = call, arg = arg)
+ 18. │                       └─vctrs::vec_as_location(...)
+ 19. └─vctrs (local) `<fn>`()
+ 20.   └─vctrs:::stop_subscript_oob(...)
+ 21.     └─vctrs:::stop_subscript(...)
+ 22.       └─rlang::abort(...)
+```
+
+To debug this, I made liberal use of the `browser()` command and analysed each part of the `pubs` object.
+This quickly revealed the cause of the error:
+
+For ORCID works that **are not** journal publications (e.g., conference proceeedings), the `source.assertion-origin-name.value` column contains `NA` — in other words, these works **have no authors** defined.
+And if there are no journal publications associated with the ORCID ID, the `source.assertion-origin-name.value` column **does not exist**!
+
+The solution was to only select columns if they existed, by using `dplyr::matches()`:
+
+``` r
+all_pubs[[orcid_id]] <- pubs[[1]]$works |>
+        dplyr::select(
+          title = dplyr::matches("title.title.value"),
+          DOI = dplyr::matches("external-ids.external-id"),
+          authors = dplyr::matches("source.assertion-origin-name.value"),
+          publication_year = dplyr::matches("publication-date.year.value"),
+          journal_name = dplyr::matches("journal-title.value")
+        )
+```
+
+and then adding any missing columns, filling them with a default value:
+
+``` r
+append_column_if_missing <- function(.data, column, default_value = NA) {
+
+  current_columns <- colnames(.data)
+
+  if (!column %in% current_columns) {
+    return(
+      .data |>
+        mutate(!!column := default_value)
+    )
+  }
+
+  return (.data)
+}
+
+# ... |>
+append_column_if_missing("title", default_value = NA_character_) |>
+append_column_if_missing("DOI", default_value = NA_character_) |>
+append_column_if_missing("authors", default_value = NA_character_) |>
+append_column_if_missing("publication_year", default_value = NA_integer_) |>
+append_column_if_missing("journal_name", default_value = NA_character_) |>
+# ...
 ```
