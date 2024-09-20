@@ -30,7 +30,7 @@ function addAsciinemaPlayer(cast_file, container_id) {
     const player = AsciinemaPlayer.create(
         cast_file,
         document.getElementById(container_id),
-        { poster: 'npt:0:0.1', theme: 'dracula', fit: 'width' });
+        { poster: 'npt:0:0.1', theme: 'gimlb-auto', fit: 'width' });
 
     // Find all elements that seek to specific times in this video.
     const selector = '[data-video="' + container_id + '"][data-seek-to]'
