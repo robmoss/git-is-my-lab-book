@@ -88,6 +88,7 @@ nav:
     - community/README.md
     - "Meetings":
       - community/meetings/README.md
+      - "12 September 2024": community/meetings/2024-09-12.md
       - "8 August 2024": community/meetings/2024-08-08.md
       - "11 July 2024": community/meetings/2024-07-11.md
       - "13 June 2024": community/meetings/2024-06-13.md
