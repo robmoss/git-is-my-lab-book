@@ -121,6 +121,7 @@ nav:
         - "Debugging manifesto": community/training/debugging/manifesto.md
         - "Resources": community/training/debugging/resources.md
         - "Exercise solutions": community/training/debugging/solutions.md
+        - "Acknowledgements": community/training/debugging/acknowledgements.md
 
 markdown_extensions:
   - admonition
