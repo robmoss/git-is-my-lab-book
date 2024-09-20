@@ -158,3 +158,5 @@ For example, the following code is used to display the video recording on the [C
     2. <a data-video="demo" data-seek-to="17" href="javascript:;">Show how to use nano</a>
     3. <a data-video="demo" data-seek-to="71" href="javascript:;">Show how to use vim</a>
 ```
+
+You can use the [asciinema-scripted](https://github.com/robmoss/asciinema-scripted) tool to generate scripted recordings.

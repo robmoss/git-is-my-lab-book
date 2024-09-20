@@ -1,0 +1,14 @@
+# Formatter and linter settings for Python code examples.
+
+[tool.ruff]
+line-length = 78
+target-version = "py310"
+
+[tool.ruff.lint]
+# Enable pyflakes (F), pycodestyle (E, W), flake8-bugbear (B), pyupgrade (UP),
+# flake8-debugger (T10), and NumPy (NPY).
+select = ["F", "E", "W", "B", "UP", "T10", "NPY"]
+
+[tool.ruff.format]
+quote-style = "single"
+docstring-code-format = true

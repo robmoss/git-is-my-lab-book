@@ -16,3 +16,8 @@ The [three characteristics](https://www.communityofpractice.ca/background/what-i
 3. Domain: A shared interest, problem, or concern.
 
 We regularly meet as a community, report [meeting summaries](meetings/README.md), and collect [case studies](case-studies/README.md) that showcase good practices.
+
+## Training events
+
+To support skill development, we have the capacity to prepare and deliver bespoke training events as standalone session and as part of larger meetings and conferences.
+See our [Training events](training/README.md) page for further details.
