@@ -1,0 +1,3819 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://git-is-my-lab-book.net/community/meetings/2024-05-09/">
+      
+      
+        <link rel="prev" href="../2024-06-13/">
+      
+      
+        <link rel="next" href="../2024-04-11/">
+      
+      
+      <link rel="icon" href="../../../logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
+    
+    
+      
+        <title>9 May 2024 - Git is my lab book</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../extra/asciinema-player.css">
+    
+      <link rel="stylesheet" href="../../../extra/asciinema-theme-gimlb.css">
+    
+      <link rel="stylesheet" href="../../../extra/larger-admonitions.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9-may-2024" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Git is my lab book" class="md-header__button md-logo" aria-label="Git is my lab book" data-md-component="logo">
+      
+  <img src="../../../logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Git is my lab book
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              9 May 2024
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/robmoss/git-is-my-lab-book" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  Introduction
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../orientation/" class="md-tabs__link">
+          
+  
+    
+  
+  Orientation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../guides/" class="md-tabs__link">
+          
+  
+    
+  
+  Topical guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Community
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Git is my lab book" class="md-nav__button md-logo" aria-label="Git is my lab book" data-md-component="logo">
+      
+  <img src="../../../logo.svg" alt="logo">
+
+    </a>
+    Git is my lab book
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/robmoss/git-is-my-lab-book" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to contribute
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../orientation/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Orientation
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Orientation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../guides/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Topical guides
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Topical guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/learning-objectives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning objectives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../guides/version-control/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    1. Version control concepts
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            1. Version control concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/version-control/what-is-version-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is version control?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/version-control/what-is-a-repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a repository?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/version-control/what-is-a-commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a commit?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/version-control/what-should-I-commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What should I commit?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/version-control/how-do-I-write-a-commit-message/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How do I write a commit message?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/version-control/what-is-a-tag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a tag?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/version-control/what-is-a-branch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a branch?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/version-control/what-is-a-merge-conflict/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a merge conflict?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/version-control/exercise-using-version-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise: using version control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../guides/using-git/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    2. Effective use of git
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            2. Effective use of git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/graphical-git-clients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graphical Git clients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/first-time-git-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    First-time Git setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/choosing-your-git-editor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Choosing your Git editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/creating-a-repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/cloning-an-existing-repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloning an existing repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/how-to-structure-a-repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to structure a repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/choosing-a-license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Choosing a license
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/creating-a-commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a commit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/creating-a-remote-repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a remote repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/pushing-and-pulling-commits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pushing and pulling commits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/how-to-ignore-certain-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to ignore certain files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/how-to-create-and-use-tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to create and use tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/inspecting-your-history/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inspecting your history
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/where-did-this-line-come-from/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where did this line come from?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/where-did-this-problem-come-from/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where did this problem come from?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/how-to-use-branches/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to use branches?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/how-to-resolve-merge-conflicts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to resolve merge conflicts?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/exercise-create-a-local-repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise: create a local repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/exercise-use-a-remote-repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise: use a remote repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/using-git/exercise-resolve-a-merge-conflict/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise: resolve a merge conflict
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../guides/collaborating/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    3. Collaborating
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            3. Collaborating
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/collaborating/collaborating-on-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collaborating on code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/collaborating/collaborating-on-a-paper/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collaborating on a paper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/collaborating/sharing-a-repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing a repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/collaborating/sharing-a-branch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing a branch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/collaborating/merge-pull-requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge/Pull requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/collaborating/an-example-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An example pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/collaborating/peer-code-review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Peer code review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/collaborating/coding-style-guides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding style guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/collaborating/continuous-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../guides/project-structure/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    4. Project structure
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            4. Project structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/project-structure/workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Define your workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/project-structure/automating-tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automate common tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/project-structure/explain-how-it-works/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Explain how it works
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/project-structure/exercise-what-works-for-you/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise: what works for you?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/project-structure/exercise-a-good-readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise: a good README
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../guides/writing-code/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    5. Writing code
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            5. Writing code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/writing-code/how-we-learn-to-write-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How we learn to write code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/writing-code/cohesion-coupling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cohesion and coupling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/writing-code/behave-nicely/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Behave nicely
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/writing-code/coding-advice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding advice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/writing-code/create-packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create packages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/writing-code/check-your-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Check your code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/writing-code/format-your-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Format your code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/writing-code/document-your-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Document your code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/writing-code/exercise-seek-feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise: seek feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../guides/reproducibility/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    6. Reproducibility
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            6. Reproducibility
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/reproducibility/what-is-reproducible-research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is reproducible research?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../guides/testing/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    7. Testing
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            7. Testing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../guides/high-performance-computing/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    8. Cloud and HPC platforms
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            8. Cloud and HPC platforms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Useful resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Meetings
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Meetings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024-10-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 October 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024-09-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12 September 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024-08-08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8 August 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024-07-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 July 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024-06-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13 June 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    9 May 2024
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    9 May 2024
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentation-by-tk-le" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentation by TK Le
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#three-projects-four-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three projects, four models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-multi-model-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      The multi-model structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-and-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools and platforms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-visualisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data visualisation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other activities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control-and-publishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version control and publishing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broader-conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broader conclusions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024-04-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 April 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024-02-19/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19 February 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2023-10-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18 October 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2023-08-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15 August 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2023-06-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13 June 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2023-04-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17 April 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../case-studies/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Case studies
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Case studies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/moss-pypfilt-earlier-states/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fixing a bug in pypfilt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/moss-incorrect-data-pre-print/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incorrect data in a pre-print figure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/campbell-pen-and-paper-version-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pen and paper version control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../training/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Training events
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Training events
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../training/debugging/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Introduction to Debugging
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction to Debugging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/learning-objectives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning objectives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/what-is-debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is debugging?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/understanding-error-messages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding error messages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/why-are-debuggers-useful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why are debuggers useful?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/using-a-debugger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using a debugger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/when-something-fails/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    When something fails
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/real-world-stories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Real-world stories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/example-square-numbers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example: Square numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/exercise-perfect-numbers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise: Perfect numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/exercise-python-vs-r/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise: Python vs R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/building-your-skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building your skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/manifesto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging manifesto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/solutions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/debugging/acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/robmoss/git-is-my-lab-book/edit/master/docs/community/meetings/2024-05-09.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="9-may-2024">9 May 2024<a class="headerlink" href="#9-may-2024" title="Permanent link">&para;</a></h1>
+<h2 id="presentation-by-tk-le">Presentation by TK Le<a class="headerlink" href="#presentation-by-tk-le" title="Permanent link">&para;</a></h2>
+<p>In this meeting <a href="https://github.com/thaopletk">TK Le</a> gave a presentation about a series of COVID-19 modelling projects and how their experiences were impacted by the choice of programming languages, model structure, editors, tools, etc.</p>
+<p>Attendance: 4 in person, 4 online.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>We welcome presentations about research projects and experiences that relate in any way to reproducibility and good computational research practices.
+Presentations can be short, informal, and free-form.</p>
+<p>Please contact us if you have anything you might like to present!</p>
+</div>
+<h2 id="three-projects-four-models">Three projects, four models<a class="headerlink" href="#three-projects-four-models" title="Permanent link">&para;</a></h2>
+<p>This work began in 2022, and was based on code that was originally written by <a href="https://github.com/EamonConway">Eamon</a> and Camelia.
+TK adapted the code to run new scenarios across three separate modelling projects:</p>
+<ol>
+<li><a href="https://doi.org/10.1186/s12879-024-09282-4">Modelling the impact of hybrid immunity on futute COVID-19 waves</a>;</li>
+<li><a href="https://doi.org/10.1101/2023.11.14.23298536">Cost-effective boosting allocations in the post-Omicron era of COVID-19 management</a>; and</li>
+<li>Confidential scenario modelling for the Australian Department of Health &amp; Aged Care.</li>
+</ol>
+<p>The workflow was divided into a series of distinct models:</p>
+<ol>
+<li>
+<p>An immunological model written in R and <a href="https://greta-stats.org/">greta</a>;</p>
+</li>
+<li>
+<p>An agent-based model of population transmission written in C++ (post-processing written in R);</p>
+</li>
+<li>
+<p>A clinical pathways model implemented in MATLAB; and</p>
+</li>
+<li>
+<p>A cost-effectiveness model implemented in R.</p>
+</li>
+</ol>
+<p>TK's primary activities involved implementing different vaccine schedules in the transmission model, and data visualisation of outputs from the transmission model and the clinical pathways, all of which they implemented in Python.</p>
+<h2 id="the-multi-model-structure">The multi-model structure<a class="headerlink" href="#the-multi-model-structure" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key message</p>
+<p>There isn't necessarily a single best way to structure a large project.</p>
+</div>
+<p><strong>Question:</strong> Was it a benefit to have separate model implementations in different languages, with clearly defined data flows from one model to the next?</p>
+<p>Conceptually yes, but this structure also involved a lot of trade-offs — even the sheer volume of data that had to be saved by one model and read into another.
+It was difficult to pick up and use the code <strong>as a whole</strong>.
+And there were related issues, such as being able to successfully install <a href="https://greta-stats.org/">greta</a>.</p>
+<blockquote>
+<p>Nick Tierney: I know that greta can be difficult to install, and I can help people with this.</p>
+</blockquote>
+<p>TK also noted that they found some minor inconsistencies between the models, such as whether a date was used to identify the start or end of its 24-hour interval.</p>
+<h2 id="tools-and-platforms">Tools and platforms<a class="headerlink" href="#tools-and-platforms" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key message</p>
+<p>Personal preferences can play a major role in deciding which tools are best for a project.</p>
+</div>
+<p>The various models were hosted in repositories on <a href="https://bitbucket.org/">Bitbucket</a>, <a href="https://github.com/">GitHub</a>, and the University of Melbourne's <a href="https://gitlab.unimelb.edu.au/">GitLab instance</a>.
+TK noted that the only discernible differences between these platforms was how they handled authorisation and authentication.</p>
+<p>TK also explored several different editors, some which were language-specific:</p>
+<ul>
+<li>VS Code was the easiest for looking at, and searching through, the code;</li>
+<li>RStudio was the worst; and</li>
+<li>Matlab was somewhat hard to use, but TK acknowledged they were also the least familiar with this language.
+  They also experienced issues running Matlab on high-performance computing platforms.</li>
+</ul>
+<p>TK noted they had previous experience with Eclipse (an IDE for Java) and Visual Studio (which felt very "heavy").</p>
+<p><strong>Question:</strong> what were your favourite things in VS Code, and what made RStudio the worst?</p>
+<p>It was easiest to open a project in VS Code, RStudio would always open up an entire project or previous workspace, rather than just opening a single file.
+RStudio also kept asking to update itself.</p>
+<p>TK  also strongly disliked the RStudio font, which was another source of friction.
+They tried installing an RStudio extension for VS Code, but weren't sure how well it worked.</p>
+<blockquote>
+<p>Nick Tierney: R history is really annoying, but you can turn it off.
+I'm not sure why it's enabled by default, all of the RStudio recommendations involve turning off these kinds of things.</p>
+<p>Rahmat Sagara: I'm potentially interested in using VS Code instead of RStudio.</p>
+<p>Eamon Conway: the worst thing about VS code is that debugging is very hard to setup.</p>
+</blockquote>
+<h2 id="task-management">Task management<a class="headerlink" href="#task-management" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key message</p>
+<p>Task management is hard, and switching to a new system during a project is extremely difficult.</p>
+</div>
+<p>TK reported trying to use Gitlab issues to plan out what to do and how to do it, but found they weren't a good fit with their workflow.
+They then trialled <a href="https://trello.com/">Trello boards</a> for different versions, but stopped using them due to a lack of time to manage the boards.
+In review:</p>
+<ul>
+<li>TK uses <a href="https://todoist.com/">todoist</a> for personal stuff (and likes it), and uses <a href="https://www.ticktick.com/">TickTick</a> for work tasks — but it's ugly!</li>
+<li>Trello was their favourite so far, but plotting out an entire roadmap wasn't useful — there were major changes in the plan during the project, and <strong>it was hard to make time</strong> to update the roadmap.</li>
+<li>They are currently using TickTick and <strong>paper-based notes</strong>, but are always on the lookout for a better task manager.</li>
+<li>One advantage of online systems is that you can easily paste hyperlinks, emails, pictures, etc.</li>
+</ul>
+<blockquote>
+<p>Rob Moss: we know that behaviour changes are hard to achieve, so it's not surprising that a large change was challenging to maintain — ideally we would make small, incremental changes, but this isn't always possible or useful.</p>
+<p>Eamon Conway: I like the general idea of using task-tracking software, but I've settled on only using paper.
+It's always with me, it's always at home, and it's physically under my keyboard!</p>
+<p>Ruarai Tobin: I use <a href="https://www.notion.so/">Notion</a> with a single large Markdown file, you can paste screenshots.</p>
+</blockquote>
+<h2 id="repository-structure">Repository structure<a class="headerlink" href="#repository-structure" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key message</p>
+<p>There are many factors and competing concerns that influence the repository structure.</p>
+</div>
+<p>The repository structure changed a lot across these three projects.</p>
+<p>In the beginning, the main challenge was separating out the different parts.
+While this was achieved, it wasn't immediately obvious where a user was supposed to start — the file structure did not make it clear.
+The <code>README.md</code> file did, however, include an explanation.</p>
+<p>By the final project, the repository was divided into a number of directories, each of which was given a numeric prefix (e.g, <code>0_data</code> and <code>4_post_processing</code>).
+However, this was also a little misleading:</p>
+<ul>
+<li>
+<p>In order to run the code you start in the folder numbered <strong>1</strong>;</p>
+</li>
+<li>
+<p>The post processing in <code>4_post_processing</code> was interleaved between some of the other steps (it mostly contains plotting and visualisation code, but also some other stuff);</p>
+</li>
+<li>
+<p>The structure also had to differ between running the code on Monash University's <a href="https://research.monash.edu/en/equipments/massive">MASSIVE</a> HPC platform, and on the University of Melbourne's <a href="https://dashboard.hpc.unimelb.edu.au/">Spartan</a> HPC platform.</p>
+</li>
+</ul>
+<p><strong>Question:</strong> is there an automated pipeline?</p>
+<p>TK replied that the user had to run the code in each of the numbered folders in the correct (ascending) order, and that they wanted to make improvements for automating the dependent jobs on Spartan.</p>
+<blockquote>
+<p>Eamon Conway: if you do ever automate it, we should share it with people (e.g., <a href="../../">this community</a>) because people may be able to learn from it when they want to use Spartan.
+I know how to use slurm for job management and can help you automate it.</p>
+</blockquote>
+<h2 id="data-visualisation">Data visualisation<a class="headerlink" href="#data-visualisation" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key message</p>
+<p>Producing good figures takes a lot of time, thought, and experimentation, and also a lot of coding.</p>
+</div>
+<p>It was extremely hard to decide what to show, and how to show it, in order to highlight key messages.</p>
+<p>It was very easy to overwhelm the viewer with complicated plots and massive legends.
+For example, the scenarios involved three epidemic waves, and how can you show relationships between each pair of waves?
+It is relatively <strong>simple to build</strong> a 3D plot that shows these relationships, but the viewer can't really interpret the results.</p>
+<h2 id="other-activities">Other activities<a class="headerlink" href="#other-activities" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key message</p>
+<p>Following better practices would have required maybe 50% more time, but there wasn't funding — who will pay for this?</p>
+</div>
+<p>Dedicating time to other activities was not feasible — no one had time, these projects had fixed deadlines and it was challenging to complete the work within these deadlines.</p>
+<p>As explained above, data visualisation took longer than expected.
+And sometimes the code simply wouldn't run on high-performance computing platforms.
+For example, sometimes Matlab just wouldn't load, there were intermittent failures for no apparent reason and with no useful error messages.</p>
+<p>Activities that would have been nice to do, but were not undertaken, included:</p>
+<ul>
+<li>Testing (TK did not have time);</li>
+<li>Code review (nobody else had time); and</li>
+<li>Documentation — some was added afterwards, to accompany papers;</li>
+</ul>
+<blockquote>
+<p>Rob Moss: we're very unlikely to get funding to explicitly cover these activities.
+If possible, we need to allocate sufficient time in our budgets, as best as possible.
+Practising these skills on smaller scales can also help us to use them with less overhead in larger projects.</p>
+</blockquote>
+<h2 id="version-control-and-publishing">Version control and publishing<a class="headerlink" href="#version-control-and-publishing" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key message</p>
+<p>This can be challenging even with all of the tools and infrastructure in place.</p>
+</div>
+<p><strong>Question:</strong> were all of the projects wrapped up into one central thing?</p>
+<p>No, they're all separate.
+The first project was provided as a zip file attached to the paper.
+The second project is in a public git repository.
+The final project is ongoing and remains confidential, it is stored in a private repository on the University of Melbourne's GitLab instance.</p>
+<p><strong>Question:</strong> did the latest project build on the previous ones?</p>
+<p>Yes, and this led to managing current and older versions of the code.
+For example, TK found a bug that caused a minor discrepancy between times reported in two different models (see <a href="#the-multi-model-structure">The multi-model structure</a>) but it wasn't possible to update the older code and regenerate the associated outputs.</p>
+<p><strong>Question:</strong> should we use git (and GitHub) only for publication, or during the work itself?</p>
+<blockquote>
+<p>Eamon Conway: Use it from the beginning to track your work, and maybe have different privacy settings (confidential code and/or data).</p>
+<p>Rob Moss: you can use a git repository for your own purposes during the work, and upload a snapshot to <a href="https://figshare.com/">Figshare</a> or <a href="https://zenodo.org/">Zenodo</a> to obtain a DOI that you can cite in your paper.</p>
+</blockquote>
+<h2 id="broader-conclusions">Broader conclusions<a class="headerlink" href="#broader-conclusions" title="Permanent link">&para;</a></h2>
+<p>Changing our behaviour and work habits is hard, and so is finding time to develop these skills.
+We need to practice these skills on small problems first, rather than on large projects (and definitely not when there are tight deadlines).</p>
+<div class="admonition question">
+<p class="admonition-title">A question for the community</p>
+<p>Should we organise an event to practice and develop these skills on small-scale problems?</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../2024-06-13/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 13 June 2024">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                13 June 2024
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../2024-04-11/" class="md-footer__link md-footer__link--next" aria-label="Next: 11 April 2024">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                11 April 2024
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.follow", "toc.integrate", "content.action.edit", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../../../extra/asciinema-player.min.js"></script>
+      
+        <script src="../../../extra/wrapper.js"></script>
+      
+    
+  </body>
+</html>
