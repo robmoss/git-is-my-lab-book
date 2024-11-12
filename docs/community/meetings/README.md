@@ -2,6 +2,8 @@
 
 This section contains summaries of each Community of Practice meeting.
 
+- [10 October 2024](2024-10-10.md): workshop retrospective, identify future workshops.
+
 - [12 September 2024](2024-09-12.md): test run of our Introduction to Debugging workshop.
 
 - [8 August 2024](2024-08-08.md): orientation guide planning.
