@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://git-is-my-lab-book.net/community/meetings/2024-10-10/">
+        <link rel="canonical" href="https://git-is-my-lab-book.net/community/meetings/2024-11-14/">
       
       
-        <link rel="prev" href="../2024-11-14/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../2024-09-12/">
+        <link rel="next" href="../2024-10-10/">
       
       
       <link rel="icon" href="../../../logo.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>10 October 2024 - Git is my lab book</title>
+        <title>14 November 2024 - Git is my lab book</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 October 2024
+              14 November 2024
             
           </span>
         </div>
@@ -2520,27 +2520,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../2024-11-14/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    14 November 2024
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2557,7 +2536,7 @@
           
   
   <span class="md-ellipsis">
-    10 October 2024
+    14 November 2024
   </span>
   
 
@@ -2568,7 +2547,7 @@
         
   
   <span class="md-ellipsis">
-    10 October 2024
+    14 November 2024
   </span>
   
 
@@ -2590,45 +2569,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#workshop-retrospective" class="md-nav__link">
+  <a href="#eamon-conway-coding-tools-and-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Workshop retrospective
+      Eamon Conway: coding tools and workflow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#future-training-events" class="md-nav__link">
+  <a href="#linters" class="md-nav__link">
     <span class="md-ellipsis">
-      Future training events
+      Linters
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-do-people-use-tests" class="md-nav__link">
+  <a href="#language-servers" class="md-nav__link">
     <span class="md-ellipsis">
-      How do people use tests?
+      Language servers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#writing-testable-code" class="md-nav__link">
+  <a href="#debugging" class="md-nav__link">
     <span class="md-ellipsis">
-      Writing testable code
+      Debugging
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-show-and-tell-event" class="md-nav__link">
+  <a href="#testing" class="md-nav__link">
     <span class="md-ellipsis">
-      A "show and tell" event
+      Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automation
     </span>
   </a>
   
@@ -2638,6 +2626,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024-10-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 October 2024
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3506,7 +3515,7 @@
                   
 
   
-    <a href="https://github.com/robmoss/git-is-my-lab-book/edit/master/docs/community/meetings/2024-10-10.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/robmoss/git-is-my-lab-book/edit/master/docs/community/meetings/2024-11-14.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3515,167 +3524,97 @@
 
 
 <h1 id="10-october-2024">10 October 2024<a class="headerlink" href="#10-october-2024" title="Permanent link">&para;</a></h1>
-<p>Attendance: 4 in person, 3 online</p>
-<h2 id="workshop-retrospective">Workshop retrospective<a class="headerlink" href="#workshop-retrospective" title="Permanent link">&para;</a></h2>
-<p>We recently ran an <a href="../../training/debugging/">Introduction to Debugging workshop</a> at the SPECTRUM Annual Meeting 2024 (23-25 September).
-We began this meeting by reflecting on what went well, and what could be improved for future versions of this workshop.</p>
-<div class="admonition tip">
-<p class="admonition-title">Key message</p>
-<p>Feedback on the workshop was generally positive, although we encountered some technical challenges on the day.</p>
-</div>
-<ul>
-<li>
-<p>Some workshop attendees reported an interest in running this workshop at a future <a href="https://austms.org.au/special-interest-groups/wimsig/">WIMSIG</a> event.</p>
-</li>
-<li>
-<p>Shortly after the workshop, Emma McBryde informed us that she encountered a difficult coding problem and solved it quickly thanks to the knowledge and skills that she learned from our workshop.</p>
-</li>
-<li>
-<p>While almost all of the attendees already had R and Python installed, in future iterations we should ensure that each attendee already has R and Python installed prior to the workshop.</p>
-</li>
-<li>
-<p>Limited internet connectivity in the workshop venue meant that we had to ask participants to download the Python and R scripts ahead of time, so we added links to each script to the <a href="../../training/debugging/resources/">Resources page</a>.</p>
-</li>
-</ul>
-<p>We concluded that this workshop is a good foundation for planning the <strong>debugging and testing topical guides</strong>.</p>
-<ul>
-<li><a href="https://www.debuggingbook.org/">The Debugging Book</a> might be a useful reference.</li>
-</ul>
-<h2 id="future-training-events">Future training events<a class="headerlink" href="#future-training-events" title="Permanent link">&para;</a></h2>
-<p>Given the success of the Introduction to Debugging workshop, we asked participants if there were other topics or skills that they would like to learn in a workshop or similar type of event.</p>
-<div class="admonition tip">
-<p class="admonition-title">Key message</p>
-<p>There was broad interest in a testing workshop, and we discussed how good coding practices, testing, and debugging are highly interrelated skills.</p>
-</div>
-<p>Several attendees immediately nominated learning how to test their code as a highly desirable skill, and a logical follow-up to the debugging workshop.</p>
-<ul>
-<li>
-<p>Saras noted that it's a skill that needs to actively maintained, and that it becomes harder and harder to do well when you haven't done it for a while.</p>
-</li>
-<li>
-<p>As Rob pointed out in his presentation at the SPECTRUM &amp; SPARK Annual Meeting in 2023, most of the introductions and training guides only present trivial examples, and these are not sufficiently detailed or relevant for most researchers.</p>
-<ul>
-<li>We need detailed examples that are relevant to our research domain(s).
-  Obvious candidates include moderately complex compartmental models (both deterministic and stochastic), and agent-based models.</li>
-</ul>
-</li>
-</ul>
-<h2 id="how-do-people-use-tests">How do people use tests?<a class="headerlink" href="#how-do-people-use-tests" title="Permanent link">&para;</a></h2>
-<p>Nick asked how other people introduced testing into code bases that are not structured as software packages.</p>
-<div class="admonition tip">
-<p class="admonition-title">Key message</p>
-<p>Perhaps the most difficult challenge is deciding <strong>what to test</strong>.</p>
-</div>
-<ul>
-<li>
-<p>Nick himself has implemented tests as a separate workflow in the <a href="https://github.com/njtierney/ttiq-simulation?tab=readme-ov-file#running-tests">Test, Trace, Isolation and Quarantine (TTIQ) repository</a>.</p>
-</li>
-<li>
-<p>Rob mentioned that he uses Continuous Integration (on the University of Melbourne's <a href="https://gitlab.unimelb.edu.au/">GitLab instance</a>) to automatically run tests for most of his research code.
-  For example, this has allowed him to rapidly <a href="../../case-studies/moss-pypfilt-earlier-states/">catch and identify errors</a> in his <code>pypfilt</code> package.</p>
-<ul>
-<li>But as Nick pointed out, this approach relies on your code already being reproducible, and perhaps this is too much of a hurdle for most people?</li>
-</ul>
-</li>
-<li>
-<p>Eamon explained that he typically begins by writing tests, and makes them a part of his (C++) build system.
-  He sets up his workflow so that doesn't allow running simulations or experiments unless all of the tests are successful.</p>
-</li>
-<li>
-<p>Rob explained that he finds tests very useful for articulating his ideas about, and expectations of, his code.</p>
-</li>
-</ul>
-<p>A related question was deciding <strong>what to test?</strong>
-It isn't necessarily useful to aim for 100% test coverage (meaning that every line of code is executed by at least one case).
-So how do you write "maximum value" tests?</p>
-<p>We all agreed that it can be very scary to think about having your code subject to scrutiny after publication.</p>
-<ul>
-<li>
-<p>A high-profile example is Keisha Prem's 20211 <a href="https://doi.org/10.1371/journal.pcbi.1009098">social contact matrices paper</a>.
-  This paper received a lot of attention and scrutiny, and <a href="https://doi.org/10.1371/journal.pcbi.1012454">a correction was published</a> in 2024 that provided a corrected version of the code.</p>
-</li>
-<li>
-<p>Saras mentioned that as a journal editor, whenever a reviewer remarked that a result or output in a paper "looked weird", the authors would investigate and respond that it was an error.</p>
-</li>
-<li>
-<p>Rob mentioned that he encountered this situation (as a reviewer) earlier in the year.</p>
-</li>
-</ul>
-<h2 id="writing-testable-code">Writing testable code<a class="headerlink" href="#writing-testable-code" title="Permanent link">&para;</a></h2>
-<div class="admonition tip">
-<p class="admonition-title">Key message</p>
-<p>Attendees reflected on their experiences of testing and debugging.
-A common finding was that there is an art to writing code that is <strong>easy to test and debug</strong>.</p>
-</div>
-<p>As we highlight at the start of the <a href="../../../guides/writing-code/">Writing code</a> guide, code should be <strong>written for people to read</strong>!</p>
-<p>This is not easy!
-Much like writing good research papers, this is a skill that takes time to learn, and it gets easier with practice.</p>
-<ul>
-<li>
-<p>Nick has given a talk, <a href="https://github.com/njtierney/funfun">practical functions</a>, about writing code to make it easier to debug and test.</p>
-</li>
-<li>
-<p>Saras reflected on a project that began with a large amount of inherited code.
-  The first step was to reorganise the code in order to understand it, and to make it easier to test and debug.</p>
-</li>
-<li>
-<p>Saras also shared a relevant quote from the UK Research Software Engineering conference:</p>
-<blockquote>
-<p>Typically we see of code as a snapshot of a paper, but we could instead consider the paper as a snapshot of the code.</p>
-</blockquote>
-</li>
-</ul>
-<p>The code is the living project, the manifestation of what you've done.
-It is the ultimate "methods section", and should be written in a way that explains and clarifies what you've done <strong>and why you've done it</strong>.</p>
+<h2 id="eamon-conway-coding-tools-and-workflow">Eamon Conway: coding tools and workflow<a class="headerlink" href="#eamon-conway-coding-tools-and-workflow" title="Permanent link">&para;</a></h2>
+<p>In this meeting <a href="https://github.com/EamonConway">Eamon</a> gave a presentation about a range of coding tools and how he makes use of them in his workflow.</p>
+<p>Attendance: 3 in person, 5 online</p>
+<!--
+Here: Eamon, me, TK
+Online: Michael L, Nick T, Rahmat Sahara, Samik Datta, Tanaphum Wichaita
+-->
+
 <div class="admonition info">
-<p class="admonition-title">Refactoring</p>
-<p>We can't expect to write "perfect" code, because our goals and expectations can change during the research process.
-So we may need to step back and restructure our code at times — this is known as "refactoring".</p>
-<p>This is the coding equivalent of rewriting text (e.g., in a paper) to improve its logical flow and clarity.</p>
+<p class="admonition-title">Info</p>
+<p>We welcome presentations about research projects and experiences that relate in any way to reproducibility and good computational research practices.
+Presentations can be short, informal, and free-form.</p>
+<p>Please contact us if you have anything you might like to present!</p>
 </div>
-<h2 id="a-show-and-tell-event">A "show and tell" event<a class="headerlink" href="#a-show-and-tell-event" title="Permanent link">&para;</a></h2>
+<h2 id="linters">Linters<a class="headerlink" href="#linters" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Key message</p>
-<p>There was unanimous agreement that a "show and tell" event, where people present examples of well-written code, debugging, testing, etc, would be a great way to <strong>share knowledge and good practices</strong>.</p>
-<p>This could also be an "on ramp" for peer code review?</p>
+<p>Linters enforce a consistent coding style, which makes it easier to read your own code and also other people's code.</p>
 </div>
-<p>Several attendees said they would love to see a talk about testing the sort of  code that researchers write — as opposed to general software — and finding a good balance for research code, which is often only intended for reuse in a rather narrow sense.</p>
+<p>Eamon began using linters to format his code in order to avoid creating commits that contained "noise" such as trailing space characters at the end of a line and other unanticipated minor effects.
+One source of motivation was working on <a href="https://git-is-my-lab-book.net/">Git is my lab book</a>, which is written in Markdown.</p>
+<p>You can adjust your editor settings so that it will automatically format your code whenever you save, whenever you paste text, or even whenever you type (which some people suggested might be annoying!).</p>
+<p>Michael mentioned that when working on shared R code with Eamon, who isn't an R coder, he used <a href="https://lintr.r-lib.org/"><code>lintr</code></a> and <a href="https://styler.r-lib.org/"><code>styler</code></a> to clean up Eamon's code and make it easier for him (Michael) to understand.</p>
+<p>Michael also asked if anyone had good experiences when edited nested code blocks in R Markdown documents.
+Rob replied that he uses Emacs, and that <a href="https://polymode.github.io/">polymode</a> handle nested R code blocks very smoothly, but he has no experience with other editors — and doesn't suggest anyone switch to using Emacs!</p>
+<h2 id="language-servers">Language servers<a class="headerlink" href="#language-servers" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key message</p>
+<p>Language servers are tools that understand your code and can make your editor more powerful.</p>
+</div>
+<p>An immediate question from the audience was: "what is a language server?"</p>
+<p>A language server is a program that <strong>understands your code</strong> and provides your editor with features such as:</p>
 <ul>
 <li>
-<p>Nefel observed that (some) PhD students do discuss ideas about how to implement certain things in their code, and may even be doing some form of peer code review.
-  She remarked that peer code review during development sounds really cool and fascinating, but also terrifying to do in retrospect — there's an understandable feeling that you don't want to know about errors in retrospect!</p>
+<p><strong>Automatic completion</strong> of variable and function names;</p>
 </li>
 <li>
-<p>Several attendees stress that making mistakes in your code is not rare at all, and we should normalise it to remove any sense of shame.</p>
+<p><strong>Displaying documentation</strong> when you place your cursor on a variable or function; and</p>
 </li>
 <li>
-<p>Eamon explained that he likes to write tests while writing code, and develops his projects iteratively, creating test scripts as he goes and retaining them for regression testing.</p>
-</li>
-<li>
-<p>Saras responded that she wanted a "show and tell" where Eamon could demonstrate how his build process works.</p>
+<p><strong>Renaming</strong> variables and functions <strong>in every file</strong> that uses them.</p>
 </li>
 </ul>
-<p>We ended with a brief discussion about how a "show and tell" event might be structured, and came up with the following suggestions:</p>
+<p>Nick mentioned that <a href="https://github.com/posit-dev/ark"><code>ark</code></a> is a language server for R.
+It's created by Posit and (at the time of writing) is only available in <a href="https://positron.posit.co/">Positron</a>.</p>
+<p>Rob said that he uses <a href="https://github.com/python-lsp/python-lsp-server"><code>python-lsp-server</code></a> for Python, and <a href="https://docs.basedpyright.com/"><code>basedpyright</code></a> is another language server for Python.</p>
+<p>Nick asked how Eamon (and others) have set up language servers.
+Some editors support language servers through separate packages or extensions (e.g., for VS Code), while other editors have a single "LSP" package that will automatically use any installed language server when you open a code file.</p>
+<p>Eamon then walked through some examples of using language server features in VS Code, for both C++ and Python files.</p>
+<h2 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key message</p>
+<p>Stepping through your code is a great way to investigate when it doesn't appear to be working as intended</p>
+</div>
+<p>The discussion then moved on to using debuggers to step through your code, so that you can understand what it's doing when you think there's a problem.</p>
+<p>In the examples that Eamon presented, he uses Python code as a "wrapper" to call his C++ code, and the debugger allows him to step from Python code into the C++ code and back to Python again.</p>
+<p>Nick mentioned that he has used <a href="https://positron.posit.co/">Positron</a> to debug C code that was being called from R, using the <a href="https://lldb.llvm.org/">LLDB</a> debugger, and that it is also possible to step into Python code from R.</p>
+<p>In fact, as Eamon explained, if your code is compiled with an <a href="https://llvm.org/">LLVM</a> toolchain, you can used LLDB to step through code that is written in multiple languages (e.g., C, C++, Julia, Rust).</p>
+<p>This was followed by a broader discussion about VS Code, Posit, and R Studio, which features these editors provide, and which additional features can be enabled by installing additional packages.</p>
+<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key message</p>
+<p>Pick a testing framework and give it a go!</p>
+</div>
+<p>Eamon finished by talking about writing and running test cases, using Python as an example.
+He showed how to use <a href="https://docs.python.org/3/library/unittest.html"><code>unittest</code></a>, which is part of Python's standard library.
+One feature that Eamon has found particularly useful is the ability to only run tests that are relevant to the current file or code that he's working on.</p>
+<p>Eamon emphasised that testing your code is something you need to <strong>learn by doing</strong>, and told everyone:</p>
+<blockquote>
+<p>Just pick a testing framework and give it a go!
+Most, if not all, of the concepts and practices will be directly applicable to other frameworks, if you end up finding a better tool.</p>
+</blockquote>
+<p>For example, Rob mentioned that he uses <a href="https://docs.pytest.org/en/stable/"><code>pytest</code></a> instead of <code>unittest</code>, because it is fully compatible with <code>unittest</code> but adds a lot of useful features, such as running tests that failed last time, and allowing you to select specific tests to run.</p>
+<p>For R, <a href="https://testthat.r-lib.org/"><code>testthat</code></a> is the most popular unit testing package.
+Nick mentioned that <a href="https://lazytest.cynkra.com/"><code>lazytest</code></a> lets you rerun only the tests that have failed during the last run, and that <a href="https://usethis.r-lib.org/"><code>usethis</code></a> can create GitHub actions for automatically running your tests.</p>
+<h2 id="automation">Automation<a class="headerlink" href="#automation" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key message</p>
+<p>Using an automation tool to perform repetitive tasks can prevent human errors.</p>
+</div>
+<p>Eamon explained that he uses <a href="https://www.gnu.org/software/make/">GNU Make</a> to ensure that his C++ code is recompiled when necessary, so that the executables are always up to date.
+The <a href="https://docs.ropensci.org/targets/"><code>targets</code></a> package provides similar functionality for R.</p>
+<p>Importantly, both of these tools <strong>understand the dependencies</strong> between running commands/code and the files/outputs that will be created.
+This means that they know which files and outputs are up to date, and can <strong>avoid unnecessary computation</strong>.</p>
+<p>Eamon asked if there is an equivalent or similar package for Python.</p>
 <ul>
 <li>
-<p>A half-day or whole-day event would probably be more useful and effective than only running for 1-2 hours;</p>
-<ul>
-<li>We might to obtain a modest amount of funding, so that we could provide basic catering for attendees.</li>
-</ul>
+<p><a href="https://pydoit.org/"><code>doit</code></a> is a build tool similar to Make and targets;</p>
 </li>
 <li>
-<p>Give each attendee a short amount of time (perhaps 10-15 minutes?) to present some aspect of their work, coding practices, workflow, etc;</p>
-<ul>
-<li>
-<p>This could be something that they found particularly valuable;</p>
-</li>
-<li>
-<p>Or it could be a request for suggestions/feedback about how to improve something — peer code review in miniature!</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Finish by summarising common themes, issues, solutions, etc, and potentially identify some general guidelines for people to incorporate into their research.</p>
+<p><a href="https://tox.wiki/"><code>tox</code></a> and <a href="https://nox.thea.codes/en/stable/"><code>nox</code></a> are commonly-used Python automation tools, but do not avoid unnecessary computation.</p>
 </li>
 </ul>
 
@@ -3715,7 +3654,7 @@ So we may need to step back and restructure our code at times — this is known 
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../2024-11-14/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 14 November 2024">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Meetings">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3725,20 +3664,20 @@ So we may need to step back and restructure our code at times — this is known 
                 Previous
               </span>
               <div class="md-ellipsis">
-                14 November 2024
+                Meetings
               </div>
             </div>
           </a>
         
         
           
-          <a href="../2024-09-12/" class="md-footer__link md-footer__link--next" aria-label="Next: 12 September 2024">
+          <a href="../2024-10-10/" class="md-footer__link md-footer__link--next" aria-label="Next: 10 October 2024">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                12 September 2024
+                10 October 2024
               </div>
             </div>
             <div class="md-footer__button md-icon">
