@@ -2,6 +2,8 @@
 
 This section contains summaries of each Community of Practice meeting.
 
+- [14 November 2024](2024-11-14.md): presentation from Eamon Conway about coding tools and workflow.
+
 - [10 October 2024](2024-10-10.md): workshop retrospective, identify future workshops.
 
 - [12 September 2024](2024-09-12.md): test run of our Introduction to Debugging workshop.
