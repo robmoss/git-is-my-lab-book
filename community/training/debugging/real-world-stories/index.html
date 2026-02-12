@@ -3791,7 +3791,7 @@ This <a href="https://gitlab.unimelb.edu.au/rgmoss/particle-filter-for-python/-/
 <span class="w">          </span><span class="n">journal_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`journal-title.value`</span>
 <span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">        </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">mutate</span><span class="p">(</span>
-<span class="w">          </span><span class="c1"># the `external-ids` contains lots of things, not just DOI. It is a list containing a dataframe</span>
+<span class="w">          </span><span class="c1"># the `external-ids` contains lots of things, not just DOI; it is a list containing a dataframe</span>
 <span class="w">          </span><span class="c1"># Mapping over that list, we can filter out just the &#39;doi&#39; type</span>
 <span class="w">          </span><span class="c1"># Then pull it into a character vector</span>
 <span class="w">          </span><span class="c1"># Overwrite DOI with this value</span>
