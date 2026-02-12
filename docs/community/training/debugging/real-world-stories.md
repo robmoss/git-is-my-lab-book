@@ -176,7 +176,7 @@ get_publications_from_orcid <- function(orcid_ids) {
           journal_name = `journal-title.value`
         ) |>
         dplyr::mutate(
-          # the `external-ids` contains lots of things, not just DOI. It is a list containing a dataframe
+          # the `external-ids` contains lots of things, not just DOI; it is a list containing a dataframe
           # Mapping over that list, we can filter out just the 'doi' type
           # Then pull it into a character vector
           # Overwrite DOI with this value

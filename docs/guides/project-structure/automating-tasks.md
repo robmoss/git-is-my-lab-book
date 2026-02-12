@@ -7,7 +7,8 @@ We're all human, and we all make mistakes, but these kinds of mistakes are **eas
 
 !!! info
 
-    Mistakes are a fact of life. It is the response to the error that counts.
+    Mistakes are a fact of life.
+    It is the response to the error that counts.
 
     — Nikki Giovanni
 
