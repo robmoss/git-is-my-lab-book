@@ -15,7 +15,7 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 ## Requirements
 
-To build this book, you must have [Material for MkDocs][matmkdocs] installed.
+To build this book, you must have [Zensical][zensical] installed.
 For example:
 
 ```sh
@@ -30,11 +30,11 @@ You can view this book in your browser by running the following commands in this
 
 ```shell
 source venv/bin/activate
-mkdocs serve
+zensical serve
 ```
 
 This will automatically rebuild the book whenever you edit the contents.
 
 [book]: https://git-is-my-lab-book.net/
 [license]: https://creativecommons.org/licenses/by-sa/4.0/
-[matmkdocs]: https://squidfunk.github.io/mkdocs-material/
+[zensical]: https://zensical.org/

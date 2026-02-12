@@ -15,8 +15,8 @@ Please include "Git is my lab book" in the subject line.
 
 ## Suggest modifications and new content
 
-This book is written in Markdown and is published using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
-See the [Material for MkDocs Reference](https://squidfunk.github.io/mkdocs-material/reference/) for an overview of the supported features.
+This book is written in Markdown and is published using [Zensical](https://zensical.org/).
+See the [Zensical documentation](https://zensical.org/docs/get-started/) for an overview of the supported features.
 
 You can suggest modifications and new content by:
 
@@ -42,11 +42,11 @@ You can suggest modifications and new content by:
 
 !!! tip
 
-    When you add a new page, you must also **add the page to the `nav` block** in [`mkdocs.yml`](https://github.com/robmoss/git-is-my-lab-book/edit/master/mkdocs.yml).
+    When you add a new page, you must also **add the page to the `project.nav` table** in [`zensical.toml`](https://github.com/robmoss/git-is-my-lab-book/edit/master/zensical.toml).
 
 ## Adding tabbed code blocks
 
-You can display content in [multiple tabs](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/) by using `===`.
+You can display content in [multiple tabs](https://zensical.org/docs/authoring/content-tabs/) by using `===`.
 For example:
 
 ~~~md
