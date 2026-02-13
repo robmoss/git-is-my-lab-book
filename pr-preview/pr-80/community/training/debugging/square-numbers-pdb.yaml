@@ -1,0 +1,113 @@
+output_file: square-numbers-pdb.cast
+start_delay: 0.3
+end_delay: 0.5
+typing_delay:
+- 0.05
+- 0.1
+pre_nl_delay:
+- 0.2
+- 0.2
+post_nl_delay:
+- 0.8
+- 1.0
+with_comments: true
+comments_at_top: false
+actions:
+- python3 -m pdb square_numbers.py
+- action_id: Marker
+  label: Set a breakpoint
+- break 16
+- continue
+- action_id: Marker
+  label: Show current location
+- action_id: Input
+  text: list
+  pre_nl_delay: 1
+  post_nl_delay: 2
+- action_id: Input
+  text: print(value)
+  pre_nl_delay: 1
+  post_nl_delay: 2
+- action_id: Marker
+  label: Step into `is_square()`
+- step
+- step
+- action_id: Input
+  text: list
+  pre_nl_delay: 1
+  post_nl_delay: 2
+- up
+- action_id: Input
+  text: list
+  pre_nl_delay: 1
+  post_nl_delay: 2
+- action_id: Comment
+  comment: we can check the value of squares
+- print(squares)
+- down
+- action_id: Comment
+  comment: ''
+- step
+- step
+- action_id: Marker
+  label: Return from `is_square()`
+- step
+- step
+- action_id: Marker
+  label: Show updated `squares` list
+- print(squares)
+- step
+- print(squares)
+- action_id: Comment
+  comment: the value of squares has changed!
+- step
+- step
+- next
+- action_id: Comment
+  comment: ''
+- print(value)
+- print(squares)
+- action_id: Comment
+  comment: the value of squares has not changed!
+- action_id: Marker
+  label: Add a conditional breakpoint
+- action_id: Input
+  text: clear 1
+  pre_nl_delay: 1
+  post_nl_delay: 2
+- action_id: Input
+  text: break 18, value == 49
+  pre_nl_delay: 1
+  post_nl_delay: 2
+- action_id: Comment
+  comment: ''
+- continue
+- action_id: Marker
+  label: Stop at the conditional breakpoint
+- print(value)
+- action_id: Input
+  text: print(squares)
+  pre_nl_delay: 1
+  post_nl_delay: 2
+- action_id: Marker
+  label: Continue until the script ends
+- action_id: Input
+  text: continue
+  pre_nl_delay: 1
+  post_nl_delay: 2
+- action_id: Input
+  text: quit
+  pre_nl_delay: 1
+  post_nl_delay: 2
+- action_id: Marker
+  label: END
+- exit
+filters:
+- filter_id: RegexReplacementFilter
+  regex: /home/.*/git-is-my-lab-book/docs/community/training/
+  replacement: ''
+- filter_id: EndMarkerFilter
+  end_label: END
+- filter_id: CommentFilter
+cols: 80
+rows: 24
