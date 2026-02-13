@@ -17,8 +17,11 @@
         <link rel="next" href="../prerequisites/">
       
       
+        
+      
+      
       <link rel="icon" href="../../logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
+      <meta name="generator" content="zensical-0.0.23">
     
     
       
@@ -26,10 +29,15 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.d9d44b50.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/classic/palette.7dc9a0ad.min.css">
       
       
 
@@ -43,7 +51,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -54,11 +62,10 @@
     
       <link rel="stylesheet" href="../../extra/larger-admonitions.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
-    
     
     
   </head>
@@ -163,56 +170,32 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
       
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/robmoss/git-is-my-lab-book" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
     
@@ -225,13 +208,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../.." class="md-tabs__link">
           
-  
-    
   
   Introduction
 
@@ -245,13 +227,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../orientation/" class="md-tabs__link">
           
-  
-    
   
   Orientation
 
@@ -264,6 +245,7 @@
         
   
   
+  
     
   
   
@@ -272,8 +254,6 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
-  
-    
   
   Topical guides
 
@@ -287,13 +267,12 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../community/" class="md-tabs__link">
           
-  
-    
   
   Community
 
@@ -345,7 +324,7 @@
       <a href="https://github.com/robmoss/git-is-my-lab-book" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -374,6 +353,7 @@
       
     
     
+    
       
       
     
@@ -385,14 +365,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../.." class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -407,7 +393,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
-            Introduction
+            
+  
+    Introduction
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -423,9 +413,16 @@
       <a href="../../how-to-contribute/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     How to contribute
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -444,9 +441,16 @@
       <a href="../../contributors/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Contributors
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -477,6 +481,7 @@
       
     
     
+    
       
       
     
@@ -488,14 +493,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../orientation/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     Orientation
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -505,7 +516,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Orientation
+            
+  
+    Orientation
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -557,6 +572,7 @@
       
     
     
+    
       
         
         
@@ -571,14 +587,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     Topical guides
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -593,7 +615,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Topical guides
+            
+  
+    Topical guides
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -618,27 +644,42 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Learning objectives
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Learning objectives
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -647,14 +688,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#version-control-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Version control concepts
+      
+        Version control concepts
+      
     </span>
   </a>
   
@@ -663,7 +706,9 @@
         <li class="md-nav__item">
   <a href="#effective-use-of-git" class="md-nav__link">
     <span class="md-ellipsis">
-      Effective use of git
+      
+        Effective use of git
+      
     </span>
   </a>
   
@@ -672,7 +717,9 @@
         <li class="md-nav__item">
   <a href="#collaborating" class="md-nav__link">
     <span class="md-ellipsis">
-      Collaborating
+      
+        Collaborating
+      
     </span>
   </a>
   
@@ -681,7 +728,9 @@
         <li class="md-nav__item">
   <a href="#project-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Project structure
+      
+        Project structure
+      
     </span>
   </a>
   
@@ -690,7 +739,9 @@
         <li class="md-nav__item">
   <a href="#writing-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Writing code
+      
+        Writing code
+      
     </span>
   </a>
   
@@ -715,9 +766,16 @@
       <a href="../prerequisites/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Prerequisites
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -759,6 +817,7 @@
       
     
     
+    
       
       
     
@@ -770,14 +829,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../version-control/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     1. Version control concepts
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -792,7 +857,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
-            1. Version control concepts
+            
+  
+    1. Version control concepts
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -808,9 +877,16 @@
       <a href="../version-control/what-is-version-control/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     What is version control?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -829,9 +905,16 @@
       <a href="../version-control/what-is-a-repository/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     What is a repository?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -850,9 +933,16 @@
       <a href="../version-control/what-is-a-commit/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     What is a commit?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -871,9 +961,16 @@
       <a href="../version-control/what-should-I-commit/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     What should I commit?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -892,9 +989,16 @@
       <a href="../version-control/how-do-I-write-a-commit-message/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     How do I write a commit message?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -913,9 +1017,16 @@
       <a href="../version-control/what-is-a-tag/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     What is a tag?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -934,9 +1045,16 @@
       <a href="../version-control/what-is-a-branch/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     What is a branch?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -955,9 +1073,16 @@
       <a href="../version-control/what-is-a-merge-conflict/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     What is a merge conflict?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -976,9 +1101,16 @@
       <a href="../version-control/exercise-using-version-control/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exercise: using version control
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1050,6 +1182,7 @@
       
     
     
+    
       
       
     
@@ -1061,14 +1194,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../using-git/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     2. Effective use of git
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -1083,7 +1222,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
-            2. Effective use of git
+            
+  
+    2. Effective use of git
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1099,9 +1242,16 @@
       <a href="../using-git/graphical-git-clients/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Graphical Git clients
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1120,9 +1270,16 @@
       <a href="../using-git/first-time-git-setup/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     First-time Git setup
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1141,9 +1298,16 @@
       <a href="../using-git/choosing-your-git-editor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Choosing your Git editor
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1162,9 +1326,16 @@
       <a href="../using-git/creating-a-repository/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Creating a repository
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1183,9 +1354,16 @@
       <a href="../using-git/cloning-an-existing-repository/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Cloning an existing repository
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1204,9 +1382,16 @@
       <a href="../using-git/how-to-structure-a-repository/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     How to structure a repository
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1225,9 +1410,16 @@
       <a href="../using-git/choosing-a-license/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Choosing a license
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1246,9 +1438,16 @@
       <a href="../using-git/creating-a-commit/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Creating a commit
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1267,9 +1466,16 @@
       <a href="../using-git/creating-a-remote-repository/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Creating a remote repository
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1288,9 +1494,16 @@
       <a href="../using-git/pushing-and-pulling-commits/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Pushing and pulling commits
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1309,9 +1522,16 @@
       <a href="../using-git/how-to-ignore-certain-files/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     How to ignore certain files
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1330,9 +1550,16 @@
       <a href="../using-git/how-to-create-and-use-tags/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     How to create and use tags
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1351,9 +1578,16 @@
       <a href="../using-git/inspecting-your-history/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Inspecting your history
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1372,9 +1606,16 @@
       <a href="../using-git/where-did-this-line-come-from/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Where did this line come from?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1393,9 +1634,16 @@
       <a href="../using-git/where-did-this-problem-come-from/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Where did this problem come from?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1414,9 +1662,16 @@
       <a href="../using-git/how-to-use-branches/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     How to use branches?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1435,9 +1690,16 @@
       <a href="../using-git/how-to-resolve-merge-conflicts/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     How to resolve merge conflicts?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1456,9 +1718,16 @@
       <a href="../using-git/exercise-create-a-local-repository/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exercise: create a local repository
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1477,9 +1746,16 @@
       <a href="../using-git/exercise-use-a-remote-repository/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exercise: use a remote repository
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1498,9 +1774,16 @@
       <a href="../using-git/exercise-resolve-a-merge-conflict/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exercise: resolve a merge conflict
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1550,6 +1833,7 @@
       
     
     
+    
       
       
     
@@ -1561,14 +1845,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../collaborating/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     3. Collaborating
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -1583,7 +1873,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
-            3. Collaborating
+            
+  
+    3. Collaborating
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1599,9 +1893,16 @@
       <a href="../collaborating/collaborating-on-code/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Collaborating on code
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1620,9 +1921,16 @@
       <a href="../collaborating/collaborating-on-a-paper/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Collaborating on a paper
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1641,9 +1949,16 @@
       <a href="../collaborating/sharing-a-repository/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Sharing a repository
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1662,9 +1977,16 @@
       <a href="../collaborating/sharing-a-branch/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Sharing a branch
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1683,9 +2005,16 @@
       <a href="../collaborating/merge-pull-requests/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Merge/Pull requests
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1704,9 +2033,16 @@
       <a href="../collaborating/an-example-pull-request/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     An example pull request
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1725,9 +2061,16 @@
       <a href="../collaborating/peer-code-review/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Peer code review
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1746,9 +2089,16 @@
       <a href="../collaborating/coding-style-guides/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Coding style guides
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1767,9 +2117,16 @@
       <a href="../collaborating/continuous-integration/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Continuous integration
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1811,6 +2168,7 @@
       
     
     
+    
       
       
     
@@ -1822,14 +2180,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../project-structure/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     4. Project structure
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -1844,7 +2208,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
-            4. Project structure
+            
+  
+    4. Project structure
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1860,9 +2228,16 @@
       <a href="../project-structure/workflow/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Define your workflow
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1881,9 +2256,16 @@
       <a href="../project-structure/automating-tasks/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Automate common tasks
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1902,9 +2284,16 @@
       <a href="../project-structure/explain-how-it-works/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Explain how it works
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1923,9 +2312,16 @@
       <a href="../project-structure/exercise-what-works-for-you/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exercise: what works for you?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1944,9 +2340,16 @@
       <a href="../project-structure/exercise-a-good-readme/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exercise: a good README
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1996,6 +2399,7 @@
       
     
     
+    
       
       
     
@@ -2007,14 +2411,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../writing-code/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     5. Writing code
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -2029,7 +2439,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
-            5. Writing code
+            
+  
+    5. Writing code
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2045,9 +2459,16 @@
       <a href="../writing-code/how-we-learn-to-write-code/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     How we learn to write code
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2066,9 +2487,16 @@
       <a href="../writing-code/cohesion-coupling/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Cohesion and coupling
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2087,9 +2515,16 @@
       <a href="../writing-code/behave-nicely/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Behave nicely
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2108,9 +2543,16 @@
       <a href="../writing-code/coding-advice/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Coding advice
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2129,9 +2571,16 @@
       <a href="../writing-code/create-packages/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Create packages
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2150,9 +2599,16 @@
       <a href="../writing-code/check-your-code/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Check your code
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2171,9 +2627,16 @@
       <a href="../writing-code/format-your-code/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Format your code
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2192,9 +2655,16 @@
       <a href="../writing-code/document-your-code/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Document your code
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2213,9 +2683,16 @@
       <a href="../writing-code/exercise-seek-feedback/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exercise: seek feedback
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2249,6 +2726,7 @@
       
     
     
+    
       
       
     
@@ -2260,14 +2738,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../reproducibility/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     6. Reproducibility
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -2282,7 +2766,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_9">
             <span class="md-nav__icon md-icon"></span>
-            6. Reproducibility
+            
+  
+    6. Reproducibility
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2298,9 +2786,16 @@
       <a href="../reproducibility/what-is-reproducible-research/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     What is reproducible research?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2332,6 +2827,7 @@
       
     
     
+    
       
       
     
@@ -2343,14 +2839,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../testing/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     7. Testing
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -2360,7 +2862,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_10">
             <span class="md-nav__icon md-icon"></span>
-            7. Testing
+            
+  
+    7. Testing
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2389,6 +2895,7 @@
       
     
     
+    
       
       
     
@@ -2400,14 +2907,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../high-performance-computing/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     8. Cloud and HPC platforms
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -2417,7 +2930,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_11">
             <span class="md-nav__icon md-icon"></span>
-            8. Cloud and HPC platforms
+            
+  
+    8. Cloud and HPC platforms
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2441,9 +2958,16 @@
       <a href="../resources/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Useful resources
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2480,6 +3004,7 @@
       
     
     
+    
       
       
     
@@ -2491,14 +3016,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../community/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     Community
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -2513,7 +3044,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Community
+            
+  
+    Community
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2560,6 +3095,7 @@
       
     
     
+    
       
       
     
@@ -2571,14 +3107,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../community/meetings/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     Meetings
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -2593,7 +3135,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
-            Meetings
+            
+  
+    Meetings
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2609,9 +3155,16 @@
       <a href="../../community/meetings/2024-11-14/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     14 November 2024
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2630,9 +3183,16 @@
       <a href="../../community/meetings/2024-10-10/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     10 October 2024
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2651,9 +3211,16 @@
       <a href="../../community/meetings/2024-09-12/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     12 September 2024
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2672,9 +3239,16 @@
       <a href="../../community/meetings/2024-08-08/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     8 August 2024
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2693,9 +3267,16 @@
       <a href="../../community/meetings/2024-07-11/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     11 July 2024
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2714,9 +3295,16 @@
       <a href="../../community/meetings/2024-06-13/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     13 June 2024
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2735,9 +3323,16 @@
       <a href="../../community/meetings/2024-05-09/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     9 May 2024
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2756,9 +3351,16 @@
       <a href="../../community/meetings/2024-04-11/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     11 April 2024
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2777,9 +3379,16 @@
       <a href="../../community/meetings/2024-02-19/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     19 February 2024
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2798,9 +3407,16 @@
       <a href="../../community/meetings/2023-10-18/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     18 October 2023
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2819,9 +3435,16 @@
       <a href="../../community/meetings/2023-08-15/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     15 August 2023
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2840,9 +3463,16 @@
       <a href="../../community/meetings/2023-06-13/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     13 June 2023
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2861,9 +3491,16 @@
       <a href="../../community/meetings/2023-04-17/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     17 April 2023
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2901,6 +3538,7 @@
       
     
     
+    
       
       
     
@@ -2912,14 +3550,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../community/case-studies/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     Case studies
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -2934,7 +3578,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
-            Case studies
+            
+  
+    Case studies
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2950,9 +3598,16 @@
       <a href="../../community/case-studies/moss-pypfilt-earlier-states/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fixing a bug in pypfilt
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2971,9 +3626,16 @@
       <a href="../../community/case-studies/moss-incorrect-data-pre-print/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Incorrect data in a pre-print figure
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2992,9 +3654,16 @@
       <a href="../../community/case-studies/campbell-pen-and-paper-version-control/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Pen and paper version control
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3028,6 +3697,7 @@
       
     
     
+    
       
       
     
@@ -3039,14 +3709,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../community/training/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     Training events
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -3061,7 +3737,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
-            Training events
+            
+  
+    Training events
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3112,6 +3792,7 @@
       
     
     
+    
       
       
     
@@ -3123,14 +3804,20 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../community/training/debugging/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction to Debugging
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -3145,7 +3832,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_4_2">
             <span class="md-nav__icon md-icon"></span>
-            Introduction to Debugging
+            
+  
+    Introduction to Debugging
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3161,9 +3852,16 @@
       <a href="../../community/training/debugging/learning-objectives/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Learning objectives
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3182,9 +3880,16 @@
       <a href="../../community/training/debugging/what-is-debugging/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     What is debugging?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3203,9 +3908,16 @@
       <a href="../../community/training/debugging/understanding-error-messages/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Understanding error messages
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3224,9 +3936,16 @@
       <a href="../../community/training/debugging/why-are-debuggers-useful/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Why are debuggers useful?
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3245,9 +3964,16 @@
       <a href="../../community/training/debugging/using-a-debugger/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Using a debugger
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3266,9 +3992,16 @@
       <a href="../../community/training/debugging/when-something-fails/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     When something fails
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3287,9 +4020,16 @@
       <a href="../../community/training/debugging/real-world-stories/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Real-world stories
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3308,9 +4048,16 @@
       <a href="../../community/training/debugging/example-square-numbers/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Example: Square numbers
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3329,9 +4076,16 @@
       <a href="../../community/training/debugging/exercise-perfect-numbers/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exercise: Perfect numbers
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3350,9 +4104,16 @@
       <a href="../../community/training/debugging/exercise-python-vs-r/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exercise: Python vs R
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3371,9 +4132,16 @@
       <a href="../../community/training/debugging/building-your-skills/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Building your skills
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3392,9 +4160,16 @@
       <a href="../../community/training/debugging/manifesto/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Debugging manifesto
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3413,9 +4188,16 @@
       <a href="../../community/training/debugging/resources/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Resources
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3434,9 +4216,16 @@
       <a href="../../community/training/debugging/solutions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exercise solutions
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3455,9 +4244,16 @@
       <a href="../../community/training/debugging/acknowledgements/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Acknowledgements
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3499,12 +4295,12 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
-
   
-    <a href="https://github.com/robmoss/git-is-my-lab-book/edit/master/docs/guides/learning-objectives.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/robmoss/git-is-my-lab-book/edit/master/docs/guides/learning-objectives.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3512,10 +4308,10 @@
   
 
 
-<h1 id="learning-objectives">Learning objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h1>
+<h1 id="learning-objectives">Learning objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">¶</a></h1>
 <p>This page defines the learning objectives for individual sections.
 These are skills that the reader should be able to demonstrate after reading through the relevant section, and completing any exercises in that section.</p>
-<h2 id="version-control-concepts">Version control concepts<a class="headerlink" href="#version-control-concepts" title="Permanent link">&para;</a></h2>
+<h2 id="version-control-concepts">Version control concepts<a class="headerlink" href="#version-control-concepts" title="Permanent link">¶</a></h2>
 <p>After completing <a href="../version-control/">this section</a>, you should be able to identify how to apply version control concepts to your existing work.
 This includes being able to:</p>
 <ul>
@@ -3532,7 +4328,7 @@ This includes being able to:</p>
 <p>Identify pieces of work that could be carried out in separate branches of a repository.</p>
 </li>
 </ul>
-<h2 id="effective-use-of-git">Effective use of git<a class="headerlink" href="#effective-use-of-git" title="Permanent link">&para;</a></h2>
+<h2 id="effective-use-of-git">Effective use of git<a class="headerlink" href="#effective-use-of-git" title="Permanent link">¶</a></h2>
 <p>After completing <a href="../using-git/">this section</a>, you should be able to:</p>
 <ul>
 <li>
@@ -3563,7 +4359,7 @@ This includes being able to:</p>
 <p>Resolve merge conflicts.</p>
 </li>
 </ul>
-<h2 id="collaborating">Collaborating<a class="headerlink" href="#collaborating" title="Permanent link">&para;</a></h2>
+<h2 id="collaborating">Collaborating<a class="headerlink" href="#collaborating" title="Permanent link">¶</a></h2>
 <p>After completing <a href="../collaborating/">this section</a>, you should be able to:</p>
 <ul>
 <li>
@@ -3582,7 +4378,7 @@ This includes being able to:</p>
 <p><strong>Conduct peer code review</strong> in a respectful manner.</p>
 </li>
 </ul>
-<h2 id="project-structure">Project structure<a class="headerlink" href="#project-structure" title="Permanent link">&para;</a></h2>
+<h2 id="project-structure">Project structure<a class="headerlink" href="#project-structure" title="Permanent link">¶</a></h2>
 <p>After completing <a href="../project-structure/">this section</a>, you should be able to:</p>
 <ul>
 <li>
@@ -3595,7 +4391,7 @@ This includes being able to:</p>
 <p>Structure your code to enable new experiments and analyses.</p>
 </li>
 </ul>
-<h2 id="writing-code">Writing code<a class="headerlink" href="#writing-code" title="Permanent link">&para;</a></h2>
+<h2 id="writing-code">Writing code<a class="headerlink" href="#writing-code" title="Permanent link">¶</a></h2>
 <p>After completing <a href="../writing-code/">this section</a>, you should be able to:</p>
 <ul>
 <li>
@@ -3611,6 +4407,8 @@ This includes being able to:</p>
 <p>Take advantage of code formatters and code linters.</p>
 </li>
 </ul>
+
+
 
 
 
@@ -3689,8 +4487,8 @@ This includes being able to:</p>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -3705,10 +4503,14 @@ This includes being able to:</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.follow", "toc.integrate", "content.action.edit", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.footer","navigation.indexes","navigation.tabs","navigation.tabs.sticky","navigation.top","toc.follow","toc.integrate","content.action.edit","content.code.copy","content.code.select","content.tabs.link"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5fcf0de6.min.js"></script>
       
         <script src="../../extra/asciinema-player.min.js"></script>
       
