@@ -110,9 +110,7 @@ nav = [
     { "8. Cloud and HPC platforms" = [
       "guides/high-performance-computing/README.md",
     ]},
-    { "Useful resources" = [
-      "guides/resources.md",
-    ]},
+    { "Useful resources" = "guides/resources.md" },
   ]},
   { "Community" = [
     "community/README.md",
