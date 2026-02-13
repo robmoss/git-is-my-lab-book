@@ -73,9 +73,9 @@
 
     2. Install Python with [`actions/setup-python`](https://github.com/actions/setup-python);
 
-    3. Install [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and other required tools, as listed in [`requirements.txt`](https://github.com/robmoss/git-is-my-lab-book/blob/master/requirements.txt); and
+    3. Install [Zensical](https://zensical.org/) and other required tools, as listed in [`requirements.txt`](https://github.com/robmoss/git-is-my-lab-book/blob/master/requirements.txt); and
 
-    4. Build the HTML version of this book with [`mkdocs`](https://www.mkdocs.org/).
+    4. Build the HTML version of this book with [`zensical`](https://zensical.org/).
 
 ## High-performance computing platforms
 
