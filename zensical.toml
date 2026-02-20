@@ -164,9 +164,9 @@ nav = [
 name = "material"
 favicon = "logo.png"
 logo = "logo.svg"
-# Retain the Material for MkDocs theme for now.
+# Use the new Zensical theme instead of the "classic" Material theme.
 # See https://zensical.org/docs/setup/basics/ for further details.
-variant = "classic"
+# variant = "classic"
 features = [
   # Navigation settings
   "navigation.footer",
@@ -175,7 +175,9 @@ features = [
   "navigation.tabs.sticky",
   "navigation.top",
   "toc.follow",
-  "toc.integrate",
+  # List page subsections on the right-hand side, rather than integrating them
+  # into the left-hand side navigation.
+  # "toc.integrate",
   # See "Adding a git repository"
   "content.action.edit",
   # Code block settings
