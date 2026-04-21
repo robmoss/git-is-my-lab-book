@@ -2,7 +2,7 @@
 click==8.3.1
 deepmerge==2.0
 Markdown==3.10.2
-Pygments==2.19.2
-pymdown-extensions==10.20.1
+Pygments==2.20.0
+pymdown-extensions==10.21.2
 PyYAML==6.0.3
-zensical==0.0.23
+zensical==0.0.33
