@@ -50,7 +50,7 @@
 
 ## Performing peer code review
 
-- [The Art of Giving and Receiving Code Reviews (Gracefully)](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/)
+- [The Art of Giving and Receiving Code Reviews (Gracefully)](https://web.archive.org/web/20181216051634/http://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/)
 
 - [Code Review in the Lab](https://ropensci.org/blog/2018/11/29/codereview/)
 
