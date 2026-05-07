@@ -1,8 +1,11 @@
 ## The following requirements were added by pip freeze:
 click==8.3.1
 deepmerge==2.0
+Jinja2==3.1.6
 Markdown==3.10.2
+MarkupSafe==3.0.3
 Pygments==2.20.0
 pymdown-extensions==10.21.2
 PyYAML==6.0.3
-zensical==0.0.33
+tomli==2.4.1
+zensical==0.0.40
