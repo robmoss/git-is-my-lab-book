@@ -30,7 +30,7 @@ You can suggest modifications and new content by:
 
 !!! info
 
-    You can also edit any page by clicking the "Edit this page" button (:material-file-edit:) in the top-right corner.
+    You can also edit any page by clicking the "Edit this page" button (:lucide-file-edit:) in the top-right corner.
     This will start the process described above by forking the book repository.
 
 !!! tip
